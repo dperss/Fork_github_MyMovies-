@@ -1,0 +1,8 @@
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMoviesLibrary.deps.json
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMoviesLibrary.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\obj\Debug\netstandard2.0\MyMoviesLibrary.csprojAssemblyReference.cache
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\obj\Debug\netstandard2.0\MyMoviesLibrary.AssemblyInfoInputs.cache
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\obj\Debug\netstandard2.0\MyMoviesLibrary.AssemblyInfo.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMoviesLibrary.pdb
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\obj\Debug\netstandard2.0\MyMoviesLibrary.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\obj\Debug\netstandard2.0\MyMoviesLibrary.pdb

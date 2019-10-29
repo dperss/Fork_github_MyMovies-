@@ -1,0 +1,11 @@
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.exe
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.deps.json
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.runtimeconfig.json
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.runtimeconfig.dev.json
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\bin\Debug\netcoreapp3.0\MyMovies.pdb
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\obj\Debug\netcoreapp3.0\MyMovies.csprojAssemblyReference.cache
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\obj\Debug\netcoreapp3.0\MyMovies.AssemblyInfoInputs.cache
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\obj\Debug\netcoreapp3.0\MyMovies.AssemblyInfo.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\obj\Debug\netcoreapp3.0\MyMovies.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies\obj\Debug\netcoreapp3.0\MyMovies.pdb
