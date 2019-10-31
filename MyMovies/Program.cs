@@ -1,6 +1,5 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Collections.Generic;
+﻿using MyMoviesLibrary.BL;
+using System;
 
 namespace MyMovies
 {
@@ -8,6 +7,10 @@ namespace MyMovies
     {
         static void Main(string[] args)
         {
+            Filme_escritor b = new Filme_escritor(1,2);
+            b.Delete(b);
+            
+
             Console.WriteLine("Hello World!");
         }
     }
