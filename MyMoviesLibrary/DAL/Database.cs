@@ -13,7 +13,7 @@ namespace MyMovies.DAL
         {
             //... codigo de conecção à base dados e abertura (sql connection e o open)
             //estava a dar erro aqui pq fiz primeiro SqlConnection connection = new .... não é preciso pq ja esta criado em cima e estou a criar 2x
-            connection = new SqlConnection("Server=tcp:dpersss.database.windows.net,1433;Initial Catalog=AID_teste;Persist Security Info=False;User ID=dpers;Password=Hct4k#qap0YgwPcp;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            connection = new SqlConnection("Server=tcp:dai-19-20.database.windows.net,1433;Initial Catalog=dai_19_20;Persist Security Info=False;User ID=beleza07;Password=Claudia_98;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             connection.Open();
         }
 
@@ -57,8 +57,10 @@ namespace MyMovies.DAL
 
                     command.Parameters.AddWithValue(keys.Key, keys.Value);
                 }
+                result = command.ExecuteNonQuery(); //devolve 0 ou 1
+
             }
-            result = command.ExecuteNonQuery(); //devolve 0 ou 1
+
             return result;
         }
 
