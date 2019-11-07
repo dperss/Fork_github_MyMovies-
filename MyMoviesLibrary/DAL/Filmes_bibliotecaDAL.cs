@@ -11,7 +11,7 @@ namespace MyMoviesLibrary.DAL
     {
         public static bool CreateTable()
         {
-            Database db = new Database();
+            Database db = new Database();//falta meter tipo enum 
             string query = @"CREATE TABLE [dbo].[Filmes_biblioteca] (
                              idfilmes_biblioteca INTEGER PRIMARY KEY NOT NULL,
                              tipo nvarchar(50) NOT NULL,

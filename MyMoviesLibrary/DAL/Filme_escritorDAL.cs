@@ -14,10 +14,10 @@ namespace MyMoviesLibrary.DAL
 
         public static bool CreateTable()
         {
-            Database db = new Database();
+            Database db = new Database();// escritor_idescritor é fk
             string query = @"CREATE TABLE [dbo].[Filme_escritor] (
                              filme_idfilme integer PRIMARY KEY NOT NULL,
-                             escritor_idescritor integer,)
+                             escritor_idescritor integer ,)
                              ";
             try
             {
