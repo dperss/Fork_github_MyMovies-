@@ -21,9 +21,8 @@ namespace MyMoviesLibrary.DAL
                              ";
             try
             {
-                db.NonQuery(query, null);
-                return true;
-
+                    db.NonQuery(query, null);
+                    return true;         
             }
             catch (System.Data.SqlClient.SqlException)
             {
