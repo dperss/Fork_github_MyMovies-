@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using FilmesLibrary.DAL;
+using MyMoviesLibrary.DAL;
 
-namespace FilmesLibrary.BL
+namespace MyMoviesLibrary.BL
 {
     public class Diretor
     {

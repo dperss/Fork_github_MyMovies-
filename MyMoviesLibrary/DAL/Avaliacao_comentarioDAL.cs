@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using FilmesLibrary.BL;
+using MyMoviesLibrary.BL;
 using MyMovies.DAL;
 
-namespace FilmesLibrary.DAL
+
+
+namespace MyMoviesLibrary.DAL
 {
     public class Avaliacao_comentarioDAL
     {
-        public static int Create(Avaliacao_comentarioDAL a)
+        public static int Create(Avaliacao_comentario a)
         {
             Database db = new Database();
             string query = "INSERT INTO[dbo].[Avaliacao_comentario]([idavaliacao_comentario],[avaliacao],[comentario],[idutilizador],[idfilme])VALUES(@id,@avaliacao,@comentario,@idu,@idf);";
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@id", a.Idavaliacao_comentario);
-            d.Add("@avaliacao", a.Avaliacao);
+            d.Add("@avalicao", a.Avaliacao);
             d.Add("@comentario", a.Comentario);
             d.Add("@idu", a.Idutilizador);
             d.Add("@idf", a.Idfilme);
@@ -171,3 +173,4 @@ namespace FilmesLibrary.DAL
         }
     }
 }
+

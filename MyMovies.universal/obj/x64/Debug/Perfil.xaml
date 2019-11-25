@@ -1,0 +1,109 @@
+﻿<Page
+    x:Class="MyMovies.universal.Perfil"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="2.6*"/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="2.6*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Rectangle Fill="White"  Opacity="0.5" Height="370" VerticalAlignment="Bottom" />
+                </Grid>
+                
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="2.6*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <TextBox  PlaceholderText="NOME"  Height="40" Width="465" Background="LightSteelBlue"  HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBox  PlaceholderText="EMAIL"  Height="40" Width="465" Background="LightSteelBlue"  HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Row="3">
+                    <TextBox  PlaceholderText="ALTERAR PASSWORD"  Height="40" Width="465" Background="LightSteelBlue" HorizontalAlignment="Left"/>
+                </Grid>
+                <Grid Grid.Row="4">
+                    <TextBox  PlaceholderText="CONFIRMAR PASSWORD"  Height="40" Width="465" Background="LightSteelBlue" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid Grid.Row="5">
+                    <Button Content="Confirmar" Background="LightSlateGray" Opacity="0.8" HorizontalAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition />
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <PersonPicture  />
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <TextBlock Text="PERFIL"  Foreground="Gray"  HorizontalAlignment="Center" FontSize="40"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Center"/>
+            </Grid>
+           
+        </Grid>
+    </Grid>
+</Page>
+

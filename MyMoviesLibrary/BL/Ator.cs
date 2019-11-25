@@ -10,7 +10,7 @@ namespace MyMoviesLibrary.BL
         public int Idator { get; set; }
         public string Nome { get; set; }
         public string Datanascimento { get; set; }
-        //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME
+
 
 
         public static int Create(Ator a)
@@ -40,3 +40,4 @@ namespace MyMoviesLibrary.BL
 
     }
 }
+

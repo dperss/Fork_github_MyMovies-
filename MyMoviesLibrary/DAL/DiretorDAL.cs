@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using FilmesLibrary.BL;
+using MyMoviesLibrary.BL;
 using System.Data.SqlClient;
+using MyMovies.DAL;
 
-namespace FilmesLibrary.DAL
+namespace MyMoviesLibrary.DAL
 {
     public class diretorDAL
     {

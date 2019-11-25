@@ -125,10 +125,14 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registo.xaml.cs">
-      <DependentUpon>Registo.xaml</DependentUpon>
+    <Compile Include="Pagina_Filmes.xaml.cs">
+      <DependentUpon>Pagina_Filmes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Perfil.xaml.cs">
+      <DependentUpon>Perfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\Pagina_Inicial_ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -136,10 +140,17 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="image\capa.png" />
-    <Content Include="image\capa_login.png" />
-    <Content Include="image\EditDocument-512.png" />
-    <Content Include="image\Untitled-1.png" />
+    <Content Include="Assets\aladin.jpg" />
+    <Content Include="Assets\capa.jpg" />
+    <Content Include="Assets\EditDocument-512.png" />
+    <Content Include="Assets\el camino.jpg" />
+    <Content Include="Assets\end_game.jpg" />
+    <Content Include="Assets\hustlers.jpg" />
+    <Content Include="Assets\Joker.PNG" />
+    <Content Include="Assets\kindom.jpg" />
+    <Content Include="Assets\rambo.jpg" />
+    <Content Include="Assets\spiderman.jpg" />
+    <Content Include="Assets\Untitled-1.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -162,7 +173,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Registo.xaml">
+    <Page Include="Pagina_Filmes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Perfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,6 +187,7 @@
       <Version>6.2.9</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
