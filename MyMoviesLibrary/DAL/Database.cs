@@ -26,7 +26,7 @@ namespace MyMovies.DAL
 
         }
 
-        public SqlDataReader Query(string query, Dictionary<string, string> dic)
+        public SqlDataReader Query(string query, Dictionary<string, object> dic)
         {
 
 
@@ -34,7 +34,7 @@ namespace MyMovies.DAL
 
             if (dic != null)
             {
-                foreach (KeyValuePair<string, string> keys in dic)
+                foreach (KeyValuePair<string, object> keys in dic)
                 {
                     command.Parameters.AddWithValue(keys.Key, keys.Value);
 

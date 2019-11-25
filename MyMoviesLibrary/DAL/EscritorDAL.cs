@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using FilmesLibrary.BL;
+using MyMovies.DAL;
+using MyMoviesLibrary.BL;
 
-namespace FilmesLibrary.DAL
+namespace MyMoviesLibrary.DAL
 {
     class EscritorDAL
     {

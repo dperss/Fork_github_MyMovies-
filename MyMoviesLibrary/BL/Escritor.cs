@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using FilmesLibrary.DAL;
+using MyMoviesLibrary.DAL;
 
-namespace FilmesLibrary.BL
+namespace MyMoviesLibrary.BL
 {
-    public class escritor
+    public class Escritor
     {
         public int Idescritor { get; set; }
         public string Nome { get; set; }
 
-        public escritor() { }
+        public Escritor() { }
 
-        public escritor(int id, string nome)
+        public Escritor(int id, string nome)
         {
             this.Idescritor = id;
             this.Nome = nome;
@@ -22,33 +22,33 @@ namespace FilmesLibrary.BL
             return $"Id: {Idescritor}" +
                 $"\nNome: {Nome}";
         }
-        public static int Create(escritor e)
+        public static int Create(Escritor e)
         {
-            return escritorDAL.Create(e);
+            return EscritorDAL.Create(e);
         }
-        public static List<escritor> ReadNome(escritor e)
+        public static List<Escritor> ReadNome(Escritor e)
         {
-            return escritorDAL.ReadNome(e);
+            return EscritorDAL.ReadNome(e);
         }
-        public static escritor ReadId(escritor e)
+        public static Escritor ReadId(Escritor e)
         {
-            return escritorDAL.ReadId(e);
+            return EscritorDAL.ReadId(e);
         }
-        public static List<escritor> ReadAll()
+        public static List<Escritor> ReadAll()
         {
-            return escritorDAL.ReadAll();
+            return EscritorDAL.ReadAll();
         }
-        public static int Update(escritor e)
+        public static int Update(Escritor e)
         {
-            return escritorDAL.Update(e);
+            return EscritorDAL.Update(e);
         }
-        public static int Delete(escritor e)
+        public static int Delete(Escritor e)
         {
-            return escritorDAL.Delete(e);
+            return EscritorDAL.Delete(e);
         }
         public static bool CreateTable()
         {
-            return escritorDAL.CreateTable();
+            return EscritorDAL.CreateTable();
         }
     }
 }
