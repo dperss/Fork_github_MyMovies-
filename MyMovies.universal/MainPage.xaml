@@ -50,7 +50,6 @@
 
             </GridView>
         </Grid>
-
-
+        <Frame x:Name="myFrame"></Frame>
     </Grid>
 </Page>

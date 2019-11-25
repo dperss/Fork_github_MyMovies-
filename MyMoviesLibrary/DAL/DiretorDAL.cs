@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyMoviesLibrary.BL;
+using MyMovies.BL;
 using System.Data.SqlClient;
-using MyMovies.DAL;
 
-namespace MyMoviesLibrary.DAL
+namespace MyMovies.DAL
 {
-    public class diretorDAL
+    public class DiretorDAL
     {
         public static int Create(Diretor dir)
         {

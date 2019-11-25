@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyMoviesLibrary.DAL;
+using MyMovies.DAL;
 
-namespace MyMoviesLibrary.BL
+namespace MyMovies.BL
 {
     public class Diretor
     {
@@ -23,31 +23,31 @@ namespace MyMoviesLibrary.BL
         }
         public static int Create(Diretor dir)
         {
-            return diretorDAL.Create(dir);
+            return DiretorDAL.Create(dir);
         }
         public static List<Diretor> ReadNome(Diretor dir)
         {
-            return diretorDAL.ReadNome(dir);
+            return DiretorDAL.ReadNome(dir);
         }
         public static Diretor ReadId(Diretor dir)
         {
-            return diretorDAL.ReadId(dir);
+            return DiretorDAL.ReadId(dir);
         }
         public static List<Diretor> ReadAll()
         {
-            return diretorDAL.ReadAll();
+            return DiretorDAL.ReadAll();
         }
         public static int Update(Diretor dir)
         {
-            return diretorDAL.Update(dir);
+            return DiretorDAL.Update(dir);
         }
         public static int Delete(Diretor dir)
         {
-            return diretorDAL.Delete(dir);
+            return DiretorDAL.Delete(dir);
         }
         public static bool CreateTable()
         {
-            return diretorDAL.CreateTable();
+            return DiretorDAL.CreateTable();
         }
 
 

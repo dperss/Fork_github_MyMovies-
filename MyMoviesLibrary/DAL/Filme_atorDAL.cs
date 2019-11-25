@@ -1,11 +1,10 @@
-﻿using MyMovies.DAL;
-using MyMoviesLibrary.BL;
+﻿using MyMovies.BL;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace MyMoviesLibrary.DAL
+namespace MyMovies.DAL
 {
     class Filme_atorDAL
     {

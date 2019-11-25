@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
-using MyMoviesLibrary.BL;
-using MyMovies.DAL;
+using MyMovies.BL;
 
 
 
-namespace MyMoviesLibrary.DAL
+namespace MyMovies.DAL
 {
     public class Avaliacao_comentarioDAL
     {

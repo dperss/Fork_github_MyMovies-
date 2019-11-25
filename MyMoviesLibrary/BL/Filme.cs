@@ -1,9 +1,9 @@
-﻿using MyMoviesLibrary.DAL;
+﻿using MyMovies.DAL;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyMoviesLibrary.BL
+namespace MyMovies.BL
 {
     public class Filme
     {

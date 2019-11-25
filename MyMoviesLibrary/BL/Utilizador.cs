@@ -1,22 +1,23 @@
-﻿using FilmesLibrary.DAL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using MyMovies.DAL;
 
 public enum Tipo { admin = 0, user = 1 };
 
-namespace FilmesLibrary.BL
+namespace MyMovies.BL
 {
-    public class utilizador
+    public class Utilizador
     {
         public int Idutilizador { get; set; } = -1;
         public string Nome { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
         public Tipo Tipo { get; set; }
+        public static DateTime Lastupdate { get; set; }
 
-        public utilizador() { }
-        public utilizador(int idutilizador, string nome, string email, string password, string user_adm)
+        public Utilizador() { }
+        public Utilizador(int idutilizador, string nome, string email, string password, string user_adm)
         {
             this.Idutilizador = idutilizador;
             this.Nome = nome;
@@ -35,33 +36,33 @@ namespace FilmesLibrary.BL
                 $"\nPassword: {Password}" +
                 $"\nTipo: {Tipo}";
         }
-        public static int Create(utilizador u)
+        public static int Create(Utilizador u)
         {
-            return utilizadorDAL.Create(u);
+            return UtilizadorDAL.Create(u);
         }
-        public static List<utilizador> ReadNome(utilizador u)
+        public static List<Utilizador> ReadNome(Utilizador u)
         {
-            return utilizadorDAL.ReadNome(u);
+            return UtilizadorDAL.ReadNome(u);
         }
-        public static utilizador ReadId(utilizador u)
+        public static Utilizador ReadId(Utilizador u)
         {
-            return utilizadorDAL.ReadId(u);
+            return UtilizadorDAL.ReadId(u);
         }
-        public static List<utilizador> ReadAll()
+        public static List<Utilizador> ReadAll()
         {
-            return utilizadorDAL.ReadAll();
+            return UtilizadorDAL.ReadAll();
         }
-        public static int Update(utilizador u)
+        public static int Update(Utilizador u)
         {
-            return utilizadorDAL.Update(u);
+            return UtilizadorDAL.Update(u);
         }
-        public static int Delete(utilizador u)
+        public static int Delete(Utilizador u)
         {
-            return utilizadorDAL.Delete(u);
+            return UtilizadorDAL.Delete(u);
         }
         public static bool CreateTable()
         {
-            return utilizadorDAL.CreateTable();
+            return UtilizadorDAL.CreateTable();
         }
     }
 }
