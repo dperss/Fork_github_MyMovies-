@@ -47,3 +47,8 @@ C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMo
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Registo.xbf

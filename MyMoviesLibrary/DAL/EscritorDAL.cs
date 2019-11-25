@@ -24,7 +24,7 @@ namespace FilmesLibrary.DAL
                 return 0;
             }
         }
-        public static List<Escritor> ReadNome(Escritor e)
+        public static List<Escritor> ReadNome(Escritor e)   
         {
             Database db = new Database();
             string query = "SELECT * FROM Escritor WHERE nome=@nome";

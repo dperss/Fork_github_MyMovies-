@@ -9,12 +9,32 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Frame  x:Name="MyFrame">
-            <Frame.ContentTransitions>
-                <TransitionCollection>
-                    <NavigationThemeTransition  />
-                </TransitionCollection>
-            </Frame.ContentTransitions>
-        </Frame>
+        <NavigationView 
+                        x:Name="NavView"
+    ItemInvoked="NavView_ItemInvoked"
+    Loaded="NavView_Loaded"
+                        IsBackButtonVisible="Visible"
+                        IsBackEnabled="True"
+                Header="Let's go shopping!">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Icon="Home" Content="Home" Tag="Gestão_de_Atores" />
+                <NavigationViewItem Icon="Shop" Content="Shop" Tag="Shop_Page" />
+                <NavigationViewItem  Icon="Shop" Content="message" Tag="message"/>
+                <NavigationViewItem Content="Shopping Cart" Tag="Cart_Page">
+
+                    <NavigationViewItem.Icon>
+                        <FontIcon Glyph="[Insert Hex Decimal Value Here]"/>
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+                <NavigationViewItem Icon="Message" Content="Message" Tag="Message_Page" />
+                <NavigationViewItem Icon="Print" Content="Print" Tag="Print_Page" />
+            </NavigationView.MenuItems>
+
+
+            <ScrollViewer>
+                <Frame x:Name="myFrame"/>
+            </ScrollViewer>
+
+        </NavigationView>
     </Grid>
 </Page>

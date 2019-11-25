@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 using FilmesLibrary.BL;
+using MyMovies.DAL;
 
 namespace FilmesLibrary.DAL
 {
-    public class avaliacao_comentarioDAL
+    public class Avaliacao_comentarioDAL
     {
-        public static int Create(Avaliacao_comentario a)
+        public static int Create(Avaliacao_comentarioDAL a)
         {
             Database db = new Database();
             string query = "INSERT INTO[dbo].[Avaliacao_comentario]([idavaliacao_comentario],[avaliacao],[comentario],[idutilizador],[idfilme])VALUES(@id,@avaliacao,@comentario,@idu,@idf);";
