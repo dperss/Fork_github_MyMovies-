@@ -29,6 +29,12 @@
             <NavigationViewItem>
                 <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
             </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_filmes">Gestão de Filmes</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
+            </NavigationViewItem>
 
         </NavigationView.MenuItems>
         <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>

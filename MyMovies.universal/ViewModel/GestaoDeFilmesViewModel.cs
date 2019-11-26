@@ -39,7 +39,7 @@ namespace MyMovies.universal.ViewModel
 
         }
 
-        public void CreateUtilizador()
+        public void CreateFilme()
         {
 
         }

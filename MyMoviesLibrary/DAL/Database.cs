@@ -7,8 +7,7 @@ namespace MyMovies.DAL
 {
     public class Database
     {
-
-        private SqlConnection connection;
+        SqlConnection connection;
         public Database()
         {
             string server = "projetodai.database.windows.net";
@@ -18,54 +17,37 @@ namespace MyMovies.DAL
             this.connection.Open();
         }
 
-
         public void Close()
-        { //metodo que fecha a base de dados 
-
-
-            connection.Close();
-
-        }
-
-        public SqlDataReader Query(string query, Dictionary<string, object> dic)
         {
-
-
-            SqlCommand command = new SqlCommand(query, connection);
-
-            if (dic != null)
+            this.connection.Close();
+        }
+        public SqlDataReader Query(string query, Dictionary<string, object> d)
+        {
+            SqlCommand command = new SqlCommand(query, this.connection);
+            if (d != null)
             {
-                foreach (KeyValuePair<string, object> keys in dic)
+                foreach (KeyValuePair<string, object> s in d)
                 {
-                    command.Parameters.AddWithValue(keys.Key, keys.Value);
-
+                    command.Parameters.AddWithValue(s.Key, s.Value);
                 }
             }
-
             return command.ExecuteReader();
         }
 
-        public int NonQuery(string query, Dictionary<string, object> dic)
+        public int NonQuery(string query, Dictionary<string, object> d)
         {
-            SqlCommand command = new SqlCommand(query, connection);
-
-            if (dic != null)
+            SqlCommand command = new SqlCommand(query, this.connection);
+            if (d != null)
             {
-                foreach (KeyValuePair<string, object> keys in dic)
+                foreach (KeyValuePair<string, object> s in d)
                 {
-
-                    command.Parameters.AddWithValue(keys.Key, keys.Value);
+                    command.Parameters.AddWithValue(s.Key, s.Value);
                 }
-                
-
             }
-
             return command.ExecuteNonQuery();
         }
 
 
 
     }
-
-
 }

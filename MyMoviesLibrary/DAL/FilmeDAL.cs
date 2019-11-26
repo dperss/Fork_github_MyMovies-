@@ -8,18 +8,26 @@ namespace MyMovies.DAL
 {
    public class FilmeDAL
     {
-        public static void CreateTable()
+        public static bool CreateTable()
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme] (
                             [Idfilme] INT          NOT NULL,
-                            [nome]          VARCHAR (10) NOT NULL,
+                            [nome]          VARCHAR (100) NOT NULL,
                             [duracao]         VARCHAR (10) NOT NULL,
                             [ano]      VARCHAR (10) NOT NULL,
                             PRIMARY KEY CLUSTERED ([Idfilme] ASC));";
-            Filme.Lastupdate = DateTime.Now;
-            db.NonQuery(query, null);
 
+            try
+            {
+                Filme.Lastupdate = DateTime.Now;
+                db.NonQuery(query, null);
+                return true;
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                return false;
+            }
 
         }
 
@@ -27,17 +35,21 @@ namespace MyMovies.DAL
         { //ver se é void e por parametros
 
             Database db = new Database();
-            string query = @"INSERT INTO [dbo].[Filme] ([Idfilme], [nome], [duracao], [ano]) VALUES (@idfilme, @nome, @duracao, @ano)";
-
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            dictionary.Add("@idfilme", f.Idfilme);
-            dictionary.Add("@nome", f.Nome);
-            dictionary.Add("@duracao", f.Duracao);
-            dictionary.Add("@ano", f.Ano);
-            Filme.Lastupdate = DateTime.Now;
-            int result = db.NonQuery(query, dictionary);
-            db.Close();
-            return result;
+            string query = "INSERT INTO[dbo].[Filme]([Idfilme],[nome],[duracao],[ano])VALUES(@id,@nome,@duracao,@ano);";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@id", f.Idfilme);
+            d.Add("@nome", f.Nome);
+            d.Add("@duracao", f.Duracao);
+            d.Add("@ano", f.Ano);
+            try
+            {
+                Filme.Lastupdate = DateTime.Now;
+                return db.NonQuery(query, d);
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                return 0;
+            }
         }
 
 

@@ -42,7 +42,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
-            <TextBlock Text="Gestão de Utilizadores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
+            <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
             <!--<AppBarButton Icon="Filter" Label="Filter by">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
@@ -84,11 +84,10 @@
         SelectionMode="Extended"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador}" Tag="Id"/>
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idfilme}" Tag="Id"/>
                 <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
-                <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" Tag="Email" />
-                <controls:DataGridTextColumn Header="Password" Binding="{Binding Password}" Tag="Password" />
-                <controls:DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" />
+                <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano}" Tag="Ano" />
+                <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao}" Tag="Duracao" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

@@ -26,10 +26,65 @@ namespace MyMovies.universal
         {
             this.InitializeComponent();
         }
-
         private void Botao_login_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Login));
+        }
+
+            private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            if (args.IsSettingsInvoked)
+            {
+                contentFrame.Navigate(typeof(Paginas.Definicoes));
+            }
+            else
+            {
+                TextBlock ItemContent = args.InvokedItem as TextBlock;
+                if (ItemContent != null)
+                {
+                    switch (ItemContent.Tag)
+                    {
+                        case "Nav_Home":
+                            contentFrame.Navigate(typeof(Paginas.Principal));
+                            break;
+                        case "Nav_Login":
+                            contentFrame.Navigate(typeof(Paginas.Login));
+                            break;
+                        case "Nav_Registo":
+                            contentFrame.Navigate(typeof(Paginas.Registo));
+                            break;
+                        case "Nav_Gestao_de_utilizadores":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                            break;
+                        case "Nav_Gestao_de_filmes":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                            break;
+                        case "Nav_Gestao_de_atores":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
+                            break;
+
+                    }
+                }
+
+            }
+        }
+
+        private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+
+        }
+
+        private void nv_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (NavigationViewItemBase item in nv.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "Home_Page")
+                {
+                    nv.SelectedItem = item;
+                    break;
+                }
+            }
+            contentFrame.Navigate(typeof(Paginas.Principal));
         }
 
         
