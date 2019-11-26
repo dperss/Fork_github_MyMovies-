@@ -1,11 +1,10 @@
-﻿using MyMovies.DAL;
-using MyMoviesLibrary.BL;
+﻿using MyMovies.BL;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace MyMoviesLibrary.DAL
+namespace MyMovies.DAL
 {
    public class FilmeDAL
     {
@@ -18,8 +17,8 @@ namespace MyMoviesLibrary.DAL
                             [duracao]         VARCHAR (10) NOT NULL,
                             [ano]      VARCHAR (10) NOT NULL,
                             PRIMARY KEY CLUSTERED ([Idfilme] ASC));";
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            db.NonQuery(query, dictionary);
+            Filme.Lastupdate = DateTime.Now;
+            db.NonQuery(query, null);
 
 
         }
@@ -35,6 +34,7 @@ namespace MyMoviesLibrary.DAL
             dictionary.Add("@nome", f.Nome);
             dictionary.Add("@duracao", f.Duracao);
             dictionary.Add("@ano", f.Ano);
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -71,7 +71,7 @@ namespace MyMoviesLibrary.DAL
 
             dictionary.Add("@duracao", f.Duracao);
 
-
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -86,6 +86,7 @@ namespace MyMoviesLibrary.DAL
 
             dictionary.Add("@ano", f.Ano);
 
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

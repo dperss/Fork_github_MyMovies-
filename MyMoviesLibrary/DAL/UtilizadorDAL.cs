@@ -1,14 +1,14 @@
-﻿using FilmesLibrary.BL;
+﻿using MyMovies.BL;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace FilmesLibrary.DAL
+namespace MyMovies.DAL
 {
-    public class utilizadorDAL
+    public class UtilizadorDAL
     {
-        public static int Create(utilizador u)
+        public static int Create(Utilizador u)
         {
             Database db = new Database();
             string query = "INSERT INTO[dbo].[Utilizador]([idutilizador],[nome],[email],[password],[tipo])VALUES(@id,@nome,@email,@password,@tipo);";
@@ -20,6 +20,7 @@ namespace FilmesLibrary.DAL
             d.Add("@tipo", u.Tipo);
             try
             {
+                Utilizador.Lastupdate = DateTime.Now;
                 return db.NonQuery(query, d);
             }
             catch (System.Data.SqlClient.SqlException)
@@ -28,19 +29,19 @@ namespace FilmesLibrary.DAL
             }
         }
         
-        public static List<utilizador> ReadNome(utilizador u)
+        public static List<Utilizador> ReadNome(Utilizador u)
         {
             Database db = new Database();
             string query = "SELECT * FROM Utilizador WHERE nome=@nome";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            List<utilizador> ulist = new List<utilizador>();
+            List<Utilizador> ulist = new List<Utilizador>();
             d.Add("@nome", u.Nome);
             SqlDataReader row = db.Query(query, d);
             if (row.HasRows == false)
                 return null;
             while (row.Read())
             {
-                u = new utilizador();
+                u = new Utilizador();
                 u.Idutilizador = (int)row["idutilizador"];
                 u.Nome = (string)row["nome"];
                 u.Email = (string)row["email"];
@@ -54,7 +55,7 @@ namespace FilmesLibrary.DAL
             row.Close();
             return ulist;
         }
-        public static utilizador ReadId(utilizador u)
+        public static Utilizador ReadId(Utilizador u)
         {
             Database db = new Database();
             string query = "SELECT * FROM Utilizador WHERE idutilizador=@id;";
@@ -77,18 +78,18 @@ namespace FilmesLibrary.DAL
             row.Close();
             return u;
         }
-        public static List<utilizador> ReadAll()
+        public static List<Utilizador> ReadAll()
         {
             Database db = new Database();
-            utilizador u;
-            List<utilizador> ulist = new List<utilizador>();
+            Utilizador u;
+            List<Utilizador> ulist = new List<Utilizador>();
             string query = "SELECT * FROM Utilizador";
             SqlDataReader row = db.Query(query, null);
             if (!row.HasRows)
                 return null;
             while (row.Read())
             {
-                u = new utilizador();
+                u = new Utilizador();
                 u.Idutilizador = (int)row["idutilizador"];
                 u.Nome = (string)row["nome"];
                 u.Email = (string)row["email"];
@@ -103,7 +104,7 @@ namespace FilmesLibrary.DAL
             return ulist;
             
         }
-        public static int Update(utilizador u)
+        public static int Update(Utilizador u)
         {
             Database db = new Database();
             string query = "UPDATE [Utilizador] SET[nome] = @nome, [email] = @email, [password] = @password, [tipo] = @tipo WHERE idutilizador = @id;";
@@ -118,6 +119,7 @@ namespace FilmesLibrary.DAL
                 d.Add("@tipo", "user");
             try
             {
+                Utilizador.Lastupdate = DateTime.Now;
                 return db.NonQuery(query, d);
             }
             catch (System.Data.SqlClient.SqlException)
@@ -125,7 +127,7 @@ namespace FilmesLibrary.DAL
                 return 0;
             }
         }
-        public static int Delete(utilizador u)
+        public static int Delete(Utilizador u)
         {
             Database db = new Database();
             string query = "DELETE FROM Utilizador WHERE idutilizador =@id;";
@@ -145,6 +147,7 @@ namespace FilmesLibrary.DAL
                              ";
             try
             {
+                Utilizador.Lastupdate = DateTime.Now;
                 db.NonQuery(query, null);
                 return true;
 

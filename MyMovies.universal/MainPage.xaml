@@ -9,49 +9,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition />
-            <RowDefinition Height="5*"/>
-        </Grid.RowDefinitions>
+    <NavigationView x:Name="nv"
+                    Loaded="nv_Loaded"
+                    Margin="0,12,0,0"
+                    SelectionChanged="nv_SelectionChanged"
+                    ItemInvoked="nv_ItemInvoked"
+                    IsTabStop="False"
+                    Header="MyMovies">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Home" Tag="Home_Page">
+                <TextBlock Tag="Nav_Home"></TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Tag="Login_Page">
+                <TextBlock Tag="Nav_Login">Login</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Tag="Registo_Page">
+                <TextBlock Tag="Nav_Registo">Registo</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
+            </NavigationViewItem>
 
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="7*"/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="1">
-                <Button  Width ="100" Height="50"  HorizontalAlignment="Right" >
-                    <Image Source="Assets\EditDocument-512.png" />
-                </Button>
-            </Grid>
-            <Grid Grid.Column="2">
-                <Button x:Name="Botao_login" Click="Login_Click" Width ="100" Height="50"   HorizontalAlignment="Center"   >
-                    <Image Source="Assets\Untitled-1.png" />
-                </Button>
-            </Grid>
-            <Frame x:Name="MyFrame"/>
-        </Grid>
-        <Grid Grid.Row="1">
-            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
-                <PivotItem Header="Recentes"/>
-                <PivotItem Header="Mais Vistos"/>
-                <PivotItem Header="Melhor Classificados"/>
-            </Pivot>
-        </Grid>
-        <Grid Grid.Row="2">
-            <Rectangle Fill="Gray" Opacity="0.8" />
-            <GridView>
-
-
-            </GridView>
-        </Grid>
-
-
-    </Grid>
+        </NavigationView.MenuItems>
+        <Frame x:Name="contentFrame"></Frame>
+    </NavigationView>
 </Page>

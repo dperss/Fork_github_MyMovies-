@@ -1,22 +1,28 @@
-﻿using MyMoviesLibrary.DAL;
+﻿using MyMovies.DAL;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MyMoviesLibrary.BL
+namespace MyMovies.BL
 {
     public class Filme
     {
         public int Idfilme { get; set; }
         public string Nome { get; set; }
         public string Ano { get; set; }
-        public string Duracao { get; set; } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME
+        public string Duracao { get; set; } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
+
+        public static DateTime Lastupdate { get; set; }
 
 
         public static int Create(Filme f)
         {
 
             return FilmeDAL.Create(f); //Este metodo vai ser estatico
+        }
+        public static List<Filme> ReadAll()
+        {
+            return FilmeDAL.ReadAll();
         }
         public static int Update(Filme f)
         {

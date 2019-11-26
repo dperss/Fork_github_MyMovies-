@@ -11,10 +11,11 @@ namespace MyMovies.DAL
         private SqlConnection connection;
         public Database()
         {
-            //... codigo de conecção à base dados e abertura (sql connection e o open)
-            //estava a dar erro aqui pq fiz primeiro SqlConnection connection = new .... não é preciso pq ja esta criado em cima e estou a criar 2x
-            connection = new SqlConnection("Server=tcp:dpersss.database.windows.net,1433;Initial Catalog=AID_teste;Persist Security Info=False;User ID=dpers;Password=Hct4k#qap0YgwPcp;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
-            connection.Open();
+            string server = "projetodai.database.windows.net";
+            string user = "mig50";
+            string pass = "ProjetoDAI202019";
+            this.connection = new SqlConnection($"Server=tcp:{server},1433;Initial Catalog=ProjetoDAI;Persist Security Info=False;User ID={user};Password={pass};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            this.connection.Open();
         }
 
 
@@ -41,13 +42,11 @@ namespace MyMovies.DAL
                 }
             }
 
-            SqlDataReader row = command.ExecuteReader();
-            return row;
+            return command.ExecuteReader();
         }
 
         public int NonQuery(string query, Dictionary<string, object> dic)
         {
-            int result = 0;
             SqlCommand command = new SqlCommand(query, connection);
 
             if (dic != null)
@@ -57,11 +56,11 @@ namespace MyMovies.DAL
 
                     command.Parameters.AddWithValue(keys.Key, keys.Value);
                 }
-                result = command.ExecuteNonQuery(); //devolve 0 ou 1
+                
 
             }
 
-            return result;
+            return command.ExecuteNonQuery();
         }
 
 

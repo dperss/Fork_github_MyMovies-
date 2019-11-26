@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using MyMoviesLibrary.DAL;
+using MyMovies.DAL;
 
-namespace MyMoviesLibrary.BL
+namespace MyMovies.BL
 {
     public class Filme_escritor
     {
