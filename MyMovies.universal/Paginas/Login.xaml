@@ -11,7 +11,7 @@
     <Grid HorizontalAlignment="Left" Width="1500">
 
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="Fill"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>

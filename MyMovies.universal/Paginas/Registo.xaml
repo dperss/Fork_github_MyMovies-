@@ -9,6 +9,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
 
     </Grid>
 </Page>
