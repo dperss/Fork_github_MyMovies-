@@ -35,6 +35,8 @@
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.Definicoes" />
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -51,6 +53,8 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Style" />
+      <RootProperty Name="Tag" />
+      <RootProperty Name="Inlines" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -93,6 +97,7 @@
       <RootProperty Name="Binding" />
       <RootProperty Name="Tag" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeUtilizadores" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -115,10 +120,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -130,28 +134,22 @@
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="MyMovies.universal.Login" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
-    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
-      <RootProperty Name="Fill" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.GridView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
-      <RootProperty Name="Background" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="Items" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsTabStop" />
       <RootProperty Name="Header" />
+      <RootProperty Name="MenuItems" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Loaded" />
+      <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="ItemInvoked" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Image">
-      <RootProperty Name="Source" />
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Tag" />
+      <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="MyMovies.universal.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
       <RootProperty Name="PlaceholderText" />
@@ -161,6 +159,14 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
+      <RootProperty Name="Fill" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="MyMovies.universal.Pagina_Filmes" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
@@ -172,5 +178,7 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="MyMovies.universal.Perfil" />
+    <RootType FullName="MyMovies.universal.Paginas.Principal" />
+    <RootType FullName="MyMovies.universal.Paginas.Registo" />
   </Roots.RootTypes>
 </Roots>

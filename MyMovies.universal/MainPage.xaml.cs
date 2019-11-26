@@ -25,11 +25,59 @@ namespace MyMovies.universal
         public MainPage()
         {
             this.InitializeComponent();
-            myFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
-            
         }
 
-        
+        private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            if (args.IsSettingsInvoked)
+            {
+                contentFrame.Navigate(typeof(Paginas.Definicoes));
+            }
+            else
+            {
+                TextBlock ItemContent = args.InvokedItem as TextBlock;
+                if (ItemContent != null)
+                {
+                    switch (ItemContent.Tag)
+                    {
+                        case "Nav_Home":
+                            contentFrame.Navigate(typeof(Paginas.Principal));
+                            break;
+                        case "Nav_Login":
+                            contentFrame.Navigate(typeof(Login));
+                            break;
+                        case "Nav_Registo":
+                            contentFrame.Navigate(typeof(Paginas.Registo));
+                            break;
+                        case "Nav_Gestao_de_utilizadores":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                            break;
+
+                    }
+                }
+
+            }
+        }
+
+        private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+
+        }
+
+        private void nv_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (NavigationViewItemBase item in nv.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "Home_Page")
+                {
+                    nv.SelectedItem = item;
+                    break;
+                }
+            }
+            contentFrame.Navigate(typeof(Paginas.Principal));
+        }
+
+
     }
 }
 

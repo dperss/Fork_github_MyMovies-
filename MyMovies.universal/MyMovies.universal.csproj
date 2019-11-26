@@ -119,6 +119,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Definicoes.xaml.cs">
+      <DependentUpon>Definicoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\GestaoDeAtores.xaml.cs">
+      <DependentUpon>GestaoDeAtores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\GestaoDeFilmes.xaml.cs">
+      <DependentUpon>GestaoDeFilmes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\GestaoDeUtilizadores.xaml.cs">
       <DependentUpon>GestaoDeUtilizadores.xaml</DependentUpon>
     </Compile>
@@ -134,7 +143,15 @@
     <Compile Include="Paginas\Perfil.xaml.cs">
       <DependentUpon>Perfil.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Principal.xaml.cs">
+      <DependentUpon>Principal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Registo.xaml.cs">
+      <DependentUpon>Registo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\GestaoDeAtoresViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeFilmesViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeUtilizadoresViewModel.cs" />
     <Compile Include="ViewModel\Pagina_Inicial_ViewModel.cs" />
   </ItemGroup>
@@ -169,6 +186,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Paginas\Definicoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\GestaoDeAtores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\GestaoDeFilmes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\GestaoDeUtilizadores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -186,6 +215,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paginas\Perfil.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\Principal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\Registo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

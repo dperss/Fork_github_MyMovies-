@@ -121,6 +121,15 @@
     <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
+      <PackagePath>Paginas\Definicoes.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
+      <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
+      <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
     </AppxPackagedFile>
@@ -135,6 +144,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
+      <PackagePath>Paginas\Principal.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
+      <PackagePath>Paginas\Registo.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

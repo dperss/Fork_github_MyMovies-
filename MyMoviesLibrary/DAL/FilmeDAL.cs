@@ -17,8 +17,8 @@ namespace MyMovies.DAL
                             [duracao]         VARCHAR (10) NOT NULL,
                             [ano]      VARCHAR (10) NOT NULL,
                             PRIMARY KEY CLUSTERED ([Idfilme] ASC));";
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            db.NonQuery(query, dictionary);
+            Filme.Lastupdate = DateTime.Now;
+            db.NonQuery(query, null);
 
 
         }
@@ -34,6 +34,7 @@ namespace MyMovies.DAL
             dictionary.Add("@nome", f.Nome);
             dictionary.Add("@duracao", f.Duracao);
             dictionary.Add("@ano", f.Ano);
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -70,7 +71,7 @@ namespace MyMovies.DAL
 
             dictionary.Add("@duracao", f.Duracao);
 
-
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -85,6 +86,7 @@ namespace MyMovies.DAL
 
             dictionary.Add("@ano", f.Ano);
 
+            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

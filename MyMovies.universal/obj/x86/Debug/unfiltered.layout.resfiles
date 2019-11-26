@@ -19,9 +19,14 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 MyMovies.universal.xr.xml
+Paginas\Definicoes.xbf
+Paginas\GestaoDeAtores.xbf
+Paginas\GestaoDeFilmes.xbf
 Paginas\GestaoDeUtilizadores.xbf
 Paginas\Login.xbf
 Paginas\Pagina_Filmes.xbf
 Paginas\Perfil.xbf
+Paginas\Principal.xbf
+Paginas\Registo.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UWP.ViewModels
+namespace MyMovies.universal.ViewModel
 {
     public class GestaoDeUtilizadoresViewModel
     {
