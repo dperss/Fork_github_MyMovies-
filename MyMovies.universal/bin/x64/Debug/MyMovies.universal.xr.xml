@@ -177,6 +177,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="MyMovies.universal.Perfil" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
