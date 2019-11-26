@@ -9,7 +9,49 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
 
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Button  Width ="100" Height="50"  HorizontalAlignment="Right" >
+                    <Image Source="/Assets\EditDocument-512.png" />
+                </Button>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button x:ConnectionId='3' x:Name="Botao_login"                           Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                    <Image Source="/Assets\Untitled-1.png" />
+                </Button>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
+                <PivotItem Header="Recentes"/>
+                <PivotItem Header="Mais Vistos"/>
+                <PivotItem Header="Melhor Classificados"/>
+            </Pivot>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Rectangle Fill="Gray" Opacity="0.8" />
+            <GridView x:ConnectionId='2' 
+                x:Name="Filmes"
+                SelectionMode="Single"
+               
+                />
+
+        </Grid>
     </Grid>
 </Page>
 

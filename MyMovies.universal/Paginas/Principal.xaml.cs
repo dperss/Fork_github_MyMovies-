@@ -26,5 +26,9 @@ namespace MyMovies.universal.Paginas
         {
             this.InitializeComponent();
         }
+        private void Botao_login_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Paginas.Login));
+        }
     }
 }

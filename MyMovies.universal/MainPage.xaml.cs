@@ -26,12 +26,7 @@ namespace MyMovies.universal
         {
             this.InitializeComponent();
         }
-        private void Botao_login_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Login));
-        }
-
-            private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
             if (args.IsSettingsInvoked)
             {
@@ -87,7 +82,9 @@ namespace MyMovies.universal
             contentFrame.Navigate(typeof(Paginas.Principal));
         }
 
-        
+
+
+
     }
 }
 

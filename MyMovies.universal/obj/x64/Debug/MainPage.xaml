@@ -10,11 +10,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
 
-    <NavigationView x:Name="nv"
-                    Loaded="nv_Loaded"
+    <NavigationView x:ConnectionId='2' x:Name="nv"
+                                      
                     Margin="0,12,0,0"
-                    SelectionChanged="nv_SelectionChanged"
-                    ItemInvoked="nv_ItemInvoked"
+                                                          
+                                                
                     IsTabStop="False"
                     Header="MyMovies"
                     PaneDisplayMode="LeftCompact">
@@ -39,7 +39,8 @@
             </NavigationViewItem>
 
         </NavigationView.MenuItems>
-        <Frame x:Name="contentFrame"></Frame>
+        <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>
     </NavigationView>
 
 </Page>
+

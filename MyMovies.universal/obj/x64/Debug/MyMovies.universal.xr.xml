@@ -5,10 +5,15 @@
     <RootPropertyPathName Name="First_ascent" />
     <RootPropertyPathName Name="Prominence" />
     <RootPropertyPathName Name="Coordinates" />
+    <RootPropertyPathName Name="Datanascimento" />
+    <RootPropertyPathName Name="Nome" />
+    <RootPropertyPathName Name="Idator" />
+    <RootPropertyPathName Name="Duracao" />
+    <RootPropertyPathName Name="Ano" />
+    <RootPropertyPathName Name="Idfilme" />
     <RootPropertyPathName Name="Tipo" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Email" />
-    <RootPropertyPathName Name="Nome" />
     <RootPropertyPathName Name="Idutilizador" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -37,7 +42,6 @@
       <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Definicoes" />
-    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -55,6 +59,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Style" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Tag" />
+      <RootProperty Name="Inlines" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
@@ -97,6 +103,7 @@
       <RootProperty Name="Binding" />
       <RootProperty Name="Tag" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeUtilizadores" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
@@ -109,10 +116,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -126,7 +133,34 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
-    <RootType FullName="MyMovies.universal.Login" />
+    <RootType FullName="MyMovies.universal.Paginas.Login" />
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsTabStop" />
+      <RootProperty Name="Header" />
+      <RootProperty Name="PaneDisplayMode" />
+      <RootProperty Name="MenuItems" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Loaded" />
+      <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="ItemInvoked" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.NavigationViewItem">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Tag" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
+    <RootType FullName="MyMovies.universal.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="QueryIcon" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
@@ -135,6 +169,16 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Pagina_Filmes" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+    </RootType>
+    <RootType FullName="MyMovies.universal.Perfil" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="SelectionMode" />
     </RootType>
@@ -150,26 +194,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
     </RootType>
-    <RootType FullName="MyMovies.universal.MainPage" />
-    <RootType FullName="Windows.UI.Xaml.Controls.AutoSuggestBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="QueryIcon" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-    </RootType>
-    <RootType FullName="MyMovies.universal.Pagina_Filmes" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="MyMovies.universal.Perfil" />
     <RootType FullName="MyMovies.universal.Paginas.Principal" />
     <RootType FullName="MyMovies.universal.Paginas.Registo" />
   </Roots.RootTypes>
