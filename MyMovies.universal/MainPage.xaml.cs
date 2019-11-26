@@ -52,6 +52,9 @@ namespace MyMovies.universal
                         case "Nav_Gestao_de_utilizadores":
                             contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
                             break;
+                        case "Nav_Gestao_de_filmes":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                            break;
 
                     }
                 }

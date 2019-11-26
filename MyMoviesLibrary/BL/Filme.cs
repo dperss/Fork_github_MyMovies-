@@ -33,9 +33,9 @@ namespace MyMovies.BL
         {
             return FilmeDAL.Delete(f);
         }
-        public static void CreateTable()
+        public static bool CreateTable()
         {
-            FilmeDAL.CreateTable();
+            return FilmeDAL.CreateTable();
         }
     }
 }

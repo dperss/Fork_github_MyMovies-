@@ -5,10 +5,13 @@
     <RootPropertyPathName Name="First_ascent" />
     <RootPropertyPathName Name="Prominence" />
     <RootPropertyPathName Name="Coordinates" />
+    <RootPropertyPathName Name="Duracao" />
+    <RootPropertyPathName Name="Ano" />
+    <RootPropertyPathName Name="Nome" />
+    <RootPropertyPathName Name="Idfilme" />
     <RootPropertyPathName Name="Tipo" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Email" />
-    <RootPropertyPathName Name="Nome" />
     <RootPropertyPathName Name="Idutilizador" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
