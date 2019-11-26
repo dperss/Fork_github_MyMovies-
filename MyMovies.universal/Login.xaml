@@ -11,29 +11,60 @@
     <Grid HorizontalAlignment="Left" Width="1500">
 
         <Grid.Background>
-            <ImageBrush ImageSource="image\capa_login.png" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="0.5*"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="0.5*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.5*" />
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition Height="0.5*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <PersonPicture HorizontalAlignment="Center" VerticalAlignment="Bottom" />
+                </Grid>
+                <Grid Grid.Row="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <TextBlock  Height="100"   />
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="373*"/>
+                            <ColumnDefinition Width="293*"/>
+                        </Grid.ColumnDefinitions>
+                        <PasswordBox  Height="100" Header="Email" PlaceholderText="Enter your Email" PasswordChar="#" Grid.ColumnSpan="2" Margin="0,0,0,-16"  />
+                    </Grid>
+
+
+
+                </Grid>
+            </Grid>
+
+
+        </Grid>
 
 
         <Grid Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Center" Width="750">
-            <PersonPicture ProfilePicture="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"  RenderTransformOrigin="0.44,-0.22" Margin="325,69,325,331" />
-            <Viewbox Grid.Column="1" Margin="225,210,225,177" Grid.Row="1" Stretch="Fill" Width="Auto">
-                <Grid Height="113" Width="300">
-                    <PasswordBox Width="300" Header="Password" PlaceholderText="Enter your password" PasswordChar="#" Margin="0,59,0,0" />
-                    <PasswordBox Width="300" Header="Email" PlaceholderText="Enter your Email" PasswordChar="#" Margin="0,0,0,59" RenderTransformOrigin="0.513,0.34" />
-                </Grid>
-            </Viewbox>
+
+
             <Button Content="REGISTE-SE" Click="Button_Click"  Margin="334,419,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.082,0"/>
             <TextBlock Text="Ainda não tem uma conta? " SelectionChanged="TextBlock_SelectionChanged"  Margin="296,387,275,89"/>
             <Button Content="Esqueceu-se da sua password?" Click="Button_Click" RenderTransformOrigin="8.444,9.953" Margin="225,339,0,0" VerticalAlignment="Top" Width="215" />

@@ -26,5 +26,7 @@ namespace MyMovies.universal
         {
             this.InitializeComponent();
         }
+
+        
     }
 }

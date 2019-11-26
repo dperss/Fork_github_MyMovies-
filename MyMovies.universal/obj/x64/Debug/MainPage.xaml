@@ -31,11 +31,11 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:Name="Botao_login" Click="Login_Click" Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                <Button x:ConnectionId='3' x:Name="Botao_login"                     Width ="100" Height="50"   HorizontalAlignment="Center"   >
                     <Image Source="Assets\Untitled-1.png" />
                 </Button>
             </Grid>
-            <Frame x:Name="MyFrame"/>
+            <Frame x:ConnectionId='2' x:Name="MyFrame"/>
         </Grid>
         <Grid Grid.Row="1">
             <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
@@ -55,3 +55,4 @@
 
     </Grid>
 </Page>
+
