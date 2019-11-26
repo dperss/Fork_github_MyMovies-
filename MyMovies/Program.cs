@@ -10,13 +10,14 @@ namespace MyMovies
     {
         static void Main(string[] args)
         {
-            Filme f = new Filme();
-            f.Ano = "1985";
-            f.Duracao = "1h56m";
-            f.Idfilme = 1;
-            f.Nome = "Back To The Future";
-            Console.WriteLine(Filme.Create(f));
-
+            foreach(Utilizador u in Utilizador.ReadAll())
+            {
+                Console.WriteLine(u);
+            }
+            foreach(Ator a in Ator.ReadAll())
+            {
+                Console.WriteLine(a);
+            }
         }
     }
 

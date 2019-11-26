@@ -44,7 +44,7 @@ namespace MyMovies.universal
                             contentFrame.Navigate(typeof(Paginas.Principal));
                             break;
                         case "Nav_Login":
-                            contentFrame.Navigate(typeof(Login));
+                            contentFrame.Navigate(typeof(Paginas.Login));
                             break;
                         case "Nav_Registo":
                             contentFrame.Navigate(typeof(Paginas.Registo));
@@ -54,6 +54,9 @@ namespace MyMovies.universal
                             break;
                         case "Nav_Gestao_de_filmes":
                             contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                            break;
+                        case "Nav_Gestao_de_atores":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
                             break;
 
                     }

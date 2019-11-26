@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovies.universal.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,12 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class GestaoDeAtores : Page
     {
+        GestaoDeAtoresViewModel GestaoDeAtoresViewModel { get; set; }
         public GestaoDeAtores()
         {
             this.InitializeComponent();
+            GestaoDeAtoresViewModel = new GestaoDeAtoresViewModel();
+            viewAtores.ItemsSource = GestaoDeAtoresViewModel.Atores;
         }
     }
 }

@@ -5,9 +5,11 @@
     <RootPropertyPathName Name="First_ascent" />
     <RootPropertyPathName Name="Prominence" />
     <RootPropertyPathName Name="Coordinates" />
+    <RootPropertyPathName Name="Datanascimento" />
+    <RootPropertyPathName Name="Nome" />
+    <RootPropertyPathName Name="Idator" />
     <RootPropertyPathName Name="Duracao" />
     <RootPropertyPathName Name="Ano" />
-    <RootPropertyPathName Name="Nome" />
     <RootPropertyPathName Name="Idfilme" />
     <RootPropertyPathName Name="Tipo" />
     <RootPropertyPathName Name="Password" />
@@ -39,7 +41,6 @@
       <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Definicoes" />
-    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -100,6 +101,7 @@
       <RootProperty Name="Binding" />
       <RootProperty Name="Tag" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeUtilizadores" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
@@ -136,7 +138,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="RenderTransformOrigin" />
     </RootType>
-    <RootType FullName="MyMovies.universal.Login" />
+    <RootType FullName="MyMovies.universal.Paginas.Login" />
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="Margin" />
       <RootProperty Name="IsTabStop" />

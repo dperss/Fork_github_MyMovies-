@@ -11,8 +11,15 @@ namespace MyMovies.BL
         public string Nome { get; set; }
         public string Datanascimento { get; set; }
 
+        public static DateTime Lastupdate { get; set; }
 
 
+        public override String ToString()
+        {
+            return $"Id: {Idator}" +
+                $"\nNome: {Nome}" +
+                $"\nData de Nascimento: {Datanascimento}";
+        }
         public static int Create(Ator a)
         {
 
@@ -27,14 +34,14 @@ namespace MyMovies.BL
         {
             return AtorDAL.Delete(a);
         }
-        public static void CreateTable()
+        public static bool CreateTable()
         {
-            AtorDAL.CreateTable();
+            return AtorDAL.CreateTable();
         }
 
         public static List<Ator> ReadAll()
         {
-            return Ator.ReadAll();
+            return AtorDAL.ReadAll();
         }
 
 

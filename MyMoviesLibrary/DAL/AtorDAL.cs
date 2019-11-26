@@ -8,17 +8,27 @@ namespace MyMovies.DAL
 {
     class AtorDAL
     {
-        public static void CreateTable()
+        public static bool CreateTable()
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Ator] (
                             [idator] INT          NOT NULL,
-                            [nome]          VARCHAR (10) NOT NULL,
+                            [nome]          VARCHAR (100) NOT NULL,
                             [datanascimento]         VARCHAR (10) NOT NULL,
                             PRIMARY KEY CLUSTERED ([idator] ASC));";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            db.NonQuery(query, dictionary);
 
+
+            try
+            {
+                db.NonQuery(query, dictionary);
+                Ator.Lastupdate = DateTime.Now;
+                return true;
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                return false;
+            }
 
         }
 
@@ -26,13 +36,14 @@ namespace MyMovies.DAL
         { //ver se é void e por parametros
 
             Database db = new Database();
-            string query = @"INSERT INTO [dbo].[Ator] ([Idator], [Nome], [Datanascimento]) VALUES (@idator, @nome, @datanascimento)";
+            string query = @"INSERT INTO [dbo].[Ator] ([idator], [nome], [datanascimento]) VALUES (@idator, @nome, @datanascimento)";
 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             dictionary.Add("@idator", a.Idator);
             dictionary.Add("@nome", a.Nome);
             dictionary.Add("@datanascimento", a.Datanascimento);
-            
+
+            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -42,22 +53,23 @@ namespace MyMovies.DAL
         public static List<Ator> ReadAll()
         {
             Database db = new Database();
+            Ator a;
+            List<Ator> alist = new List<Ator>();
             string query = "SELECT * FROM Ator";
-            List<Ator> lista = new List<Ator>();
-
             SqlDataReader row = db.Query(query, null);
+            if (!row.HasRows)
+                return null;
             while (row.Read())
             {
-                Ator a = new Ator();
+                a = new Ator();
                 a.Idator = (int)row["idator"];
                 a.Nome = (string)row["nome"];
-                a.Datanascimento= (string)row["datanascimento"]; //falta ver qual o tipo para ano e para a duração
-               
-                lista.Add(a);
+                a.Datanascimento = (string)row["datanascimento"];
+                alist.Add(a);
             }
             row.Close();
+            return alist;
 
-            return lista;
 
         }
 
@@ -69,7 +81,7 @@ namespace MyMovies.DAL
 
             dictionary.Add("@datanascimento", a.Datanascimento);
 
-
+            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -84,6 +96,7 @@ namespace MyMovies.DAL
 
             dictionary.Add("@datanascimento", a.Datanascimento);
 
+            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

@@ -42,7 +42,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
-            <TextBlock Text="Gestão de Utilizadores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
+            <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
             <!--<AppBarButton Icon="Filter" Label="Filter by">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
