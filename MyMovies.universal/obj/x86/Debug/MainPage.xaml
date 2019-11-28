@@ -9,18 +9,19 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <NavigationView x:ConnectionId='2' x:Name="nv"
                                       
                     Margin="0,12,0,0"
                                                           
                                                 
                     IsTabStop="False"
-                    Header="MyMovies">
+                    PaneDisplayMode="LeftCompact">
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="Home" Tag="Home_Page">
                 <TextBlock Tag="Nav_Home"></TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Tag="Login_Page">
+            <NavigationViewItem Tag="Login_Page" Icon="OtherUser">
                 <TextBlock Tag="Nav_Login">Login</TextBlock>
             </NavigationViewItem>
             <NavigationViewItem Tag="Registo_Page">
@@ -39,5 +40,6 @@
         </NavigationView.MenuItems>
         <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>
     </NavigationView>
+
 </Page>
 

@@ -16,7 +16,7 @@ namespace MyMovies.universal.ViewModel
         {
             List <Utilizador> lista = Utilizador.ReadAll();
             utilizadores = new ObservableCollection<Utilizador>(lista);
-            Lastupdate = DateTime.Now;
+            Lastupdate = DateTime.Now;//atualizar a lista ao inserir na base de dados em vez de usar esta variável
         }
         public ObservableCollection<Utilizador> Utilizadores {
             get

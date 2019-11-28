@@ -15,6 +15,7 @@ namespace MyMovies.BL
         public static DateTime Lastupdate { get; set; }
 
 
+
         public static int Create(Filme f)
         {
 

@@ -41,16 +41,16 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                      <Grid Grid.Row="0">
-                    <TextBox Text="Email" Height="40" Width="500" Background="LightSteelBlue"/>
+                    <TextBox PlaceholderText="Email" Height="40" Width="500" Background="LightSteelBlue" x:Name="EmailTextBox"/>
                      </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox Text="Nome" Height="40" Width="500" Background="LightSteelBlue"/>
+                    <TextBox PlaceholderText="Nome" Height="40" Width="500" Background="LightSteelBlue" x:Name="NomeTextBox"/>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <TextBox Text="Password" Height="40" Width="500" Background="LightSteelBlue"/>
+                    <PasswordBox PlaceholderText="Password" Height="40" Width="500" Background="LightSteelBlue" x:Name="PasswordBox"/>
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Button Content="Submeter" HorizontalAlignment="Center" Background="Gray"/>
+                    <Button Content="Submeter" HorizontalAlignment="Center" Background="Gray" Click="Button_Submeter"/>
                 </Grid>
            </Grid>
         </Grid>
