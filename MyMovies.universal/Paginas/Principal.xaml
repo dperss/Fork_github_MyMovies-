@@ -45,12 +45,18 @@
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
-            <GridView 
-                x:Name="Filmes"
-                SelectionMode="Single"
-               
-                />
-
+            <GridView x:Name="Filmes"
+                      SelectionMode="Single">
+                <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <Image  Stretch="UniformToFill" Width="190" Height="130" />
+                    </DataTemplate>
+                  
+                </GridView.ItemTemplate>
+                
+            </GridView> 
         </Grid>
     </Grid>
 </Page>

@@ -8,6 +8,6 @@ namespace MyMovies.universal.ViewModel
 {
     class Pagina_Inicial_ViewModel
     {
-
+        
     }
 }
