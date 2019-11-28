@@ -137,7 +137,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.NavigationView">
       <RootProperty Name="Margin" />
       <RootProperty Name="IsTabStop" />
-      <RootProperty Name="Header" />
       <RootProperty Name="PaneDisplayMode" />
       <RootProperty Name="MenuItems" />
       <RootProperty Name="Content" />

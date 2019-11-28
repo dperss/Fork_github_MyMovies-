@@ -16,7 +16,6 @@
                                                           
                                                 
                     IsTabStop="False"
-                    Header="MyMovies"
                     PaneDisplayMode="LeftCompact">
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="Home" Tag="Home_Page">
