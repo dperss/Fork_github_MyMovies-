@@ -13,7 +13,7 @@ namespace MyMovies.BL
         public string Duracao { get; set; } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
 
         public static DateTime Lastupdate { get; set; }
-
+        public byte[] Foto { get; set; }
 
 
         public static int Create(Filme f)
