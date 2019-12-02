@@ -12,36 +12,29 @@ namespace MyMovies.universal.ViewModel
     public class GestaoDeAtoresViewModel
     {
         ObservableCollection<Ator> atores;
-        DateTime Lastupdate { get; set; }
         public GestaoDeAtoresViewModel()
         {
             List<Ator> lista = Ator.ReadAll();
             atores = new ObservableCollection<Ator>(lista);
-            Lastupdate = DateTime.Now;
         }
         public ObservableCollection<Ator> Atores
         {
             get
             {
-                if (this.Lastupdate >= Ator.Lastupdate)
-                {
                     return atores;
-                }
-                else
-                {
-                    List<Ator> lista = Ator.ReadAll();
-                    atores = new ObservableCollection<Ator>(lista);
-                    Lastupdate = DateTime.Now;
-                    return atores;
-                }
 
             }
 
         }
 
-        public void CreateAtor()
+        public bool CreateAtor(Ator a)
         {
-
+            if (Ator.Create(a) == 1)
+            {
+                atores.Add(a);
+                return true;
+            }
+            return false;
         }
     }
 }

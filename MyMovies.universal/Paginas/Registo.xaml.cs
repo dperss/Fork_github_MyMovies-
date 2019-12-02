@@ -38,7 +38,8 @@ namespace MyMovies.universal.Paginas
             u.Nome = NomeTextBox.Text;
             u.Password = PasswordBox.Password;
             u.Tipo = Tipo.user;
-            GestaoDeUtilizadoresViewModel.CreateUtilizador(u);
+            GestaoDeUtilizadoresViewModel.CreateUtilizador(u);//como é que mostro mensagens de erro dependendo do return desta funcao?
+            //levar para outra página
         }
     }
 }

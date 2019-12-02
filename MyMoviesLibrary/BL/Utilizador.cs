@@ -14,7 +14,6 @@ namespace MyMovies.BL
         public string Email { get; set; }
         public string Password { get; set; }
         public Tipo Tipo { get; set; }
-        public static DateTime Lastupdate { get; set; }
 
         public Utilizador() { }
         public Utilizador(int idutilizador, string nome, string email, string password, string user_adm)

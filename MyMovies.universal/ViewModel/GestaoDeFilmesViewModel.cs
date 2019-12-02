@@ -11,37 +11,30 @@ namespace MyMovies.universal.ViewModel
     public class GestaoDeFilmesViewModel
     {
         ObservableCollection<Filme> filmes;
-        DateTime Lastupdate { get; set; }
 
         public GestaoDeFilmesViewModel()
         {
             List<Filme> lista = Filme.ReadAll();
             filmes = new ObservableCollection<Filme>(lista);
-            Lastupdate = DateTime.Now;
         }
         public ObservableCollection<Filme> Filmes
         {
             get
             {
-                if (this.Lastupdate >= Filme.Lastupdate)
-                {
                     return filmes;
-                }
-                else
-                {
-                    List<Filme> lista = Filme.ReadAll();
-                    filmes = new ObservableCollection<Filme>(lista);
-                    Lastupdate = DateTime.Now;
-                    return filmes;
-                }
 
             }
 
         }
 
-        public void CreateFilme()
+        public bool CreateFilme(Filme f)
         {
-
+            if (Filme.Create(f) == 1)
+            {
+                filmes.Add(f);
+                return true;
+            }
+            return false;
         }
     }
 }

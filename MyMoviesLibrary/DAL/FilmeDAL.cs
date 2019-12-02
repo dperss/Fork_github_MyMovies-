@@ -20,7 +20,6 @@ namespace MyMovies.DAL
 
             try
             {
-                Filme.Lastupdate = DateTime.Now;
                 db.NonQuery(query, null);
                 return true;
             }
@@ -43,7 +42,6 @@ namespace MyMovies.DAL
             d.Add("@ano", f.Ano);
             try
             {
-                Filme.Lastupdate = DateTime.Now;
                 return db.NonQuery(query, d);
             }
             catch (System.Data.SqlClient.SqlException)
@@ -83,7 +81,6 @@ namespace MyMovies.DAL
 
             dictionary.Add("@duracao", f.Duracao);
 
-            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -98,7 +95,6 @@ namespace MyMovies.DAL
 
             dictionary.Add("@ano", f.Ano);
 
-            Filme.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

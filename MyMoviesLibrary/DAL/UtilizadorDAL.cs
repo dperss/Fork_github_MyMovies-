@@ -20,7 +20,6 @@ namespace MyMovies.DAL
             d.Add("@tipo", u.Tipo.ToString());
             try
             {
-                Utilizador.Lastupdate = DateTime.Now;
                 return db.NonQuery(query, d);
             }
             catch (System.Data.SqlClient.SqlException)
@@ -116,7 +115,6 @@ namespace MyMovies.DAL
             d.Add("@tipo", u.Tipo.ToString());
             try
             {
-                Utilizador.Lastupdate = DateTime.Now;
                 return db.NonQuery(query, d);
             }
             catch (System.Data.SqlClient.SqlException)
@@ -144,7 +142,6 @@ namespace MyMovies.DAL
                              ";
             try
             {
-                Utilizador.Lastupdate = DateTime.Now;
                 db.NonQuery(query, null);
                 return true;
 
