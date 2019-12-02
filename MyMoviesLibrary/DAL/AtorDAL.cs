@@ -12,7 +12,7 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Ator] (
-                            [idator] INT          NOT NULL,
+                            [idator] INT IDENTITY(1,1)         NOT NULL,
                             [nome]          VARCHAR (100) NOT NULL,
                             [datanascimento]         VARCHAR (10) NOT NULL,
                             PRIMARY KEY CLUSTERED ([idator] ASC));";

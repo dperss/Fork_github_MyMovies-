@@ -151,7 +151,7 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Avaliacao_comentario] (
-                             idavaliacao_comentario INT PRIMARY KEY NOT NULL,
+                             idavaliacao_comentario INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
                              avaliacao INT NOT NULL,
                              comentario varchar(300) NOT NULL,
                              idutilizador INT NOT NULL,
