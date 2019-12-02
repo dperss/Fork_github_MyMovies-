@@ -25,12 +25,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Button x:ConnectionId='4' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
+                <Button x:ConnectionId='5' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='3' x:Name="Botao_login"                           Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                <Button x:ConnectionId='4' x:Name="Botao_login"                           Width ="100" Height="50"   HorizontalAlignment="Center"   >
                     <Image Source="/Assets\Untitled-1.png" />
                 </Button>
             </Grid>
@@ -45,12 +45,18 @@
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
-            <GridView x:ConnectionId='2' 
-                x:Name="Filmes"
-                SelectionMode="Single"
-               
-                />
-
+            <GridView x:ConnectionId='2' x:Name="Filmes"
+                      SelectionMode="Single">
+                <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <Image  Stretch="UniformToFill" Width="190" Height="130" />
+                    </DataTemplate>
+                  
+                </GridView.ItemTemplate>
+                
+            </GridView> 
         </Grid>
     </Grid>
 </Page>

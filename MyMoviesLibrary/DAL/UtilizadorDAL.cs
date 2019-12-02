@@ -11,13 +11,13 @@ namespace MyMovies.DAL
         public static int Create(Utilizador u)
         {
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Utilizador]([idutilizador],[nome],[email],[password],[tipo])VALUES(@id,@nome,@email,@password,@tipo);";
+            string query = "INSERT INTO[dbo].[Utilizador]([nome],[email],[password],[tipo])VALUES(@nome,@email,@password,@tipo);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", u.Idutilizador);
+            //d.Add("@id", u.Idutilizador);
             d.Add("@nome", u.Nome);
             d.Add("@email", u.Email);
             d.Add("@password", u.Password);
-            d.Add("@tipo", u.Tipo);
+            d.Add("@tipo", u.Tipo.ToString());
             try
             {
                 Utilizador.Lastupdate = DateTime.Now;
@@ -113,10 +113,7 @@ namespace MyMovies.DAL
             d.Add("@nome", u.Nome);
             d.Add("@email", u.Email);
             d.Add("@password", u.Password);
-            if (u.Tipo.ToString().Equals("admin"))
-                d.Add("@tipo", "admin");
-            else
-                d.Add("@tipo", "user");
+            d.Add("@tipo", u.Tipo.ToString());
             try
             {
                 Utilizador.Lastupdate = DateTime.Now;
@@ -130,7 +127,7 @@ namespace MyMovies.DAL
         public static int Delete(Utilizador u)
         {
             Database db = new Database();
-            string query = "DELETE FROM Utilizador WHERE idutilizador =@id;";
+            string query = "DELETE FROM Utilizador WHERE idutilizador = @id;";
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@id", u.Idutilizador);
             return db.NonQuery(query, d);
@@ -139,11 +136,11 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Utilizador] (
-                             idutilizador INT PRIMARY KEY NOT NULL,
+                             idutilizador INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
                              nome varchar(100) NOT NULL,
                              email varchar(100) NOT NULL,
                              password varchar(45) NOT NULL,
-                             tipo varchar(10) NOT NULL CHECK (name IN('admin', 'user')));
+                             tipo varchar(10) NOT NULL CHECK (tipo IN('admin', 'user')));
                              ";
             try
             {

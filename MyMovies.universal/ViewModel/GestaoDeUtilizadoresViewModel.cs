@@ -37,9 +37,21 @@ namespace MyMovies.universal.ViewModel
          
         }
 
-        public void CreateUtilizador()
+        public bool CreateUtilizador(Utilizador u)
         {
-
+            foreach(Utilizador x in utilizadores)
+            {
+                if (x.Email == u.Email)
+                {
+                    return false;
+                }
+            }
+            if(Utilizador.Create(u) == 1)
+            {
+                utilizadores.Add(u);
+                return true;
+            }
+            return false;
         }
     }
 }

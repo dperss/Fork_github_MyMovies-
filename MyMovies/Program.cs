@@ -10,13 +10,17 @@ namespace MyMovies
     {
         static void Main(string[] args)
         {
-            foreach(Utilizador u in Utilizador.ReadAll())
+            Console.WriteLine(Utilizador.CreateTable());
+            Utilizador u = new Utilizador();
+            u.Email = "example@email.com";
+            u.Nome = "Miguel";
+            u.Password = "1232";
+            u.Tipo = Tipo.admin;
+            
+            Utilizador.Create(u);
+            foreach (Utilizador x in Utilizador.ReadAll())
             {
-                Console.WriteLine(u);
-            }
-            foreach(Ator a in Ator.ReadAll())
-            {
-                Console.WriteLine(a);
+                Console.WriteLine(x);
             }
         }
     }
