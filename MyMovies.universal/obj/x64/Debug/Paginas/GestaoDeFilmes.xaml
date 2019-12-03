@@ -59,9 +59,9 @@
             <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                           />
-                    <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                             />
-                    <AppBarButton x:ConnectionId='6' Icon="Edit" Label="Editar"                             />
+                    <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                              />
+                    
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>

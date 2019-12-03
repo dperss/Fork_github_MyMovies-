@@ -59,8 +59,8 @@
             <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton Icon="Add" Label="Adicionar" Click="AppBarButton_Click"/>
-                    <AppBarButton Icon="Delete" Label="Eliminar" Click="AppBarButton_Click_1"/>
+                    <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Atores_Botao"/>
+                    <AppBarButton Icon="Delete" Label="Eliminar" Click="Eliminar_Atores_Botao"/>
 
                 </CommandBar.SecondaryCommands>
             </CommandBar>

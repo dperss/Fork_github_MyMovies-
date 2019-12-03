@@ -63,7 +63,7 @@
                 <CommandBar.SecondaryCommands>
                     <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                                     />
                     <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                                    />
-                    <AppBarButton x:ConnectionId='6' Icon="Edit" Label="Editar"                                  />
+                    
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
