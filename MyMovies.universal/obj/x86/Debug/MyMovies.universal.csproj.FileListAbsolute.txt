@@ -1,20 +1,15 @@
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MyMovies.universal.csprojAssemblyReference.cache
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.g.i.cs
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.g.cs
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Login.g.i.cs
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Login.g.cs
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.g.i.cs
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.g.cs
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.xaml
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Login.xaml
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.xaml
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.xbf
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Login.xbf
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.xbf
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Login.xbf
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe
@@ -47,11 +42,6 @@ C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMo
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.g.i.cs
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.g.cs
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.xaml
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Registo.xbf
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Registo.xbf
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\MyMovies.universal.csprojAssemblyReference.cache
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\App.g.i.cs
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\App.g.cs
@@ -154,3 +144,61 @@ C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtore
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xaml
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.xbf
 C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.g.i.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.g.cs
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.xaml
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pdb
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\System.Data.SqlClient.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\System.Text.Encoding.CodePages.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.dll
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.pdb
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\en-US\Microsoft.Toolkit.Uwp.UI.Controls.Properties.Resources.resw
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\FxResources.System.Data.SqlClient.SR.resw
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri.xml

@@ -9053,11 +9053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Diogo Ramos\\Desktop\\New folder\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+      "projectUniqueName": "C:\\Users\\Diogo Ramos\\Documents\\MEGAsync\\IPB\\3ºAno\\1ºSemestre\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
       "projectName": "MyMovies.universal",
-      "projectPath": "C:\\Users\\Diogo Ramos\\Desktop\\New folder\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+      "projectPath": "C:\\Users\\Diogo Ramos\\Documents\\MEGAsync\\IPB\\3ºAno\\1ºSemestre\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
       "packagesPath": "C:\\Users\\Diogo Ramos\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Diogo Ramos\\Desktop\\New folder\\mymovies\\MyMovies.universal\\obj\\",
+      "outputPath": "C:\\Users\\Diogo Ramos\\Documents\\MEGAsync\\IPB\\3ºAno\\1ºSemestre\\DAI\\mymovies\\MyMovies.universal\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -9077,8 +9077,8 @@
       "frameworks": {
         "uap10.0.17763": {
           "projectReferences": {
-            "C:\\Users\\Diogo Ramos\\Desktop\\New folder\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
-              "projectPath": "C:\\Users\\Diogo Ramos\\Desktop\\New folder\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
+            "C:\\Users\\Diogo Ramos\\Documents\\MEGAsync\\IPB\\3ºAno\\1ºSemestre\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
+              "projectPath": "C:\\Users\\Diogo Ramos\\Documents\\MEGAsync\\IPB\\3ºAno\\1ºSemestre\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
             }
           }
         }

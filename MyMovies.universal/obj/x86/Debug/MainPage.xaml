@@ -1,0 +1,45 @@
+﻿
+<Page
+    x:Class="MyMovies.universal.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <NavigationView x:ConnectionId='2' x:Name="nv"
+                                      
+                    Margin="0,12,0,0"
+                                                          
+                                                
+                    IsTabStop="False"
+                    PaneDisplayMode="LeftCompact">
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Home" Tag="Home_Page">
+                <TextBlock Tag="Nav_Home"></TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Tag="Login_Page" Icon="OtherUser">
+                <TextBlock Tag="Nav_Login">Login</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Tag="Registo_Page">
+                <TextBlock Tag="Nav_Registo">Registo</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_filmes">Gestão de Filmes</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem>
+                <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
+            </NavigationViewItem>
+
+        </NavigationView.MenuItems>
+        <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>
+    </NavigationView>
+
+</Page>
+
