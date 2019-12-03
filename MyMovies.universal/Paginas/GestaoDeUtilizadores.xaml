@@ -87,17 +87,16 @@
         FrozenColumnCount="0"
         GridLinesVisibility="None"
         HeadersVisibility="Column"
-        IsReadOnly="False"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
         SelectionMode="Extended"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador}" Tag="Id"/>
-                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
-                <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" Tag="Email" />
-                <controls:DataGridTextColumn Header="Password" Binding="{Binding Password}" Tag="Password" />
-                <controls:DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" />
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
+                <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
+                <controls:DataGridTextColumn Header="Password" Binding="{Binding Password}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
+                <controls:DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="MyMovies.universal.Paginas.GestaoDeUtilizadores"
+    x:Class="MyMovies.universal.Paginas.GestaoDeAtores"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
@@ -10,7 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
         <Grid.Resources>
             <DataTemplate x:Key="RowDetailsTemplate">
                 <StackPanel>
@@ -43,7 +42,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
-            <TextBlock Text="Gestão de Utilizadores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
+            <TextBlock Text="Gestão de Atores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
             <!--<AppBarButton Icon="Filter" Label="Filter by">
                 <AppBarButton.Flyout>
                     <MenuFlyout>
@@ -58,18 +57,18 @@
                 </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
-
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='9' Icon="Add" Label="Adicionar"                                     />
-                    <AppBarButton x:ConnectionId='10' Icon="Delete" Label="Eliminar"                                    />
-                    
+                    <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                              />
+
                 </CommandBar.SecondaryCommands>
             </CommandBar>
+            
         </StackPanel>
         <controls:DataGrid x:ConnectionId='3'
       Grid.Row="1"
-        x:Name="viewUtilizadores"
+        x:Name="viewAtores"
         Margin="12"
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
         HorizontalScrollBarVisibility="Visible"
@@ -87,16 +86,15 @@
         FrozenColumnCount="0"
         GridLinesVisibility="None"
         HeadersVisibility="Column"
+        IsReadOnly="False"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
         SelectionMode="Extended"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn x:ConnectionId='4' Header="Id" Binding="{Binding Idutilizador}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
-                <controls:DataGridTextColumn x:ConnectionId='5' Header="Nome" Binding="{Binding Nome}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
-                <controls:DataGridTextColumn x:ConnectionId='6' Header="Email" Binding="{Binding Email}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
-                <controls:DataGridTextColumn x:ConnectionId='7' Header="Password" Binding="{Binding Password}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
-                <controls:DataGridTextColumn x:ConnectionId='8' Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idator}" Tag="Id"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
+                <controls:DataGridTextColumn Header="Datanascimento" Binding="{Binding Datanascimento}" Tag="Datanascimento" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>
