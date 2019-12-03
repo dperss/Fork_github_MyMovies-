@@ -58,6 +58,14 @@
                 </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
+
+            <CommandBar Background="Transparent" >
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Utilizadores_Botao"/>
+                    <AppBarButton Icon="Delete" Label="Eliminar" Click="Eliminar_Utilizadores_Botao"/>
+                    <AppBarButton Icon="Edit" Label="Editar" Click="Editar_Utilizadores_Botao"/>
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
         </StackPanel>
         <controls:DataGrid
       Grid.Row="1"

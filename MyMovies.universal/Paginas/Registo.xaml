@@ -52,7 +52,7 @@
                     <PasswordBox PlaceholderText="Password" Height="40" Width="500" Background="LightSteelBlue" x:Name="PasswordBox"/>
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Button Content="Submeter" HorizontalAlignment="Center" Background="Gray" Click="Button_Submeter"/>
+                    <Button Content="Submeter" HorizontalAlignment="Center" Background="Gray" Click="Button_Submeter" />
                 </Grid>
            </Grid>
         </Grid>

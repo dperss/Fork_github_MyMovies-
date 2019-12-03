@@ -31,5 +31,20 @@ namespace MyMovies.universal.Paginas
             GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
             viewUtilizadores.ItemsSource = GestaoDeUtilizadoresViewModel.Utilizadores;
         }
+
+        private void Adicionar_Utilizadores_Botao(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Utilizadores_Botao(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Editar_Utilizadores_Botao(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
