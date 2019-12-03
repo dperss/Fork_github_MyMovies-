@@ -36,5 +36,15 @@ namespace MyMovies.universal.Paginas
         {
 
         }
+
+        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

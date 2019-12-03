@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-2990FR4</Machine>
-    <WindowsUser>migue</WindowsUser>
+    <Machine>DESKTOP-50JSP26</Machine>
+    <WindowsUser>Diogo Ramos</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>bf965f74-311b-4c55-a55b-35fff338388a</PackageIdentityName>
     <PackageIdentityPublisher>CN=Diogo Ramos</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Curso\DAI\git\mymovies\MyMovies.universal\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>F6C334AB710528DF2974BF3F628CF199216F8630112F96C3FBACBB96DA2362C5</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>bf965f74-311b-4c55-a55b-35fff338388a_1.0.0.0_x86__4yvaqynabw9fg</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>bf965f74-311b-4c55-a55b-35fff338388a_4yvaqynabw9fg!App</RegisteredUserModeAppID>
@@ -27,18 +27,18 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-02T17:49:34.407</Modified>
+      <Modified>2019-12-03T16:49:30.849</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-02T17:49:33.301</Modified>
+      <Modified>2019-12-03T16:49:25.420</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
       <Modified>2019-11-13T02:36:36.000</Modified>
     </AppxPackagedFile>
@@ -46,175 +46,175 @@
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2019-07-22T13:01:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\system.data.sqlclient\4.7.0\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\system.data.sqlclient\4.7.0\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
       <PackagePath>System.Data.SqlClient.dll</PackagePath>
       <Modified>2019-09-13T01:41:14.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\system.diagnostics.diagnosticsource\4.6.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\system.diagnostics.diagnosticsource\4.6.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
       <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
       <Modified>2019-09-13T01:39:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\system.runtime.compilerservices.unsafe\4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\system.runtime.compilerservices.unsafe\4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
       <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
       <Modified>2019-09-13T01:28:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\system.text.encoding.codepages\4.6.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\system.text.encoding.codepages\4.6.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
       <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
       <Modified>2019-09-13T01:39:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMovies.dll">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMovies.dll">
       <PackagePath>MyMovies.dll</PackagePath>
-      <Modified>2019-12-02T17:49:24.756</Modified>
+      <Modified>2019-12-03T16:43:30.172</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T17:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\aladin.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\aladin.jpg">
       <PackagePath>Assets\aladin.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.747</Modified>
+      <Modified>2019-12-03T16:41:15.146</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\capa.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\capa.jpg">
       <PackagePath>Assets\capa.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.757</Modified>
+      <Modified>2019-12-03T16:41:15.151</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\el camino.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\el camino.jpg">
       <PackagePath>Assets\el camino.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.761</Modified>
+      <Modified>2019-12-03T16:41:15.152</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\end_game.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\end_game.jpg">
       <PackagePath>Assets\end_game.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.765</Modified>
+      <Modified>2019-12-03T16:41:15.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\hustlers.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\hustlers.jpg">
       <PackagePath>Assets\hustlers.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.770</Modified>
+      <Modified>2019-12-03T16:41:15.163</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\kindom.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\kindom.jpg">
       <PackagePath>Assets\kindom.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.774</Modified>
+      <Modified>2019-12-03T16:41:15.165</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\rambo.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\rambo.jpg">
       <PackagePath>Assets\rambo.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.778</Modified>
+      <Modified>2019-12-03T16:41:15.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\spiderman.jpg">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\spiderman.jpg">
       <PackagePath>Assets\spiderman.jpg</PackagePath>
-      <Modified>2019-11-25T21:42:00.783</Modified>
+      <Modified>2019-12-03T16:41:15.170</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\EditDocument-512.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\EditDocument-512.png">
       <PackagePath>Assets\EditDocument-512.png</PackagePath>
-      <Modified>2019-11-25T21:42:00.711</Modified>
+      <Modified>2019-12-03T16:41:15.128</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Joker.PNG">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Joker.PNG">
       <PackagePath>Assets\Joker.PNG</PackagePath>
-      <Modified>2019-11-25T21:42:00.726</Modified>
+      <Modified>2019-12-03T16:41:15.134</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Untitled-1.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Untitled-1.png">
       <PackagePath>Assets\Untitled-1.png</PackagePath>
-      <Modified>2019-11-25T21:42:00.741</Modified>
+      <Modified>2019-12-03T16:41:15.143</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-11-25T21:42:00.729</Modified>
+      <Modified>2019-12-03T16:41:15.135</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.731</Modified>
+      <Modified>2019-12-03T16:41:15.137</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.732</Modified>
+      <Modified>2019-12-03T16:41:15.138</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.734</Modified>
+      <Modified>2019-12-03T16:41:15.139</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.736</Modified>
+      <Modified>2019-12-03T16:41:15.140</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.737</Modified>
+      <Modified>2019-12-03T16:41:15.141</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-25T21:42:00.743</Modified>
+      <Modified>2019-12-03T16:41:15.144</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-11-25T21:42:00.810</Modified>
+      <Modified>2019-12-03T16:41:15.213</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-11-30T15:29:29.480</Modified>
+      <Modified>2019-12-03T16:43:48.326</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.872</Modified>
+      <Modified>2019-12-03T16:49:25.043</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.872</Modified>
+      <Modified>2019-12-03T16:49:25.044</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.814</Modified>
+      <Modified>2019-12-03T16:49:25.005</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.819</Modified>
+      <Modified>2019-12-03T16:49:25.009</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.826</Modified>
+      <Modified>2019-12-03T16:49:25.013</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.875</Modified>
+      <Modified>2019-12-03T16:49:25.046</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.876</Modified>
+      <Modified>2019-12-03T16:49:25.047</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.876</Modified>
+      <Modified>2019-12-03T16:49:25.048</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.877</Modified>
+      <Modified>2019-12-03T16:49:25.048</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.877</Modified>
+      <Modified>2019-12-03T16:49:25.049</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-02T17:49:32.878</Modified>
+      <Modified>2019-12-03T16:49:25.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2019-03-18T16:33:42.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.xr.xml</PackagePath>
       <Modified>2019-11-13T02:32:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-11-26T17:50:40.008</Modified>
+      <Modified>2019-12-03T16:49:26.820</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\git\mymovies\MyMovies.universal\bin\x86\Debug\Core\MyMovies.universal.exe">
+    <AppxPackagedFile Include="C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-02T17:49:34.395</Modified>
+      <Modified>2019-12-03T16:49:30.828</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
