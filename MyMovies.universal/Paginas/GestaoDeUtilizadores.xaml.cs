@@ -42,9 +42,6 @@ namespace MyMovies.universal.Paginas
 
         }
 
-        private void Editar_Utilizadores_Botao(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
     }
 }
