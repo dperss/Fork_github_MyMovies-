@@ -104,7 +104,6 @@
       <RootProperty Name="Tag" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
-    <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Background" />
       <RootProperty Name="SecondaryCommands" />
@@ -114,6 +113,7 @@
       <RootProperty Name="Label" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeUtilizadores" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />

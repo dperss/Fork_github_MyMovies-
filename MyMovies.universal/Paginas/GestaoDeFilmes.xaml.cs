@@ -30,5 +30,17 @@ namespace MyMovies.universal.Paginas
             GestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
             viewFilmes.ItemsSource = GestaoDeFilmesViewModel.Filmes;
         }
+
+        private void Adicionar_Filmes_Botao(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Filmes_Botao(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+       
     }
 }
