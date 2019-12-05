@@ -1,10 +1,12 @@
 ﻿using MyMovies.BL;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace MyMovies.universal.ViewModel
 {
@@ -20,7 +22,6 @@ namespace MyMovies.universal.ViewModel
             get
             {
                 return utilizadores;
-                
             }
          
         }
@@ -40,6 +41,30 @@ namespace MyMovies.universal.ViewModel
                 return true;
             }
             return false;
+        }
+        public bool DeleteUtilizadores(object u)
+        {
+            Utilizador utilizador = (Utilizador)u;
+            if (utilizador.Email=="")
+            {
+                utilizadores.Remove(utilizador);
+                return true;
+            }
+            if (Utilizador.Delete(utilizador) == 1)
+            {
+                utilizadores.Remove(utilizador);
+                return true;
+            }
+            return false;
+        }
+
+        public void AddLinha()
+        {
+            Utilizador u = new Utilizador();
+            u.Tipo = Tipo.user;
+            u.Email = "";
+            u.Idutilizador = utilizadores.Count + 1;
+            utilizadores.Add(u);
         }
     }
 }

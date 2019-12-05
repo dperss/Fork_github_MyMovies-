@@ -57,6 +57,14 @@
                 </AppBarButton.Flyout>
             </AppBarButton>
             <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
+            <CommandBar Background="Transparent" >
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                              />
+
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+            
         </StackPanel>
         <controls:DataGrid x:ConnectionId='3'
       Grid.Row="1"

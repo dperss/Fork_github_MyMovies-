@@ -90,15 +90,15 @@
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="RowGroupHeaderPropertyNameAlternative" />
       <RootProperty Name="Columns" />
+      <RootEvent Name="CurrentCellChanged" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
       <RootProperty Name="Header" />
       <RootProperty Name="Binding" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="IsReadOnly" />
     </RootType>
-    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
-    <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Background" />
       <RootProperty Name="SecondaryCommands" />
@@ -108,6 +108,8 @@
       <RootProperty Name="Label" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeAtores" />
+    <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeUtilizadores" />
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -132,6 +134,7 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Background" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="Flyout" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -201,6 +204,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyout">
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutItem">
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Principal" />
     <RootType FullName="MyMovies.universal.Paginas.Registo" />

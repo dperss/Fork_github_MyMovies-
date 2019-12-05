@@ -1,1 +1,1 @@
-C:\Users\Diogo Ramos\Documents\MEGAsync\IPB\3ºAno\1ºSemestre\DAI\mymovies\MyMovies.universal\MyMovies.universal.csproj;x86
+C:\Curso\DAI\git\MyMovies.universal\MyMovies.universal.csproj;x86

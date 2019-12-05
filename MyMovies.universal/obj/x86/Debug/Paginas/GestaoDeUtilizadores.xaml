@@ -61,9 +61,9 @@
 
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='4' Icon="Add" Label="Adicionar"                                     />
-                    <AppBarButton x:ConnectionId='5' Icon="Delete" Label="Eliminar"                                    />
-                    <AppBarButton x:ConnectionId='6' Icon="Edit" Label="Editar"                                  />
+                    <AppBarButton x:ConnectionId='9' Icon="Add" Label="Adicionar"                              />
+                    <AppBarButton x:ConnectionId='10' Icon="Delete" Label="Eliminar"                                    />
+                    
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
@@ -86,18 +86,18 @@
         MaxColumnWidth="400"
         FrozenColumnCount="0"
         GridLinesVisibility="None"
+                                                                
         HeadersVisibility="Column"
-        IsReadOnly="False"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
-        SelectionMode="Extended"
+        SelectionMode="Single"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador}" Tag="Id"/>
-                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
-                <controls:DataGridTextColumn Header="Email" Binding="{Binding Email}" Tag="Email" />
-                <controls:DataGridTextColumn Header="Password" Binding="{Binding Password}" Tag="Password" />
-                <controls:DataGridTextColumn Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" />
+                <controls:DataGridTextColumn x:ConnectionId='4' Header="Id" Binding="{Binding Idutilizador}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
+                <controls:DataGridTextColumn x:ConnectionId='5' Header="Nome" Binding="{Binding Nome}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
+                <controls:DataGridTextColumn x:ConnectionId='6' Header="Email" Binding="{Binding Email}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
+                <controls:DataGridTextColumn x:ConnectionId='7' Header="Password" Binding="{Binding Password}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
+                <controls:DataGridTextColumn x:ConnectionId='8' Header="Tipo" Binding="{Binding Tipo}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

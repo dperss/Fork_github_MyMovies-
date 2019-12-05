@@ -61,7 +61,7 @@
 
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Utilizadores_Botao"/>
+                    <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Linha_Botao"/>
                     <AppBarButton Icon="Delete" Label="Eliminar" Click="Eliminar_Utilizadores_Botao"/>
                     
                 </CommandBar.SecondaryCommands>
@@ -86,10 +86,11 @@
         MaxColumnWidth="400"
         FrozenColumnCount="0"
         GridLinesVisibility="None"
+        CurrentCellChanged="viewUtilizadores_CurrentCellChanged"
         HeadersVisibility="Column"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
-        SelectionMode="Extended"
+        SelectionMode="Single"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
