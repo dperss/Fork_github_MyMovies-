@@ -90,7 +90,7 @@
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="RowGroupHeaderPropertyNameAlternative" />
       <RootProperty Name="Columns" />
-      <RootEvent Name="CurrentCellChanged" />
+      <RootEvent Name="RowEditEnding" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">

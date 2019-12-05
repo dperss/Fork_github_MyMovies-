@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-05T09:29:06.973</Modified>
+      <Modified>2019-12-05T13:57:14.399</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-05T09:29:06.574</Modified>
+      <Modified>2019-12-05T13:57:13.602</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -154,51 +154,51 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-12-05T09:16:16.599</Modified>
+      <Modified>2019-12-05T13:46:19.952</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.361</Modified>
+      <Modified>2019-12-05T13:57:13.206</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.362</Modified>
+      <Modified>2019-12-05T13:57:13.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.341</Modified>
+      <Modified>2019-12-05T13:57:13.167</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.343</Modified>
+      <Modified>2019-12-05T13:57:13.170</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.346</Modified>
+      <Modified>2019-12-05T13:57:13.175</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.363</Modified>
+      <Modified>2019-12-05T13:57:13.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.363</Modified>
+      <Modified>2019-12-05T13:57:13.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.364</Modified>
+      <Modified>2019-12-05T13:57:13.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.364</Modified>
+      <Modified>2019-12-05T13:57:13.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.364</Modified>
+      <Modified>2019-12-05T13:57:13.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-05T09:29:06.364</Modified>
+      <Modified>2019-12-05T13:57:13.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -214,7 +214,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-05T09:29:06.968</Modified>
+      <Modified>2019-12-05T13:57:14.388</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

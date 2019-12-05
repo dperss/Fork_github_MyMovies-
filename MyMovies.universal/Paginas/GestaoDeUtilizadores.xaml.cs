@@ -31,7 +31,10 @@ namespace MyMovies.universal.Paginas
         {
             this.InitializeComponent();
             GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
-            viewUtilizadores.ItemsSource = GestaoDeUtilizadoresViewModel.Utilizadores;
+            if (GestaoDeUtilizadoresViewModel.Utilizadores != null)
+            {
+                viewUtilizadores.ItemsSource = GestaoDeUtilizadoresViewModel.Utilizadores;
+            }
         }
 
         private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)
@@ -56,14 +59,22 @@ namespace MyMovies.universal.Paginas
             
         }
 
-        private void viewUtilizadores_CurrentCellChanged(object sender, EventArgs e)//editar
-        {
-            if(viewUtilizadores.CurrentColumn.ToString() == "Email")
-            {
-                
-            }
+        
 
+
+        private void viewUtilizadores_RowEditEnding(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndingEventArgs e)
+        {
+            object utilizador = viewUtilizadores.SelectedItem;
+            if (!GestaoDeUtilizadoresViewModel.UpdateUtilizadores(utilizador))
+            {
+                MessageDialog message = new MessageDialog("A linha não foi editada");
+            }
         }
+
+        /*private void Page_Loading(FrameworkElement sender, object args)
+        {
+            GestaoDeUtilizadoresViewModel.CheckWhite();
+        }*/
     }
 
 }

@@ -16,7 +16,10 @@ namespace MyMovies.universal.ViewModel
         public GestaoDeUtilizadoresViewModel()
         {
             List <Utilizador> lista = Utilizador.ReadAll();
-            utilizadores = new ObservableCollection<Utilizador>(lista);
+            if (lista != null)
+            {
+                utilizadores = new ObservableCollection<Utilizador>(lista);
+            }
         }
         public ObservableCollection<Utilizador> Utilizadores {
             get
@@ -58,13 +61,60 @@ namespace MyMovies.universal.ViewModel
             return false;
         }
 
+        public bool UpdateUtilizadores(object u)
+        { 
+            Utilizador utilizador = (Utilizador)u;
+            foreach (Utilizador x in utilizadores)
+            {
+                if(utilizador.Email == x.Email && utilizador.Idutilizador != x.Idutilizador)
+                {
+                    return false;
+                }
+            }
+            Utilizador ulist = utilizadores.FirstOrDefault(x=> x.Idutilizador==utilizador.Idutilizador);
+            if (Utilizador.Update(utilizador) == 1)
+            {
+                ulist.Email = utilizador.Email;
+                ulist.Nome = utilizador.Nome;
+                ulist.Password = utilizador.Password;
+                ulist.Tipo = utilizador.Tipo;
+                return true;
+            }
+            return false;
+        }
+
         public void AddLinha()
         {
             Utilizador u = new Utilizador();
             u.Tipo = Tipo.user;
             u.Email = "";
-            u.Idutilizador = utilizadores.Count + 1;
-            utilizadores.Add(u);
+            u.Nome = "";
+            u.Password = "";
+            if (utilizadores == null)
+            {
+                utilizadores = new ObservableCollection<Utilizador>();
+                u.Idutilizador = 1;
+            }
+            else
+            {
+                u.Idutilizador = utilizadores.Count + 1;
+            }
+            if (Utilizador.Create(u) == 1)
+            {
+                utilizadores.Add(u);
+            }
+        }
+
+        public void CheckWhite()
+        {
+            foreach(Utilizador u in Utilizadores)
+            {
+                if (u.Email == "")
+                    if (Utilizador.Delete(u) == 1)
+                    {
+                        utilizadores.Remove(u);
+                    }
+            }
         }
     }
 }

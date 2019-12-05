@@ -85,8 +85,8 @@
         ColumnHeaderHeight="32"
         MaxColumnWidth="400"
         FrozenColumnCount="0"
+                                                      
         GridLinesVisibility="None"
-                                                                
         HeadersVisibility="Column"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
