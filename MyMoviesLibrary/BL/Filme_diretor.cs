@@ -11,19 +11,19 @@ namespace MyMovies.BL
         public int Filme_idfime { get; set; }
         public int Diretor_iddiretor { get; set; }
 
-        public static int Create(Filme_diretor fd)
+        public int Create()
         {
 
-            return Filme_diretorDAL.Create(fd); //Este metodo vai ser estatico
+            return Filme_diretorDAL.Create(this);
         }
-        public static int Update(Filme_diretor fd)
+        public int Update()
         {
-            return Filme_diretorDAL.Update(fd);
+            return Filme_diretorDAL.Update(this);
         }
 
-        public static int Delete(Filme_diretor fd)
+        public int Delete()
         {
-            return Filme_diretorDAL.Delete(fd);
+            return Filme_diretorDAL.Delete(this);
         }
         public static void CreateTable()
         {

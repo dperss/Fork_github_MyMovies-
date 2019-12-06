@@ -35,29 +35,29 @@ namespace MyMovies.BL
                 $"\nPassword: {Password}" +
                 $"\nTipo: {Tipo}";
         }
-        public static int Create(Utilizador u)
+        public int Create()
         {
-            return UtilizadorDAL.Create(u);
+            return UtilizadorDAL.Create(this);
         }
-        public static List<Utilizador> ReadNome(Utilizador u)
+        public List<Utilizador> ReadNome()
         {
-            return UtilizadorDAL.ReadNome(u);
+            return UtilizadorDAL.ReadNome(this);
         }
-        public static Utilizador ReadId(Utilizador u)
+        public Utilizador ReadId()
         {
-            return UtilizadorDAL.ReadId(u);
+            return UtilizadorDAL.ReadId(this);
         }
         public static List<Utilizador> ReadAll()
         {
             return UtilizadorDAL.ReadAll();
         }
-        public static int Update(Utilizador u)
+        public int Update()
         {
-            return UtilizadorDAL.Update(u);
+            return UtilizadorDAL.Update(this);
         }
-        public static int Delete(Utilizador u)
+        public int Delete()
         {
-            return UtilizadorDAL.Delete(u);
+            return UtilizadorDAL.Delete(this);
         }
         public static bool CreateTable()
         {

@@ -11,19 +11,19 @@ namespace MyMovies.BL
         public int Ator_idator { get; set; }
 
 
-        public static int Create(Filme_ator fa)
+        public int Create()
         {
 
-            return Filme_atorDAL.Create(fa); //Este metodo vai ser estatico
+            return Filme_atorDAL.Create(this); //Este metodo vai ser estatico
         }
-        public static int Update(Filme_ator fa)
+        public int Update()
         {
-            return Filme_atorDAL.Update(fa);
+            return Filme_atorDAL.Update(this);
         }
 
-        public static int Delete(Filme_ator fa)
+        public int Delete()
         {
-            return Filme_atorDAL.Delete(fa);
+            return Filme_atorDAL.Delete(this);
         }
         public static void CreateTable()
         {

@@ -15,23 +15,23 @@ namespace MyMovies.BL
         public byte[] Foto { get; set; }
 
 
-        public static int Create(Filme f)
+        public int Create()
         {
 
-            return FilmeDAL.Create(f); //Este metodo vai ser estatico
+            return FilmeDAL.Create(this); //Este metodo vai ser estatico
         }
         public static List<Filme> ReadAll()
         {
             return FilmeDAL.ReadAll();
         }
-        public static int Update(Filme f)
+        public int Update()
         {
-            return FilmeDAL.Update(f);
+            return FilmeDAL.Update(this);
         }
 
-        public static int Delete(Filme f)
+        public int Delete()
         {
-            return FilmeDAL.Delete(f);
+            return FilmeDAL.Delete(this);
         }
         public static bool CreateTable()
         {

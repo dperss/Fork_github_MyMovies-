@@ -21,29 +21,29 @@ namespace MyMovies.BL
             return $"Id: {Iddiretor}" +
                 $"\nNome: {Nome}";
         }
-        public static int Create(Diretor dir)
+        public int Create()
         {
-            return DiretorDAL.Create(dir);
+            return DiretorDAL.Create(this);
         }
-        public static List<Diretor> ReadNome(Diretor dir)
+        public List<Diretor> ReadNome()
         {
-            return DiretorDAL.ReadNome(dir);
+            return DiretorDAL.ReadNome(this);
         }
-        public static Diretor ReadId(Diretor dir)
+        public Diretor ReadId()
         {
-            return DiretorDAL.ReadId(dir);
+            return DiretorDAL.ReadId(this);
         }
         public static List<Diretor> ReadAll()
         {
             return DiretorDAL.ReadAll();
         }
-        public static int Update(Diretor dir)
+        public int Update()
         {
-            return DiretorDAL.Update(dir);
+            return DiretorDAL.Update(this);
         }
-        public static int Delete(Diretor dir)
+        public int Delete()
         {
-            return DiretorDAL.Delete(dir);
+            return DiretorDAL.Delete(this);
         }
         public static bool CreateTable()
         {

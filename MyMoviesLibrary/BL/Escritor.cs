@@ -22,29 +22,29 @@ namespace MyMovies.BL
             return $"Id: {Idescritor}" +
                 $"\nNome: {Nome}";
         }
-        public static int Create(Escritor e)
+        public int Create()
         {
-            return EscritorDAL.Create(e);
+            return EscritorDAL.Create(this);
         }
-        public static List<Escritor> ReadNome(Escritor e)
+        public List<Escritor> ReadNome()
         {
-            return EscritorDAL.ReadNome(e);
+            return EscritorDAL.ReadNome(this);
         }
-        public static Escritor ReadId(Escritor e)
+        public Escritor ReadId()
         {
-            return EscritorDAL.ReadId(e);
+            return EscritorDAL.ReadId(this);
         }
         public static List<Escritor> ReadAll()
         {
             return EscritorDAL.ReadAll();
         }
-        public static int Update(Escritor e)
+        public int Update()
         {
-            return EscritorDAL.Update(e);
+            return EscritorDAL.Update(this);
         }
-        public static int Delete(Escritor e)
+        public int Delete()
         {
-            return EscritorDAL.Delete(e);
+            return EscritorDAL.Delete(this);
         }
         public static bool CreateTable()
         {

@@ -19,26 +19,26 @@ namespace MyMovies.BL
             this.utilizador_idutilizador = utilizador_idutilizador;
             this.filme_idfilme = filme_idfilme;
         }
-        public bool CreateTable()
+        public static bool CreateTable()
         {
             return Filmes_bibliotecaDAL.CreateTable();
         }
-        public int Create(Filmes_biblioteca u)
+        public int Create()
         {
-            return Filmes_bibliotecaDAL.Create(u);
+            return Filmes_bibliotecaDAL.Create(this);
         }
-        public int Update(Filmes_biblioteca u)
+        public int Update()
         {
 
-            return Filmes_bibliotecaDAL.Update(u);
+            return Filmes_bibliotecaDAL.Update(this);
         }
-        public List<Filmes_biblioteca> ReadAll()
+        public static List<Filmes_biblioteca> ReadAll()
         {
             return Filmes_bibliotecaDAL.ReadAll();
         }
-        public int Delete(Filmes_biblioteca u)
+        public int Delete()
         {
-            return Filmes_bibliotecaDAL.Delete(u);
+            return Filmes_bibliotecaDAL.Delete(this);
         }
     }
 }

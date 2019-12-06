@@ -20,19 +20,19 @@ namespace MyMovies.BL
                 $"\nNome: {Nome}" +
                 $"\nData de Nascimento: {Datanascimento}";
         }
-        public static int Create(Ator a)
+        public int Create()
         {
 
-            return AtorDAL.Create(a); //Este metodo vai ser estatico
+            return AtorDAL.Create(this); 
         }
-        public static int Update(Ator a)
+        public int Update()
         {
-            return AtorDAL.Update(a);
+            return AtorDAL.Update(this);
         }
 
-        public static int Delete(Ator a)
+        public int Delete()
         {
-            return AtorDAL.Delete(a);
+            return AtorDAL.Delete(this);
         }
         public static bool CreateTable()
         {

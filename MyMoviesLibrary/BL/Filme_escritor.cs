@@ -16,21 +16,21 @@ namespace MyMovies.BL
             this.escritor_idescritor = escritor_idescritor;
         }
 
-        public bool CreateTable()
+        public static bool CreateTable()
         {
             return Filme_escritorDAL.CreateTable();
         }
-        public int Create(Filme_escritor u)
+        public int Create()
         {
-            return Filme_escritorDAL.Create(u);
+            return Filme_escritorDAL.Create(this);
         }
-        public List<Filme_escritor> ReadAll()
+        public static List<Filme_escritor> ReadAll()
         {
             return Filme_escritorDAL.ReadAll();
         }
-        public int Delete(Filme_escritor u)
+        public int Delete()
         {
-            return Filme_escritorDAL.Delete(u);
+            return Filme_escritorDAL.Delete(this);
         }
     }
 

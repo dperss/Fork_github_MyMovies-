@@ -37,12 +37,12 @@ namespace MyMovies.universal.Paginas
             }
         }
 
-        private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)
+        private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)//ver
         {
             GestaoDeUtilizadoresViewModel.AddLinha();
         }
 
-        private async void Eliminar_Utilizadores_Botao(object sender, RoutedEventArgs e)
+        private async void Eliminar_Utilizadores_Botao(object sender, RoutedEventArgs e)//ver
         {
             object utilizador = viewUtilizadores.SelectedItem;
             if (utilizador == null)
@@ -71,10 +71,7 @@ namespace MyMovies.universal.Paginas
             }
         }
 
-        /*private void Page_Loading(FrameworkElement sender, object args)
-        {
-            GestaoDeUtilizadoresViewModel.CheckWhite();
-        }*/
+        
     }
 
 }

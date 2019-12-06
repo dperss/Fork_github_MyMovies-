@@ -20,6 +20,10 @@ namespace MyMovies.universal.ViewModel
             {
                 utilizadores = new ObservableCollection<Utilizador>(lista);
             }
+            else
+            {
+                utilizadores = new ObservableCollection<Utilizador>();
+            }
         }
         public ObservableCollection<Utilizador> Utilizadores {
             get

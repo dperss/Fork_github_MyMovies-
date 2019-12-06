@@ -16,25 +16,25 @@ namespace MyMovies.BL
             this.filme_idfilme = filme_idfilme;
             this.genero_nome = genero_nome;
         }
-        public bool CreateTable()
+        public static bool CreateTable()
         {
             return filme_generoDAL.CreateTable();
         }
-        public int Create(Filme_genero u)
+        public int Create()
         {
-            return filme_generoDAL.Create(u);
+            return filme_generoDAL.Create(this);
         }
-        public int Update(Filme_genero u)
+        public int Update()
         {
-            return filme_generoDAL.Update(u);
+            return filme_generoDAL.Update(this);
         }
-        public List<Filme_genero> ReadAll()
+        public static List<Filme_genero> ReadAll()
         {
             return filme_generoDAL.ReadAll();
         }
-        public int Delete(Filme_genero u)
+        public int Delete()
         {
-            return filme_generoDAL.Delete(u);
+            return filme_generoDAL.Delete(this);
         }
     }
 
