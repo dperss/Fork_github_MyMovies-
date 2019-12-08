@@ -20,13 +20,11 @@ namespace MyMovies.universal.Paginas
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Perfil : Page
+    public sealed partial class Biblioteca : Page
     {
-        public Perfil()
+        public Biblioteca()
         {
             this.InitializeComponent();
         }
-
-        
     }
 }

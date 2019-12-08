@@ -8,14 +8,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
+
     <Grid>
+
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
         </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="0.4*"/>
+            <RowDefinition Height="0.3*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -24,7 +27,7 @@
                 <ColumnDefinition Width="1.2*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Rectangle Fill="White" Opacity="0.8"/>
+                <Rectangle Fill="White" Opacity="0.6" Margin="-20,10,30,-70" />
             </Grid>
         </Grid>
         <Grid Grid.Row="1">
@@ -35,70 +38,42 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="2*"/>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="0.8*"/>
-                    <RowDefinition Height="0.4*"/>
-                    <RowDefinition Height="0.8*"/>
+                    <RowDefinition Height="1.4*"/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <PersonPicture ProfilePicture="https://docs.microsoft.com/windows/uwp/contacts-and-calendar/images/shoulder-tap-static-payload.png"  />
+                    <PersonPicture Margin="0,10,30,0"/>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.25*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.25*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <TextBox Header="Email" PlaceholderText="Insere um Email"  />
-                    </Grid>
+                    <TextBox PlaceholderText="EMAIL" Height="40" Width="500" Background="CadetBlue"  Margin="0,0,30,-30" BorderBrush="Gray"/>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.25*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.25*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <PasswordBox Header="Password" PlaceholderText="Insere uma password" PasswordChar="#" />
-                    </Grid>
+                    <PasswordBox x:ConnectionId='3' PlaceholderText="PASSWORD" Height="40" Width="500" Background="CadetBlue" x:Name="PasswordBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.25*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.25*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Button x:ConnectionId='4' Content="Esqueceu-se da sua password?"                       VerticalAlignment="Top" Height="29" Width="215" />
-                    </Grid>
+                    <Button Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top"/>
+                    <TextBlock x:ConnectionId='2' Text="Ainda não tem uma conta?"                                                 Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
                 </Grid>
-                <Grid Grid.Row="4" >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <TextBlock x:ConnectionId='3' Text="Ainda não tem uma conta?"                                                 />
-                    </Grid>
-                </Grid>
-                <Grid Grid.Row="5">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.8*"/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition Width="0.8*"/>
-                    </Grid.ColumnDefinitions>
-                    <Grid Grid.Column="1">
-                        <Button x:ConnectionId='2' Content="REGISTE-SE"                      RenderTransformOrigin="2.901,0.406"  VerticalAlignment="Top" Width="151" HorizontalAlignment="Center" Margin="0,10,0,0" Height="28" />
-                    </Grid>
-                </Grid>
+                <Button Grid.Row="3" Content="REGISTE-SE" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="0">
-            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <TextBlock Text="LOGIN"  Foreground="Gray"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="40"/>
+            </Grid>
+            <Grid Grid.Column="2">
+                <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>
+            </Grid>
+
         </Grid>
     </Grid>
 </Page>

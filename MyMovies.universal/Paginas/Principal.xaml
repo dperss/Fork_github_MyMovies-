@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -30,12 +30,12 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:Name="Botao_login" Click="Botao_login_Click" Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                <Button x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"   >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem Text="Perfil" />
-                            <MenuFlyoutItem Text="Biblioteca"/>
+                            <MenuFlyoutItem Text="Perfil" Click="Botao_Perfil_Click"/>
+                            <MenuFlyoutItem Text="Biblioteca" Click="Botao_Biblioteca_Click"/>
                             <MenuFlyoutItem Text="LogOut"/>
 
                         </MenuFlyout>

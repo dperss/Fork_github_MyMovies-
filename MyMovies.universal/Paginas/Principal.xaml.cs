@@ -26,14 +26,24 @@ namespace MyMovies.universal.Paginas
         {
             this.InitializeComponent();
         }
-        private void Botao_login_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Paginas.Login));
-        }
+       // private void Botao_login_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Frame.Navigate(typeof(Paginas.Login)); Quando pusermos a funcionar temos que adicionar o evento ao botao do login com este nome
+        //}
 
         private void Botao_registo_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Registo));
+        }
+
+        private void Botao_Biblioteca_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Paginas.Biblioteca));
+        }
+
+        private void Botao_Perfil_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Paginas.Perfil));
         }
     }
 }

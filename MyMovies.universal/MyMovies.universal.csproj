@@ -119,6 +119,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\Biblioteca.xaml.cs">
+      <DependentUpon>Biblioteca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\Definicoes.xaml.cs">
       <DependentUpon>Definicoes.xaml</DependentUpon>
     </Compile>
@@ -186,6 +189,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Paginas\Biblioteca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\Definicoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

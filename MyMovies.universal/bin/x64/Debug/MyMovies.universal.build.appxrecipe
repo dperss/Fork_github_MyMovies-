@@ -121,6 +121,9 @@
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Biblioteca.xbf">
+      <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
     </AppxPackagedFile>

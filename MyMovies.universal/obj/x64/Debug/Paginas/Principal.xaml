@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="UniformToFill"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -25,17 +25,17 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Button x:ConnectionId='5' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
+                <Button x:ConnectionId='7' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='4' x:Name="Botao_login"                           Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"   >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem Text="Perfil" />
-                            <MenuFlyoutItem Text="Biblioteca"/>
+                            <MenuFlyoutItem x:ConnectionId='5' Text="Perfil"                           />
+                            <MenuFlyoutItem x:ConnectionId='6' Text="Biblioteca"                               />
                             <MenuFlyoutItem Text="LogOut"/>
 
                         </MenuFlyout>

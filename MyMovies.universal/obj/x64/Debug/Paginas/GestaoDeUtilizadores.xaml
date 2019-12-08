@@ -61,7 +61,7 @@
 
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='9' Icon="Add" Label="Adicionar"                                     />
+                    <AppBarButton x:ConnectionId='9' Icon="Add" Label="Adicionar"                              />
                     <AppBarButton x:ConnectionId='10' Icon="Delete" Label="Eliminar"                                    />
                     
                 </CommandBar.SecondaryCommands>
@@ -85,11 +85,12 @@
         ColumnHeaderHeight="32"
         MaxColumnWidth="400"
         FrozenColumnCount="0"
+                                                      
         GridLinesVisibility="None"
         HeadersVisibility="Column"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
-        SelectionMode="Extended"
+        SelectionMode="Single"
         RowGroupHeaderPropertyNameAlternative="Range">
             <controls:DataGrid.Columns>
                 <controls:DataGridTextColumn x:ConnectionId='4' Header="Id" Binding="{Binding Idutilizador}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
