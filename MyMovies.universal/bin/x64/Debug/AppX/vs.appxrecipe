@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-08T18:48:23.574</Modified>
+      <Modified>2019-12-08T19:36:06.499</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-08T18:48:23.184</Modified>
+      <Modified>2019-12-08T19:36:06.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -64,7 +64,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMovies.dll">
       <PackagePath>MyMovies.dll</PackagePath>
-      <Modified>2019-12-08T17:37:41.197</Modified>
+      <Modified>2019-12-08T19:02:41.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -154,55 +154,55 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-12-08T18:45:27.391</Modified>
+      <Modified>2019-12-08T19:35:14.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Biblioteca.xbf">
       <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.970</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.875</Modified>
+      <Modified>2019-12-08T19:36:05.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.877</Modified>
+      <Modified>2019-12-08T19:36:05.950</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.879</Modified>
+      <Modified>2019-12-08T19:36:05.953</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-08T18:48:23.058</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-08T18:38:33.896</Modified>
+      <Modified>2019-12-08T19:36:05.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -218,7 +218,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-08T18:48:23.571</Modified>
+      <Modified>2019-12-08T19:36:06.495</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

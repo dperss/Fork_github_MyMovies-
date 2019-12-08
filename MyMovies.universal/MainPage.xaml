@@ -16,7 +16,9 @@
                     SelectionChanged="nv_SelectionChanged"
                     ItemInvoked="nv_ItemInvoked"
                     IsTabStop="False"
-                    PaneDisplayMode="LeftCompact">
+                    PaneDisplayMode="LeftCompact"
+                    BackRequested="nv_BackRequested"
+                    IsBackEnabled="True">
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="Home" Tag="Home_Page">
                 <TextBlock Tag="Nav_Home"></TextBlock>
@@ -24,16 +26,16 @@
             <NavigationViewItem Tag="Login_Page" Icon="OtherUser">
                 <TextBlock Tag="Nav_Login">Login</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Tag="Registo_Page">
+            <NavigationViewItem Tag="Registo_Page" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem>
+            <NavigationViewItem Icon="Admin">
                 <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem>
+            <NavigationViewItem Icon="Admin">
                 <TextBlock Tag="Nav_Gestao_de_filmes">Gestão de Filmes</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem>
+            <NavigationViewItem Icon="Admin">
                 <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
             </NavigationViewItem>
 

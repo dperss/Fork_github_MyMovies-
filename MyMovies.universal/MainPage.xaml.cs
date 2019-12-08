@@ -82,8 +82,12 @@ namespace MyMovies.universal
             contentFrame.Navigate(typeof(Paginas.Principal));
         }
 
+        private void nv_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
+        {
 
-
+           
+        }
+       
 
     }
 }
