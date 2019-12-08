@@ -11,30 +11,80 @@ namespace MyMovies.universal.ViewModel
 {
     public class GestaoDeAtoresViewModel
     {
-        ObservableCollection<Ator> atores;
+        ObservableCollection<Ator> _atores;
+        Ator _ator;
+
+        public Ator SelectedAtor
+        {
+            get
+            {
+                return _ator;
+            }
+            set
+            {
+                _ator = value;
+            }
+        }
         public GestaoDeAtoresViewModel()
         {
             List<Ator> lista = Ator.ReadAll();
-            atores = new ObservableCollection<Ator>(lista);
+            if (lista == null)
+            {
+                Ator.CreateTable();
+                _atores = new ObservableCollection<Ator>();
+            }
+            else
+            {
+                _atores = new ObservableCollection<Ator>(lista);
+            }
         }
         public ObservableCollection<Ator> Atores
         {
             get
             {
-                    return atores;
+                    return _atores;
 
+            }
+            set
+            {
+                _atores = value;
             }
 
         }
 
         public bool CreateAtor(Ator a)
         {
-            if (Ator.Create(a) == 1)
+            if (a.Create() == 1)
             {
-                atores.Add(a);
+                Atores.Add(a);
                 return true;
             }
             return false;
+        }
+        public bool UpdateAtor()
+        {
+            if (SelectedAtor.Update() == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+        public bool DeleteAtor()
+        {
+            if (SelectedAtor.Delete() == 1)
+            {
+                Atores.Remove(SelectedAtor);
+                Ator.ReSeed(Atores.Count);
+                return true;
+            }
+            return false;
+        }
+
+        public bool Add_Linha()
+        {
+            Ator a = new Ator();
+            a.Idator = Atores.Count + 1;
+            return CreateAtor(a);
         }
     }
 }

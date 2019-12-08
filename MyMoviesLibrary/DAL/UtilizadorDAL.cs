@@ -84,7 +84,7 @@ namespace MyMovies.DAL
             List<Utilizador> ulist = new List<Utilizador>();
             string query = "SELECT * FROM Utilizador";
             SqlDataReader row = db.Query(query, null);
-            if (!row.HasRows)
+            if (row == null)
                 return null;
             while (row.Read())
             {
@@ -151,6 +151,14 @@ namespace MyMovies.DAL
                 return false;
             }
 
+        }
+        public static int ReSeed(int number)
+        {
+            Database db = new Database();
+            string query = "DBCC CHECKIDENT(Utilizador, RESEED, @number);";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@number", number);
+            return db.NonQuery(query, dictionary);
         }
     }
 }

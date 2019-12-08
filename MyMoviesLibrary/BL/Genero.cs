@@ -14,21 +14,21 @@ namespace MyMovies.BL
         {
             this.nome = nome;
         }
-        public bool CreateTable()
+        public static bool CreateTable()
         {
             return GeneroDAL.CreateTable();
         }
-        public int Create(Genero u)
+        public int Create()
         {
-            return GeneroDAL.Create(u);
+            return GeneroDAL.Create(this);
         }
-        public List<Genero> ReadAll()
+        public static List<Genero> ReadAll()
         {
             return GeneroDAL.ReadAll();
         }
-        public int Delete(Genero u)
+        public int Delete()
         {
-            return GeneroDAL.Delete(u);
+            return GeneroDAL.Delete(this);
         }
 
 

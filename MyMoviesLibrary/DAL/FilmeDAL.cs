@@ -34,9 +34,8 @@ namespace MyMovies.DAL
         { //ver se é void e por parametros
 
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Filme]([Idfilme],[nome],[duracao],[ano])VALUES(@id,@nome,@duracao,@ano);";
+            string query = "INSERT INTO[dbo].[Filme]([nome],[duracao],[ano])VALUES(@nome,@duracao,@ano);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", f.Idfilme);
             d.Add("@nome", f.Nome);
             d.Add("@duracao", f.Duracao);
             d.Add("@ano", f.Ano);
@@ -58,6 +57,8 @@ namespace MyMovies.DAL
             List<Filme> lista = new List<Filme>();
 
             SqlDataReader row = db.Query(query, null);
+            if (row == null)
+                return null;
             while (row.Read())
             {
                 Filme f = new Filme();
@@ -76,11 +77,12 @@ namespace MyMovies.DAL
         public static int Update(Filme f)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Filme] SET duracao=@duracao WHERE Id =@Idfilme ; ";
+            string query = "UPDATE [dbo].[Filme] SET duracao=@duracao, nome=@nome, ano=@ano WHERE Idfilme=@Idfilme;";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
+            dictionary.Add("@Idfilme", f.Idfilme);
             dictionary.Add("@duracao", f.Duracao);
-
+            dictionary.Add("@nome", f.Nome);
+            dictionary.Add("@ano", f.Ano);
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -90,10 +92,10 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Filme] WHERE id=@Idfilme";
+            string query = "DELETE FROM [dbo].[Filme] WHERE Idfilme=@Idfilme";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
-            dictionary.Add("@ano", f.Ano);
+            dictionary.Add("@Idfilme", f.Idfilme);
 
             int result = db.NonQuery(query, dictionary);
             db.Close();
@@ -101,14 +103,14 @@ namespace MyMovies.DAL
 
 
         }
-
-
-
-
-
-
-
-
-
+        
+        public static int ReSeed(int number)
+        {
+            Database db = new Database();
+            string query = "DBCC CHECKIDENT(Filme, RESEED, @number);";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@number", number);
+            return db.NonQuery(query, dictionary);
+        }
     }
 }

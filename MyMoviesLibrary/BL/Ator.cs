@@ -1,38 +1,78 @@
 ﻿using MyMovies.DAL;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace MyMovies.BL
 {
-    public class Ator
+    public class Ator : INotifyPropertyChanged
     {
-        public int Idator { get; set; }
-        public string Nome { get; set; }
-        public string Datanascimento { get; set; }
+        int _Idator;
+        string _Nome;
+        string _Datanascimento;
+        public int Idator { 
+            get 
+            {
+                return _Idator;
+            }
+            set 
+            {
+                _Idator = value;
+                Onchanged("Idator");
+            } 
+        }
+        public string Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+            set
+            {
+                _Nome = value;
+                Onchanged("Nome");
+            }
+        }
+        public string Datanascimento
+        {
+            get
+            {
+                return _Datanascimento;
+            }
+            set
+            {
+                _Datanascimento = value;
+                Onchanged("Datanascimento");
+            }
+        }
 
-        public static DateTime Lastupdate { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
 
-
+        public Ator()
+        {
+            Nome = "";
+            Datanascimento = "";
+        }
         public override String ToString()
         {
             return $"Id: {Idator}" +
                 $"\nNome: {Nome}" +
                 $"\nData de Nascimento: {Datanascimento}";
         }
-        public static int Create(Ator a)
+        public int Create()
         {
 
-            return AtorDAL.Create(a); //Este metodo vai ser estatico
+            return AtorDAL.Create(this); 
         }
-        public static int Update(Ator a)
+        public int Update()
         {
-            return AtorDAL.Update(a);
+            return AtorDAL.Update(this);
         }
 
-        public static int Delete(Ator a)
+        public int Delete()
         {
-            return AtorDAL.Delete(a);
+            return AtorDAL.Delete(this);
         }
         public static bool CreateTable()
         {
@@ -42,6 +82,16 @@ namespace MyMovies.BL
         public static List<Ator> ReadAll()
         {
             return AtorDAL.ReadAll();
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
+        }
+        public static int ReSeed(int number)
+        {
+            return AtorDAL.ReSeed(number);
         }
 
 

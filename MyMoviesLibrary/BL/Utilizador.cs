@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 using MyMovies.DAL;
 
@@ -7,15 +8,81 @@ public enum Tipo { admin = 0, user = 1 };
 
 namespace MyMovies.BL
 {
-    public class Utilizador
+    public class Utilizador : INotifyPropertyChanged
     {
-        public int Idutilizador { get; set; } = -1;
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public Tipo Tipo { get; set; }
+        int _Idutilizador;
+        string _Nome;
+        string _Email;
+        string _Password;
+        Tipo _Tipo;
+        public int Idutilizador { 
+            get 
+            {
+                return _Idutilizador;
+            } 
+            set 
+            {
+                _Idutilizador = value;
+                Onchanged("Idutilizador");
+            } 
+        }
+        public string Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+            set
+            {
+                _Nome = value;
+                Onchanged("Nome");
+            }
+        }
+        public string Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                _Email = value;
+                Onchanged("Email");
+            }
+        }
+        public string Password
+        {
+            get
+            {
+                return _Password;
+            }
+            set
+            {
+                _Password = value;
+                Onchanged("Password");
+            }
+        }
+        public Tipo Tipo
+        {
+            get
+            {
+                return _Tipo;
+            }
+            set
+            {
+                _Tipo = value;
+                Onchanged("Tipo");
+            }
+        }
 
-        public Utilizador() { }
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public Utilizador() {
+            Nome = "";
+            Email = "";
+            Password = "";
+            Tipo = Tipo.user;
+        }
         public Utilizador(int idutilizador, string nome, string email, string password, string user_adm)
         {
             this.Idutilizador = idutilizador;
@@ -35,33 +102,43 @@ namespace MyMovies.BL
                 $"\nPassword: {Password}" +
                 $"\nTipo: {Tipo}";
         }
-        public static int Create(Utilizador u)
+        public int Create()
         {
-            return UtilizadorDAL.Create(u);
+            return UtilizadorDAL.Create(this);
         }
-        public static List<Utilizador> ReadNome(Utilizador u)
+        public List<Utilizador> ReadNome()
         {
-            return UtilizadorDAL.ReadNome(u);
+            return UtilizadorDAL.ReadNome(this);
         }
-        public static Utilizador ReadId(Utilizador u)
+        public Utilizador ReadId()
         {
-            return UtilizadorDAL.ReadId(u);
+            return UtilizadorDAL.ReadId(this);
         }
         public static List<Utilizador> ReadAll()
         {
             return UtilizadorDAL.ReadAll();
         }
-        public static int Update(Utilizador u)
+        public int Update()
         {
-            return UtilizadorDAL.Update(u);
+            return UtilizadorDAL.Update(this);
         }
-        public static int Delete(Utilizador u)
+        public int Delete()
         {
-            return UtilizadorDAL.Delete(u);
+            return UtilizadorDAL.Delete(this);
         }
         public static bool CreateTable()
         {
             return UtilizadorDAL.CreateTable();
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
+        }
+        public static int ReSeed(int number)
+        {
+            return UtilizadorDAL.ReSeed(number);
         }
     }
 }

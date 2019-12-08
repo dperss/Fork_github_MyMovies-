@@ -32,33 +32,33 @@ namespace MyMovies.BL
                 $"\nId Utilizador: {Idutilizador}" +
                 $"\nId Filme: {Idfilme}";
         }
-        public static int Create(Avaliacao_comentario a)
+        public int Create()
         {
-            return Avaliacao_comentarioDAL.Create(a);
+            return Avaliacao_comentarioDAL.Create(this);
         }
-        public static List<Avaliacao_comentario> ReadIdUtilizador(Avaliacao_comentario a)
+        public List<Avaliacao_comentario> ReadIdUtilizador()
         {
-            return Avaliacao_comentarioDAL.ReadIdUtilizador(a);
+            return Avaliacao_comentarioDAL.ReadIdUtilizador(this);
         }
-        public static List<Avaliacao_comentario> ReadIdFilme(Avaliacao_comentario a)
+        public List<Avaliacao_comentario> ReadIdFilme()
         {
-            return Avaliacao_comentarioDAL.ReadIdFilme(a);
+            return Avaliacao_comentarioDAL.ReadIdFilme(this);
         }
-        public static Avaliacao_comentario ReadId(Avaliacao_comentario a)
+        public Avaliacao_comentario ReadId()
         {
-            return Avaliacao_comentarioDAL.ReadId(a);
+            return Avaliacao_comentarioDAL.ReadId(this);
         }
         public static List<Avaliacao_comentario> ReadAll()
         {
             return Avaliacao_comentarioDAL.ReadAll();
         }
-        public static int Update(Avaliacao_comentario a)
+        public int Update()
         {
-            return Avaliacao_comentarioDAL.Update(a);
+            return Avaliacao_comentarioDAL.Update(this);
         }
-        public static int Delete(Avaliacao_comentario a)
+        public int Delete()
         {
-            return Avaliacao_comentarioDAL.Delete(a);
+            return Avaliacao_comentarioDAL.Delete(this);
         }
         public static bool CreateTable()
         {
