@@ -38,6 +38,7 @@ namespace MyMovies.universal.Paginas
         private void viewUtilizadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GestaoDeUtilizadoresViewModel.SelectedUtilizador = viewUtilizadores.SelectedItem as Utilizador;
+            //FrameworkElement a = Tipo.GetCellContent(viewUtilizadores.SelectedItem); não consigo editar o valor do Tipo
         }
 
         private void viewUtilizadores_RowEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndedEventArgs e)
@@ -45,49 +46,28 @@ namespace MyMovies.universal.Paginas
             GestaoDeUtilizadoresViewModel.UpdateUtilizador();
         }
 
-        private void Add_Utilizador_Click(object sender, RoutedEventArgs e)
+        private async void Add_Utilizador_Click(object sender, RoutedEventArgs e)
         {
-            GestaoDeUtilizadoresViewModel.AddLinha();
-        }
-
-        private void Eliminar_Utilizador_Click(object sender, RoutedEventArgs e)
-        {
-            GestaoDeUtilizadoresViewModel.EliminarUtilizador();
-        }
-
-        /*private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)//ver
-        {
-            GestaoDeUtilizadoresViewModel.AddLinha();
-        }
-
-        private async void Eliminar_Utilizadores_Botao(object sender, RoutedEventArgs e)//ver
-        {
-            object utilizador = viewUtilizadores.SelectedItem;
-            if (utilizador == null)
+            if (!GestaoDeUtilizadoresViewModel.Add_Linha())
             {
-                MessageDialog select = new MessageDialog("Tem que selecionar alguma linha para remover");
-                await select.ShowAsync();
-                return;
+                MessageDialog message = new MessageDialog("O Utilizador não foi adicionado");
+                await message.ShowAsync();
             }
-            if (!GestaoDeUtilizadoresViewModel.DeleteUtilizadores(utilizador)) 
-            {
-                MessageDialog retorno = new MessageDialog("A Operação falhou");
-                await retorno.ShowAsync();
-            }
-            
         }
 
-        
-
-
-        private void viewUtilizadores_RowEditEnding(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndingEventArgs e)
+        private async void Eliminar_Utilizador_Click(object sender, RoutedEventArgs e)
         {
-            object utilizador = viewUtilizadores.SelectedItem;
-            if (!GestaoDeUtilizadoresViewModel.UpdateUtilizadores(utilizador))
+            if (viewUtilizadores.SelectedItem == null)
             {
-                MessageDialog message = new MessageDialog("A linha não foi editada");
+                MessageDialog message = new MessageDialog("Tem que selecionar algum Utilizador para remover");
+                await message.ShowAsync();
             }
-        }*/
+            if (!GestaoDeUtilizadoresViewModel.DeleteUtilizador())
+            {
+                MessageDialog error = new MessageDialog("O Utilizador não foi removido");
+                await error.ShowAsync();
+            }
+        }
 
 
     }

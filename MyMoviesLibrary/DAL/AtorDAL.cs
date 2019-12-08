@@ -22,7 +22,6 @@ namespace MyMovies.DAL
             try
             {
                 db.NonQuery(query, dictionary);
-                Ator.Lastupdate = DateTime.Now;
                 return true;
             }
             catch (System.Data.SqlClient.SqlException)
@@ -36,14 +35,10 @@ namespace MyMovies.DAL
         { //ver se é void e por parametros
 
             Database db = new Database();
-            string query = @"INSERT INTO [dbo].[Ator] ([idator], [nome], [datanascimento]) VALUES (@idator, @nome, @datanascimento)";
-
+            string query = @"INSERT INTO [dbo].[Ator] ( [nome], [datanascimento]) VALUES (@nome, @datanascimento)";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            dictionary.Add("@idator", a.Idator);
             dictionary.Add("@nome", a.Nome);
             dictionary.Add("@datanascimento", a.Datanascimento);
-
-            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -57,7 +52,7 @@ namespace MyMovies.DAL
             List<Ator> alist = new List<Ator>();
             string query = "SELECT * FROM Ator";
             SqlDataReader row = db.Query(query, null);
-            if (!row.HasRows)
+            if (row == null)
                 return null;
             while (row.Read())
             {
@@ -76,12 +71,12 @@ namespace MyMovies.DAL
         public static int Update(Ator a)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Ator] SET [datanascimento] = @datanascimento WHERE Idator =@Idator ; ";
+            string query = "UPDATE [Ator] SET[nome] = @nome, [datanascimento] = @datanascimento WHERE idator = @idator;";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
+            dictionary.Add("@idator", a.Idator);
+            dictionary.Add("@nome", a.Nome);
             dictionary.Add("@datanascimento", a.Datanascimento);
 
-            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -91,17 +86,25 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Ator] WHERE id=@idator";
+            string query = "DELETE FROM [dbo].[Ator] WHERE idator=@idator";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
-            dictionary.Add("@datanascimento", a.Datanascimento);
+            dictionary.Add("@idator", a.Idator);
 
-            Ator.Lastupdate = DateTime.Now;
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
 
 
+        }
+
+        public static int ReSeed(int number)
+        {
+            Database db = new Database();
+            string query = "DBCC CHECKIDENT(Ator, RESEED, @number);";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@number", number);
+            return db.NonQuery(query, dictionary);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace MyMovies.universal.ViewModel
 {
     public class GestaoDeUtilizadoresViewModel
     {
-        ObservableCollection<Utilizador> utilizadores;
+        ObservableCollection<Utilizador> _utilizadores;
         Utilizador _utilizador;
 
         public Utilizador SelectedUtilizador
@@ -28,160 +28,68 @@ namespace MyMovies.universal.ViewModel
                 _utilizador = value;
             }
         }
+
         public GestaoDeUtilizadoresViewModel()
         {
-            List <Utilizador> lista = Utilizador.ReadAll();
-            if (lista != null)
+            List<Utilizador> lista = Utilizador.ReadAll();
+            if(lista == null)
             {
-                utilizadores = new ObservableCollection<Utilizador>(lista);
+                Utilizador.CreateTable();
+                _utilizadores = new ObservableCollection<Utilizador>();
             }
             else
             {
-                utilizadores = new ObservableCollection<Utilizador>();
+                _utilizadores = new ObservableCollection<Utilizador>(lista);
             }
         }
-        public ObservableCollection<Utilizador> Utilizadores {
+
+        public ObservableCollection<Utilizador> Utilizadores
+        {
             get
             {
-                return utilizadores;
+                return _utilizadores;
             }
-         
-        }
-
-        public bool UpdateUtilizador()
-        {
-            Utilizador u = utilizadores.FirstOrDefault(x=> x.Idutilizador == SelectedUtilizador.Idutilizador);
-            if (u.Update() == 1)
+            set
             {
-                u = SelectedUtilizador;
-                return true;
+                _utilizadores = value;
             }
-            
-            return false;
-        }
-
-        public void AddLinha()
-        {
-            Utilizador u = new Utilizador();
-            u.Email = "";
-            u.Idutilizador = utilizadores.Count + 1;
-            u.Password = "";
-            u.Tipo = Tipo.user;
-            u.Nome = "";
-            if(u.Create() == 1)
-            utilizadores.Add(u);
         }
 
         public bool CreateUtilizador(Utilizador u)
         {
-            if (u.Create() == 1)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        public bool EliminarUtilizador()
-        {
-            if(SelectedUtilizador == null)
-            {
-                return false;
-            }
-            if(SelectedUtilizador.Delete() == 1)
-            {
-                utilizadores.Remove(SelectedUtilizador);
-                return true;
-            }
-            return false;
-        }
-
-        /*public bool CreateUtilizador(Utilizador u)
-        {
-            foreach(Utilizador x in utilizadores)
-            {
-                if (x.Email == u.Email)
-                {
-                    return false;
-                }
-            }
             if(u.Create() == 1)
             {
-                utilizadores.Add(u);
+                Utilizadores.Add(u);
                 return true;
             }
             return false;
         }
-        public bool DeleteUtilizadores(object u)
+        public bool UpdateUtilizador()
         {
-            Utilizador utilizador = (Utilizador)u;
-            if (utilizador.Email=="")
+            if(SelectedUtilizador.Update() == 1)
             {
-                utilizadores.Remove(utilizador);
                 return true;
             }
-            if (utilizador.Delete() == 1)
+            return false;
+        }
+        public bool DeleteUtilizador()
+        {
+            if (SelectedUtilizador.Delete() == 1)
             {
-                utilizadores.Remove(utilizador);
+                Utilizadores.Remove(SelectedUtilizador);
+                Utilizador.ReSeed(Utilizadores.Count);
                 return true;
             }
             return false;
         }
 
-        public bool UpdateUtilizadores(object u)
-        { 
-            Utilizador utilizador = (Utilizador)u;
-            foreach (Utilizador x in utilizadores)
-            {
-                if(utilizador.Email == x.Email && utilizador.Idutilizador != x.Idutilizador)
-                {
-                    return false;
-                }
-            }
-            Utilizador ulist = utilizadores.FirstOrDefault(x=> x.Idutilizador==utilizador.Idutilizador);
-            if (utilizador.Update() == 1)
-            {
-                ulist.Email = utilizador.Email;
-                ulist.Nome = utilizador.Nome;
-                ulist.Password = utilizador.Password;
-                ulist.Tipo = utilizador.Tipo;
-                return true;
-            }
-            return false;
-        }
-
-        public void AddLinha()
+        public bool Add_Linha()
         {
             Utilizador u = new Utilizador();
-            u.Tipo = Tipo.user;
-            u.Email = "";
-            u.Nome = "";
-            u.Password = "";
-            if (utilizadores == null)
-            {
-                utilizadores = new ObservableCollection<Utilizador>();
-                u.Idutilizador = 1;
-            }
-            else
-            {
-                u.Idutilizador = utilizadores.Count + 1;
-            }
-            if (u.Create() == 1)
-            {
-                utilizadores.Add(u);
-            }
+            u.Idutilizador = Utilizadores.Count + 1;
+            return CreateUtilizador(u);
         }
-
-        public void CheckWhite()
-        {
-            foreach(Utilizador u in Utilizadores)
-            {
-                if (u.Email == "")
-                    if (u.Delete() == 1)
-                    {
-                        utilizadores.Remove(u);
-                    }
-            }
-        }*/
+        
         
     }
 }

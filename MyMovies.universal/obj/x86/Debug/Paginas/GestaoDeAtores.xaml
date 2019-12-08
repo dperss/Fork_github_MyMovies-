@@ -87,15 +87,17 @@
         GridLinesVisibility="None"
         HeadersVisibility="Column"
         IsReadOnly="False"
+                                              
+                                                      
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
-        SelectionMode="Extended"
+        SelectionMode="Single"
         RowGroupHeaderPropertyNameAlternative="Range"
                                                              >
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idator}" Tag="Id"/>
-                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
-                <controls:DataGridTextColumn Header="Datanascimento" Binding="{Binding Datanascimento}" Tag="Datanascimento" />
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idator, Mode=TwoWay}" Tag="Id" IsReadOnly="True"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
+                <controls:DataGridTextColumn Header="Datanascimento" Binding="{Binding Datanascimento, Mode=TwoWay}" Tag="Datanascimento" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

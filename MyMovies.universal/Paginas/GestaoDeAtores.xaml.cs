@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MyMovies.BL;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -30,16 +32,37 @@ namespace MyMovies.universal.Paginas
             GestaoDeAtoresViewModel = new GestaoDeAtoresViewModel();
         }
 
-        private void Adicionar_Atores_Botao(object sender, RoutedEventArgs e)
+        private async void Adicionar_Atores_Botao(object sender, RoutedEventArgs e)
         {
-
+            if (!GestaoDeAtoresViewModel.Add_Linha())
+            {
+                MessageDialog message = new MessageDialog("O Ator não foi adicionado");
+                await message.ShowAsync();
+            }
         }
 
-        private void Eliminar_Atores_Botao(object sender, RoutedEventArgs e)
+        private async void Eliminar_Atores_Botao(object sender, RoutedEventArgs e)
         {
-
+            if (viewAtores.SelectedItem == null)
+            {
+                MessageDialog message = new MessageDialog("Tem que selecionar algum Ator para remover");
+                await message.ShowAsync();
+            }
+            if (!GestaoDeAtoresViewModel.DeleteAtor())
+            {
+                MessageDialog error = new MessageDialog("O Ator não foi removido");
+                await error.ShowAsync();
+            }
         }
 
-       
+        private void viewAtores_RowEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndedEventArgs e)
+        {
+            GestaoDeAtoresViewModel.UpdateAtor();
+        }
+
+        private void viewAtores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GestaoDeAtoresViewModel.SelectedAtor = viewAtores.SelectedItem as Ator;
+        }
     }
 }

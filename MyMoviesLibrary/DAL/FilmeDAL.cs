@@ -112,14 +112,5 @@ namespace MyMovies.DAL
             dictionary.Add("@number", number);
             return db.NonQuery(query, dictionary);
         }
-
-
-
-
-
-
-
-
-
     }
 }

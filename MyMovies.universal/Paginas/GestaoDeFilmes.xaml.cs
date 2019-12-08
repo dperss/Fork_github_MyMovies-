@@ -32,18 +32,28 @@ namespace MyMovies.universal.Paginas
             GestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
         }
 
-        private void Adicionar_Filmes_Botao(object sender, RoutedEventArgs e)
+        private async void Adicionar_Filmes_Botao(object sender, RoutedEventArgs e)
         {
             if (!GestaoDeFilmesViewModel.Add_Linha())
             {
                 MessageDialog message = new MessageDialog("O Filme não foi adicionado");
+                await message.ShowAsync();
             }
             
         }
 
-        private void Eliminar_Filmes_Botao(object sender, RoutedEventArgs e)
+        private async void Eliminar_Filmes_Botao(object sender, RoutedEventArgs e)
         {
-            GestaoDeFilmesViewModel.DeleteFilme();
+            if(viewFilmes.SelectedItem == null)
+            {
+                MessageDialog message = new MessageDialog("Tem que selecionar algum Filme para remover");
+                await message.ShowAsync();
+            }
+            if (!GestaoDeFilmesViewModel.DeleteFilme())
+            {
+                MessageDialog error = new MessageDialog("O Filme não foi removido");
+                await error.ShowAsync();
+            }
         }
 
         private void viewFilmes_RowEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndedEventArgs e)
