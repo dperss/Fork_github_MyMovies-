@@ -91,10 +91,13 @@
       <RootProperty Name="RowDetailsVisibilityMode" />
       <RootProperty Name="SelectionMode" />
       <RootProperty Name="RowGroupHeaderPropertyNameAlternative" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Columns" />
-      <RootEvent Name="RowEditEnding" />
+      <RootEvent Name="SelectionChanged" />
+      <RootEvent Name="RowEditEnded" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTextColumn">
       <RootProperty Name="Header" />
       <RootProperty Name="Binding" />

@@ -3,7 +3,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Popups;
@@ -13,6 +15,19 @@ namespace MyMovies.universal.ViewModel
     public class GestaoDeUtilizadoresViewModel
     {
         ObservableCollection<Utilizador> utilizadores;
+        Utilizador _utilizador;
+
+        public Utilizador SelectedUtilizador
+        {
+            get
+            {
+                return _utilizador;
+            }
+            set
+            {
+                _utilizador = value;
+            }
+        }
         public GestaoDeUtilizadoresViewModel()
         {
             List <Utilizador> lista = Utilizador.ReadAll();
@@ -33,7 +48,54 @@ namespace MyMovies.universal.ViewModel
          
         }
 
+        public bool UpdateUtilizador()
+        {
+            Utilizador u = utilizadores.FirstOrDefault(x=> x.Idutilizador == SelectedUtilizador.Idutilizador);
+            if (u.Update() == 1)
+            {
+                u = SelectedUtilizador;
+                return true;
+            }
+            
+            return false;
+        }
+
+        public void AddLinha()
+        {
+            Utilizador u = new Utilizador();
+            u.Email = "";
+            u.Idutilizador = utilizadores.Count + 1;
+            u.Password = "";
+            u.Tipo = Tipo.user;
+            u.Nome = "";
+            if(u.Create() == 1)
+            utilizadores.Add(u);
+        }
+
         public bool CreateUtilizador(Utilizador u)
+        {
+            if (u.Create() == 1)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public bool EliminarUtilizador()
+        {
+            if(SelectedUtilizador == null)
+            {
+                return false;
+            }
+            if(SelectedUtilizador.Delete() == 1)
+            {
+                utilizadores.Remove(SelectedUtilizador);
+                return true;
+            }
+            return false;
+        }
+
+        /*public bool CreateUtilizador(Utilizador u)
         {
             foreach(Utilizador x in utilizadores)
             {
@@ -42,7 +104,7 @@ namespace MyMovies.universal.ViewModel
                     return false;
                 }
             }
-            if(Utilizador.Create(u) == 1)
+            if(u.Create() == 1)
             {
                 utilizadores.Add(u);
                 return true;
@@ -57,7 +119,7 @@ namespace MyMovies.universal.ViewModel
                 utilizadores.Remove(utilizador);
                 return true;
             }
-            if (Utilizador.Delete(utilizador) == 1)
+            if (utilizador.Delete() == 1)
             {
                 utilizadores.Remove(utilizador);
                 return true;
@@ -76,7 +138,7 @@ namespace MyMovies.universal.ViewModel
                 }
             }
             Utilizador ulist = utilizadores.FirstOrDefault(x=> x.Idutilizador==utilizador.Idutilizador);
-            if (Utilizador.Update(utilizador) == 1)
+            if (utilizador.Update() == 1)
             {
                 ulist.Email = utilizador.Email;
                 ulist.Nome = utilizador.Nome;
@@ -103,7 +165,7 @@ namespace MyMovies.universal.ViewModel
             {
                 u.Idutilizador = utilizadores.Count + 1;
             }
-            if (Utilizador.Create(u) == 1)
+            if (u.Create() == 1)
             {
                 utilizadores.Add(u);
             }
@@ -114,11 +176,12 @@ namespace MyMovies.universal.ViewModel
             foreach(Utilizador u in Utilizadores)
             {
                 if (u.Email == "")
-                    if (Utilizador.Delete(u) == 1)
+                    if (u.Delete() == 1)
                     {
                         utilizadores.Remove(u);
                     }
             }
-        }
+        }*/
+        
     }
 }

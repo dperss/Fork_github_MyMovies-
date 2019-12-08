@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using MyMovies.universal.ViewModel;
 using Windows.UI.Popups;
 using System.Collections;
+using MyMovies.BL;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -27,17 +28,34 @@ namespace MyMovies.universal.Paginas
     {
         GestaoDeUtilizadoresViewModel GestaoDeUtilizadoresViewModel { get; set; }
 
+
         public GestaoDeUtilizadores()
         {
             this.InitializeComponent();
             GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
-            if (GestaoDeUtilizadoresViewModel.Utilizadores != null)
-            {
-                viewUtilizadores.ItemsSource = GestaoDeUtilizadoresViewModel.Utilizadores;
-            }
         }
 
-        private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)//ver
+        private void viewUtilizadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            GestaoDeUtilizadoresViewModel.SelectedUtilizador = viewUtilizadores.SelectedItem as Utilizador;
+        }
+
+        private void viewUtilizadores_RowEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndedEventArgs e)
+        {
+            GestaoDeUtilizadoresViewModel.UpdateUtilizador();
+        }
+
+        private void Add_Utilizador_Click(object sender, RoutedEventArgs e)
+        {
+            GestaoDeUtilizadoresViewModel.AddLinha();
+        }
+
+        private void Eliminar_Utilizador_Click(object sender, RoutedEventArgs e)
+        {
+            GestaoDeUtilizadoresViewModel.EliminarUtilizador();
+        }
+
+        /*private void Adicionar_Linha_Botao(object sender, RoutedEventArgs e)//ver
         {
             GestaoDeUtilizadoresViewModel.AddLinha();
         }
@@ -69,9 +87,9 @@ namespace MyMovies.universal.Paginas
             {
                 MessageDialog message = new MessageDialog("A linha não foi editada");
             }
-        }
+        }*/
 
-        
+
     }
 
 }

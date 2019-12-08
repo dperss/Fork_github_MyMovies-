@@ -10,7 +10,6 @@ namespace MyMovies
     {
         static void Main(string[] args)
         {
-            
         }
     }
 

@@ -31,7 +31,13 @@ namespace MyMovies.DAL
                     command.Parameters.AddWithValue(s.Key, s.Value);
                 }
             }
-            return command.ExecuteReader();
+            try
+            {
+                return command.ExecuteReader();
+            }catch(SqlException e)
+            {
+                return null;
+            }
         }
 
         public int NonQuery(string query, Dictionary<string, object> d)
@@ -44,7 +50,13 @@ namespace MyMovies.DAL
                     command.Parameters.AddWithValue(s.Key, s.Value);
                 }
             }
-            return command.ExecuteNonQuery();
+            try
+            {
+                return command.ExecuteNonQuery();
+            }catch(SqlException e)
+            {
+                return 0;
+            }
         }
 
 

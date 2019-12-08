@@ -1,20 +1,83 @@
 ﻿using MyMovies.DAL;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace MyMovies.BL
 {
-    public class Filme
+    public class Filme : INotifyPropertyChanged
     {
-        public int Idfilme { get; set; }
-        public string Nome { get; set; }
-        public string Ano { get; set; }
-        public string Duracao { get; set; } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
+        private int _Idfilme;
+        private string _Nome;
+        private string _Ano;
+        private string _Duracao;
+        private byte[] _Foto;
+        public int Idfilme { //PERGUNTAR: porque que se usa uma variável privada e uma property publica? 
+            get
+            {
+                return _Idfilme;
+            }
+            set 
+            {
+                _Idfilme = value;
+                Onchanged("Idfilme");
+            } 
+        }
+        public string Nome { 
+            get 
+            { 
+                return _Nome;  
+            } 
+            set
+            {
+                _Nome = value;
+                Onchanged("Nome");
+            } 
+        }
+        public string Ano { 
+            get 
+            { 
+                return _Ano; 
+            } 
+            set 
+            {
+                _Ano = value;
+                Onchanged("Ano");
+            } 
+        }
+        public string Duracao { 
+            get 
+            { 
+                return _Duracao; 
+            } 
+            set 
+            {
+                _Duracao = value;
+                Onchanged("Duracao");
+            } 
+        } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
 
-        public byte[] Foto { get; set; }
+        public byte[] Foto { 
+            get 
+            { 
+                return _Foto; 
+            } 
+            set 
+            {
+                _Foto = value;
+                Onchanged("Foto");
+            } 
+        }
 
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        public Filme()
+        {
+            Nome = "";
+            Ano = "";
+            Duracao = "";
+        }
         public int Create()
         {
 
@@ -36,6 +99,16 @@ namespace MyMovies.BL
         public static bool CreateTable()
         {
             return FilmeDAL.CreateTable();
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
+        }
+        public static int ReSeed(int number)
+        {
+            return FilmeDAL.ReSeed(number);
         }
     }
 }

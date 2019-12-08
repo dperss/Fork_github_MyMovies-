@@ -88,13 +88,16 @@
         IsReadOnly="False"
         RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
-        SelectionMode="Extended"
-        RowGroupHeaderPropertyNameAlternative="Range">
+        SelectionChanged="viewFilmes_SelectionChanged"
+        SelectionMode="Single"
+        RowEditEnded="viewFilmes_RowEditEnded"
+        RowGroupHeaderPropertyNameAlternative="Range"
+        ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idfilme}" Tag="Id"/>
-                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome}" Tag="Nome" />
-                <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano}" Tag="Ano" />
-                <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao}" Tag="Duracao" />
+                <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idfilme, Mode=TwoWay}" Tag="Id"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
+                <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano, Mode=TwoWay}" Tag="Ano" />
+                <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao, Mode=TwoWay}" Tag="Duracao" />
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

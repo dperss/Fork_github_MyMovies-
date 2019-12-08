@@ -29,7 +29,7 @@ namespace MyMovies.universal.ViewModel
 
         public bool CreateAtor(Ator a)
         {
-            if (Ator.Create(a) == 1)
+            if (a.Create() == 1)
             {
                 atores.Add(a);
                 return true;

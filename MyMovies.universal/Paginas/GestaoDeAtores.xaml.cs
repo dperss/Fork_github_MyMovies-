@@ -28,7 +28,6 @@ namespace MyMovies.universal.Paginas
         {
             this.InitializeComponent();
             GestaoDeAtoresViewModel = new GestaoDeAtoresViewModel();
-            viewAtores.ItemsSource = GestaoDeAtoresViewModel.Atores;
         }
 
         private void Adicionar_Atores_Botao(object sender, RoutedEventArgs e)
