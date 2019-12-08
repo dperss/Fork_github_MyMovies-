@@ -45,5 +45,10 @@ namespace MyMovies.universal.Paginas
         {
             this.Frame.Navigate(typeof(Paginas.Perfil));
         }
+
+        private void Botao_login_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

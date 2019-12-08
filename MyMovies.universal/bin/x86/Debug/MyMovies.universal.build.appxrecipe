@@ -121,6 +121,9 @@
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf">
+      <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
     </AppxPackagedFile>

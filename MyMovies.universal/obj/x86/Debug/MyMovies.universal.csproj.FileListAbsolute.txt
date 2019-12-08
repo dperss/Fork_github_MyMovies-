@@ -304,3 +304,8 @@ C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\MultipleQualifiersPerDimension
 C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.pri.xml
 C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
+C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.g.i.cs
+C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.g.cs
+C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.xaml
+C:\Curso\DAI\git\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.xbf
+C:\Curso\DAI\git\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf
