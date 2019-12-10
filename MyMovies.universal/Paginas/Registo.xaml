@@ -43,7 +43,7 @@
                     <RowDefinition/>
                 </Grid.RowDefinitions>
                      <Grid Grid.Row="0">
-                    <TextBox PlaceholderText="Email" Height="40" Width="500" Background="CadetBlue" x:Name="EmailTextBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
+                    <TextBox  PlaceholderText="Email" Height="40" Width="500" Background="CadetBlue" x:Name="EmailTextBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
                      </Grid>
                 <Grid Grid.Row="1">
                     <TextBox PlaceholderText="Nome" Height="40" Width="500" Background="CadetBlue" x:Name="NomeTextBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
