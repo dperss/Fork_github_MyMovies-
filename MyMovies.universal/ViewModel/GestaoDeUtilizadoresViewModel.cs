@@ -89,7 +89,23 @@ namespace MyMovies.universal.ViewModel
             u.Idutilizador = Utilizadores.Count + 1;
             return CreateUtilizador(u);
         }
-        
-        
+        public bool Login(Utilizador u)
+        {
+            Utilizador c = new Utilizador();
+
+            c.Email = u.Email;
+            c.ReadEmail();
+
+            if (c.Password == u.Password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
     }
 }

@@ -114,6 +114,10 @@ namespace MyMovies.BL
         {
             return UtilizadorDAL.ReadId(this);
         }
+        public Utilizador ReadEmail()
+        {
+            return UtilizadorDAL.ReadEmail(this);
+        }
         public static List<Utilizador> ReadAll()
         {
             return UtilizadorDAL.ReadAll();

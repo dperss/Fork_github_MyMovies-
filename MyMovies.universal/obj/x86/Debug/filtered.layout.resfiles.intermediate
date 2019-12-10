@@ -1,3 +1,4 @@
+WinMetadata\Windows.winmd
 Assets\aladin.jpg
 Assets\capa.jpg
 Assets\EditDocument-512.png
@@ -30,4 +31,3 @@ Paginas\Perfil.xbf
 Paginas\Principal.xbf
 Paginas\Registo.xbf
 Properties\Default.rd.xml
-WinMetadata\Windows.winmd

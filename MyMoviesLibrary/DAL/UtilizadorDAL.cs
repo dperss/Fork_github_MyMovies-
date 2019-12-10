@@ -77,6 +77,29 @@ namespace MyMovies.DAL
             row.Close();
             return u;
         }
+        public static Utilizador ReadEmail(Utilizador u)
+        {
+            Database db = new Database();
+            string query = "SELECT * FROM Utilizador WHERE email=@email;";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@email", u.Email);
+            SqlDataReader row = db.Query(query, d);
+            if (row.HasRows == false)
+                return null;
+            while (row.Read())
+            {
+                u.Idutilizador = (int)row["idutilizador"];
+                u.Nome = (string)row["nome"];
+                u.Email = (string)row["email"];
+                u.Password = (string)row["password"];
+                if (((string)row["tipo"]).Equals("admin"))
+                    u.Tipo = Tipo.admin;
+                else
+                    u.Tipo = Tipo.user;
+            }
+            row.Close();
+            return u;
+        }
         public static List<Utilizador> ReadAll()
         {
             Database db = new Database();

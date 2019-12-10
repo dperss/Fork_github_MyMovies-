@@ -48,16 +48,16 @@
                     <PersonPicture Margin="0,10,30,0"/>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox PlaceholderText="EMAIL" Height="40" Width="500" Background="CadetBlue"  Margin="0,0,30,-30" BorderBrush="Gray"/>
+                    <TextBox x:ConnectionId='6' PlaceholderText="EMAIL" Height="40" Width="500" Background="CadetBlue" x:Name="EmailTextBox"  Margin="0,0,30,-30" BorderBrush="Gray"/>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <PasswordBox x:ConnectionId='3' PlaceholderText="PASSWORD" Height="40" Width="500" Background="CadetBlue" x:Name="PasswordBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
+                    <PasswordBox x:ConnectionId='5' PlaceholderText="PASSWORD" Height="40" Width="500" Background="CadetBlue" x:Name="PasswordBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Button Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top"/>
-                    <TextBlock x:ConnectionId='2' Text="Ainda não tem uma conta?"                                                 Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
+                    <Button x:ConnectionId='3' Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top"                      />
+                    <TextBlock x:ConnectionId='4' Text="Ainda não tem uma conta?"                                                 Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
                 </Grid>
-                <Button Grid.Row="3" Content="REGISTE-SE" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80"/>
+                <Button x:ConnectionId='2' Grid.Row="3" Content="REGISTE-SE" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80"                        />
             </Grid>
         </Grid>
         <Grid Grid.Row="0">
