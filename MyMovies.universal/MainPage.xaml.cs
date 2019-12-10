@@ -57,6 +57,7 @@ namespace MyMovies.universal
                         case "Nav_Gestao_de_atores":
                             contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
                             break;
+                        
 
                     }
                 }

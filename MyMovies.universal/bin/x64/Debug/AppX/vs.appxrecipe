@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-10T16:24:25.596</Modified>
+      <Modified>2019-12-10T17:49:55.008</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-10T16:24:25.174</Modified>
+      <Modified>2019-12-10T17:49:54.617</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -70,37 +70,17 @@
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T17:36:56.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\aladin.jpg">
-      <PackagePath>Assets\aladin.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.320</Modified>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\181527.png">
+      <PackagePath>Assets\181527.png</PackagePath>
+      <Modified>2019-12-10T16:56:31.486</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\capa.jpg">
-      <PackagePath>Assets\capa.jpg</PackagePath>
-      <Modified>2019-11-23T18:26:20.308</Modified>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\233-2336379_png-file-timer-icon-svg.png">
+      <PackagePath>Assets\233-2336379_png-file-timer-icon-svg.png</PackagePath>
+      <Modified>2019-12-10T17:03:22.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\el camino.jpg">
-      <PackagePath>Assets\el camino.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.327</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\end_game.jpg">
-      <PackagePath>Assets\end_game.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.333</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\hustlers.jpg">
-      <PackagePath>Assets\hustlers.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.338</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\kindom.jpg">
-      <PackagePath>Assets\kindom.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.342</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\rambo.jpg">
-      <PackagePath>Assets\rambo.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.347</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\spiderman.jpg">
-      <PackagePath>Assets\spiderman.jpg</PackagePath>
-      <Modified>2019-11-23T18:57:48.355</Modified>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\check-circle-outline-512.png">
+      <PackagePath>Assets\check-circle-outline-512.png</PackagePath>
+      <Modified>2019-12-10T17:05:29.027</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\EditDocument-512.png">
       <PackagePath>Assets\EditDocument-512.png</PackagePath>
@@ -148,61 +128,93 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2019-11-23T18:17:26.440</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\aladin.jpg">
+      <PackagePath>Assets\aladin.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.320</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\capa.jpg">
+      <PackagePath>Assets\capa.jpg</PackagePath>
+      <Modified>2019-11-23T18:26:20.308</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\el camino.jpg">
+      <PackagePath>Assets\el camino.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.327</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\end_game.jpg">
+      <PackagePath>Assets\end_game.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.333</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\hustlers.jpg">
+      <PackagePath>Assets\hustlers.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.338</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\kindom.jpg">
+      <PackagePath>Assets\kindom.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.342</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\rambo.jpg">
+      <PackagePath>Assets\rambo.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.347</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Assets\spiderman.jpg">
+      <PackagePath>Assets\spiderman.jpg</PackagePath>
+      <Modified>2019-11-23T18:57:48.355</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2019-11-23T18:17:26.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-12-08T19:35:14.709</Modified>
+      <Modified>2019-12-10T17:46:44.665</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Biblioteca.xbf">
       <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.034</Modified>
+      <Modified>2019-12-10T17:43:19.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.034</Modified>
+      <Modified>2019-12-10T17:43:19.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.034</Modified>
+      <Modified>2019-12-10T17:43:19.693</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:49:54.476</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-10T16:24:25.049</Modified>
+      <Modified>2019-12-10T17:43:19.709</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -214,11 +226,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-08T20:55:59.755</Modified>
+      <Modified>2019-12-10T17:42:36.117</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\bin\x64\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-10T16:24:25.596</Modified>
+      <Modified>2019-12-10T17:49:55.008</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
