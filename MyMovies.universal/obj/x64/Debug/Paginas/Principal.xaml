@@ -30,7 +30,7 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"   >
+                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"                             >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>

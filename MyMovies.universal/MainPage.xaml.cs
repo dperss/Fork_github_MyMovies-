@@ -84,7 +84,13 @@ namespace MyMovies.universal
 
         private void nv_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
+            try
+            {
+                contentFrame.GoBack();
+            }catch(System.Runtime.InteropServices.COMException e)
+            {
 
+            }
            
         }
        
