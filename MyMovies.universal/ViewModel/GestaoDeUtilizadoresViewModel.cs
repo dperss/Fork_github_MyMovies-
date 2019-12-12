@@ -16,6 +16,19 @@ namespace MyMovies.universal.ViewModel
     {
         ObservableCollection<Utilizador> _utilizadores;
         Utilizador _utilizador;
+        ObservableCollection<Tipo> _tipos;
+
+        public ObservableCollection<Tipo> Tipos
+        {
+            get
+            {
+                return _tipos;
+            }
+            set
+            {
+                _tipos = value;
+            }
+        }
 
         public Utilizador SelectedUtilizador
         {
@@ -32,6 +45,9 @@ namespace MyMovies.universal.ViewModel
         public GestaoDeUtilizadoresViewModel()
         {
             List<Utilizador> lista = Utilizador.ReadAll();
+            _tipos = new ObservableCollection<Tipo>();
+            Tipos.Add(Tipo.admin);
+            Tipos.Add(Tipo.user);
             if(lista == null)
             {
                 Utilizador.CreateTable();
