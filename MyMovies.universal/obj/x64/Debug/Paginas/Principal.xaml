@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="MyMovies.universal.Paginas.Principal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition />
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+       
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="7*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Button x:ConnectionId='7' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
+                    <Image Source="/Assets\EditDocument-512.png" />
+                </Button>
+            </Grid>
+            <Grid Grid.Column="2">
+                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"                             >
+                    <Image Source="/Assets\Untitled-1.png" />
+                    <Button.Flyout>
+                        <MenuFlyout>
+                            <MenuFlyoutItem x:ConnectionId='5' Text="Perfil"                           />
+                            <MenuFlyoutItem x:ConnectionId='6' Text="Biblioteca"                               />
+                            <MenuFlyoutItem Text="LogOut"/>
+
+                        </MenuFlyout>
+                    </Button.Flyout>
+                </Button>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
+                <PivotItem Header="Recentes"/>
+                <PivotItem Header="Mais Vistos"/>
+                <PivotItem Header="Melhor Classificados"/>
+            </Pivot>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Rectangle Fill="Gray" Opacity="0.8" />
+            <GridView x:ConnectionId='2' x:Name="Filmes"
+                      SelectionMode="Single">
+                <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        
+                        <Image  Stretch="UniformToFill" Width="190" Height="130" />
+                    </DataTemplate>
+                  
+                </GridView.ItemTemplate>
+                
+            </GridView> 
+        </Grid>
+       
+    </Grid>
+</Page>
+

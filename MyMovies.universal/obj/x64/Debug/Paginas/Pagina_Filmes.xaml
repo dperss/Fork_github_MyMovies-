@@ -1,0 +1,98 @@
+﻿<Page
+    x:Class="MyMovies.universal.Paginas.Pagina_Filmes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Windows.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="7*" />
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Rectangle  Fill="Gray" Opacity="0.6"/>
+                <Rectangle  Fill="White" Opacity="0.6" Height="750" Width="772" HorizontalAlignment="Right"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="329*"/>
+                <ColumnDefinition Width="1171*"/>
+            </Grid.ColumnDefinitions>
+            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Center" HorizontalAlignment="Left" Width="300" Grid.Column="1" Margin="871,0,0,0"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"/>
+                <ColumnDefinition />
+                <ColumnDefinition Width="1.3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <!--aqui falta ver como se poe a imagem-->
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Image Source="/Assets\check-circle-outline-512.png" Height="50" Margin="200,10,10,320"/>
+                    <Image Source="/Assets\181527.png" Height="50"  Margin="-200,10,10,320"/>
+                    <Image Source="/Assets\233-2336379_png-file-timer-icon-svg.png" Height="50" Margin="0,10,10,320"/>
+                </Grid>
+            </Grid>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="1.4*"/>
+                <ColumnDefinition Width=".3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
+                    <RowDefinition Height="0.5*"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <RatingControl HorizontalAlignment="Right" Margin="0,0,30,0" >
+                        <RatingControl.Resources>
+                            <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
+                            <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>
+                        </RatingControl.Resources>
+                    </RatingControl>
+                </Grid>
+               
+                
+            </Grid>
+            
+            
+            
+        </Grid>
+
+
+
+
+    </Grid>
+</Page>
+
