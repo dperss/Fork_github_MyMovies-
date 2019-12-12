@@ -38,7 +38,8 @@
             <NavigationViewItem Icon="Admin">
                 <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
             </NavigationViewItem>
-
+            
+            
         </NavigationView.MenuItems>
         <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>
     </NavigationView>

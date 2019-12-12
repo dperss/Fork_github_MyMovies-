@@ -99,7 +99,7 @@
                 <controls:DataGridTextColumn x:ConnectionId='5' Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
                 <controls:DataGridTextColumn x:ConnectionId='6' Header="Email" Binding="{Binding Email, Mode=TwoWay}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
                 <controls:DataGridTextColumn x:ConnectionId='7' Header="Password" Binding="{Binding Password, Mode=TwoWay}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
-                <controls:DataGridTextColumn x:ConnectionId='8' Header="Tipo" Binding="{Binding Tipo, Mode=TwoWay}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
+                <controls:DataGridComboBoxColumn x:ConnectionId='8' Header="Tipo"                                                            Binding="{Binding Tipo, Mode=TwoWay}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>
