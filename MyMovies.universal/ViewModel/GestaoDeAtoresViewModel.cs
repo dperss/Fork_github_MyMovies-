@@ -73,8 +73,23 @@ namespace MyMovies.universal.ViewModel
         {
             if (SelectedAtor.Delete() == 1)
             {
-                Atores.Remove(SelectedAtor);
-                Ator.ReSeed(Atores.Count);
+                if (SelectedAtor.Idator == Atores.Count)
+                {
+                    Atores.Remove(SelectedAtor);
+                    Ator.ReSeed(Atores.Count);
+                }
+                else
+                {
+
+                    foreach (Ator u in Atores)
+                    {
+                        if (u.Idator > SelectedAtor.Idator)
+                            u.Idator -= 1;
+                    }
+                    Atores.Remove(SelectedAtor);
+                    Ator.CreateFromObservableCollection(Atores);
+                }
+
                 return true;
             }
             return false;

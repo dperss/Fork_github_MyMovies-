@@ -61,6 +61,7 @@ namespace MyMovies.universal.Paginas
             {
                 MessageDialog message = new MessageDialog("Tem que selecionar algum Utilizador para remover");
                 await message.ShowAsync();
+                return;
             }
             if (!GestaoDeUtilizadoresViewModel.DeleteUtilizador())
             {

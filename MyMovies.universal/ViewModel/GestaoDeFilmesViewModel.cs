@@ -73,10 +73,25 @@ namespace MyMovies.universal.ViewModel
 
         public bool DeleteFilme()
         {
-            if(SelectedFilme.Delete()==1)
+            if (SelectedFilme.Delete() == 1)
             {
-                Filmes.Remove(SelectedFilme);
-                Filme.ReSeed(Filmes.Count);
+                if (SelectedFilme.Idfilme == Filmes.Count)
+                {
+                    Filmes.Remove(SelectedFilme);
+                    Filme.ReSeed(Filmes.Count);
+                }
+                else
+                {
+
+                    foreach (Filme f in Filmes)
+                    {
+                        if (f.Idfilme > SelectedFilme.Idfilme)
+                            f.Idfilme -= 1;
+                    }
+                    Filmes.Remove(SelectedFilme);
+                    Filme.CreateFromObservableCollection(Filmes);
+                }
+
                 return true;
             }
             return false;

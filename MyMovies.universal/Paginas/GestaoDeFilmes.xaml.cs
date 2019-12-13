@@ -48,6 +48,7 @@ namespace MyMovies.universal.Paginas
             {
                 MessageDialog message = new MessageDialog("Tem que selecionar algum Filme para remover");
                 await message.ShowAsync();
+                return;
             }
             if (!GestaoDeFilmesViewModel.DeleteFilme())
             {
