@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:50:11.162</Modified>
+      <Modified>2019-12-13T21:16:51.603</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-12T14:50:10.766</Modified>
+      <Modified>2019-12-13T21:16:51.210</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -64,7 +64,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMovies.dll">
       <PackagePath>MyMovies.dll</PackagePath>
-      <Modified>2019-12-12T14:44:01.415</Modified>
+      <Modified>2019-12-13T20:57:44.542</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -72,149 +72,149 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\181527.png">
       <PackagePath>Assets\181527.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\233-2336379_png-file-timer-icon-svg.png">
       <PackagePath>Assets\233-2336379_png-file-timer-icon-svg.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\check-circle-outline-512.png">
       <PackagePath>Assets\check-circle-outline-512.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\EditDocument-512.png">
       <PackagePath>Assets\EditDocument-512.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Joker.PNG">
       <PackagePath>Assets\Joker.PNG</PackagePath>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Untitled-1.png">
       <PackagePath>Assets\Untitled-1.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.821</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\aladin.jpg">
       <PackagePath>Assets\aladin.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\capa.jpg">
       <PackagePath>Assets\capa.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\el camino.jpg">
       <PackagePath>Assets\el camino.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\end_game.jpg">
       <PackagePath>Assets\end_game.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\hustlers.jpg">
       <PackagePath>Assets\hustlers.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\kindom.jpg">
       <PackagePath>Assets\kindom.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\rambo.jpg">
       <PackagePath>Assets\rambo.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\spiderman.jpg">
       <PackagePath>Assets\spiderman.jpg</PackagePath>
-      <Modified>2019-12-12T14:42:37.837</Modified>
+      <Modified>2019-12-13T20:34:55.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-12-12T14:42:37.852</Modified>
+      <Modified>2019-12-13T20:34:55.017</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-12-12T14:48:02.243</Modified>
+      <Modified>2019-12-13T21:12:42.938</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.626</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf">
       <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.626</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.626</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.611</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.611</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.611</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-12T14:50:10.640</Modified>
+      <Modified>2019-12-13T21:16:51.085</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -226,11 +226,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-12T14:44:07.884</Modified>
+      <Modified>2019-12-13T20:35:43.173</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-12T14:50:11.158</Modified>
+      <Modified>2019-12-13T21:16:51.603</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

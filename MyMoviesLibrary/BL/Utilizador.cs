@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 using MyMovies.DAL;
@@ -137,12 +138,20 @@ namespace MyMovies.BL
         public void Onchanged(string name)
         {
             if (PropertyChanged != null)
+            {
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
+                if (name == "Tipo")
+                    this.Update();
+            }
 
         }
         public static int ReSeed(int number)
         {
             return UtilizadorDAL.ReSeed(number);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Utilizador> collection)
+        {
+            return UtilizadorDAL.CreateFromObservableCollection(collection);
         }
     }
 }

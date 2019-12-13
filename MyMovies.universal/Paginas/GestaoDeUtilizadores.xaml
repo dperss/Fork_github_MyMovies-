@@ -54,7 +54,7 @@
        
         ItemsSource="{x:Bind GestaoDeUtilizadoresViewModel.Utilizadores}">
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador, Mode=TwoWay}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Idutilizador, Mode=OneWay}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
                 <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
                 <controls:DataGridTextColumn Header="Email" Binding="{Binding Email, Mode=TwoWay}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
                 <controls:DataGridTextColumn Header="Password" Binding="{Binding Password, Mode=TwoWay}" Tag="Password" IsReadOnly="False" x:Name="Password"/>

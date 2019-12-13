@@ -10,64 +10,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
-        <Grid.Resources>
-            <DataTemplate x:Key="RowDetailsTemplate">
-                <StackPanel>
-                    <TextBlock Margin="20" Text="" />
-                    <Grid Margin="20,10" Padding="5">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Text="Coordinates: " FontWeight="SemiBold" FontSize="13" />
-                        <TextBlock Grid.Row="1" Text="Prominence (m): " FontWeight="SemiBold" FontSize="13" />
-                        <TextBlock Grid.Row="2" Text="First Ascent (year): " FontWeight="SemiBold" FontSize="13" />
-                        <TextBlock Grid.Row="3" Text="No. of ascents: " FontWeight="SemiBold" FontSize="13" />
-                        <TextBlock Grid.Column="1" FontSize="13" Text="{Binding Coordinates}" HorizontalAlignment="Right" />
-                        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="13" Text="{Binding Prominence}" HorizontalAlignment="Right" />
-                        <TextBlock Grid.Row="2" Grid.Column="1" FontSize="13" Text="{Binding First_ascent}" HorizontalAlignment="Right" />
-                        <TextBlock Grid.Row="3" Grid.Column="1" FontSize="13" Text="{Binding Ascents}" HorizontalAlignment="Right" />
-                    </Grid>
-                </StackPanel>
-            </DataTemplate>
-        </Grid.Resources>
+       
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
             <TextBlock Text="Gestão de Utilizadores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
-            <!--<AppBarButton Icon="Filter" Label="Filter by">
-                <AppBarButton.Flyout>
-                    <MenuFlyout>
-                        <MenuFlyoutItem x:Name="rankLow" Text="Rank &lt; 50" />
-                        <MenuFlyoutItem x:Name="rankHigh" Text="Rank &gt; 50" />
-                        <MenuFlyoutSeparator />
-                        <MenuFlyoutItem x:Name="heightLow" Text="Height &lt; 8000ft" />
-                        <MenuFlyoutItem x:Name="heightHigh" Text="Height &gt; 8000ft" />
-                        <MenuFlyoutSeparator />
-                        <MenuFlyoutItem x:Name="clearFilter" Text="Remove Filter" />
-                    </MenuFlyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
-            <AppBarButton x:Name="groupButton" Icon="List" Label="Group by" />-->
-
+       
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='9' Icon="Add" Label="Adicionar"                             />
-                    <AppBarButton x:ConnectionId='10' Icon="Delete" Label="Eliminar"                                  />
+                    <AppBarButton x:ConnectionId='8' Icon="Add" Label="Adicionar"                             />
+                    <AppBarButton x:ConnectionId='9' Icon="Delete" Label="Eliminar"                                  />
                     
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
-        <controls:DataGrid x:ConnectionId='3'
+        <controls:DataGrid x:ConnectionId='2'
       Grid.Row="1"
         x:Name="viewUtilizadores"
         Margin="12"
@@ -89,17 +48,18 @@
                                                     
         GridLinesVisibility="None"
         HeadersVisibility="Column"
-        RowDetailsTemplate="{StaticResource RowDetailsTemplate}"
         RowDetailsVisibilityMode="Collapsed"
         SelectionMode="Single"
         RowGroupHeaderPropertyNameAlternative="Range"
+       
                                                                          >
             <controls:DataGrid.Columns>
-                <controls:DataGridTextColumn x:ConnectionId='4' Header="Id" Binding="{Binding Idutilizador, Mode=TwoWay}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
-                <controls:DataGridTextColumn x:ConnectionId='5' Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
-                <controls:DataGridTextColumn x:ConnectionId='6' Header="Email" Binding="{Binding Email, Mode=TwoWay}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
-                <controls:DataGridTextColumn x:ConnectionId='7' Header="Password" Binding="{Binding Password, Mode=TwoWay}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
-                <controls:DataGridComboBoxColumn x:ConnectionId='8' Header="Tipo"                                                            Binding="{Binding Tipo, Mode=TwoWay}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
+                <controls:DataGridTextColumn x:ConnectionId='3' Header="Id" Binding="{Binding Idutilizador, Mode=OneWay}" Tag="Id" IsReadOnly="True" x:Name="Idutilizador"/>
+                <controls:DataGridTextColumn x:ConnectionId='4' Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" IsReadOnly="False" x:Name="Nome"/>
+                <controls:DataGridTextColumn x:ConnectionId='5' Header="Email" Binding="{Binding Email, Mode=TwoWay}" Tag="Email" IsReadOnly="False" x:Name="Email"/>
+                <controls:DataGridTextColumn x:ConnectionId='6' Header="Password" Binding="{Binding Password, Mode=TwoWay}" Tag="Password" IsReadOnly="False" x:Name="Password"/>
+                <controls:DataGridComboBoxColumn x:ConnectionId='7' Header="Tipo"                                                            
+                                                 Binding="{Binding Tipo, Mode=TwoWay}" Tag="Tipo" IsReadOnly="False" x:Name="Tipo"/>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>

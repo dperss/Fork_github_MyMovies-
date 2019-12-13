@@ -92,8 +92,23 @@ namespace MyMovies.universal.ViewModel
         {
             if (SelectedUtilizador.Delete() == 1)
             {
-                Utilizadores.Remove(SelectedUtilizador);
-                Utilizador.ReSeed(Utilizadores.Count);
+                if(SelectedUtilizador.Idutilizador == Utilizadores.Count)
+                {
+                    Utilizadores.Remove(SelectedUtilizador);
+                    Utilizador.ReSeed(Utilizadores.Count);
+                }
+                else
+                {
+                    
+                    foreach (Utilizador u in Utilizadores)
+                    {
+                        if(u.Idutilizador > SelectedUtilizador.Idutilizador)
+                            u.Idutilizador -= 1;
+                    }
+                    Utilizadores.Remove(SelectedUtilizador);
+                    Utilizador.CreateFromObservableCollection(Utilizadores);
+                }
+                
                 return true;
             }
             return false;
