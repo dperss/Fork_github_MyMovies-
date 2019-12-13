@@ -1,6 +1,7 @@
 ﻿using MyMovies.DAL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
 
@@ -92,6 +93,10 @@ namespace MyMovies.BL
         public static int ReSeed(int number)
         {
             return AtorDAL.ReSeed(number);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Ator> collection)
+        {
+            return AtorDAL.CreateFromObservableCollection(collection);
         }
 
 

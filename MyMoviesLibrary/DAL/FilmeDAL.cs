@@ -1,6 +1,7 @@
 ﻿using MyMovies.BL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -111,6 +112,25 @@ namespace MyMovies.DAL
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             dictionary.Add("@number", number);
             return db.NonQuery(query, dictionary);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Filme> collection)
+        {
+            Database db = new Database();
+            try
+            {
+                db.NonQuery("DELETE FROM Filme", null);
+                ReSeed(0);
+                foreach(Filme f in collection)
+                {
+                    f.Create();
+                }
+                return true;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

@@ -16,7 +16,19 @@ namespace MyMovies.universal.ViewModel
     {
         ObservableCollection<Utilizador> _utilizadores;
         Utilizador _utilizador;
+        ObservableCollection<Tipo> _tipos;
 
+        public ObservableCollection<Tipo> Tipos
+        {
+            get
+            {
+                return _tipos;
+            }
+            set
+            {
+                _tipos = value;
+            }
+        }
 
         public Utilizador SelectedUtilizador
         {
@@ -33,7 +45,10 @@ namespace MyMovies.universal.ViewModel
         public GestaoDeUtilizadoresViewModel()
         {
             List<Utilizador> lista = Utilizador.ReadAll();
-            if (lista == null)
+            _tipos = new ObservableCollection<Tipo>();
+            Tipos.Add(Tipo.admin);
+            Tipos.Add(Tipo.user);
+            if(lista == null)
             {
                 Utilizador.CreateTable();
                 _utilizadores = new ObservableCollection<Utilizador>();
@@ -58,29 +73,42 @@ namespace MyMovies.universal.ViewModel
 
         public bool CreateUtilizador(Utilizador u)
         {
-            if (u.Create() == 1)
+            if(u.Create() == 1)
             {
                 Utilizadores.Add(u);
                 return true;
             }
             return false;
         }
-
         public bool UpdateUtilizador()
         {
-            if (SelectedUtilizador.Update() == 1)
+            if(SelectedUtilizador.Update() == 1)
             {
                 return true;
             }
             return false;
         }
-
         public bool DeleteUtilizador()
         {
             if (SelectedUtilizador.Delete() == 1)
             {
-                Utilizadores.Remove(SelectedUtilizador);
-                Utilizador.ReSeed(Utilizadores.Count);
+                if(SelectedUtilizador.Idutilizador == Utilizadores.Count)
+                {
+                    Utilizadores.Remove(SelectedUtilizador);
+                    Utilizador.ReSeed(Utilizadores.Count);
+                }
+                else
+                {
+                    
+                    foreach (Utilizador u in Utilizadores)
+                    {
+                        if(u.Idutilizador > SelectedUtilizador.Idutilizador)
+                            u.Idutilizador -= 1;
+                    }
+                    Utilizadores.Remove(SelectedUtilizador);
+                    Utilizador.CreateFromObservableCollection(Utilizadores);
+                }
+                
                 return true;
             }
             return false;
@@ -92,8 +120,23 @@ namespace MyMovies.universal.ViewModel
             u.Idutilizador = Utilizadores.Count + 1;
             return CreateUtilizador(u);
         }
+        public bool Login(Utilizador u)
+        {
+            Utilizador c = new Utilizador();
 
+            c.Email = u.Email;
+            c.ReadEmail();
 
+            if (c.Password == u.Password)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
 
     }
 }

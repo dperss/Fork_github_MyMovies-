@@ -47,6 +47,7 @@ namespace MyMovies.universal.Paginas
             {
                 MessageDialog message = new MessageDialog("Tem que selecionar algum Ator para remover");
                 await message.ShowAsync();
+                return;
             }
             if (!GestaoDeAtoresViewModel.DeleteAtor())
             {

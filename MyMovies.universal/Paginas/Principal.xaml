@@ -10,7 +10,7 @@
 
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition/>
