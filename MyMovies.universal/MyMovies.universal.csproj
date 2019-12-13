@@ -157,6 +157,7 @@
     <Compile Include="ViewModel\GestaoDeFilmesViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeUtilizadoresViewModel.cs" />
     <Compile Include="ViewModel\Pagina_Inicial_ViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

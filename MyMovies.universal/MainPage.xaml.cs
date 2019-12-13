@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -12,18 +13,26 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using MyMovies.BL;
+using MyMovies.universal;
+using MyMovies;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace MyMovies.universal
 {
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public MainPage()
-        {
+        public static int Estatuto { get; set; }
+        Utilizador a = new Utilizador();
+
+        public MainPage() {
+            
             this.InitializeComponent();
         }
         private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
@@ -35,31 +44,59 @@ namespace MyMovies.universal
             else
             {
                 TextBlock ItemContent = args.InvokedItem as TextBlock;
+                a.Idutilizador = Estatuto;
+                a.ReadId();
                 if (ItemContent != null)
                 {
-                    switch (ItemContent.Tag)
+                    if ((int)a.Tipo == 0)
                     {
-                        case "Nav_Home":
-                            contentFrame.Navigate(typeof(Paginas.Principal));
-                            break;
-                        case "Nav_Login":
-                            contentFrame.Navigate(typeof(Paginas.Login));
-                            break;
-                        case "Nav_Registo":
-                            contentFrame.Navigate(typeof(Paginas.Registo));
-                            break;
-                        case "Nav_Gestao_de_utilizadores":
-                            contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
-                            break;
-                        case "Nav_Gestao_de_filmes":
-                            contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
-                            break;
-                        case "Nav_Gestao_de_atores":
-                            contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
-                            break;
-                        
-
+                        switch (ItemContent.Tag)
+                        {
+                            case "Nav_Home":
+                                contentFrame.Navigate(typeof(Paginas.Principal));
+                                break;
+                            case "Nav_Login":
+                                contentFrame.Navigate(typeof(Paginas.Login), Estatuto);
+                                break;
+                            case "Nav_Registo":
+                                contentFrame.Navigate(typeof(Paginas.Registo));
+                                break;
+                            case "Nav_Gestao_de_utilizadores":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                                break;
+                            case "Nav_Gestao_de_filmes":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                                break;
+                            case "Nav_Gestao_de_atores":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
+                                break;
+                        }
                     }
+                    else
+                    {
+                        switch (ItemContent.Tag)
+                        {
+                            case "Nav_Home":
+                                contentFrame.Navigate(typeof(Paginas.Principal));
+                                break;
+                            case "Nav_Login":
+                                contentFrame.Navigate(typeof(Paginas.Login), Estatuto);
+                                break;
+                            case "Nav_Registo":
+                                contentFrame.Navigate(typeof(Paginas.Registo));
+                                break;
+                            /*case "Nav_Gestao_de_utilizadores":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                                break;
+                            case "Nav_Gestao_de_filmes":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                                break;
+                            case "Nav_Gestao_de_atores":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
+                                break;*/
+                        }
+                    }
+
                 }
 
             }

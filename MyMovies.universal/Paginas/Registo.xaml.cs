@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Navigation;
 using MyMovies.BL;
 using MyMovies.universal.ViewModel;
 
+
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace MyMovies.universal.Paginas
@@ -33,6 +34,7 @@ namespace MyMovies.universal.Paginas
 
         private void Button_Submeter(object sender, RoutedEventArgs e)//este codigo devia de estar no gestaodeutilizadoresviewmodel
         {
+          
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;//o acesso às textboxes tem que ser aqui
             u.Nome = NomeTextBox.Text;

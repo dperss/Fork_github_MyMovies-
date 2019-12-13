@@ -16,6 +16,9 @@ using MyMovies.universal.ViewModel;
 using Windows.UI.Popups;
 using System.Collections;
 using MyMovies.BL;
+using MyMovies.universal;
+using MyMovies;
+
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,11 +29,12 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Login : Page
     {
-        GestaoDeUtilizadoresViewModel GestaoDeUtilizadoresViewModel { get; set; }
+        ViewModel.UserViewModel Log = new ViewModel.UserViewModel();
+
         public Login()
         {
+            
             this.InitializeComponent();
-            GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
             
         }
 
@@ -41,12 +45,16 @@ namespace MyMovies.universal.Paginas
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
-            if (GestaoDeUtilizadoresViewModel.Login(u)==true && !((u.Email=="")||(u.Password==""))){
+            if (Log.Login(u)==true && !((u.Email=="")||(u.Password==""))){
                 MessageDialog message = new MessageDialog("Dados Certos");
                 await message.ShowAsync();
+                MainPage.Estatuto = Log.c.Idutilizador;
+                
+                this.Frame.Navigate(typeof(Paginas.Principal));// tem que passa o user como parametro
             }
             else
             {
@@ -71,4 +79,6 @@ namespace MyMovies.universal.Paginas
 
         }
     }
+
+    
 }

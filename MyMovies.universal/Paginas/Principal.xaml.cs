@@ -22,6 +22,8 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Principal : Page
     {
+       
+
         public Principal()
         {
             this.InitializeComponent();
