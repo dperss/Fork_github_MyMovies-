@@ -28,8 +28,7 @@ namespace MyMovies.universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static int Estatuto { get; set; }
-        Utilizador a = new Utilizador();
+        public static Tipo Tipo { get; set; } = Tipo.user;
 
         public MainPage() {
             
@@ -37,26 +36,28 @@ namespace MyMovies.universal
         }
         private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
-            if (args.IsSettingsInvoked)
+            /*if (args.IsSettingsInvoked)
             {
                 contentFrame.Navigate(typeof(Paginas.Definicoes));
             }
             else
             {
                 TextBlock ItemContent = args.InvokedItem as TextBlock;
-                a.Idutilizador = Estatuto;
-                a.ReadId();
                 if (ItemContent != null)
                 {
-                    if ((int)a.Tipo == 0)
+                    if (Tipo == Tipo.admin)
                     {
+                        nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
+                        nv_item_gestao_filmes.Visibility = Visibility.Visible;
+                        nv_item_gestao_atores.Visibility = Visibility.Visible;
                         switch (ItemContent.Tag)
                         {
+
                             case "Nav_Home":
                                 contentFrame.Navigate(typeof(Paginas.Principal));
                                 break;
                             case "Nav_Login":
-                                contentFrame.Navigate(typeof(Paginas.Login), Estatuto);
+                                contentFrame.Navigate(typeof(Paginas.Login));
                                 break;
                             case "Nav_Registo":
                                 contentFrame.Navigate(typeof(Paginas.Registo));
@@ -74,37 +75,84 @@ namespace MyMovies.universal
                     }
                     else
                     {
+                        
                         switch (ItemContent.Tag)
                         {
                             case "Nav_Home":
                                 contentFrame.Navigate(typeof(Paginas.Principal));
                                 break;
                             case "Nav_Login":
-                                contentFrame.Navigate(typeof(Paginas.Login), Estatuto);
+                                contentFrame.Navigate(typeof(Paginas.Login));
                                 break;
                             case "Nav_Registo":
                                 contentFrame.Navigate(typeof(Paginas.Registo));
                                 break;
-                            /*case "Nav_Gestao_de_utilizadores":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
-                                break;
-                            case "Nav_Gestao_de_filmes":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
-                                break;
-                            case "Nav_Gestao_de_atores":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
-                                break;*/
+                            
                         }
                     }
 
                 }
 
-            }
+            }*/
         }
 
         private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
+            if (args.IsSettingsSelected)
+            {
+                contentFrame.Navigate(typeof(Paginas.Definicoes));
+            }
+            else
+            {
+                string SelectedItem = args.SelectedItemContainer.Tag.ToString();
+                if(SelectedItem != null) {
+                    if (Tipo == Tipo.admin)
+                    {
+                        nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
+                        nv_item_gestao_filmes.Visibility = Visibility.Visible;
+                        nv_item_gestao_atores.Visibility = Visibility.Visible;
+                        switch (SelectedItem)
+                        {
+                            case "Home_Page":
+                                contentFrame.Navigate(typeof(Paginas.Principal));
+                                break;
+                            case "Login_Page":
+                                contentFrame.Navigate(typeof(Paginas.Login));
+                                break;
+                            case "Registo_Page":
+                                contentFrame.Navigate(typeof(Paginas.Registo));
+                                break;
+                            case "Gestao_de_utilizadores_Page":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                                break;
+                            case "Gestao_de_filmes_Page":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                                break;
+                            case "Gestao_de_atores_Page":
+                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
+                                break;
+                        }
+                    }
+                    else
+                    {
+                        switch (SelectedItem)
+                        {
+                            case "Home_Page":
+                                contentFrame.Navigate(typeof(Paginas.Principal));
+                                break;
+                            case "Login_Page":
+                                contentFrame.Navigate(typeof(Paginas.Login));
+                                break;
+                            case "Registo_Page":
+                                contentFrame.Navigate(typeof(Paginas.Registo));
+                                break;
 
+                        }
+                    }
+                    
+                }
+            }
+            
         }
 
         private void nv_Loaded(object sender, RoutedEventArgs e)

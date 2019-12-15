@@ -120,22 +120,17 @@ namespace MyMovies.universal.ViewModel
             u.Idutilizador = Utilizadores.Count + 1;
             return CreateUtilizador(u);
         }
-        public bool Login(Utilizador u)
+        public Tuple<bool, Tipo> Login(Utilizador u)
         {
-            Utilizador c = new Utilizador();
-
-            c.Email = u.Email;
-            c.ReadEmail();
-
-            if (c.Password == u.Password)
-            {
-                return true;
-            }
+            Utilizador b = new Utilizador();
+            b.Email = u.Email;
+            b.ReadEmail();
+            if (b == null)
+                return Tuple.Create(false, b.Tipo);
+            if (b.Password == u.Password)
+                return Tuple.Create(true, b.Tipo);
             else
-            {
-                return false;
-            }
-
+                return Tuple.Create(false, b.Tipo);
         }
 
     }

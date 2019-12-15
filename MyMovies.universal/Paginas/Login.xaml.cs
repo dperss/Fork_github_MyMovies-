@@ -30,6 +30,7 @@ namespace MyMovies.universal.Paginas
     public sealed partial class Login : Page
     {
         ViewModel.UserViewModel Log = new ViewModel.UserViewModel();
+        ViewModel.GestaoDeUtilizadoresViewModel GestaoDeUtilizadoresViewModel = new ViewModel.GestaoDeUtilizadoresViewModel();
 
         public Login()
         {
@@ -45,24 +46,24 @@ namespace MyMovies.universal.Paginas
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
-            if (Log.Login(u)==true && !((u.Email=="")||(u.Password==""))){
-                MessageDialog message = new MessageDialog("Dados Certos");
-                await message.ShowAsync();
-                MainPage.Estatuto = Log.c.Idutilizador;
-                
-                this.Frame.Navigate(typeof(Paginas.Principal));// tem que passa o user como parametro
+            Tuple<bool, Tipo> ret = GestaoDeUtilizadoresViewModel.Login(u);
+            if (ret.Item1)
+            {
+                MainPage.Tipo = ret.Item2;
+                //mudar item selecionado
+                //dar refresh à navigation view
+                this.Frame.Navigate(typeof(Paginas.Principal));
             }
             else
             {
-                MessageDialog message = new MessageDialog("Dados Errados");
+                MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
                 await message.ShowAsync();
             }
-
         }
+
 
         private void Button_registar(object sender, RoutedEventArgs e)
         {

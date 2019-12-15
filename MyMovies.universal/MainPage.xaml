@@ -18,6 +18,7 @@
                     IsTabStop="False"
                     PaneDisplayMode="LeftCompact"
                     BackRequested="nv_BackRequested"
+                     
                     IsBackEnabled="True">
         <NavigationView.MenuItems>
             <NavigationViewItem Icon="Home" Tag="Home_Page">
@@ -29,13 +30,13 @@
             <NavigationViewItem Tag="Registo_Page" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Icon="Admin">
+            <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">
                 <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Icon="Admin">
+            <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_filmes" Visibility="Collapsed" Tag="Gestao_de_filmes_Page">
                 <TextBlock Tag="Nav_Gestao_de_filmes">Gestão de Filmes</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Icon="Admin">
+            <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_atores" Visibility="Collapsed" Tag="Gestao_de_atores_Page">
                 <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
             </NavigationViewItem>
             
