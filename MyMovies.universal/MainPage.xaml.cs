@@ -28,7 +28,7 @@ namespace MyMovies.universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static Tipo Tipo { get; set; } = Tipo.user;
+        public static Utilizador current_user = new Utilizador();
 
         public MainPage() {
             
@@ -106,7 +106,7 @@ namespace MyMovies.universal
             {
                 string SelectedItem = args.SelectedItemContainer.Tag.ToString();
                 if(SelectedItem != null) {
-                    if (Tipo == Tipo.admin)
+                    if (current_user.Tipo == 0)
                     {
                         nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
                         nv_item_gestao_filmes.Visibility = Visibility.Visible;

@@ -48,7 +48,7 @@ namespace MyMovies.universal.ViewModel
             _tipos = new ObservableCollection<Tipo>();
             Tipos.Add(Tipo.admin);
             Tipos.Add(Tipo.user);
-            if(lista == null)
+            if (lista == null)
             {
                 Utilizador.CreateTable();
                 _utilizadores = new ObservableCollection<Utilizador>();
@@ -73,7 +73,7 @@ namespace MyMovies.universal.ViewModel
 
         public bool CreateUtilizador(Utilizador u)
         {
-            if(u.Create() == 1)
+            if (u.Create() == 1)
             {
                 Utilizadores.Add(u);
                 return true;
@@ -82,7 +82,7 @@ namespace MyMovies.universal.ViewModel
         }
         public bool UpdateUtilizador()
         {
-            if(SelectedUtilizador.Update() == 1)
+            if (SelectedUtilizador.Update() == 1)
             {
                 return true;
             }
@@ -92,23 +92,23 @@ namespace MyMovies.universal.ViewModel
         {
             if (SelectedUtilizador.Delete() == 1)
             {
-                if(SelectedUtilizador.Idutilizador == Utilizadores.Count)
+                if (SelectedUtilizador.Idutilizador == Utilizadores.Count)
                 {
                     Utilizadores.Remove(SelectedUtilizador);
                     Utilizador.ReSeed(Utilizadores.Count);
                 }
                 else
                 {
-                    
+
                     foreach (Utilizador u in Utilizadores)
                     {
-                        if(u.Idutilizador > SelectedUtilizador.Idutilizador)
+                        if (u.Idutilizador > SelectedUtilizador.Idutilizador)
                             u.Idutilizador -= 1;
                     }
                     Utilizadores.Remove(SelectedUtilizador);
                     Utilizador.CreateFromObservableCollection(Utilizadores);
                 }
-                
+
                 return true;
             }
             return false;
@@ -120,17 +120,20 @@ namespace MyMovies.universal.ViewModel
             u.Idutilizador = Utilizadores.Count + 1;
             return CreateUtilizador(u);
         }
-        public Tuple<bool, Tipo> Login(Utilizador u)
+
+        public Utilizador Login(Utilizador u)
         {
             Utilizador b = new Utilizador();
             b.Email = u.Email;
             b.ReadEmail();
-            if (b == null)
-                return Tuple.Create(false, b.Tipo);
-            if (b.Password == u.Password)
-                return Tuple.Create(true, b.Tipo);
+            if (b.Password != u.Password)
+            {
+                return null;
+            }
             else
-                return Tuple.Create(false, b.Tipo);
+            {
+                return b;
+            }
         }
 
     }

@@ -29,14 +29,14 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Login : Page
     {
-        ViewModel.UserViewModel Log = new ViewModel.UserViewModel();
-        ViewModel.GestaoDeUtilizadoresViewModel GestaoDeUtilizadoresViewModel = new ViewModel.GestaoDeUtilizadoresViewModel();
+
+        GestaoDeUtilizadoresViewModel GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
 
         public Login()
         {
-            
+
             this.InitializeComponent();
-            
+
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
@@ -49,10 +49,10 @@ namespace MyMovies.universal.Paginas
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
-            Tuple<bool, Tipo> ret = GestaoDeUtilizadoresViewModel.Login(u);
-            if (ret.Item1)
+            MainPage.current_user = GestaoDeUtilizadoresViewModel.Login(u);
+            if (MainPage.current_user != null)
             {
-                MainPage.Tipo = ret.Item2;
+
                 //mudar item selecionado
                 //dar refresh à navigation view
                 this.Frame.Navigate(typeof(Paginas.Principal));
@@ -81,5 +81,5 @@ namespace MyMovies.universal.Paginas
         }
     }
 
-    
+
 }
