@@ -12,7 +12,9 @@ namespace MyMovies.DAL
         public static void CreateTable()
         {
             Database db = new Database();
-            string query = @""; //VER
+            string query = @"CREATE TABLE [dbo].[Filme_ator]
+                             filme_idfilme int PRIMARY KEY NOT NULL
+                             ator_idator int PRIMARY KEY NOT NULL"; 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             db.NonQuery(query, dictionary);
 
@@ -20,10 +22,10 @@ namespace MyMovies.DAL
         }
 
         public static int Create(Filme_ator fa)
-        { //ver se é void e por parametros
+        { 
 
             Database db = new Database();
-            string query = @"INSERT INTO [dbo].[Filme_ator] ([filme_idfilme], [ator_idator]) VALUES (@filme_idfilme ,@ator_idator)"; //VER
+            string query = @"INSERT INTO [dbo].[Filme_ator] ([filme_idfilme], [ator_idator]) VALUES (@filme_idfilme ,@ator_idator)"; 
 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);
@@ -61,7 +63,7 @@ namespace MyMovies.DAL
         public static int Update(Filme_ator fa)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_ator] SET [filme_idfilme] = @filme_idfilme WHERE Id =@ator_idator ; "; //VER
+            string query = "UPDATE [dbo].[Filme_ator] SET [filme_idfilme] = @filme_idfilme WHERE Id =@ator_idator ; ";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);
@@ -77,7 +79,7 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Filme_ator] WHERE id=@ator_idator"; //VER
+            string query = "DELETE FROM [dbo].[Filme_ator] WHERE ator_idator = @ator_idator AND filme_idfilme = @filme_idfilme" ; 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);

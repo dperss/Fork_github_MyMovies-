@@ -1,1 +1,1 @@
-C:\Users\Diogo Ramos\Desktop\mymovies\MyMovies.universal\MyMovies.universal.csproj;x86
+C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\MyMovies.universal.csproj;x86

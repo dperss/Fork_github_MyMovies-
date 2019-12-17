@@ -142,20 +142,22 @@ namespace MyMovies.DAL
         public static int Delete(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "DELETE FROM Avaliacao_comentario WHERE idavaliacao_comentario =@id;";
+            string query = "DELETE FROM [dbo].[Avaliacao_comentario] WHERE idavaliacao_comentario =@id;";
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@id", a.Idavaliacao_comentario);
-            return db.NonQuery(query, d);
+            int result = db.NonQuery(query, d);
+            db.Close();
+            return result;
         }
         public static bool CreateTable()
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Avaliacao_comentario] (
-                             idavaliacao_comentario INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-                             avaliacao INT NOT NULL,
-                             comentario varchar(300) NOT NULL,
-                             idutilizador INT NOT NULL,
-                             idfilme INT NOT NULL,
+                             [idavaliacao_comentario] INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+                             [avaliacao] INT NOT NULL,
+                             [comentario] varchar(300) NOT NULL,
+                             [idutilizador] INT NOT NULL,
+                             [idfilme] INT NOT NULL,
                              );
                              ";
             try

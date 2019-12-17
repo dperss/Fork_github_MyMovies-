@@ -13,8 +13,8 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme_genero] (
-                             filme_idfilme INTEGER PRIMARY KEY NOT NULL,
-                             genero_nome nvarchar(50) NOT NULL);
+                             filme_idfilme INT PRIMARY KEY NOT NULL,
+                             genero_nome nvarchar(50) PRIMARY KEY NOT NULL);
                              ";
             try
             {
