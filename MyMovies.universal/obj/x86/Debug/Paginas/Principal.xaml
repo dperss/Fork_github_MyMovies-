@@ -17,7 +17,7 @@
             <RowDefinition />
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-       
+
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
@@ -25,21 +25,24 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Button x:ConnectionId='7' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
+                <Button x:ConnectionId='9' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"                             >
+                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Collapsed"  HorizontalAlignment="Center"                             >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem x:ConnectionId='5' Text="Perfil"                           />
-                            <MenuFlyoutItem x:ConnectionId='6' Text="Biblioteca"                               />
-                            <MenuFlyoutItem Text="LogOut"/>
+                            <MenuFlyoutItem x:ConnectionId='6' Text="Perfil"                           />
+                            <MenuFlyoutItem x:ConnectionId='7' Text="Biblioteca"                               />
+                            <MenuFlyoutItem x:ConnectionId='8' x:Name="LogOut" Text="LogOut"                     />
 
                         </MenuFlyout>
                     </Button.Flyout>
+                </Button>
+                <Button x:ConnectionId='5' x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center"                                    >
+                    <Image Source="/Assets\Untitled-1.png" />
                 </Button>
             </Grid>
 
@@ -58,15 +61,15 @@
                 <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <Image  Stretch="UniformToFill" Width="190" Height="130" />
                     </DataTemplate>
-                  
+
                 </GridView.ItemTemplate>
-                
-            </GridView> 
+
+            </GridView>
         </Grid>
-       
+
     </Grid>
 </Page>
 

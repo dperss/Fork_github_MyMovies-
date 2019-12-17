@@ -24,10 +24,10 @@
             <NavigationViewItem Icon="Home" Tag="Home_Page">
                 <TextBlock Tag="Nav_Home"></TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Tag="Login_Page" Icon="OtherUser">
+            <NavigationViewItem Tag="Login_Page" x:Name="nv_item_Login_Page" Visibility="Collapsed" Icon="OtherUser">
                 <TextBlock Tag="Nav_Login">Login</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem Tag="Registo_Page" Icon="Add">
+            <NavigationViewItem Tag="Registo_Page" x:Name="nv_item_Registo_Page" Visibility="Collapsed" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
             <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">

@@ -17,7 +17,7 @@
             <RowDefinition />
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
-       
+
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
@@ -30,16 +30,19 @@
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:Name="Botao_login"  Width ="100" Height="50"   HorizontalAlignment="Center"  Click="Botao_login_Click"  >
+                <Button x:Name="Botao_login"  Width ="100" Height="50" Visibility="Collapsed"  HorizontalAlignment="Center"  Click="Botao_login_Click"  >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
                             <MenuFlyoutItem Text="Perfil" Click="Botao_Perfil_Click"/>
                             <MenuFlyoutItem Text="Biblioteca" Click="Botao_Biblioteca_Click"/>
-                            <MenuFlyoutItem Text="LogOut"/>
+                            <MenuFlyoutItem x:Name="LogOut" Text="LogOut" Click="LogOut_Click"/>
 
                         </MenuFlyout>
                     </Button.Flyout>
+                </Button>
+                <Button x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center" Click="Botao_login_sem_user_Click" >
+                    <Image Source="/Assets\Untitled-1.png" />
                 </Button>
             </Grid>
 
@@ -58,14 +61,14 @@
                 <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
                 <GridView.ItemTemplate>
                     <DataTemplate>
-                        
+
                         <Image  Stretch="UniformToFill" Width="190" Height="130" />
                     </DataTemplate>
-                  
+
                 </GridView.ItemTemplate>
-                
-            </GridView> 
+
+            </GridView>
         </Grid>
-       
+
     </Grid>
 </Page>

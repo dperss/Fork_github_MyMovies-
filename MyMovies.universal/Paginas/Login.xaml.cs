@@ -50,9 +50,8 @@ namespace MyMovies.universal.Paginas
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
             MainPage.current_user = GestaoDeUtilizadoresViewModel.Login(u);
-            if (MainPage.current_user != null)
+            if (MainPage.current_user != null )
             {
-
                 //mudar item selecionado
                 //dar refresh à navigation view
                 this.Frame.Navigate(typeof(Paginas.Principal));

@@ -111,16 +111,12 @@ namespace MyMovies.universal
                         nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
                         nv_item_gestao_filmes.Visibility = Visibility.Visible;
                         nv_item_gestao_atores.Visibility = Visibility.Visible;
+                        nv_item_Registo_Page.Visibility = Visibility.Collapsed;
+                        nv_item_Login_Page.Visibility = Visibility.Collapsed;
                         switch (SelectedItem)
                         {
                             case "Home_Page":
                                 contentFrame.Navigate(typeof(Paginas.Principal));
-                                break;
-                            case "Login_Page":
-                                contentFrame.Navigate(typeof(Paginas.Login));
-                                break;
-                            case "Registo_Page":
-                                contentFrame.Navigate(typeof(Paginas.Registo));
                                 break;
                             case "Gestao_de_utilizadores_Page":
                                 contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
@@ -135,18 +131,35 @@ namespace MyMovies.universal
                     }
                     else
                     {
-                        switch (SelectedItem)
+                        if (current_user.Idutilizador != 0)
                         {
-                            case "Home_Page":
-                                contentFrame.Navigate(typeof(Paginas.Principal));
-                                break;
-                            case "Login_Page":
-                                contentFrame.Navigate(typeof(Paginas.Login));
-                                break;
-                            case "Registo_Page":
-                                contentFrame.Navigate(typeof(Paginas.Registo));
-                                break;
+                            nv_item_Registo_Page.Visibility = Visibility.Collapsed;
+                            nv_item_Login_Page.Visibility = Visibility.Collapsed;
+                            switch (SelectedItem)
+                            {
+                                case "Home_Page":
+                                    contentFrame.Navigate(typeof(Paginas.Principal));
+                                    break;
 
+                            }
+                        }
+                        else
+                        {
+                            nv_item_Registo_Page.Visibility = Visibility.Visible;
+                            nv_item_Login_Page.Visibility = Visibility.Visible;
+                            switch (SelectedItem)
+                            {
+                                case "Home_Page":
+                                    contentFrame.Navigate(typeof(Paginas.Principal));
+                                    break;
+                                case "Login_Page":
+                                    contentFrame.Navigate(typeof(Paginas.Login));
+                                    break;
+                                case "Registo_Page":
+                                    contentFrame.Navigate(typeof(Paginas.Registo));
+                                    break;
+
+                            }
                         }
                     }
                     
