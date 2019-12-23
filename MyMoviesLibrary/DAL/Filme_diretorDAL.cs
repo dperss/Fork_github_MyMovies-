@@ -12,9 +12,10 @@ namespace MyMovies.DAL
         public static void CreateTable()
         {
             Database db = new Database();
-            string query = @"CREATE TABLE [dbo].[Filme_diretor]
-                             filme_idfilme int PRIMARY KEY NOT NULL
-                             diretor_iddiretor int PRIMARY KEY NOT NULL"; 
+            string query = @"CREATE TABLE [dbo].[Filme_diretor](
+                             filme_idfilme int NOT NULL
+                             diretor_iddiretor int NOT NULL
+                             PRIMARY KEY (filme_idfilme, diretor_iddiretor));";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             db.NonQuery(query, dictionary);
 
@@ -22,7 +23,7 @@ namespace MyMovies.DAL
         }
 
         public static int Create(Filme_diretor fd)
-        { 
+        {
 
             Database db = new Database();
             string query = @"INSERT INTO[dbo].[Filme_diretor]([filme_idfilme],[diretor_iddiretor])VALUES(@filme_idfilme,@diretor_iddiretor);";
@@ -48,7 +49,7 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 Filme_diretor fd = new Filme_diretor();
-                fd.Filme_idfime= (int)row["filme_idfilme"];
+                fd.Filme_idfime = (int)row["filme_idfilme"];
                 fd.Diretor_iddiretor = (int)row["diretor_iddiretor"];
 
 
@@ -63,7 +64,7 @@ namespace MyMovies.DAL
         public static int Update(Filme_diretor fd)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_diretor] SET [filme_idfilme] = @filme_idfilme WHERE Id =@diretor_iddiretor ; "; 
+            string query = "UPDATE [dbo].[Filme_diretor] SET [filme_idfilme] = @filme_idfilme, [diretor_iddiretor] = @diretor_iddiretos WHERE Id =@diretor_iddiretor AND filme_idfilme = @filme_idfilme ; ";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fd.Filme_idfime);
@@ -79,7 +80,7 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Filme_diretor] WHERE filme_idfilme = @filme_idfilme AND diretor_iddiretor = @diretor_iddiretor"; 
+            string query = "DELETE FROM [dbo].[Filme_diretor] WHERE filme_idfilme = @filme_idfilme AND diretor_iddiretor = @diretor_iddiretor";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fd.Filme_idfime);
@@ -94,3 +95,4 @@ namespace MyMovies.DAL
 
     }
 }
+

@@ -12,9 +12,10 @@ namespace MyMovies.DAL
         public static void CreateTable()
         {
             Database db = new Database();
-            string query = @"CREATE TABLE [dbo].[Filme_ator]
-                             filme_idfilme int PRIMARY KEY NOT NULL
-                             ator_idator int PRIMARY KEY NOT NULL"; 
+            string query = @"CREATE TABLE [dbo].[Filme_ator](
+                             filme_idfilme int NOT NULL
+                             ator_idator int NOT NULL
+                             PRIMARY KEY (filme_idfilme, ator_idator))";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             db.NonQuery(query, dictionary);
 
@@ -22,15 +23,15 @@ namespace MyMovies.DAL
         }
 
         public static int Create(Filme_ator fa)
-        { 
+        {
 
             Database db = new Database();
-            string query = @"INSERT INTO [dbo].[Filme_ator] ([filme_idfilme], [ator_idator]) VALUES (@filme_idfilme ,@ator_idator)"; 
+            string query = @"INSERT INTO [dbo].[Filme_ator] ([filme_idfilme], [ator_idator]) VALUES (@filme_idfilme ,@ator_idator)";
 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);
             dictionary.Add("@ator_idator", fa.Ator_idator);
-            
+
 
             int result = db.NonQuery(query, dictionary);
             db.Close();
@@ -49,8 +50,8 @@ namespace MyMovies.DAL
             {
                 Filme_ator fa = new Filme_ator();
                 fa.Filme_idfilme = (int)row["filme_idfilme"];
-                fa.Ator_idator = (int )row["ator_idator"];
-                
+                fa.Ator_idator = (int)row["ator_idator"];
+
 
                 lista.Add(fa);
             }
@@ -63,7 +64,7 @@ namespace MyMovies.DAL
         public static int Update(Filme_ator fa)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_ator] SET [filme_idfilme] = @filme_idfilme WHERE Id =@ator_idator ; ";
+            string query = "UPDATE [dbo].[Filme_ator] SET [filme_idfilme] = @filme_idfilme, [ator_idator] = @ator_idator WHERE Id =@ator_idator AND filme_idfilme = @filme_idfilme ; ";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);
@@ -79,7 +80,7 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Filme_ator] WHERE ator_idator = @ator_idator AND filme_idfilme = @filme_idfilme" ; 
+            string query = "DELETE FROM [dbo].[Filme_ator] WHERE ator_idator = @ator_idator AND filme_idfilme = @filme_idfilme";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", fa.Filme_idfilme);

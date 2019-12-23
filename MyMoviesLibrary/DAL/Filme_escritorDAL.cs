@@ -13,15 +13,16 @@ namespace MyMovies.DAL
 
         public static bool CreateTable()
         {
-            Database db = new Database();// escritor_idescritor é fk
+            Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme_escritor] (
-                             filme_idfilme int PRIMARY KEY NOT NULL,
-                             escritor_idescritor int PRIMARY KEY NOT NULL);
+                             filme_idfilme int NOT NULL,
+                             escritor_idescritor int NOT NULL
+                             PRIMARY KEY (filme_idfilme, escritor_idescritor));
                              ";
             try
             {
-                    db.NonQuery(query, null);
-                    return true;         
+                db.NonQuery(query, null);
+                return true;
             }
             catch (System.Data.SqlClient.SqlException)
             {
@@ -32,7 +33,7 @@ namespace MyMovies.DAL
         public static int Create(Filme_escritor u)
         {
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Filme_escritor]([filme_idfilme],[escritor_idescritor])VALUES(@filme_idfilme,@escritor_idescritor);";
+            string query = "INSERT INTO[dbo].[Filme_escritor]([filme_idfilme],[escritor_idescritor])VALUES(@filme_idfilme, @escritor_idescritor);";
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@filme_idfilme", u.filme_idfilme);
             d.Add("@escritor_idescritor", u.escritor_idescritor);
@@ -77,7 +78,7 @@ namespace MyMovies.DAL
         public static int Update(Filme_escritor u)
         {
             Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_escritor] SET [filme_idfilme] = @filme_idfilme WHERE Id =@escritor_idescritor ;"; 
+            string query = "UPDATE [dbo].[Filme_escritor] SET[escritor_idescritor] = @escritor_idescritor, filme_idfilme = @filme_idfilme  WHERE filme_idfilme = @filme_idfilme AND escritor_idescritor = escritor_idescritor;";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
 
             dictionary.Add("@filme_idfilme", u.filme_idfilme);
