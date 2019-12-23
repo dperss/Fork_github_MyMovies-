@@ -1,23 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using MyMovies.universal.ViewModel;
 using Windows.UI.Popups;
-using System.Collections;
-using MyMovies.BL;
-using MyMovies.universal;
-using MyMovies;
+using Windows.UI.Core;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Input;
+using System.Security.Permissions;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,14 +18,23 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Perfil : Page
     {
+
+
         public Perfil()
         {
             this.InitializeComponent();
+
+            NOME.PlaceholderText = MainPage.current_user.Nome;
+            EMAIL.PlaceholderText = MainPage.current_user.Email;
         }
+
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (EMAIL.Text != "") {
+
+
+            if (EMAIL.Text != "")
+            {
                 MainPage.current_user.Email = EMAIL.Text;
             }
             if (NOME.Text != "")
@@ -51,9 +50,10 @@ namespace MyMovies.universal.Paginas
                 }
                 else
                 {
-                    if (PasswordBox.Password == PasswordBox_2.Password) { 
-                    MessageDialog message = new MessageDialog("As suas passwords não são iguais");
-                    await message.ShowAsync();
+                    if (PasswordBox.Password == PasswordBox_2.Password)
+                    {
+                        MessageDialog message = new MessageDialog("As suas passwords não são iguais");
+                        await message.ShowAsync();
                     }
                 }
                 MainPage.current_user.Update();
@@ -68,5 +68,11 @@ namespace MyMovies.universal.Paginas
                 this.Frame.Navigate(typeof(Paginas.Perfil));
             }
         }
+
+
     }
+
+
+
+
 }

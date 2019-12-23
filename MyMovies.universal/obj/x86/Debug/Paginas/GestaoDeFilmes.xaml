@@ -58,10 +58,10 @@
                 <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
                 <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano, Mode=TwoWay}" Tag="Ano" />
                 <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao, Mode=TwoWay}" Tag="Duracao" />
-                <controls:DataGridTextColumn Header="Genero" Binding="{Binding}"/>
-                <controls:DataGridTextColumn Header="Elenco"/>
-                <controls:DataGridTextColumn Header="Diretor"/>
-                <controls:DataGridTextColumn Header="Escritor"/>
+                <controls:DataGridTextColumn Header="Genero"  Tag="Genero"/>
+                <controls:DataGridTextColumn Header="Elenco" Tag="Elenco"/>
+                <controls:DataGridTextColumn Header="Diretor" Tag="Diretor"/>
+                <controls:DataGridTextColumn Header="Escritor" Tag="Escritor"/>
 
             </controls:DataGrid.Columns>
         </controls:DataGrid>

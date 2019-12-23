@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {}
+    "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {
+    "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+        "projectUniqueName": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
         "projectName": "MyMovies.universal",
-        "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
-        "packagesPath": "C:\\Users\\ClaudiaAlves\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\obj\\",
+        "projectPath": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+        "packagesPath": "C:\\Users\\Diogo Ramos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMovies.universal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ClaudiaAlves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diogo Ramos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
-                "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
+              "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
+                "projectPath": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
               }
             }
           }
@@ -81,17 +81,17 @@
         }
       }
     },
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
+    "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
+        "projectUniqueName": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
         "projectName": "MyMovies",
-        "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
-        "packagesPath": "C:\\Users\\ClaudiaAlves\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
+        "packagesPath": "C:\\Users\\Diogo Ramos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diogo Ramos\\Desktop\\mymovies\\MyMoviesLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ClaudiaAlves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diogo Ramos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
