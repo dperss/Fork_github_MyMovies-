@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovies.BL;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,8 @@ namespace MyMovies.universal
     /// </summary>
     sealed partial class App : Application
     {
+        public static bool user = false;
+        public static Utilizador utilizador;
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -99,5 +102,13 @@ namespace MyMovies.universal
             //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
+
+        public static void NavigateMainPage()
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(MainPage));
+        }
+
+        
     }
 }

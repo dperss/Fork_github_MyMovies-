@@ -25,12 +25,12 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
-                <Button x:ConnectionId='9' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" >
+                <Button x:ConnectionId='9' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Collapsed"  HorizontalAlignment="Center"                             >
+                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Visible"  HorizontalAlignment="Center"                             >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>

@@ -14,20 +14,18 @@
                                       
                     Margin="0,12,0,0"
                                                           
-                                                
                     IsTabStop="False"
                     PaneDisplayMode="LeftCompact"
                                                     
-                     
                     IsBackEnabled="True">
         <NavigationView.MenuItems>
-            <NavigationViewItem Icon="Home" Tag="Home_Page">
+            <NavigationViewItem Icon="Home" Tag="Home_Page" Visibility="Visible">
                 <TextBlock Tag="Nav_Home"></TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem x:ConnectionId='3' Tag="Login_Page" x:Name="nv_item_Login_Page" Visibility="Collapsed" Icon="OtherUser">
+            <NavigationViewItem x:ConnectionId='3' Tag="Login_Page" x:Name="nv_item_Login_Page" Visibility="Visible" Icon="OtherUser">
                 <TextBlock Tag="Nav_Login">Login</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem x:ConnectionId='4' Tag="Registo_Page" x:Name="nv_item_Registo_Page" Visibility="Collapsed" Icon="Add">
+            <NavigationViewItem x:ConnectionId='4' Tag="Registo_Page" x:Name="nv_item_Registo_Page" Visibility="Visible" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
             <NavigationViewItem x:ConnectionId='5' Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">

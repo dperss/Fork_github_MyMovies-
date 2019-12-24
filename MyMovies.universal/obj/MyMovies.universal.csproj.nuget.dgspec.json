@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {}
+    "C:\\Curso\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {
+    "C:\\Curso\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+        "projectUniqueName": "C:\\Curso\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
         "projectName": "MyMovies.universal",
-        "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
-        "packagesPath": "C:\\Users\\ClaudiaAlves\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMovies.universal\\obj\\",
+        "projectPath": "C:\\Curso\\DAI\\mymovies\\MyMovies.universal\\MyMovies.universal.csproj",
+        "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
+        "outputPath": "C:\\Curso\\DAI\\mymovies\\MyMovies.universal\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\ClaudiaAlves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -31,8 +31,8 @@
         "frameworks": {
           "uap10.0.17763": {
             "projectReferences": {
-              "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
-                "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
+              "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
+                "projectPath": "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj"
               }
             }
           }
@@ -81,17 +81,20 @@
         }
       }
     },
-    "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
+    "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
+        "projectUniqueName": "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
         "projectName": "MyMovies",
-        "projectPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
-        "packagesPath": "C:\\Users\\ClaudiaAlves\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ClaudiaAlves\\Desktop\\3ano\\DAI\\Trabalho\\mymovies\\MyMoviesLibrary\\obj\\",
+        "projectPath": "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\MyMovies.csproj",
+        "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
+        "outputPath": "C:\\Curso\\DAI\\mymovies\\MyMoviesLibrary\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ClaudiaAlves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

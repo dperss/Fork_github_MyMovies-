@@ -24,8 +24,8 @@ namespace MyMovies.universal.Paginas
         {
             this.InitializeComponent();
 
-            NOME.PlaceholderText = MainPage.current_user.Nome;
-            EMAIL.PlaceholderText = MainPage.current_user.Email;
+            NOME.PlaceholderText = App.utilizador.Nome;
+            EMAIL.PlaceholderText = App.utilizador.Email;
         }
 
 
@@ -35,18 +35,18 @@ namespace MyMovies.universal.Paginas
 
             if (EMAIL.Text != "")
             {
-                MainPage.current_user.Email = EMAIL.Text;
+                App.utilizador.Email = EMAIL.Text;
             }
             if (NOME.Text != "")
             {
-                MainPage.current_user.Nome = NOME.Text;
+                App.utilizador.Nome = NOME.Text;
             }
 
             if (EMAIL.Text != "" || NOME.Text != "" || PasswordBox.Password != "")
             {
                 if (PasswordBox.Password == PasswordBox_2.Password && PasswordBox.Password != "")
                 {
-                    MainPage.current_user.Password = PasswordBox.Password;
+                    App.utilizador.Password = PasswordBox.Password;
                 }
                 else
                 {
@@ -56,7 +56,7 @@ namespace MyMovies.universal.Paginas
                         await message.ShowAsync();
                     }
                 }
-                MainPage.current_user.Update();
+                App.utilizador.Update();
                 MessageDialog message_2 = new MessageDialog("As mudanças foram feitas");
                 await message_2.ShowAsync();
                 this.Frame.Navigate(typeof(Paginas.Principal));
@@ -67,6 +67,7 @@ namespace MyMovies.universal.Paginas
                 await message_2.ShowAsync();
                 this.Frame.Navigate(typeof(Paginas.Perfil));
             }
+            
         }
 
 

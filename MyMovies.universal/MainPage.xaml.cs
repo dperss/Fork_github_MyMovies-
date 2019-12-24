@@ -28,73 +28,12 @@ namespace MyMovies.universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static Utilizador current_user = new Utilizador();
 
         public MainPage() {
             
             this.InitializeComponent();
         }
-        private void nv_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-        {
-            /*if (args.IsSettingsInvoked)
-            {
-                contentFrame.Navigate(typeof(Paginas.Definicoes));
-            }
-            else
-            {
-                TextBlock ItemContent = args.InvokedItem as TextBlock;
-                if (ItemContent != null)
-                {
-                    if (Tipo == Tipo.admin)
-                    {
-                        nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
-                        nv_item_gestao_filmes.Visibility = Visibility.Visible;
-                        nv_item_gestao_atores.Visibility = Visibility.Visible;
-                        switch (ItemContent.Tag)
-                        {
-
-                            case "Nav_Home":
-                                contentFrame.Navigate(typeof(Paginas.Principal));
-                                break;
-                            case "Nav_Login":
-                                contentFrame.Navigate(typeof(Paginas.Login));
-                                break;
-                            case "Nav_Registo":
-                                contentFrame.Navigate(typeof(Paginas.Registo));
-                                break;
-                            case "Nav_Gestao_de_utilizadores":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
-                                break;
-                            case "Nav_Gestao_de_filmes":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
-                                break;
-                            case "Nav_Gestao_de_atores":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
-                                break;
-                        }
-                    }
-                    else
-                    {
-                        
-                        switch (ItemContent.Tag)
-                        {
-                            case "Nav_Home":
-                                contentFrame.Navigate(typeof(Paginas.Principal));
-                                break;
-                            case "Nav_Login":
-                                contentFrame.Navigate(typeof(Paginas.Login));
-                                break;
-                            case "Nav_Registo":
-                                contentFrame.Navigate(typeof(Paginas.Registo));
-                                break;
-                            
-                        }
-                    }
-
-                }
-
-            }*/
-        }
+        
 
         private void nv_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
@@ -105,67 +44,33 @@ namespace MyMovies.universal
             else
             {
                 string SelectedItem = args.SelectedItemContainer.Tag.ToString();
-                if(SelectedItem != null) {
-                    if (current_user.Tipo == 0)
+                if (SelectedItem != null)
+                {
+                    switch (SelectedItem)
                     {
-                        nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
-                        nv_item_gestao_filmes.Visibility = Visibility.Visible;
-                        nv_item_gestao_atores.Visibility = Visibility.Visible;
-                        nv_item_Registo_Page.Visibility = Visibility.Collapsed;
-                        nv_item_Login_Page.Visibility = Visibility.Collapsed;
-                        switch (SelectedItem)
-                        {
-                            case "Home_Page":
-                                contentFrame.Navigate(typeof(Paginas.Principal));
-                                break;
-                            case "Gestao_de_utilizadores_Page":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
-                                break;
-                            case "Gestao_de_filmes_Page":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
-                                break;
-                            case "Gestao_de_atores_Page":
-                                contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
-                                break;
-                        }
+                        case "Home_Page":
+                            contentFrame.Navigate(typeof(Paginas.Principal));
+                            break;
+                        case "Gestao_de_utilizadores_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeUtilizadores));
+                            break;
+                        case "Gestao_de_filmes_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeFilmes));
+                            break;
+                        case "Gestao_de_atores_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
+                            break;
+                        case "Login_Page":
+                            contentFrame.Navigate(typeof(Paginas.Login));
+                            break;
+                        case "Registo_Page":
+                            contentFrame.Navigate(typeof(Paginas.Registo));
+                            break;
                     }
-                    else
-                    {
-                        if (current_user.Idutilizador != 0)
-                        {
-                            nv_item_Registo_Page.Visibility = Visibility.Collapsed;
-                            nv_item_Login_Page.Visibility = Visibility.Collapsed;
-                            switch (SelectedItem)
-                            {
-                                case "Home_Page":
-                                    contentFrame.Navigate(typeof(Paginas.Principal));
-                                    break;
-
-                            }
-                        }
-                        else
-                        {
-                            nv_item_Registo_Page.Visibility = Visibility.Visible;
-                            nv_item_Login_Page.Visibility = Visibility.Visible;
-                            switch (SelectedItem)
-                            {
-                                case "Home_Page":
-                                    contentFrame.Navigate(typeof(Paginas.Principal));
-                                    break;
-                                case "Login_Page":
-                                    contentFrame.Navigate(typeof(Paginas.Login));
-                                    break;
-                                case "Registo_Page":
-                                    contentFrame.Navigate(typeof(Paginas.Registo));
-                                    break;
-
-                            }
-                        }
-                    }
-                    
                 }
+                
             }
-            
+                    
         }
 
         private void nv_Loaded(object sender, RoutedEventArgs e)
@@ -187,7 +92,43 @@ namespace MyMovies.universal
                 contentFrame.GoBack();
            
         }
-       
+        public void LoginNvVisibility(Utilizador u)
+        {
+            nv_item_Login_Page.Visibility = Visibility.Collapsed;
+            nv_item_Registo_Page.Visibility = Visibility.Collapsed;
+            if (u.Tipo== Tipo.user)
+            {
+                nv_item_gestao_atores.Visibility = Visibility.Collapsed;
+                nv_item_gestao_filmes.Visibility = Visibility.Collapsed;
+                nv_item_gestao_utilizadores.Visibility = Visibility.Collapsed;
+            }
+            if(u.Tipo == Tipo.admin)
+            {
+                nv_item_gestao_atores.Visibility = Visibility.Visible;
+                nv_item_gestao_filmes.Visibility = Visibility.Visible;
+                nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
+            }
+        }
+
+        public static MainPage GetCurrent()
+        {
+            Frame appFrame = Window.Current.Content as Frame;
+            return appFrame.Content as MainPage;
+        }
+
+        public void NavigateHome()
+        {
+            foreach (NavigationViewItemBase item in nv.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "Home_Page")
+                {
+                    nv.SelectedItem = item;
+                    break;
+                }
+            }
+            contentFrame.Navigate(typeof(Paginas.Principal));
+        }
+
 
     }
 }

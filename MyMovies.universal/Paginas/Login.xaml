@@ -55,7 +55,7 @@
                 </Grid>
                 <Grid Grid.Row="3">
                     <Button Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top" Click="Button_Click" />
-                    <TextBlock Text="Ainda não tem uma conta?" SelectionChanged="TextBlock_SelectionChanged_2" Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
+                    <TextBlock Text="Ainda não tem uma conta?" Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
                 </Grid>
                 <Button Grid.Row="3" Content="REGISTE-SE" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80" Click="Button_registar"/>
             </Grid>

@@ -49,12 +49,14 @@ namespace MyMovies.universal.Paginas
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
-            MainPage.current_user = GestaoDeUtilizadoresViewModel.Login(u);
-            if (MainPage.current_user != null )
+            u = GestaoDeUtilizadoresViewModel.Login(u);
+            if (u != null )
             {
-                //mudar item selecionado
-                //dar refresh à navigation view
-                this.Frame.Navigate(typeof(Paginas.Principal));
+                MainPage mainPage = MainPage.GetCurrent();
+                App.user = true;
+                App.utilizador = u;
+                mainPage.LoginNvVisibility(u);
+                mainPage.NavigateHome();
             }
             else
             {
@@ -69,15 +71,7 @@ namespace MyMovies.universal.Paginas
             this.Frame.Navigate(typeof(Paginas.Registo));
         }
 
-        private void TextBlock_SelectionChanged_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void TextBlock_SelectionChanged_2(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 
 

@@ -32,15 +32,11 @@ namespace MyMovies.universal.Paginas
         {
             
             this.InitializeComponent();
-            if (MainPage.current_user.Idutilizador != 0)//Quando tem um user
+            if (App.user == true)//Quando tem um user
             {
                 Botao_login_sem_user.Visibility = Visibility.Collapsed;
                 Botao_registo.Visibility = Visibility.Collapsed;
                 Botao_login.Visibility = Visibility.Visible;
-            }
-            else//Quando não tem user
-            {
-                
             }
         }
 
@@ -66,9 +62,9 @@ namespace MyMovies.universal.Paginas
 
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
-            Utilizador c = new Utilizador();
-            MainPage.current_user = c;
-            this.Frame.Navigate(typeof(Paginas.Principal));
+            App.user = false;
+            App.NavigateMainPage();
+            
         }
 
         private void Botao_login_sem_user_Click(object sender, RoutedEventArgs e)
