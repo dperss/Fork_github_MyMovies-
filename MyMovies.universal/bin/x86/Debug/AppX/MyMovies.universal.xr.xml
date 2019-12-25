@@ -182,6 +182,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
+      <RootProperty Name="IsSpellCheckEnabled" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PersonPicture">
       <RootProperty Name="Margin" />

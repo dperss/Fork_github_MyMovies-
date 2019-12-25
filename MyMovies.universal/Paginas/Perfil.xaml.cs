@@ -23,51 +23,54 @@ namespace MyMovies.universal.Paginas
         public Perfil()
         {
             this.InitializeComponent();
-
-            NOME.PlaceholderText = App.utilizador.Nome;
-            EMAIL.PlaceholderText = App.utilizador.Email;
+            nome.Text = App.utilizador.Nome;
+            email.Text = App.utilizador.Email;
         }
-
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-
-
-            if (EMAIL.Text != "")
+            if(email.Text==App.utilizador.Email && nome.Text==App.utilizador.Nome && PasswordBox.Password=="" && PasswordBox_2.Password=="")
             {
-                App.utilizador.Email = EMAIL.Text;
-            }
-            if (NOME.Text != "")
-            {
-                App.utilizador.Nome = NOME.Text;
-            }
-
-            if (EMAIL.Text != "" || NOME.Text != "" || PasswordBox.Password != "")
-            {
-                if (PasswordBox.Password == PasswordBox_2.Password && PasswordBox.Password != "")
-                {
-                    App.utilizador.Password = PasswordBox.Password;
-                }
-                else
-                {
-                    if (PasswordBox.Password == PasswordBox_2.Password)
-                    {
-                        MessageDialog message = new MessageDialog("As suas passwords não são iguais");
-                        await message.ShowAsync();
-                    }
-                }
-                App.utilizador.Update();
-                MessageDialog message_2 = new MessageDialog("As mudanças foram feitas");
-                await message_2.ShowAsync();
-                this.Frame.Navigate(typeof(Paginas.Principal));
+                MessageDialog message = new MessageDialog("Não alterou os dados");
+                await message.ShowAsync();
+                return;
             }
             else
             {
-                MessageDialog message_2 = new MessageDialog("Não a nada para mudar");
-                await message_2.ShowAsync();
-                this.Frame.Navigate(typeof(Paginas.Perfil));
+                App.utilizador.Email = email.Text;
+                App.utilizador.Nome = nome.Text;
+                if (PasswordBox.Password == "" && PasswordBox_2.Password=="")
+                {
+                    if (App.utilizador.Update() == 1)
+                    {
+                        MessageDialog message = new MessageDialog("Os seus dados foram alterados");
+                        await message.ShowAsync();
+                    }
+                    else
+                    {
+                        MessageDialog message = new MessageDialog("Não foi possível alterar os seus dados");
+                        await message.ShowAsync();
+                    }
+                    return;
+                }
+                if(PasswordBox.Password == PasswordBox_2.Password && PasswordBox.Password != "")
+                {
+                    App.utilizador.Password = PasswordBox.Password;
+                    if (App.utilizador.Update() == 1)
+                    {
+                        MessageDialog message = new MessageDialog("Os seus dados foram alterados");
+                        await message.ShowAsync();
+                    }
+                    else
+                    {
+                        MessageDialog message = new MessageDialog("Não foi possível alterar os seus dados");
+                        await message.ShowAsync();
+                    }
+                    return;
+                }
             }
             
+
         }
 
 
