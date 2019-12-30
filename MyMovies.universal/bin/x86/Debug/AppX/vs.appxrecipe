@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-30T16:10:40.378</Modified>
+      <Modified>2019-12-30T22:13:54.529</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.exe">
       <PackagePath>entrypoint\MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-30T16:10:39.946</Modified>
+      <Modified>2019-12-30T22:13:54.103</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\migue\.nuget\packages\microsoft.toolkit.uwp.ui.controls.datagrid\6.0.0\lib\uap10.0.16299\Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.UI.Controls.DataGrid.dll</PackagePath>
@@ -68,7 +68,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMoviesLibrary\bin\Debug\netstandard2.0\MyMovies.dll">
       <PackagePath>MyMovies.dll</PackagePath>
-      <Modified>2019-12-30T15:41:47.594</Modified>
+      <Modified>2019-12-30T22:10:42.949</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -174,55 +174,55 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.universal.xr.xml">
       <PackagePath>MyMovies.universal.xr.xml</PackagePath>
-      <Modified>2019-12-30T16:04:20.599</Modified>
+      <Modified>2019-12-30T22:10:47.980</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.138</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf">
       <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.138</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.138</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
-      <Modified>2019-12-30T16:10:39.816</Modified>
+      <Modified>2019-12-30T22:13:53.959</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf">
       <PackagePath>Paginas\Login.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf">
       <PackagePath>Paginas\Pagina_Filmes.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
-      <Modified>2019-12-30T15:55:36.139</Modified>
+      <Modified>2019-12-30T22:13:53.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -234,11 +234,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-29T15:27:02.228</Modified>
+      <Modified>2019-12-30T22:10:48.426</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Core\MyMovies.universal.exe">
       <PackagePath>MyMovies.universal.exe</PackagePath>
-      <Modified>2019-12-30T16:10:40.373</Modified>
+      <Modified>2019-12-30T22:13:54.525</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

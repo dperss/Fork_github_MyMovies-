@@ -197,6 +197,17 @@ namespace MyMovies.DAL
             db.Close();
             return result;
         }
+        public static int UpdateFoto(Filme f)
+        {
+            Database db = new Database();
+            string query = "UPDATE [dbo].[Filme] SET foto=@foto WHERE Idfilme=@Idfilme;";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@Idfilme", f.Idfilme);
+            dictionary.Add("@foto", f.Foto);
+            int result = db.NonQueryFotoFilme(query, dictionary);
+            db.Close();
+            return result;
+        }
 
         public static int Delete(Filme f)
         {

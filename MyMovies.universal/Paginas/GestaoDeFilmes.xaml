@@ -4,7 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:data="using:MyMovies.BL"
-    xmlns:viewmodel="using:MyMovies.universal.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
@@ -12,19 +11,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
             <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
- 
+
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
                     <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Filmes_Botao"/>
                     <AppBarButton Icon="Delete" Label="Eliminar" Click="Eliminar_Filmes_Botao"/>
-                    
+
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
@@ -48,7 +47,6 @@
         FrozenColumnCount="0"
         GridLinesVisibility="None"
         HeadersVisibility="Column"
-   
         RowDetailsVisibilityMode="Collapsed"
         SelectionChanged="viewFilmes_SelectionChanged"
         SelectionMode="Single"
@@ -64,8 +62,8 @@
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Image Source="{Binding Foto, Mode=TwoWay}"></Image>
-                                <Button Click="Foto_Button_Click">Click me</Button>
+                                <Image Source="{Binding Foto, Mode=TwoWay}" ></Image>
+                                <Button Click="Foto_Button_Click">Alterar Foto</Button>
                             </StackPanel>
                         </DataTemplate>
                     </controls:DataGridTemplateColumn.CellTemplate>
@@ -81,7 +79,7 @@
                                     <Flyout>
                                         <StackPanel>
                                             <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Elenco" Margin="0,0,0,12" />
-                                            <!--<TextBox Text="{Binding Atores.Idator, Mode=TwoWay}"/>-->
+                                            <TextBox Text="{Binding Atores.Idator, Mode=TwoWay}"/>
                                         </StackPanel>
                                     </Flyout>
                                 </Button.Flyout>
@@ -93,6 +91,6 @@
             </controls:DataGrid.Columns>
         </controls:DataGrid>
 
-       
+
     </Grid>
 </Page>

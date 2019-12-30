@@ -17,6 +17,10 @@ using MyMovies.BL;
 using Windows.UI.Popups;
 using Windows.System;
 using Windows.Storage;
+using System.Threading.Tasks;
+using Windows.Storage.Pickers;
+using System.Text.RegularExpressions;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -71,7 +75,13 @@ namespace MyMovies.universal.Paginas
 
         private async void Foto_Button_Click(object sender, RoutedEventArgs e)
         {
-            //await Launcher.LaunchFolderAsync(await StorageFolder.GetFolderFromPathAsync(@"C:\"));
+            var file = await GestaoDeFilmesViewModel.OpenLocalFile(".jpg",".png");
+            await GestaoDeFilmesViewModel.UpdateFoto(file);
+        }
+        public static async Task<BitmapImage> ByteArrayToImage()
+        {
+            //return await GestaoDeFilmesViewModel.ByteArrayToImage();
+            return null;
         }
     }
 }

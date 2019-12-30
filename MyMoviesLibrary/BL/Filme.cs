@@ -166,6 +166,10 @@ namespace MyMovies.BL
         {
             return FilmeDAL.Update(this);
         }
+        public int UpdateFoto()
+        {
+            return FilmeDAL.UpdateFoto(this);
+        }
 
         public int Delete()
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace MyMovies.DAL
 {
@@ -54,6 +55,28 @@ namespace MyMovies.DAL
             {
                 return command.ExecuteNonQuery();
             }catch(SqlException e)
+            {
+                return 0;
+            }
+        }
+        public int NonQueryFotoFilme(string query, Dictionary<string, object> d)
+        {
+            SqlCommand command = new SqlCommand(query, this.connection);
+            if (d != null)
+            {
+                foreach (KeyValuePair<string, object> s in d)
+                {
+                    if(s.Key=="@foto")
+                        command.Parameters.Add(s.Key, SqlDbType.VarBinary).Value = s.Value;
+                    if(s.Key== "@Idfilme")
+                        command.Parameters.AddWithValue(s.Key, s.Value);
+                }
+            }
+            try
+            {
+                return command.ExecuteNonQuery();
+            }
+            catch (SqlException e)
             {
                 return 0;
             }

@@ -2,9 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
 namespace MyMovies.universal.ViewModel
@@ -40,6 +48,7 @@ namespace MyMovies.universal.ViewModel
             {
                 f.Atores = f.ReadAllAtores();
                 f.Generos = f.ReadAllGeneros();
+                
             }
             
            
@@ -108,6 +117,55 @@ namespace MyMovies.universal.ViewModel
             Filme f = new Filme();
             f.Idfilme = Filmes.Count + 1;
             return CreateFilme(f);
+        }
+        public async static Task<StorageFile> OpenLocalFile(params string[] types)
+        {
+            var picker = new FileOpenPicker();
+            picker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+            Regex typeReg = new Regex(@"^\.[a-zA-Z0-9]+$");
+            foreach (var type in types)
+            {
+                if (type == "*" || typeReg.IsMatch(type))
+                    picker.FileTypeFilter.Add(type);
+                else
+                    throw new InvalidCastException("File extension is incorrect");
+            }
+            var file = await picker.PickSingleFileAsync();
+            if (file != null)
+                return file;
+            else
+                return null;
+        }
+        public async Task<bool> UpdateFoto(StorageFile file)
+        {
+            if (file == null)
+                return false;
+            SelectedFilme.Foto = (await FileIO.ReadBufferAsync(file)).ToArray();
+            if(SelectedFilme.Foto == null)
+            {
+                return false;
+            }
+            if (SelectedFilme.UpdateFoto() == 1)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public async Task<BitmapImage> ByteArrayToImage(Byte[] byteArrayIn)
+        {
+            using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
+            {
+                using (DataWriter writer = new DataWriter(stream.GetOutputStreamAt(0)))
+                {
+                    writer.WriteBytes(byteArrayIn);
+                    await writer.StoreAsync();
+                }
+                var image = new BitmapImage();
+                await image.SetSourceAsync(stream);
+                return image;
+
+            }
         }
     }
 }

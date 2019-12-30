@@ -4,7 +4,6 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:data="using:MyMovies.BL"
-    xmlns:viewmodel="using:MyMovies.universal.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
@@ -12,19 +11,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Margin="12">
             <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
- 
+
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='7' Icon="Add" Label="Adicionar"                               />
-                    <AppBarButton x:ConnectionId='8' Icon="Delete" Label="Eliminar"                              />
-                    
+                    <AppBarButton x:ConnectionId='6' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='7' Icon="Delete" Label="Eliminar"                              />
+
                 </CommandBar.SecondaryCommands>
             </CommandBar>
         </StackPanel>
@@ -48,7 +47,6 @@
         FrozenColumnCount="0"
         GridLinesVisibility="None"
         HeadersVisibility="Column"
-   
         RowDetailsVisibilityMode="Collapsed"
                                                       
         SelectionMode="Single"
@@ -64,8 +62,8 @@
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <Image Source="{Binding Foto, Mode=TwoWay}"></Image>
-                                <Button x:ConnectionId='6'                          >Click me</Button>
+                                <Image Source="{Binding Foto, Mode=TwoWay}" ></Image>
+                                <Button x:ConnectionId='5'                          >Alterar Foto</Button>
                             </StackPanel>
                         </DataTemplate>
                     </controls:DataGridTemplateColumn.CellTemplate>
@@ -73,9 +71,9 @@
                 <controls:DataGridTextColumn Header="Genero"  Tag="Genero"/>
                 <controls:DataGridTextColumn Header="Diretor" Binding="{Binding Diretor.Nome, Mode=TwoWay}" Tag="Diretor"/>
                 <controls:DataGridTextColumn Header="Escritor" Binding="{Binding Escritor.Nome, Mode=TwoWay}" Tag="Escritor"/>
-                <controls:DataGridTemplateColumn Header="Elenco" Tag="Elenco" >
+                <controls:DataGridTemplateColumn Header="Elenco" Tag="Elenco">
                     <controls:DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate                       >
+                        <DataTemplate>
                             <Button Content="Ver Elenco">
                                 <Button.Flyout>
                                     <Flyout>
@@ -93,7 +91,7 @@
             </controls:DataGrid.Columns>
         </controls:DataGrid>
 
-       
+
     </Grid>
 </Page>
 
