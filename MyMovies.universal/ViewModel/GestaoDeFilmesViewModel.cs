@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace MyMovies.universal.ViewModel
 {
@@ -25,7 +26,7 @@ namespace MyMovies.universal.ViewModel
         }
         public GestaoDeFilmesViewModel()
         {
-            List<Filme> lista = Filme.ReadAll();
+            List<Filme> lista = Filme.ReadAllJoin();
             if(lista == null)
             {
                 Filme.CreateTable();
@@ -35,6 +36,12 @@ namespace MyMovies.universal.ViewModel
             {
                 _filmes = new ObservableCollection<Filme>(lista);
             }
+            foreach (Filme f in Filmes)
+            {
+                f.Atores = f.ReadAllAtores();
+                f.Generos = f.ReadAllGeneros();
+            }
+            
            
         }
         public ObservableCollection<Filme> Filmes

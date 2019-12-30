@@ -12,8 +12,8 @@ namespace MyMovies.DAL
         public static bool CreateTable()
         {
             Database db = new Database();
-            string query = @"CREATE TABLE [dbo].[Filme_genero] (filme_idfilme INT NOT NULL,
-                             genero_nome nvarchar(50)  NOT NULL
+            string query = @"CREATE TABLE [dbo].[Filme_genero] (filme_idfilme INT FOREIGN KEY REFERENCES Filme(idfilme) NOT NULL,
+                             genero_nome varchar(50) FOREIGN KEY REFERENCES Genero(nome) NOT NULL
                              PRIMARY KEY (filme_idfilme, genero_nome));
                              ";
             try

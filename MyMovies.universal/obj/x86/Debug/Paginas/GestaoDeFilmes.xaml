@@ -3,6 +3,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
+    xmlns:data="using:MyMovies.BL"
+    xmlns:viewmodel="using:MyMovies.universal.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
@@ -20,8 +22,8 @@
  
             <CommandBar Background="Transparent" >
                 <CommandBar.SecondaryCommands>
-                    <AppBarButton x:ConnectionId='3' Icon="Add" Label="Adicionar"                               />
-                    <AppBarButton x:ConnectionId='4' Icon="Delete" Label="Eliminar"                              />
+                    <AppBarButton x:ConnectionId='7' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='8' Icon="Delete" Label="Eliminar"                              />
                     
                 </CommandBar.SecondaryCommands>
             </CommandBar>
@@ -40,7 +42,7 @@
         AutoGenerateColumns="False"
         CanUserSortColumns="False"
         CanUserReorderColumns="True"
-        CanUserResizeColumns="True"
+        CanUserResizeColumns="False"
         ColumnHeaderHeight="32"
         MaxColumnWidth="400"
         FrozenColumnCount="0"
@@ -58,10 +60,35 @@
                 <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
                 <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano, Mode=TwoWay}" Tag="Ano" />
                 <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao, Mode=TwoWay}" Tag="Duracao" />
+                <controls:DataGridTemplateColumn Header="Foto" Tag="Foto" >
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Image Source="{Binding Foto, Mode=TwoWay}"></Image>
+                                <Button x:ConnectionId='6'                          >Click me</Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
                 <controls:DataGridTextColumn Header="Genero"  Tag="Genero"/>
-                <controls:DataGridTextColumn Header="Elenco" Tag="Elenco"/>
-                <controls:DataGridTextColumn Header="Diretor" Tag="Diretor"/>
-                <controls:DataGridTextColumn Header="Escritor" Tag="Escritor"/>
+                <controls:DataGridTextColumn Header="Diretor" Binding="{Binding Diretor.Nome, Mode=TwoWay}" Tag="Diretor"/>
+                <controls:DataGridTextColumn Header="Escritor" Binding="{Binding Escritor.Nome, Mode=TwoWay}" Tag="Escritor"/>
+                <controls:DataGridTemplateColumn Header="Elenco" Tag="Elenco" >
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate                       >
+                            <Button Content="Ver Elenco">
+                                <Button.Flyout>
+                                    <Flyout>
+                                        <StackPanel>
+                                            <TextBlock Style="{ThemeResource BaseTextBlockStyle}" Text="Elenco" Margin="0,0,0,12" />
+                                            <TextBox Text="{Binding Atores.Idator, Mode=TwoWay}"/>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
 
             </controls:DataGrid.Columns>
         </controls:DataGrid>

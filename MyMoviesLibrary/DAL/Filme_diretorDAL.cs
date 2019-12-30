@@ -13,8 +13,8 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme_diretor](
-                             filme_idfilme int NOT NULL
-                             diretor_iddiretor int NOT NULL
+                             filme_idfilme int UNIQUE FOREIGN KEY REFERENCES Filme(idfilme) NOT NULL,
+                             diretor_iddiretor int FOREIGN KEY REFERENCES Diretor(iddiretor) NOT NULL
                              PRIMARY KEY (filme_idfilme, diretor_iddiretor));";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
             db.NonQuery(query, dictionary);

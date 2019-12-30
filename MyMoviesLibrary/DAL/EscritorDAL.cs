@@ -108,7 +108,7 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Escritor] (
-                             idescritor INT PRIMARY KEY NOT NULL,
+                             idescritor INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
                              nome varchar(100) NOT NULL,
                              );
                              ";

@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Drawing;
+using System.IO;
 using System.Text;
 
 namespace MyMovies.BL
@@ -14,6 +16,11 @@ namespace MyMovies.BL
         private string _Ano;
         private string _Duracao;
         private byte[] _Foto;
+        private Diretor _Diretor;
+        private Escritor _Escritor;
+        private ObservableCollection<Ator> _Atores;
+        private List<Genero> _Generos;
+
         public int Idfilme { //PERGUNTAR: porque que se usa uma variável privada e uma property publica? 
             get
             {
@@ -63,13 +70,63 @@ namespace MyMovies.BL
             get 
             { 
                 return _Foto; 
-            } 
+            }             
             set 
             {
                 _Foto = value;
                 Onchanged("Foto");
             } 
         }
+
+        public Diretor Diretor
+        {
+            get
+            {
+                return _Diretor;
+            }
+            set
+            {
+                _Diretor = value;
+                Onchanged("Diretor");
+            }
+        }
+        public Escritor Escritor
+        {
+            get
+            {
+                return _Escritor;
+            }
+            set
+            {
+                _Escritor = value;
+                Onchanged("Escritor");
+            }
+        }
+        public ObservableCollection<Ator> Atores
+        {
+            get
+            {
+                return _Atores;
+            }
+            set
+            {
+                _Atores = value;
+                Onchanged("Atores");
+            }
+        }
+        public List<Genero> Generos
+        {
+            get
+            {
+                return _Generos;
+            }
+            set
+            {
+                _Generos = value;
+                Onchanged("Generos");
+            }
+        }
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -78,6 +135,10 @@ namespace MyMovies.BL
             Nome = "";
             Ano = "";
             Duracao = "";
+            Diretor = new Diretor();
+            Escritor = new Escritor();
+            //Foto = File.ReadAllBytes(@"C:\users\migue\Desktop\aladin.jpg");
+
         }
         public int Create()
         {
@@ -88,6 +149,19 @@ namespace MyMovies.BL
         {
             return FilmeDAL.ReadAll();
         }
+        public static List<Filme> ReadAllJoin()
+        {
+            return FilmeDAL.ReadAllJoin();
+        }
+        public ObservableCollection<Ator> ReadAllAtores()
+        {
+            return FilmeDAL.ReadAllAtores(this.Idfilme);
+        }
+        public List<Genero> ReadAllGeneros()
+        {
+            return FilmeDAL.ReadAllGeneros(this.Idfilme);
+        }
+
         public int Update()
         {
             return FilmeDAL.Update(this);
@@ -115,6 +189,7 @@ namespace MyMovies.BL
         {
             return FilmeDAL.CreateFromObservableCollection(collection);
         }
+        
     }
 }
 

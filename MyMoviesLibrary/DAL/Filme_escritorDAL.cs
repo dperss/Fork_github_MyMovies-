@@ -15,8 +15,8 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme_escritor] (
-                             filme_idfilme int NOT NULL,
-                             escritor_idescritor int NOT NULL
+                             filme_idfilme int UNIQUE FOREIGN KEY REFERENCES Filme(idfilme) NOT NULL,
+                             escritor_idescritor int FOREIGN KEY REFERENCES Escritor(idescritor) NOT NULL
                              PRIMARY KEY (filme_idfilme, escritor_idescritor));
                              ";
             try

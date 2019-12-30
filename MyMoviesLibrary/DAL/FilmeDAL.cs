@@ -9,6 +9,15 @@ namespace MyMovies.DAL
 {
    public class FilmeDAL
     {
+        /*query: SELECT Filme.*, Escritor.nome as escritor, Filme_genero.genero_nome as genero, Diretor.nome as diretor, Ator.nome as ator
+        FROM Filme 
+        LEFT JOIN Filme_escritor ON Filme.idfilme = Filme_escritor.filme_idfilme 
+        LEFT JOIN Escritor ON Filme_escritor.escritor_idescritor = Escritor.idescritor
+        LEFT JOIN Filme_genero ON Filme.idfilme = Filme_genero.filme_idfilme
+        LEFT JOIN Filme_diretor ON Filme.idfilme = Filme_diretor.filme_idfilme
+        LEFT JOIN Diretor ON Filme_diretor.diretor_iddiretor = Diretor.iddiretor
+        LEFT JOIN Filme_ator ON Filme.idfilme = Filme_ator.filme_idfilme
+        LEFT JOIN Ator ON Filme_ator.ator_idator = Ator.idator; */
         public static bool CreateTable()
         {
             Database db = new Database();
@@ -17,6 +26,7 @@ namespace MyMovies.DAL
                             [nome]          VARCHAR (100) NOT NULL,
                             [duracao]         VARCHAR (10) NOT NULL,
                             [ano]      VARCHAR (10) NOT NULL,
+                            [foto]     VARBINARY(max),
                             PRIMARY KEY CLUSTERED ([Idfilme] ASC));";
 
             try
@@ -40,6 +50,7 @@ namespace MyMovies.DAL
             d.Add("@nome", f.Nome);
             d.Add("@duracao", f.Duracao);
             d.Add("@ano", f.Ano);
+            //d.Add("@foto", f.Foto);
             try
             {
                 return db.NonQuery(query, d);
@@ -66,7 +77,9 @@ namespace MyMovies.DAL
                 f.Idfilme = (int)row["idfilme"] ;
                 f.Nome = (string)row["nome"];
                 f.Ano = (string)row["ano"]; //falta ver qual o tipo para ano e para a duração
-                f.Duracao = (string)row ["Duracao"];
+                f.Duracao = (string)row ["duracao"];
+                if(row["foto"] != DBNull.Value)
+                    f.Foto = (byte[])row["foto"];
                 lista.Add(f);
             }
             row.Close();
@@ -74,6 +87,101 @@ namespace MyMovies.DAL
             return lista;
 
         }
+        public static List<Filme> ReadAllJoin()
+        {
+            Database db = new Database();
+            string query = "SELECT Filme.*, Escritor.nome as escritor, Diretor.nome as diretor " +
+            "FROM Filme "
+        + "LEFT JOIN Filme_escritor ON Filme.idfilme = Filme_escritor.filme_idfilme " +
+        "LEFT JOIN Escritor ON Filme_escritor.escritor_idescritor = Escritor.idescritor " +
+        "LEFT JOIN Filme_diretor ON Filme.idfilme = Filme_diretor.filme_idfilme " +
+        "LEFT JOIN Diretor ON Filme_diretor.diretor_iddiretor = Diretor.iddiretor;";
+            List<Filme> lista = new List<Filme>();
+
+            SqlDataReader row = db.Query(query, null);
+            if(row == null)
+                return null;
+            while (row.Read())
+            {
+                Filme f = new Filme();
+                f.Idfilme = (int)row["idfilme"];
+                f.Nome = (string)row["nome"];
+                f.Ano = (string)row["ano"];
+                f.Duracao = (string)row["duracao"];
+                if (row["foto"] != DBNull.Value)
+                    f.Foto = (byte[])row["foto"];
+                if(row["diretor"] != DBNull.Value)
+                f.Diretor.Nome = (string)row["diretor"];
+                if (row["escritor"] != DBNull.Value)
+                    f.Escritor.Nome = (string)row["escritor"];
+
+                lista.Add(f);
+            }
+            row.Close();
+
+            return lista;
+
+        }
+        public static ObservableCollection<Ator> ReadAllAtores(int idfilme)
+        {
+            Database db = new Database();
+            string query = "SELECT Ator.nome as nome_ator, Ator.idator as id_ator, Ator.datanascimento " +
+                "FROM Filme " +
+                "LEFT JOIN Filme_ator ON Filme.idfilme = Filme_ator.filme_idfilme " +
+                "LEFT JOIN Ator ON Filme_ator.ator_idator = Ator.idator " +
+                "WHERE idfilme = @id;";
+            ObservableCollection<Ator> collection = new ObservableCollection<Ator>();
+
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@id", idfilme);
+            SqlDataReader row = db.Query(query, d);
+            if (row == null)
+                return null;
+            while (row.Read())
+            {
+                Ator a = new Ator();
+                if (row["nome_ator"] == DBNull.Value)
+                {
+                    return collection;
+                }
+                a.Nome = (string)row["nome_ator"];
+                a.Idator = (int)row["id_ator"];
+                a.Datanascimento = (string)row["datanascimento"];
+                collection.Add(a);
+            }
+            row.Close();
+
+            return collection;
+            }
+        public static List<Genero> ReadAllGeneros(int idfilme)
+        {
+            Database db = new Database();
+            string query = "SELECT Genero.nome as nome_genero " +
+                "FROM Filme " +
+                "LEFT JOIN Filme_genero ON Filme.idfilme = Filme_genero.filme_idfilme " +
+                "LEFT JOIN Genero ON Filme_genero.genero_nome = Genero.nome " +
+                "WHERE idfilme = @id;";
+            List<Genero> lista = new List<Genero>();
+
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@id", idfilme);
+            SqlDataReader row = db.Query(query, d);
+
+            if (row == null)
+                return null;
+            while (row.Read())
+            {
+                Genero g = new Genero();
+                if(row["nome_genero"] == DBNull.Value)
+                {
+                    return lista;
+                }
+                g.nome = (string)row["nome_genero"];
+                lista.Add(g);
+            }
+            row.Close();
+            return lista;
+            }
 
         public static int Update(Filme f)
         {
@@ -84,6 +192,7 @@ namespace MyMovies.DAL
             dictionary.Add("@duracao", f.Duracao);
             dictionary.Add("@nome", f.Nome);
             dictionary.Add("@ano", f.Ano);
+            //dictionary.Add("@foto", f.Foto);
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

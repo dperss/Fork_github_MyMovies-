@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Navigation;
 using MyMovies.universal.ViewModel;
 using MyMovies.BL;
 using Windows.UI.Popups;
+using Windows.System;
+using Windows.Storage;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -65,6 +67,11 @@ namespace MyMovies.universal.Paginas
         private void viewFilmes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GestaoDeFilmesViewModel.SelectedFilme = viewFilmes.SelectedItem as Filme;
+        }
+
+        private async void Foto_Button_Click(object sender, RoutedEventArgs e)
+        {
+            //await Launcher.LaunchFolderAsync(await StorageFolder.GetFolderFromPathAsync(@"C:\"));
         }
     }
 }

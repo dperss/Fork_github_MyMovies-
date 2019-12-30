@@ -127,6 +127,10 @@
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.7.0, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [

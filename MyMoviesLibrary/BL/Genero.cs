@@ -30,6 +30,10 @@ namespace MyMovies.BL
         {
             return GeneroDAL.Delete(this);
         }
+        public override string ToString()
+        {
+            return $"{nome}";
+        }
 
 
     }

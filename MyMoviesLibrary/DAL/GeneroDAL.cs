@@ -12,7 +12,7 @@ namespace MyMovies.DAL
         public static bool CreateTable()
         {
             Database db = new Database();
-            string query = @"CREATE TABLE [dbo].[genero] (
+            string query = @"CREATE TABLE [dbo].[Genero] (
                              nome VARCHAR(50) PRIMARY KEY NOT NULL);
                              ";
             try
