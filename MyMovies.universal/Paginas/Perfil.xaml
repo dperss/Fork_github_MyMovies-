@@ -70,7 +70,7 @@
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="1">
                 <PersonPicture VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Height="130"/>
-                <TextBlock Text="perfil"  Foreground="Gray"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="40"/>
+                <TextBlock Text="PERFIL"  Foreground="Gray"  HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="40"/>
             </Grid>
             <Grid Grid.Column="2">
                 <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>

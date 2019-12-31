@@ -66,6 +66,12 @@ namespace MyMovies.universal
                         case "Registo_Page":
                             contentFrame.Navigate(typeof(Paginas.Registo));
                             break;
+                        case "Perfil_Page":
+                            contentFrame.Navigate(typeof(Paginas.Perfil));
+                            break;
+                        case "Biblioteca_Page":
+                            contentFrame.Navigate(typeof(Paginas.Biblioteca));
+                            break;
                     }
                 }
                 
@@ -101,9 +107,13 @@ namespace MyMovies.universal
                 nv_item_gestao_atores.Visibility = Visibility.Collapsed;
                 nv_item_gestao_filmes.Visibility = Visibility.Collapsed;
                 nv_item_gestao_utilizadores.Visibility = Visibility.Collapsed;
+                nv_item_Biblioteca_Page.Visibility = Visibility.Visible;
+                nv_item_Perfil_Page.Visibility = Visibility.Visible;
             }
             if(u.Tipo == Tipo.admin)
             {
+                nv_item_Biblioteca_Page.Visibility = Visibility.Visible;
+                nv_item_Perfil_Page.Visibility = Visibility.Visible;
                 nv_item_gestao_atores.Visibility = Visibility.Visible;
                 nv_item_gestao_filmes.Visibility = Visibility.Visible;
                 nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
@@ -127,6 +137,18 @@ namespace MyMovies.universal
                 }
             }
             contentFrame.Navigate(typeof(Paginas.Principal));
+        }
+
+        public void ChangeNvSelection(string selection)
+        {
+            foreach (NavigationViewItemBase item in nv.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == selection)
+                {
+                    nv.SelectedItem = item;
+                    break;
+                }
+            }
         }
 
 

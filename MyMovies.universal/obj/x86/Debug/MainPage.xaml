@@ -28,19 +28,25 @@
             <NavigationViewItem x:ConnectionId='4' Tag="Registo_Page" x:Name="nv_item_Registo_Page" Visibility="Visible" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem x:ConnectionId='5' Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">
+            <NavigationViewItem x:ConnectionId='5' Tag="Perfil_Page" x:Name="nv_item_Perfil_Page" Visibility="Collapsed" Icon="Account">
+                <TextBlock Tag="Nav_Perfil">Perfil</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem x:ConnectionId='6' Tag="Biblioteca_Page" x:Name="nv_item_Biblioteca_Page" Visibility="Collapsed" Icon="Library">
+                <TextBlock Tag="Nav_Biblioteca">Biblioteca</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem x:ConnectionId='7' Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">
                 <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem x:ConnectionId='6' Icon="Admin" x:Name="nv_item_gestao_filmes" Visibility="Collapsed" Tag="Gestao_de_filmes_Page">
+            <NavigationViewItem x:ConnectionId='8' Icon="Admin" x:Name="nv_item_gestao_filmes" Visibility="Collapsed" Tag="Gestao_de_filmes_Page">
                 <TextBlock Tag="Nav_Gestao_de_filmes">Gestão de Filmes</TextBlock>
             </NavigationViewItem>
-            <NavigationViewItem x:ConnectionId='7' Icon="Admin" x:Name="nv_item_gestao_atores" Visibility="Collapsed" Tag="Gestao_de_atores_Page">
+            <NavigationViewItem x:ConnectionId='9' Icon="Admin" x:Name="nv_item_gestao_atores" Visibility="Collapsed" Tag="Gestao_de_atores_Page">
                 <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
             </NavigationViewItem>
             
             
         </NavigationView.MenuItems>
-        <Frame x:ConnectionId='8' x:Name="contentFrame"></Frame>
+        <Frame x:ConnectionId='10' x:Name="contentFrame"></Frame>
     </NavigationView>
 
 </Page>

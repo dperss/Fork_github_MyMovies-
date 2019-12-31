@@ -739,3 +739,8 @@ C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\obj\
 C:\Users\ClaudiaAlves\Desktop\3ano\DAI\Trabalho\mymovies\MyMovies.universal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\System.Drawing.Common.dll
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\FxResources.System.Drawing.Common.SR.resw
+C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\UserControl\FotoControl.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControl\FotoControl.g.i.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControl\FotoControl.g.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControl\FotoControl.xaml
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControl\FotoControl.xbf

@@ -43,6 +43,8 @@ namespace MyMovies.universal.Paginas
         private void Botao_registo_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Registo));
+            MainPage mainPage  = MainPage.GetCurrent();
+            mainPage.ChangeNvSelection("Registo_Page");
         }
 
         private void Botao_Biblioteca_Click(object sender, RoutedEventArgs e)
@@ -70,6 +72,8 @@ namespace MyMovies.universal.Paginas
         private void Botao_login_sem_user_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Login));
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.ChangeNvSelection("Login_Page");
         }
     }
 }

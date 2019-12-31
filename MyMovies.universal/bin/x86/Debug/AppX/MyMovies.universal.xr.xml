@@ -4,10 +4,8 @@
     <RootPropertyPathName Name="Datanascimento" />
     <RootPropertyPathName Name="Nome" />
     <RootPropertyPathName Name="Idator" />
-    <RootPropertyPathName Name="Atores" />
     <RootPropertyPathName Name="Escritor" />
     <RootPropertyPathName Name="Diretor" />
-    <RootPropertyPathName Name="Foto" />
     <RootPropertyPathName Name="Duracao" />
     <RootPropertyPathName Name="Ano" />
     <RootPropertyPathName Name="Idfilme" />
@@ -33,6 +31,8 @@
       <RootMethod Name="SetRow" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
       <RootProperty Name="ImageSource" />
@@ -49,6 +49,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="RenderTransformOrigin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
@@ -167,16 +168,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
       <RootProperty Name="Content" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
-      <RootProperty Name="Text" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="IsSpellCheckEnabled" />
-    </RootType>
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridComboBoxColumn">
       <RootProperty Name="Header" />
@@ -196,6 +187,17 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
+      <RootEvent Name="KeyDown" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="IsSpellCheckEnabled" />
+      <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PersonPicture">
       <RootProperty Name="Margin" />
@@ -243,5 +245,6 @@
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Principal" />
     <RootType FullName="MyMovies.universal.Paginas.Registo" />
+    <RootType FullName="MyMovies.universal.UserControl.FotoControl" />
   </Roots.RootTypes>
 </Roots>

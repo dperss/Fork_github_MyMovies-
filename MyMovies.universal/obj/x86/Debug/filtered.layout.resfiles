@@ -33,5 +33,6 @@ Paginas\Pagina_Filmes.xbf
 Paginas\Perfil.xbf
 Paginas\Principal.xbf
 Paginas\Registo.xbf
+UserControl\FotoControl.xbf
 Properties\Default.rd.xml
 WinMetadata\Windows.winmd

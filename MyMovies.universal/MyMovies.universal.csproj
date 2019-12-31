@@ -153,6 +153,9 @@
       <DependentUpon>Registo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl\FotoControl.xaml.cs">
+      <DependentUpon>FotoControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\GestaoDeAtoresViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeFilmesViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeUtilizadoresViewModel.cs" />
@@ -233,6 +236,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paginas\Registo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControl\FotoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

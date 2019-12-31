@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using MyMovies.BL;
 using MyMovies.universal.ViewModel;
+using Windows.UI.Popups;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -32,7 +33,7 @@ namespace MyMovies.universal.Paginas
             GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
         }
 
-        private void Button_Submeter(object sender, RoutedEventArgs e)//este codigo devia de estar no gestaodeutilizadoresviewmodel
+        private async void Button_Submeter(object sender, RoutedEventArgs e)//este codigo devia de estar no gestaodeutilizadoresviewmodel
         {
           
             Utilizador u = new Utilizador();
@@ -40,8 +41,15 @@ namespace MyMovies.universal.Paginas
             u.Nome = NomeTextBox.Text;
             u.Password = PasswordBox.Password;
             u.Tipo = Tipo.user;
-            GestaoDeUtilizadoresViewModel.CreateUtilizador(u);//como é que mostro mensagens de erro dependendo do return desta funcao?
-            //levar para outra página
+            if (!GestaoDeUtilizadoresViewModel.CreateUtilizador(u))
+            {
+                MessageDialog message = new MessageDialog("Não foi possível criar a sua conta");
+                await message.ShowAsync();
+            }
+            else {
+                App.NavigateMainPage();
+
+            }
         }
     }
 }

@@ -28,6 +28,12 @@
             <NavigationViewItem Tag="Registo_Page" x:Name="nv_item_Registo_Page" Visibility="Visible" Icon="Add">
                 <TextBlock Tag="Nav_Registo">Registo</TextBlock>
             </NavigationViewItem>
+            <NavigationViewItem Tag="Perfil_Page" x:Name="nv_item_Perfil_Page" Visibility="Collapsed" Icon="Account">
+                <TextBlock Tag="Nav_Perfil">Perfil</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Tag="Biblioteca_Page" x:Name="nv_item_Biblioteca_Page" Visibility="Collapsed" Icon="Library">
+                <TextBlock Tag="Nav_Biblioteca">Biblioteca</TextBlock>
+            </NavigationViewItem>
             <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_utilizadores" Visibility="Collapsed" Tag="Gestao_de_utilizadores_Page">
                 <TextBlock Tag="Nav_Gestao_de_utilizadores">Gestão de Utilizadores</TextBlock>
             </NavigationViewItem>

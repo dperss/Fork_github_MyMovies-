@@ -48,16 +48,20 @@
                     <PersonPicture Margin="0,10,30,0"/>
                 </Grid>
                 <Grid Grid.Row="1">
-                    <TextBox PlaceholderText="EMAIL" Height="40" Width="500" Background="CadetBlue" x:Name="EmailTextBox"  Margin="0,0,30,-30" BorderBrush="Gray" IsSpellCheckEnabled="False"/>
+                    <TextBox PlaceholderText="Email" Height="40" Width="500" Background="CadetBlue" x:Name="EmailTextBox"  Margin="0,0,30,-30" BorderBrush="Gray" IsSpellCheckEnabled="False" KeyDown="EmailTextBox_KeyDown"/>
+
+
                 </Grid>
                 <Grid Grid.Row="2">
-                    <PasswordBox PlaceholderText="PASSWORD" Height="40" Width="500" Background="CadetBlue" x:Name="PasswordBox" Margin="0,0,30,-30" BorderBrush="Gray"/>
+                    <PasswordBox PlaceholderText="Password" Height="40" Width="500" Background="CadetBlue" x:Name="PasswordBox" Margin="0,0,30,-30" BorderBrush="Gray" KeyDown="PasswordBox_KeyDown"/>
+
+
                 </Grid>
                 <Grid Grid.Row="3">
-                    <Button Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top" Click="Button_Click" />
+                    <Button Content="Confirmar" HorizontalAlignment="Center" Background="Gray"  Margin="0,10,100,-30" VerticalAlignment="Top" Click="Button_Click"/>
                     <TextBlock Text="Ainda não tem uma conta?" Foreground="Gray" HorizontalAlignment="Right" Margin="0,40,50,0"/>
                 </Grid>
-                <Button Grid.Row="3" Content="REGISTE-SE" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80" Click="Button_registar"/>
+                <Button Grid.Row="3" Content="Registe-se" HorizontalAlignment="Right" VerticalAlignment="Center" Background="Gray" Margin="0,0,80,-80" Click="Button_registar"/>
             </Grid>
         </Grid>
         <Grid Grid.Row="0">

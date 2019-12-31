@@ -21,6 +21,7 @@ namespace MyMovies.universal.ViewModel
     {
         ObservableCollection<Filme> _filmes;
         Filme _filme;
+        
         public Filme SelectedFilme
         {
             get

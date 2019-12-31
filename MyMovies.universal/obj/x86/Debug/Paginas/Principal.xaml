@@ -19,12 +19,15 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="7*"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <AutoSuggestBox Grid.ColumnSpan="2" PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5" />
             <Grid Grid.Column="1">
+
                 <Button x:ConnectionId='9' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
@@ -69,6 +72,7 @@
 
             </GridView>
         </Grid>
+
 
     </Grid>
 </Page>

@@ -39,18 +39,19 @@ namespace MyMovies.universal.Paginas
 
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
+            if (u.Password == "")
+            {
+                MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                await message.ShowAsync();
+                return;
+            }
             u = GestaoDeUtilizadoresViewModel.Login(u);
-            if (u != null )
+            if (u != null)
             {
                 MainPage mainPage = MainPage.GetCurrent();
                 App.user = true;
@@ -69,10 +70,69 @@ namespace MyMovies.universal.Paginas
         private void Button_registar(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Registo));
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.ChangeNvSelection("Registo_Page");
         }
 
-        
+        private async void EmailTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                Utilizador u = new Utilizador();
+                u.Email = EmailTextBox.Text;
+                u.Password = PasswordBox.Password;
+                if (u.Password == "")
+                {
+                    MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                    await message.ShowAsync();
+                    return;
+                }
+                u = GestaoDeUtilizadoresViewModel.Login(u);
+                if (u != null)
+                {
+                    MainPage mainPage = MainPage.GetCurrent();
+                    App.user = true;
+                    App.utilizador = u;
+                    mainPage.LoginNvVisibility(u);
+                    mainPage.NavigateHome();
+                }
+                else
+                {
+                    MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
+                    await message.ShowAsync();
+                }
+            }
+        }
+
+        private async void PasswordBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                Utilizador u = new Utilizador();
+                u.Email = EmailTextBox.Text;
+                u.Password = PasswordBox.Password;
+                if (u.Password == "")
+                {
+                    MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                    await message.ShowAsync();
+                    return;
+                }
+                u = GestaoDeUtilizadoresViewModel.Login(u);
+                if (u != null)
+                {
+                    MainPage mainPage = MainPage.GetCurrent();
+                    App.user = true;
+                    App.utilizador = u;
+                    mainPage.LoginNvVisibility(u);
+                    mainPage.NavigateHome();
+                }
+                else
+                {
+                    MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
+                    await message.ShowAsync();
+                }
+            }
+        }
+
     }
-
-
 }
