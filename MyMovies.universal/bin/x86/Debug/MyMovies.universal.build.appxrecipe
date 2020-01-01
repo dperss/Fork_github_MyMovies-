@@ -145,8 +145,17 @@
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf">
       <PackagePath>Paginas\GestaoDeAtores.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeDiretores.xbf">
+      <PackagePath>Paginas\GestaoDeDiretores.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeEscritores.xbf">
+      <PackagePath>Paginas\GestaoDeEscritores.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf">
       <PackagePath>Paginas\GestaoDeFilmes.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeGeneros.xbf">
+      <PackagePath>Paginas\GestaoDeGeneros.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf">
       <PackagePath>Paginas\GestaoDeUtilizadores.xbf</PackagePath>

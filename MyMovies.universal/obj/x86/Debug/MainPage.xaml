@@ -43,10 +43,13 @@
             <NavigationViewItem x:ConnectionId='9' Icon="Admin" x:Name="nv_item_gestao_atores" Visibility="Collapsed" Tag="Gestao_de_atores_Page">
                 <TextBlock Tag="Nav_Gestao_de_atores">Gestão de Atores</TextBlock>
             </NavigationViewItem>
+            <NavigationViewItem x:ConnectionId='10' Icon="Admin" x:Name="nv_item_gestao_escritores" Visibility="Collapsed" Tag="Gestao_de_escritores_Page">
+                <TextBlock Tag="Nav_Gestao_de_escritores">Gestão de Escritores</TextBlock>
+            </NavigationViewItem>
             
             
         </NavigationView.MenuItems>
-        <Frame x:ConnectionId='10' x:Name="contentFrame"></Frame>
+        <Frame x:ConnectionId='11' x:Name="contentFrame"></Frame>
     </NavigationView>
 
 </Page>

@@ -68,9 +68,10 @@ namespace MyMovies.universal.ViewModel
             }
             return false;
         }
-        public bool DeleteAtor()
+        public int DeleteEscritor()
         {
-            if (SelectedEscritor.Delete() == 1)
+            int ret = SelectedEscritor.Delete();
+            if (ret == 1)
             {
                 if (SelectedEscritor.Idescritor == Escritores.Count)
                 {
@@ -89,9 +90,9 @@ namespace MyMovies.universal.ViewModel
                     Escritor.CreateFromObservableCollection(Escritores);
                 }
 
-                return true;
+                return 1;
             }
-            return false;
+            return ret;
         }
 
         public bool Add_Linha()

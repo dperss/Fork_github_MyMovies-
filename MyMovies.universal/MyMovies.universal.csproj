@@ -128,8 +128,17 @@
     <Compile Include="Paginas\GestaoDeAtores.xaml.cs">
       <DependentUpon>GestaoDeAtores.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Paginas\GestaoDeDiretores.xaml.cs">
+      <DependentUpon>GestaoDeDiretores.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\GestaoDeEscritores.xaml.cs">
+      <DependentUpon>GestaoDeEscritores.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Paginas\GestaoDeFilmes.xaml.cs">
       <DependentUpon>GestaoDeFilmes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\GestaoDeGeneros.xaml.cs">
+      <DependentUpon>GestaoDeGeneros.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\GestaoDeUtilizadores.xaml.cs">
       <DependentUpon>GestaoDeUtilizadores.xaml</DependentUpon>
@@ -212,7 +221,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Paginas\GestaoDeDiretores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\GestaoDeEscritores.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Paginas\GestaoDeFilmes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\GestaoDeGeneros.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

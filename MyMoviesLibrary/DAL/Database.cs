@@ -56,7 +56,7 @@ namespace MyMovies.DAL
                 return command.ExecuteNonQuery();
             }catch(SqlException e)
             {
-                return 0;
+                return e.Number;
             }
         }
         public int NonQueryFotoFilme(string query, Dictionary<string, object> d)

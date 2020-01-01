@@ -60,6 +60,9 @@ namespace MyMovies.universal
                         case "Gestao_de_atores_Page":
                             contentFrame.Navigate(typeof(Paginas.GestaoDeAtores));
                             break;
+                        case "Gestao_de_escritores_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeEscritores));
+                            break;
                         case "Login_Page":
                             contentFrame.Navigate(typeof(Paginas.Login));
                             break;
@@ -117,6 +120,7 @@ namespace MyMovies.universal
                 nv_item_gestao_atores.Visibility = Visibility.Visible;
                 nv_item_gestao_filmes.Visibility = Visibility.Visible;
                 nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
+                nv_item_gestao_escritores.Visibility = Visibility.Visible;
             }
         }
 

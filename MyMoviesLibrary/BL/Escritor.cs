@@ -11,7 +11,9 @@ namespace MyMovies.BL
         public int Idescritor { get; set; }
         public string Nome { get; set; }
 
-        public Escritor() { }
+        public Escritor() {
+            Nome = "";
+        }
 
         public Escritor(int id, string nome)
         {

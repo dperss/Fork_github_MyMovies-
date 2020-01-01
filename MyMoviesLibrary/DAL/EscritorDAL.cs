@@ -12,9 +12,8 @@ namespace MyMovies.DAL
         public static int Create(Escritor e)
         {
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Escritor]([idescritor],[nome])VALUES(@id,@nome);";
+            string query = "INSERT INTO[dbo].[Escritor]([nome])VALUES(@nome);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", e.Idescritor);
             d.Add("@nome", e.Nome);
             try
             {

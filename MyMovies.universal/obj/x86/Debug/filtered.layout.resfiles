@@ -26,7 +26,10 @@ MyMovies.universal.xr.xml
 Paginas\Biblioteca.xbf
 Paginas\Definicoes.xbf
 Paginas\GestaoDeAtores.xbf
+Paginas\GestaoDeDiretores.xbf
+Paginas\GestaoDeEscritores.xbf
 Paginas\GestaoDeFilmes.xbf
+Paginas\GestaoDeGeneros.xbf
 Paginas\GestaoDeUtilizadores.xbf
 Paginas\Login.xbf
 Paginas\Pagina_Filmes.xbf
