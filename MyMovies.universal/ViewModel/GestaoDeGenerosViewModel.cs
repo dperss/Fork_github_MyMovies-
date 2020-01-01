@@ -68,9 +68,10 @@ namespace MyMovies.universal.ViewModel
             }
             return false;
         }
-        public bool DeleteGenero()
+        public int DeleteGenero()
         {
-            if (SelectedGenero.Delete() == 1)
+            int ret = SelectedGenero.Delete();
+            if (ret == 1)
             {
                 if (SelectedGenero.Idgenero == Generos.Count)
                 {
@@ -88,10 +89,8 @@ namespace MyMovies.universal.ViewModel
                     Generos.Remove(SelectedGenero);
                     Genero.CreateFromObservableCollection(Generos);
                 }
-
-                return true;
             }
-            return false;
+            return ret;
         }
 
         public bool Add_Linha()

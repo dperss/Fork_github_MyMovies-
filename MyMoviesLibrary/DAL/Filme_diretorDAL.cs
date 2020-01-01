@@ -29,10 +29,8 @@ namespace MyMovies.DAL
             string query = @"INSERT INTO[dbo].[Filme_diretor]([filme_idfilme],[diretor_iddiretor])VALUES(@filme_idfilme,@diretor_iddiretor);";
 
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            dictionary.Add("@filme_idfilme", fd.Filme_idfime);
+            dictionary.Add("@filme_idfilme", fd.Filme_idfilme);
             dictionary.Add("@diretor_iddiretor", fd.Diretor_iddiretor);
-
-
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
@@ -49,7 +47,7 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 Filme_diretor fd = new Filme_diretor();
-                fd.Filme_idfime = (int)row["filme_idfilme"];
+                fd.Filme_idfilme = (int)row["filme_idfilme"];
                 fd.Diretor_iddiretor = (int)row["diretor_iddiretor"];
 
 
@@ -61,32 +59,15 @@ namespace MyMovies.DAL
 
         }
 
-        public static int Update(Filme_diretor fd)
-        {
-            Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_diretor] SET [filme_idfilme] = @filme_idfilme, [diretor_iddiretor] = @diretor_iddiretos WHERE Id =@diretor_iddiretor AND filme_idfilme = @filme_idfilme ; ";
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-            dictionary.Add("@filme_idfilme", fd.Filme_idfime);
-            dictionary.Add("@diretor_iddiretor", fd.Diretor_iddiretor);
-
-
-            int result = db.NonQuery(query, dictionary);
-            db.Close();
-            return result;
-        }
-
         public static int Delete(Filme_diretor fd)
         {
 
             Database db = new Database();
             string query = "DELETE FROM [dbo].[Filme_diretor] WHERE filme_idfilme = @filme_idfilme AND diretor_iddiretor = @diretor_iddiretor";
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-            dictionary.Add("@filme_idfilme", fd.Filme_idfime);
+            dictionary.Add("@filme_idfilme", fd.Filme_idfilme);
             dictionary.Add("@diretor_iddiretor", fd.Diretor_iddiretor);
-
-            int result = db.NonQuery(query, dictionary);
+             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;
 

@@ -5,10 +5,59 @@
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="12">
+            <TextBlock Text="Gestão de Diretores" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
+
+            <CommandBar Background="Transparent" >
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Icon="Add" Label="Adicionar" Click="Adicionar_Diretores_Botao"/>
+                    <AppBarButton Icon="Delete" Label="Eliminar" Click="Eliminar_Diretores_Botao"/>
+
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+
+        </StackPanel>
+        <controls:DataGrid
+      Grid.Row="1"
+        x:Name="viewDiretores"
+        Margin="12"
+        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+        HorizontalScrollBarVisibility="Visible"
+        VerticalScrollBarVisibility="Visible"
+        AlternatingRowBackground="Transparent"
+        AlternatingRowForeground="Gray"
+        AreRowDetailsFrozen="False"
+        AreRowGroupHeadersFrozen="True"
+        AutoGenerateColumns="False"
+        CanUserSortColumns="False"
+        CanUserReorderColumns="True"
+        CanUserResizeColumns="True"
+        ColumnHeaderHeight="32"
+        MaxColumnWidth="400"
+        FrozenColumnCount="0"
+        GridLinesVisibility="None"
+        HeadersVisibility="Column"
+        IsReadOnly="False"
+        RowEditEnded="viewDiretores_RowEditEnded"
+        SelectionChanged="viewDiretores_SelectionChanged"
+        RowDetailsVisibilityMode="Collapsed"
+        SelectionMode="Single"
+        RowGroupHeaderPropertyNameAlternative="Range"
+        ItemsSource="{x:Bind GestaoDeDiretoresViewModel.Diretores}">
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="Id" Binding="{Binding Iddiretor, Mode=OneWay}" Tag="Id" IsReadOnly="True"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
     </Grid>
 </Page>

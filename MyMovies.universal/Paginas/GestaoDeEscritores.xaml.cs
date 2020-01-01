@@ -53,6 +53,7 @@ namespace MyMovies.universal.Paginas
             {
                 MessageDialog error = new MessageDialog("O Escritor não foi removido porque há conflito de Foreign Keys");
                 await error.ShowAsync();
+                return;
             }
 
             if (ret != 1)

@@ -63,6 +63,12 @@ namespace MyMovies.universal
                         case "Gestao_de_escritores_Page":
                             contentFrame.Navigate(typeof(Paginas.GestaoDeEscritores));
                             break;
+                        case "Gestao_de_generos_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeGeneros));
+                            break;
+                        case "Gestao_de_diretores_Page":
+                            contentFrame.Navigate(typeof(Paginas.GestaoDeDiretores));
+                            break;
                         case "Login_Page":
                             contentFrame.Navigate(typeof(Paginas.Login));
                             break;
@@ -121,6 +127,8 @@ namespace MyMovies.universal
                 nv_item_gestao_filmes.Visibility = Visibility.Visible;
                 nv_item_gestao_utilizadores.Visibility = Visibility.Visible;
                 nv_item_gestao_escritores.Visibility = Visibility.Visible;
+                nv_item_gestao_generos.Visibility = Visibility.Visible;
+                nv_item_gestao_diretores.Visibility = Visibility.Visible;
             }
         }
 

@@ -8,17 +8,36 @@ namespace MyMovies.BL
     class Filme_diretor
 
     {
-        public int Filme_idfime { get; set; }
-        public int Diretor_iddiretor { get; set; }
+        int _Filme_idfime;
+        int _Diretor_iddiretor;
+
+        public int Filme_idfilme
+        {
+            get
+            {
+                return _Filme_idfime;
+            }
+            set
+            {
+                _Filme_idfime = value;
+            }
+        }
+        public int Diretor_iddiretor
+        {
+            get
+            {
+                return _Diretor_iddiretor;
+            }
+            set
+            {
+                _Diretor_iddiretor = value;
+            }
+        }
 
         public int Create()
         {
 
             return Filme_diretorDAL.Create(this);
-        }
-        public int Update()
-        {
-            return Filme_diretorDAL.Update(this);
         }
 
         public int Delete()

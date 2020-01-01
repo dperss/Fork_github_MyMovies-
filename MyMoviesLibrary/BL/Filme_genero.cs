@@ -8,13 +8,37 @@ namespace MyMovies.BL
     public class Filme_genero
     {
 
-        public int filme_idfilme { set; get; }
-        public string genero_nome { set; get; }
-        public Filme_genero() { }
-        public Filme_genero(int filme_idfilme, string nome)
+        int _Filme_idfilme;
+        int _Genero_idgenero;
+
+        public int Filme_idfilme
         {
-            this.filme_idfilme = filme_idfilme;
-            this.genero_nome = genero_nome;
+            get
+            {
+                return _Filme_idfilme;
+            }
+            set
+            {
+                _Filme_idfilme = value;
+            }
+        }
+
+        public int Genero_idgenero
+        {
+            get
+            {
+                return _Genero_idgenero;
+            }
+            set
+            {
+                _Genero_idgenero = value;
+            }
+        }
+        public Filme_genero() { }
+        public Filme_genero(int filme_idfilme, int genero_idgenero)
+        {
+            this.Filme_idfilme = filme_idfilme;
+            this.Genero_idgenero = genero_idgenero;
         }
         public static bool CreateTable()
         {
@@ -24,10 +48,7 @@ namespace MyMovies.BL
         {
             return filme_generoDAL.Create(this);
         }
-        public int Update()
-        {
-            return filme_generoDAL.Update(this);
-        }
+
         public static List<Filme_genero> ReadAll()
         {
             return filme_generoDAL.ReadAll();

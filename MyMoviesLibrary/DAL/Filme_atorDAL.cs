@@ -61,21 +61,6 @@ namespace MyMovies.DAL
 
         }
 
-        public static int Update(Filme_ator fa)
-        {
-            Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_ator] SET [filme_idfilme] = @filme_idfilme, [ator_idator] = @ator_idator WHERE Id =@ator_idator AND filme_idfilme = @filme_idfilme ; ";
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-            dictionary.Add("@filme_idfilme", fa.Filme_idfilme);
-            dictionary.Add("@ator_idator", fa.Ator_idator);
-
-
-            int result = db.NonQuery(query, dictionary);
-            db.Close();
-            return result;
-        }
-
         public static int Delete(Filme_ator fa)
         {
 

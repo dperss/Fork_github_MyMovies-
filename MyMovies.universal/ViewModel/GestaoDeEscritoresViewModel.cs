@@ -89,8 +89,6 @@ namespace MyMovies.universal.ViewModel
                     Escritores.Remove(SelectedEscritor);
                     Escritor.CreateFromObservableCollection(Escritores);
                 }
-
-                return 1;
             }
             return ret;
         }

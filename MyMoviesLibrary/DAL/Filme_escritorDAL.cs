@@ -30,13 +30,13 @@ namespace MyMovies.DAL
             }
 
         }
-        public static int Create(Filme_escritor u)
+        public static int Create(Filme_escritor fe)
         {
             Database db = new Database();
             string query = "INSERT INTO[dbo].[Filme_escritor]([filme_idfilme],[escritor_idescritor])VALUES(@filme_idfilme, @escritor_idescritor);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@filme_idfilme", u.filme_idfilme);
-            d.Add("@escritor_idescritor", u.escritor_idescritor);
+            d.Add("@filme_idfilme", fe.Filme_idfilme);
+            d.Add("@escritor_idescritor", fe.Escritor_idescritor);
             try
             {
                 return db.NonQuery(query, d);
@@ -49,43 +49,30 @@ namespace MyMovies.DAL
         public static List<Filme_escritor> ReadAll()
         {
             Database db = new Database();
-            Filme_escritor u;
+            Filme_escritor fe;
             List<Filme_escritor> ulist = new List<Filme_escritor>();
             string query = "SELECT * FROM Filme_escritor";
             SqlDataReader row = db.Query(query, null);
             while (row.Read())
             {
-                u = new Filme_escritor();
-                u.filme_idfilme = (int)row["filme_idfilme"];
-                u.escritor_idescritor = (int)row["escritor_idescritor"];
-                ulist.Add(u);
+                fe = new Filme_escritor();
+                fe.Filme_idfilme = (int)row["filme_idfilme"];
+                fe.Escritor_idescritor = (int)row["escritor_idescritor"];
+                ulist.Add(fe);
             }
             row.Close();
             return ulist;
 
         }
 
-        public static int Delete(Filme_escritor u)
+        public static int Delete(Filme_escritor fe)
         {
             Database db = new Database();
             string query = "DELETE FROM [dbo].[Filme_escritor] WHERE filme_idfilme = @filme_idfilme AND escritor_idescritor = @escritor_idescritor;";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@filme_idfilme", u.filme_idfilme);
-            d.Add("@escritor_idescritor", u.escritor_idescritor);
+            d.Add("@filme_idfilme", fe.Filme_idfilme);
+            d.Add("@escritor_idescritor", fe.Escritor_idescritor);
             return db.NonQuery(query, d);
-        }
-
-        public static int Update(Filme_escritor u)
-        {
-            Database db = new Database();
-            string query = "UPDATE [dbo].[Filme_escritor] SET[escritor_idescritor] = @escritor_idescritor, filme_idfilme = @filme_idfilme  WHERE filme_idfilme = @filme_idfilme AND escritor_idescritor = escritor_idescritor;";
-            Dictionary<string, object> dictionary = new Dictionary<string, object>();
-
-            dictionary.Add("@filme_idfilme", u.filme_idfilme);
-            dictionary.Add("@escritor_idescritor", u.escritor_idescritor);
-            int result = db.NonQuery(query, dictionary);
-            db.Close();
-            return result;
         }
 
     }

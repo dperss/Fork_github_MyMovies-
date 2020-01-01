@@ -7,18 +7,36 @@ namespace MyMovies.BL
 {
     public class Filme_ator 
     {
-        public int Filme_idfilme { get; set; }
-        public int Ator_idator { get; set; }
+        int _Filme_idfilme;
+        int _Ator_idator;
 
+        public int Filme_idfilme
+        {
+            get
+            {
+                return _Filme_idfilme;
+            }
+            set
+            {
+                _Filme_idfilme = value;
+            }
+        }
+        public int Ator_idator
+        {
+            get
+            {
+                return _Ator_idator;
+            }
+            set
+            {
+                _Ator_idator = value;
+            }
+        }
 
         public int Create()
         {
 
             return Filme_atorDAL.Create(this); //Este metodo vai ser estatico
-        }
-        public int Update()
-        {
-            return Filme_atorDAL.Update(this);
         }
 
         public int Delete()

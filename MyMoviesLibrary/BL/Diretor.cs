@@ -1,22 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using MyMovies.DAL;
 
 namespace MyMovies.BL
 {
-    public class Diretor
+    public class Diretor : INotifyPropertyChanged
     {
-        public int Iddiretor { get; set; }
-        public string Nome { get; set; }
+        private int _Iddiretor;
+        private string _Nome;
+        public int Iddiretor
+        {
+            get
+            {
+                return _Iddiretor;
+            }
+            set
+            {
+                _Iddiretor = value;
+                Onchanged("Iddiretor");
+            }
+        }
+        public string Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+            set
+            {
+                _Nome = value;
+                Onchanged("Nome");
+            }
+        }
 
-        public Diretor() { }
+        public Diretor() {
+            Nome = "";
+        }
 
         public Diretor(int id, string nome) {
             this.Iddiretor = id;
             this.Nome = nome;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public override String ToString()
         {
             return $"Id: {Iddiretor}" +
@@ -57,6 +87,12 @@ namespace MyMovies.BL
         public static bool CreateFromObservableCollection(ObservableCollection<Diretor> collection)
         {
             return DiretorDAL.CreateFromObservableCollection(collection);
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
         }
 
 

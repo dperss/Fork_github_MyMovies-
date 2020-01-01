@@ -28,29 +28,13 @@ namespace MyMovies.DAL
             }
 
         }
-        public static int Create(Filme_genero u)
+        public static int Create(Filme_genero fg)
         {
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Filme_genero]([filme_idfilme],[genero_nome])VALUES(@filme_idfilme,@genero_nome);";
+            string query = "INSERT INTO[dbo].[Filme_genero]([filme_idfilme],[genero_idgenero])VALUES(@filme_idfilme,@genero_idgenero);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@filme_idfilme", u.filme_idfilme);
-            d.Add("@genero_nome", u.genero_nome);
-            try
-            {
-                return db.NonQuery(query, d);
-            }
-            catch (System.Data.SqlClient.SqlException)
-            {
-                return 0;
-            }
-        }
-        public static int Update(Filme_genero u)
-        {
-            Database db = new Database();
-            string query = "UPDATE [Filme_genero] SET[genero_nome] = @genero_nome,  [filme_idfilme] = @filme_idfilme WHERE filme_idfilme = @filme_idfilme AND genero_nome = @genero_nome;";
-            Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@filme_idfilme", u.filme_idfilme);
-            d.Add("@genero_nome", u.genero_nome);
+            d.Add("@filme_idfilme", fg.Filme_idfilme);
+            d.Add("@genero_idgenero", fg.Genero_idgenero);
             try
             {
                 return db.NonQuery(query, d);
@@ -70,8 +54,8 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 u = new Filme_genero();
-                u.filme_idfilme = (int)row["filme_idfilme"];
-                u.genero_nome = (string)row["genero_nome"];
+                u.Filme_idfilme = (int)row["filme_idfilme"];
+                u.Genero_idgenero = (int)row["genero_idgenero"];
 
                 ulist.Add(u);
             }
@@ -80,12 +64,13 @@ namespace MyMovies.DAL
 
         }
 
-        public static int Delete(Filme_genero u)
+        public static int Delete(Filme_genero fg)
         {
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Filme_genero] WHERE filme_idfilme = @filme_idfilme AND genero_nome = @genero_nome ;";
+            string query = "DELETE FROM [dbo].[Filme_genero] WHERE filme_idfilme = @filme_idfilme AND genero_idgenero = @genero_idgenero;";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@filme_idfilme", u.filme_idfilme);
+            d.Add("@filme_idfilme", fg.Filme_idfilme);
+            d.Add("@genero_idgenero", fg.Genero_idgenero);
             return db.NonQuery(query, d);
         }
     }

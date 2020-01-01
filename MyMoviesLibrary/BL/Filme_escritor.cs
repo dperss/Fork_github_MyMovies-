@@ -7,13 +7,36 @@ namespace MyMovies.BL
 {
     public class Filme_escritor
     {
-        public int filme_idfilme { get; set; }
-        public int escritor_idescritor { get; set; }
+        int _Filme_idfilme;
+        int _Escritor_idescritor;
+
+        public int Filme_idfilme
+        {
+            get
+            {
+                return _Filme_idfilme;
+            }
+            set
+            {
+                _Filme_idfilme = value;
+            }
+        }
+        public int Escritor_idescritor
+        {
+            get
+            {
+                return _Escritor_idescritor;
+            }
+            set
+            {
+                _Escritor_idescritor = value;
+            }
+        }
         public Filme_escritor() { }
         public Filme_escritor(int filme_idfilme, int escritor_idescritor)
         {
-            this.filme_idfilme = filme_idfilme;
-            this.escritor_idescritor = escritor_idescritor;
+            this.Filme_idfilme = filme_idfilme;
+            this.Escritor_idescritor = escritor_idescritor;
         }
 
         public static bool CreateTable()
@@ -31,10 +54,6 @@ namespace MyMovies.BL
         public int Delete()
         {
             return Filme_escritorDAL.Delete(this);
-        }
-        public int Update()
-        {
-            return Filme_escritorDAL.Update(this);
         }
     }
 

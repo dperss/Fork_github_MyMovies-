@@ -68,9 +68,10 @@ namespace MyMovies.universal.ViewModel
             }
             return false;
         }
-        public bool DeleteDiretor()
+        public int DeleteDiretor()
         {
-            if (SelectedDiretor.Delete() == 1)
+            int ret = SelectedDiretor.Delete();
+            if (ret == 1)
             {
                 if (SelectedDiretor.Iddiretor == Diretores.Count)
                 {
@@ -88,10 +89,8 @@ namespace MyMovies.universal.ViewModel
                     Diretores.Remove(SelectedDiretor);
                     Diretor.CreateFromObservableCollection(Diretores);
                 }
-
-                return true;
             }
-            return false;
+            return ret;
         }
 
         public bool Add_Linha()

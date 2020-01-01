@@ -46,10 +46,16 @@
             <NavigationViewItem x:ConnectionId='10' Icon="Admin" x:Name="nv_item_gestao_escritores" Visibility="Collapsed" Tag="Gestao_de_escritores_Page">
                 <TextBlock Tag="Nav_Gestao_de_escritores">Gestão de Escritores</TextBlock>
             </NavigationViewItem>
+            <NavigationViewItem x:ConnectionId='11' Icon="Admin" x:Name="nv_item_gestao_generos" Visibility="Collapsed" Tag="Gestao_de_generos_Page">
+                <TextBlock Tag="Nav_Gestao_de_generos">Gestão de Géneros</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem x:ConnectionId='12' Icon="Admin" x:Name="nv_item_gestao_diretores" Visibility="Collapsed" Tag="Gestao_de_diretores_Page">
+                <TextBlock Tag="Nav_Gestao_de_diretores">Gestão de Diretores</TextBlock>
+            </NavigationViewItem>
             
             
         </NavigationView.MenuItems>
-        <Frame x:ConnectionId='11' x:Name="contentFrame"></Frame>
+        <Frame x:ConnectionId='13' x:Name="contentFrame"></Frame>
     </NavigationView>
 
 </Page>

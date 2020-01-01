@@ -4,11 +4,13 @@
     <RootPropertyPathName Name="Datanascimento" />
     <RootPropertyPathName Name="Nome" />
     <RootPropertyPathName Name="Idator" />
+    <RootPropertyPathName Name="Iddiretor" />
     <RootPropertyPathName Name="Idescritor" />
     <RootPropertyPathName Name="Atores" />
     <RootPropertyPathName Name="Escritor" />
     <RootPropertyPathName Name="Diretor" />
     <RootPropertyPathName Name="Generos" />
+    <RootPropertyPathName Name="Idgenero" />
     <RootPropertyPathName Name="Duracao" />
     <RootPropertyPathName Name="Ano" />
     <RootPropertyPathName Name="Idfilme" />

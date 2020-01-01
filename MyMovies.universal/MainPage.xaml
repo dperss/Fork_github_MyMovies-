@@ -46,6 +46,12 @@
             <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_escritores" Visibility="Collapsed" Tag="Gestao_de_escritores_Page">
                 <TextBlock Tag="Nav_Gestao_de_escritores">Gestão de Escritores</TextBlock>
             </NavigationViewItem>
+            <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_generos" Visibility="Collapsed" Tag="Gestao_de_generos_Page">
+                <TextBlock Tag="Nav_Gestao_de_generos">Gestão de Géneros</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Icon="Admin" x:Name="nv_item_gestao_diretores" Visibility="Collapsed" Tag="Gestao_de_diretores_Page">
+                <TextBlock Tag="Nav_Gestao_de_diretores">Gestão de Diretores</TextBlock>
+            </NavigationViewItem>
             
             
         </NavigationView.MenuItems>

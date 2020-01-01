@@ -83,5 +83,7 @@ namespace MyMovies.universal.Paginas
             //return await GestaoDeFilmesViewModel.ByteArrayToImage();
             return null;
         }
+
+
     }
 }

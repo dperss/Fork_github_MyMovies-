@@ -81,6 +81,7 @@
                                             <controls:DataGrid ItemsSource="{Binding Generos}"
                                                            AutoGenerateColumns="False">
                                                 <controls:DataGrid.Columns>
+                                                    <controls:DataGridTextColumn Header="Id" Binding="{Binding Idgenero, Mode=TwoWay}" Tag="Id_Genero" />
                                                     <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
                                                 </controls:DataGrid.Columns>
                                             </controls:DataGrid>

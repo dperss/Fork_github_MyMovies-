@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using MyMovies.DAL;
 
 namespace MyMovies.BL
 {
-    public class Genero
+    public class Genero : INotifyPropertyChanged
     {
         private int _Idgenero;
         private string _Nome;
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public int Idgenero
         {
@@ -20,6 +23,7 @@ namespace MyMovies.BL
             set
             {
                 _Idgenero = value;
+                Onchanged("Idgenero");
             }
         }
         public string Nome
@@ -31,10 +35,13 @@ namespace MyMovies.BL
             set
             {
                 _Nome = value;
+                Onchanged("Nome");
             }
         }
 
-        public Genero() { }
+        public Genero() {
+            Nome = "";
+        }
         public Genero(string nome)
         {
             this.Nome = nome;
@@ -70,6 +77,12 @@ namespace MyMovies.BL
         public static bool CreateFromObservableCollection(ObservableCollection<Genero> collection)
         {
             return GeneroDAL.CreateFromObservableCollection(collection);
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
         }
 
     }
