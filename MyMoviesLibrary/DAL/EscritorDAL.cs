@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Text;
 using MyMovies.BL;
@@ -123,6 +124,33 @@ namespace MyMovies.DAL
                 return false;
             }
 
+        }
+        public static int ReSeed(int number)
+        {
+            Database db = new Database();
+            string query = "DBCC CHECKIDENT(Escritor, RESEED, @number);";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@number", number);
+            return db.NonQuery(query, dictionary);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Escritor> collection)
+        {
+            Database db = new Database();
+            try
+            {
+                db.NonQuery("DELETE FROM Escritor", null);
+                ReSeed(0);
+                foreach (Escritor e in collection)
+                {
+                    e.Create();
+                }
+                return true;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

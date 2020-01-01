@@ -176,7 +176,7 @@ namespace MyMovies.DAL
                 {
                     return lista;
                 }
-                g.nome = (string)row["nome_genero"];
+                g.Nome = (string)row["nome_genero"];
                 lista.Add(g);
             }
             row.Close();

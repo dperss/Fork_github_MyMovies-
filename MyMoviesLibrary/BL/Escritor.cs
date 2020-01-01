@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using MyMovies.DAL;
 
@@ -49,6 +50,14 @@ namespace MyMovies.BL
         public static bool CreateTable()
         {
             return EscritorDAL.CreateTable();
+        }
+        public static int ReSeed(int number)
+        {
+            return EscritorDAL.ReSeed(number);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Escritor> collection)
+        {
+            return EscritorDAL.CreateFromObservableCollection(collection);
         }
     }
 }

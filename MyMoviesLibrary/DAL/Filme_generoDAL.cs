@@ -13,8 +13,8 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Filme_genero] (filme_idfilme INT FOREIGN KEY REFERENCES Filme(idfilme) NOT NULL,
-                             genero_nome varchar(50) FOREIGN KEY REFERENCES Genero(nome) NOT NULL
-                             PRIMARY KEY (filme_idfilme, genero_nome));
+                             genero_idgenero INT FOREIGN KEY REFERENCES Genero(idgenero) NOT NULL
+                             PRIMARY KEY (filme_idfilme, genero_idgenero));
                              ";
             try
             {

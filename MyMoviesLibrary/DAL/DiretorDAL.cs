@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using MyMovies.BL;
 using System.Data.SqlClient;
+using System.Collections.ObjectModel;
 
 namespace MyMovies.DAL
 {
@@ -123,6 +124,33 @@ namespace MyMovies.DAL
                 return false;
             }
 
+        }
+        public static int ReSeed(int number)
+        {
+            Database db = new Database();
+            string query = "DBCC CHECKIDENT(Diretor, RESEED, @number);";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@number", number);
+            return db.NonQuery(query, dictionary);
+        }
+        public static bool CreateFromObservableCollection(ObservableCollection<Diretor> collection)
+        {
+            Database db = new Database();
+            try
+            {
+                db.NonQuery("DELETE FROM Diretor", null);
+                ReSeed(0);
+                foreach (Diretor d in collection)
+                {
+                    d.Create();
+                }
+                return true;
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+                return false;
+            }
         }
     }
 }

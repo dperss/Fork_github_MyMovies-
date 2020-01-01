@@ -157,7 +157,12 @@
       <DependentUpon>FotoControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\GestaoDeAtoresViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeAvaliacao_ComentarioViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeBibliotecaViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeDiretoresViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeEscritoresViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeFilmesViewModel.cs" />
+    <Compile Include="ViewModel\GestaoDeGenerosViewModel.cs" />
     <Compile Include="ViewModel\GestaoDeUtilizadoresViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
