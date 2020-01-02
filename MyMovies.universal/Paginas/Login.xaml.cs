@@ -44,9 +44,9 @@ namespace MyMovies.universal.Paginas
             Utilizador u = new Utilizador();
             u.Email = EmailTextBox.Text;
             u.Password = PasswordBox.Password;
-            if (u.Password == "")
+            if (u.Password == "" || u.Email == "")
             {
-                MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                MessageDialog message = new MessageDialog("Tem que preencher os dois campos");
                 await message.ShowAsync();
                 return;
             }
@@ -81,9 +81,9 @@ namespace MyMovies.universal.Paginas
                 Utilizador u = new Utilizador();
                 u.Email = EmailTextBox.Text;
                 u.Password = PasswordBox.Password;
-                if (u.Password == "")
+                if (u.Password == "" || u.Email == "")
                 {
-                    MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                    MessageDialog message = new MessageDialog("Tem que preencher os dois campos");
                     await message.ShowAsync();
                     return;
                 }
@@ -111,9 +111,9 @@ namespace MyMovies.universal.Paginas
                 Utilizador u = new Utilizador();
                 u.Email = EmailTextBox.Text;
                 u.Password = PasswordBox.Password;
-                if (u.Password == "")
+                if (u.Password == "" || u.Email == "")
                 {
-                    MessageDialog message = new MessageDialog("Tem que introduzir a password");
+                    MessageDialog message = new MessageDialog("Tem que preencher os dois campos");
                     await message.ShowAsync();
                     return;
                 }

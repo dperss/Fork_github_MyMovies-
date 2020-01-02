@@ -51,6 +51,10 @@ namespace MyMovies.BL
         {
             return Filme_escritorDAL.ReadAll();
         }
+        public int Update()
+        {
+            return Filme_escritorDAL.Update(this);
+        }
         public int Delete()
         {
             return Filme_escritorDAL.Delete(this);

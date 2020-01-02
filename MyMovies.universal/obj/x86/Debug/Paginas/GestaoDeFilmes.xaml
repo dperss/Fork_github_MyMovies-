@@ -34,12 +34,12 @@
         x:Name="viewFilmes"
         Margin="12"
         VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-        HorizontalScrollBarVisibility="Visible"
-        VerticalScrollBarVisibility="Visible"
+        VerticalScrollBarVisibility="Auto"
         AlternatingRowBackground="Transparent"
         AlternatingRowForeground="Gray"
         AreRowDetailsFrozen="False"
         AreRowGroupHeadersFrozen="True"
+        HorizontalScrollBarVisibility="Auto"
         AutoGenerateColumns="False"
         CanUserSortColumns="False"
         CanUserReorderColumns="True"
@@ -60,12 +60,12 @@
                 <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
                 <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano, Mode=TwoWay}" Tag="Ano" />
                 <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao, Mode=TwoWay}" Tag="Duracao" />
-                <controls:DataGridTemplateColumn Header="Foto" Tag="Foto" >
+                <controls:DataGridTemplateColumn Header="Foto" Tag="Foto">
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <control:FotoControl ImageSource="{Binding Foto, Mode=TwoWay}"/>
-                                <Button x:ConnectionId='6'                          >Alterar Foto</Button>
+                                <control:FotoControl ImageSource="{Binding Foto, Mode=TwoWay}" MaxWidth="50"/>
+                                <Button x:ConnectionId='6'                           HorizontalAlignment="Stretch">Alterar Foto</Button>
                             </StackPanel>
                         </DataTemplate>
                     </controls:DataGridTemplateColumn.CellTemplate>

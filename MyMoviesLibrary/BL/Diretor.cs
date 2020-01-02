@@ -19,8 +19,11 @@ namespace MyMovies.BL
             }
             set
             {
-                _Iddiretor = value;
-                Onchanged("Iddiretor");
+                if(_Iddiretor!= value)
+                {
+                    _Iddiretor = value;
+                    Onchanged("Iddiretor");
+                }
             }
         }
         public string Nome
@@ -31,8 +34,11 @@ namespace MyMovies.BL
             }
             set
             {
-                _Nome = value;
-                Onchanged("Nome");
+                if(_Nome!= value)
+                {
+                    _Nome = value;
+                    Onchanged("Nome");
+                }
             }
         }
 

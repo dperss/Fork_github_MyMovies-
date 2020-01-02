@@ -59,6 +59,17 @@ namespace MyMovies.DAL
 
         }
 
+        public static int Update(Filme_diretor fd)
+        {
+            Database db = new Database();
+            string query = "UPDATE Filme_diretor SET diretor_iddiretor=@iddiretor WHERE filme_idfilme = @idfilme";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@idfilme", fd.Filme_idfilme);
+            dictionary.Add("@idescritor", fd.Diretor_iddiretor);
+            int result = db.NonQuery(query, dictionary);
+            db.Close();
+            return result;
+        }
         public static int Delete(Filme_diretor fd)
         {
 

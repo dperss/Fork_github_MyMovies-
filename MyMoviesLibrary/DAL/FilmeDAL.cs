@@ -192,7 +192,6 @@ namespace MyMovies.DAL
             dictionary.Add("@duracao", f.Duracao);
             dictionary.Add("@nome", f.Nome);
             dictionary.Add("@ano", f.Ano);
-            //dictionary.Add("@foto", f.Foto);
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

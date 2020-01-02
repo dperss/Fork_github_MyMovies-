@@ -178,6 +178,7 @@
     </RootType>
     <RootType FullName="MyMovies.universal.UserControlFolder.FotoControl">
       <RootProperty Name="ImageSource" />
+      <RootProperty Name="MaxWidth" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeGeneros" />

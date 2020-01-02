@@ -1,15 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using MyMovies.DAL;
 
 namespace MyMovies.BL
 {
-    public class Escritor
+    public class Escritor : INotifyPropertyChanged
     {
-        public int Idescritor { get; set; }
-        public string Nome { get; set; }
+        int _Idescritor;
+        string _Nome;
+
+        public int Idescritor
+        {
+            get
+            {
+                return _Idescritor;
+            }
+            set
+            {
+                if(_Idescritor != value)
+                {
+                    _Idescritor = value;
+                    Onchanged("Idescritor");
+                }
+            }
+        }
+        public string Nome
+        {
+            get
+            {
+                return _Nome;
+            }
+            set
+            {
+                if (Nome != value)
+                {
+                    _Nome = value;
+                    Onchanged("Nome");
+                }
+            }
+        }
 
         public Escritor() {
             Nome = "";
@@ -20,6 +52,9 @@ namespace MyMovies.BL
             this.Idescritor = id;
             this.Nome = nome;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public override String ToString()
         {
             return $"Id: {Idescritor}" +
@@ -60,6 +95,12 @@ namespace MyMovies.BL
         public static bool CreateFromObservableCollection(ObservableCollection<Escritor> collection)
         {
             return EscritorDAL.CreateFromObservableCollection(collection);
+        }
+        public void Onchanged(string name)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(name));
+
         }
     }
 }
