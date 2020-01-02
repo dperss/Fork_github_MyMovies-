@@ -21,7 +21,7 @@ namespace MyMovies.BL
         private ObservableCollection<Ator> _Atores;
         private List<Genero> _Generos;
 
-        public int Idfilme { //PERGUNTAR: porque que se usa uma variável privada e uma property publica? 
+        public int Idfilme {
             get
             {
                 return _Idfilme;
@@ -66,16 +66,17 @@ namespace MyMovies.BL
             } 
         } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
 
-        public byte[] Foto { 
-            get 
-            { 
-                return _Foto; 
-            }             
-            set 
+        public byte[] Foto
+        {
+            get
+            {
+                return _Foto;
+            }
+            set
             {
                 _Foto = value;
                 Onchanged("Foto");
-            } 
+            }
         }
 
         public Diretor Diretor
@@ -137,13 +138,11 @@ namespace MyMovies.BL
             Duracao = "";
             Diretor = new Diretor();
             Escritor = new Escritor();
-            //Foto = File.ReadAllBytes(@"C:\users\migue\Desktop\aladin.jpg");
-
         }
         public int Create()
         {
 
-            return FilmeDAL.Create(this); //Este metodo vai ser estatico
+            return FilmeDAL.Create(this);
         }
         public static List<Filme> ReadAll()
         {

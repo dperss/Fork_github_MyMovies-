@@ -11,6 +11,7 @@
     <RootPropertyPathName Name="Diretor" />
     <RootPropertyPathName Name="Generos" />
     <RootPropertyPathName Name="Idgenero" />
+    <RootPropertyPathName Name="Foto" />
     <RootPropertyPathName Name="Duracao" />
     <RootPropertyPathName Name="Ano" />
     <RootPropertyPathName Name="Idfilme" />
@@ -175,6 +176,9 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
       <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="MyMovies.universal.UserControlFolder.FotoControl">
+      <RootProperty Name="ImageSource" />
+    </RootType>
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeGeneros" />
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridComboBoxColumn">
@@ -253,6 +257,8 @@
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Principal" />
     <RootType FullName="MyMovies.universal.Paginas.Registo" />
-    <RootType FullName="MyMovies.universal.UserControl.FotoControl" />
+    <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
+      <RootProperty Name="Content" />
+    </RootType>
   </Roots.RootTypes>
 </Roots>

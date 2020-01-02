@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:data="using:MyMovies.BL"
-    xmlns:control="using:MyMovies.universal.UserControl"
+    xmlns:control="using:MyMovies.universal.UserControlFolder"
     xmlns:viewmodel="using:MyMovies.universal.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -64,7 +64,7 @@
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <!--<control:FotoControl ImageSource="{Binding Foto, Mode=TwoWay}"></control:FotoControl>-->
+                                <control:FotoControl ImageSource="{Binding Foto, Mode=TwoWay}"/>
                                 <Button Click="Foto_Button_Click">Alterar Foto</Button>
                             </StackPanel>
                         </DataTemplate>

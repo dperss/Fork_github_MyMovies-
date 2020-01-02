@@ -49,7 +49,6 @@ namespace MyMovies.universal.ViewModel
             {
                 f.Atores = f.ReadAllAtores();
                 f.Generos = f.ReadAllGeneros();
-                
             }
             
            
@@ -129,7 +128,7 @@ namespace MyMovies.universal.ViewModel
                 if (type == "*" || typeReg.IsMatch(type))
                     picker.FileTypeFilter.Add(type);
                 else
-                    throw new InvalidCastException("File extension is incorrect");
+                    throw new InvalidCastException("A extensão do ficheiro está incorreta");
             }
             var file = await picker.PickSingleFileAsync();
             if (file != null)
@@ -152,21 +151,6 @@ namespace MyMovies.universal.ViewModel
             }
 
             return false;
-        }
-        public async Task<BitmapImage> ByteArrayToImage(Byte[] byteArrayIn)
-        {
-            using (InMemoryRandomAccessStream stream = new InMemoryRandomAccessStream())
-            {
-                using (DataWriter writer = new DataWriter(stream.GetOutputStreamAt(0)))
-                {
-                    writer.WriteBytes(byteArrayIn);
-                    await writer.StoreAsync();
-                }
-                var image = new BitmapImage();
-                await image.SetSourceAsync(stream);
-                return image;
-
-            }
         }
     }
 }

@@ -162,7 +162,7 @@
       <DependentUpon>Registo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl\FotoControl.xaml.cs">
+    <Compile Include="UserControlFolder\FotoControl.xaml.cs">
       <DependentUpon>FotoControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\GestaoDeAtoresViewModel.cs" />
@@ -265,7 +265,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControl\FotoControl.xaml">
+    <Page Include="UserControlFolder\FotoControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -284,6 +284,7 @@
       <Name>MyMovies</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

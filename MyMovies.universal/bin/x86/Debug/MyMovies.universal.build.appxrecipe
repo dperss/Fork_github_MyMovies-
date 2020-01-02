@@ -178,8 +178,8 @@
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf">
       <PackagePath>Paginas\Registo.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\UserControl\FotoControl.xbf">
-      <PackagePath>UserControl\FotoControl.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\UserControlFolder\FotoControl.xbf">
+      <PackagePath>UserControlFolder\FotoControl.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

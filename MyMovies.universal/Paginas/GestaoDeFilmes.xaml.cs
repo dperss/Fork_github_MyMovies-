@@ -75,15 +75,8 @@ namespace MyMovies.universal.Paginas
 
         private async void Foto_Button_Click(object sender, RoutedEventArgs e)
         {
-            var file = await GestaoDeFilmesViewModel.OpenLocalFile(".jpg",".png");
+            StorageFile file = await GestaoDeFilmesViewModel.OpenLocalFile(".jpg",".png");
             await GestaoDeFilmesViewModel.UpdateFoto(file);
         }
-        public static async Task<BitmapImage> ByteArrayToImage()
-        {
-            //return await GestaoDeFilmesViewModel.ByteArrayToImage();
-            return null;
-        }
-
-
     }
 }
