@@ -759,3 +759,8 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControlFolder\FotoCon
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControlFolder\FotoControl.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\UserControlFolder\FotoControl.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\UserControlFolder\FotoControl.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pesquisa.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.g.i.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.g.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.xaml
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.xbf

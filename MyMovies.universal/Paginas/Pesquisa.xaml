@@ -5,10 +5,37 @@
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrol="using:MyMovies.universal.UserControlFolder"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
 
+        
+        <Grid Grid.Row="1" Grid.Column="1">
+            <Rectangle Fill="LightYellow" Opacity="0.3"/>
+            <GridView ItemsSource="{x:Bind Filmes}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="10">
+                            <usercontrol:FotoControl ImageSource="{Binding Foto, Mode=OneTime}" Height="300"/>
+                            <TextBlock Text="{Binding Nome, Mode=OneTime}" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center" FontSize="14"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
     </Grid>
 </Page>

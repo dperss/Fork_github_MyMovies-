@@ -172,6 +172,9 @@
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf">
       <PackagePath>Paginas\Perfil.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pesquisa.xbf">
+      <PackagePath>Paginas\Pesquisa.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf">
       <PackagePath>Paginas\Principal.xbf</PackagePath>
     </AppxPackagedFile>

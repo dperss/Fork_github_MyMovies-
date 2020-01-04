@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MyMovies.BL;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,9 +24,21 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Pesquisa : Page
     {
+        public ObservableCollection<Filme> Filmes;
         public Pesquisa()
         {
             this.InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            List<Filme> flist = e.Parameter as List<Filme>;
+            Filmes = new ObservableCollection<Filme>(flist);
+            foreach(Filme f in Filmes)
+            {
+                f.ReadFoto();
+            }
+            base.OnNavigatedTo(e);
         }
     }
 }

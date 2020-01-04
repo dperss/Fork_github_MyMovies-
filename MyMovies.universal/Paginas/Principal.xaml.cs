@@ -50,11 +50,15 @@ namespace MyMovies.universal.Paginas
         private void Botao_Biblioteca_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Biblioteca));
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.ChangeNvSelection("Biblioteca_Page");
         }
 
         private void Botao_Perfil_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Paginas.Perfil));
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.ChangeNvSelection("Perfil_Page");
         }
 
         private void Botao_login_Click(object sender, RoutedEventArgs e)
@@ -75,5 +79,52 @@ namespace MyMovies.universal.Paginas
             MainPage mainPage = MainPage.GetCurrent();
             mainPage.ChangeNvSelection("Login_Page");
         }
+
+        private void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if(e.Key == Windows.System.VirtualKey.Enter)
+            {
+                AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+                if(autoSuggestBox.Text == "")
+                {
+                    return;
+                }
+                List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+                MainPage mainPage = MainPage.GetCurrent();
+                mainPage.NavigatePesquisa(flist);
+            }
+        }
+
+        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+            if (autoSuggestBox.Text == "")
+            {
+                return;
+            }
+            List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.NavigatePesquisa(flist);
+        }
+
+        private void Pivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Pivot pivot = sender as Pivot;
+            PivotItem pivotItem = pivot.SelectedItem as PivotItem;
+            if(pivotItem.Name == "Recentes")
+            {
+                
+            }
+            if(pivotItem.Name == "MaisVistos")
+            {
+
+            }
+            if(pivotItem.Name == "MelhorClassificados")
+            {
+
+            }
+        }
+
+        
     }
 }

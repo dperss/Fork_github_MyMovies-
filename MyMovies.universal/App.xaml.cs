@@ -158,13 +158,14 @@ namespace MyMovies.universal
         }
         public static List<Filme> Pesquisar(string pesquisa)
         {
+            List<Filme> Allmovies = new List<Filme>();
             List<Filme> flist = new List<Filme>();
-            flist = Filme.ReadAll();
-            foreach(Filme f in flist)
+            Allmovies = Filme.ReadAll();
+            foreach(Filme f in Allmovies)
             {
-                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.3)
+                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.7)
                 {
-                    flist.Remove(f);
+                    flist.Add(f);
                 }
             }
             return flist;

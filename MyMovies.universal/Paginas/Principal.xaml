@@ -25,7 +25,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <AutoSuggestBox Grid.ColumnSpan="2" PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5" />
+            <AutoSuggestBox Grid.ColumnSpan="2" PlaceholderText="Pesquisa" QuerySubmitted="AutoSuggestBox_QuerySubmitted" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5" KeyDown="AutoSuggestBox_KeyDown" />
             <Grid Grid.Column="1">
 
                 <Button x:Name="Botao_registo" Click="Botao_registo_Click" Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
@@ -51,17 +51,20 @@
 
         </Grid>
         <Grid Grid.Row="1">
-            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
-                <PivotItem Header="Recentes"/>
-                <PivotItem Header="Mais Vistos"/>
-                <PivotItem Header="Melhor Classificados"/>
+
+            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" SelectionChanged="Pivot_SelectionChanged">
+                <PivotItem x:Name="Recentes" Header="Recentes"/>
+
+                <PivotItem x:Name="MaisVistos" Header="Mais Vistos"/>
+
+                <PivotItem x:Name="MelhorClassificados" Header="Melhor Classificados"/>
+
             </Pivot>
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
             <GridView x:Name="Filmes"
                       SelectionMode="Single">
-                <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
                 <GridView.ItemTemplate>
                     <DataTemplate>
 

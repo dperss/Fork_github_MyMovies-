@@ -1,0 +1,137 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="MyMovies.universal.Paginas.GestaoDeFilmes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal.Paginas"
+    xmlns:data="using:MyMovies.BL"
+    xmlns:control="using:MyMovies.universal.UserControlFolder"
+    xmlns:viewmodel="using:MyMovies.universal.ViewModel"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="12">
+            <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
+
+            <CommandBar Background="Transparent" >
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton x:ConnectionId='11' Icon="Add" Label="Adicionar"                               />
+                    <AppBarButton x:ConnectionId='12' Icon="Delete" Label="Eliminar"                              />
+                </CommandBar.SecondaryCommands>
+            </CommandBar>
+            <CheckBox x:ConnectionId='10' Content="Mostrar Mais"                                                           />
+        </StackPanel>
+        <controls:DataGrid x:ConnectionId='2'
+      Grid.Row="1"
+        x:Name="viewFilmes"
+        Margin="12"
+        VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+        VerticalScrollBarVisibility="Auto"
+        AlternatingRowBackground="Transparent"
+        AlternatingRowForeground="Gray"
+        AreRowDetailsFrozen="False"
+        AreRowGroupHeadersFrozen="True"
+        HorizontalScrollBarVisibility="Auto"
+        AutoGenerateColumns="False"
+        CanUserSortColumns="False"
+        CanUserReorderColumns="True"
+        CanUserResizeColumns="False"
+        ColumnHeaderHeight="32"
+        MaxColumnWidth="400"
+        FrozenColumnCount="0"
+        GridLinesVisibility="None"
+        HeadersVisibility="Column"
+        RowDetailsVisibilityMode="Collapsed"
+                                                      
+        SelectionMode="Single"
+                                              
+        RowGroupHeaderPropertyNameAlternative="Range"
+                                                             >
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idfilme, Mode=OneWay}" Tag="Id"/>
+                <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome" />
+                <controls:DataGridTextColumn Header="Ano" Binding="{Binding Ano, Mode=TwoWay}" Tag="Ano" />
+                <controls:DataGridTextColumn Header="Duracao" Binding="{Binding Duracao, Mode=TwoWay}" Tag="Duracao" />
+                <controls:DataGridTemplateColumn x:ConnectionId='3' Header="Foto" Tag="Foto" Visibility="Collapsed" x:Name="template_column">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <control:FotoControl ImageSource="{Binding Foto, Mode=TwoWay}" MaxWidth="50"/>
+                                <Button x:ConnectionId='9'                           HorizontalAlignment="Stretch">Alterar Foto</Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+                <controls:DataGridTemplateColumn x:ConnectionId='4' Header="Género" Tag="Genero" x:Name="Generos_column" Visibility="Collapsed">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Ver Géneros">
+                                <Button.Flyout>
+                                    <Flyout>
+                                        <StackPanel>
+                                            <TextBlock Text="Géneros" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                            <controls:DataGrid ItemsSource="{Binding Generos}"
+                                                           AutoGenerateColumns="False">
+                                                <controls:DataGrid.Columns>
+                                                    <controls:DataGridTextColumn Header="Id" Binding="{Binding Idgenero, Mode=TwoWay}" Tag="Id_Genero" />
+                                                    <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
+                                                </controls:DataGrid.Columns>
+                                            </controls:DataGrid>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+                
+                <!--<controls:DataGridTemplateColumn Header="Diretor">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate x:DataType="viewmodel:GestaoDeDiretoresViewModel">
+                            <StackPanel>
+                                <ComboBox ItemsSource="{x:Bind Diretores}" SelectedItem="{Binding SelectedDiretorComboBox, Mode=TwoWay}" DisplayMemberPath="Nome" VerticalAlignment="Center" HorizontalAlignment="Stretch" SelectionChanged="ComboBox_SelectionChanged_Diretor"></ComboBox>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>-->
+
+                <controls:DataGridTextColumn Header="Diretor" Binding="{Binding Diretor.Nome, Mode=TwoWay}" Tag="Diretor"/>
+                <controls:DataGridTextColumn Header="Escritor" Binding="{Binding Escritor.Nome, Mode=TwoWay}" Tag="Escritor"/>
+                <controls:DataGridTemplateColumn x:ConnectionId='5' Header="Elenco" Tag="Elenco" x:Name="Elenco_column" Visibility="Collapsed">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Ver Elenco">
+                                <Button.Flyout>
+                                    <Flyout>
+                                        <StackPanel>
+                                            <TextBlock Text="Elenco" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                            <controls:DataGrid ItemsSource="{Binding Atores}"
+                                                           AutoGenerateColumns="False">
+                                                <controls:DataGrid.Columns>
+                                                    <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idator, Mode=OneWay}" Tag="Id_Ator"/>
+                                                    <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Ator" />
+                                                    <controls:DataGridTextColumn Header="Data de Nascimento" Binding="{Binding Datanascimento, Mode=TwoWay}" Tag="DataNascimento_Ator" />
+                                                </controls:DataGrid.Columns>
+                                            </controls:DataGrid>
+                                        </StackPanel>
+                                    </Flyout>
+                                </Button.Flyout>
+                            </Button>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+
+
+    </Grid>
+</Page>
+

@@ -25,43 +25,46 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <AutoSuggestBox Grid.ColumnSpan="2" PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5" />
+            <AutoSuggestBox x:ConnectionId='8' Grid.ColumnSpan="2" PlaceholderText="Pesquisa"                                                QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5"                                  />
             <Grid Grid.Column="1">
 
-                <Button x:ConnectionId='9' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
+                <Button x:ConnectionId='14' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='4' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Visible"  HorizontalAlignment="Center"                             >
+                <Button x:ConnectionId='9' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Visible"  HorizontalAlignment="Center"                             >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem x:ConnectionId='6' Text="Perfil"                           />
-                            <MenuFlyoutItem x:ConnectionId='7' Text="Biblioteca"                               />
-                            <MenuFlyoutItem x:ConnectionId='8' x:Name="LogOut" Text="LogOut"                     />
+                            <MenuFlyoutItem x:ConnectionId='11' Text="Perfil"                           />
+                            <MenuFlyoutItem x:ConnectionId='12' Text="Biblioteca"                               />
+                            <MenuFlyoutItem x:ConnectionId='13' x:Name="LogOut" Text="LogOut"                     />
 
                         </MenuFlyout>
                     </Button.Flyout>
                 </Button>
-                <Button x:ConnectionId='5' x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center"                                    >
+                <Button x:ConnectionId='10' x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center"                                    >
                     <Image Source="/Assets\Untitled-1.png" />
                 </Button>
             </Grid>
 
         </Grid>
         <Grid Grid.Row="1">
-            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8">
-                <PivotItem Header="Recentes"/>
-                <PivotItem Header="Mais Vistos"/>
-                <PivotItem Header="Melhor Classificados"/>
+
+            <Pivot x:ConnectionId='4'  Background="CadetBlue" Height="70" Opacity="0.8"                                          >
+                <PivotItem x:ConnectionId='5' x:Name="Recentes" Header="Recentes"/>
+
+                <PivotItem x:ConnectionId='6' x:Name="MaisVistos" Header="Mais Vistos"/>
+
+                <PivotItem x:ConnectionId='7' x:Name="MelhorClassificados" Header="Melhor Classificados"/>
+
             </Pivot>
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
             <GridView x:ConnectionId='2' x:Name="Filmes"
                       SelectionMode="Single">
-                <!--ItemsSource="{x:Bind GestaoDeFilmesViewModel.Filmes}"-->
                 <GridView.ItemTemplate>
                     <DataTemplate>
 

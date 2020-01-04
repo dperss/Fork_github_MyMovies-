@@ -150,6 +150,10 @@ namespace MyMovies.universal
             }
             contentFrame.Navigate(typeof(Paginas.Principal));
         }
+        public void NavigatePesquisa(List<Filme> flist)
+        {
+            contentFrame.Navigate(typeof(Paginas.Pesquisa), flist);
+        }
 
         public void ChangeNvSelection(string selection)
         {
