@@ -18,6 +18,7 @@ using System.Collections;
 using MyMovies.BL;
 using MyMovies.universal;
 using MyMovies;
+using System.Threading.Tasks;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
@@ -41,29 +42,7 @@ namespace MyMovies.universal.Paginas
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            Utilizador u = new Utilizador();
-            u.Email = EmailTextBox.Text;
-            u.Password = PasswordBox.Password;
-            if (u.Password == "" || u.Email == "")
-            {
-                MessageDialog message = new MessageDialog("Tem que preencher os dois campos");
-                await message.ShowAsync();
-                return;
-            }
-            u = GestaoDeUtilizadoresViewModel.Login(u);
-            if (u != null)
-            {
-                MainPage mainPage = MainPage.GetCurrent();
-                App.user = true;
-                App.utilizador = u;
-                mainPage.LoginNvVisibility(u);
-                mainPage.NavigateHome();
-            }
-            else
-            {
-                MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
-                await message.ShowAsync();
-            }
+            await LoginMethod();
         }
 
 
@@ -78,36 +57,20 @@ namespace MyMovies.universal.Paginas
         {
             if (e.Key == Windows.System.VirtualKey.Enter)
             {
-                Utilizador u = new Utilizador();
-                u.Email = EmailTextBox.Text;
-                u.Password = PasswordBox.Password;
-                if (u.Password == "" || u.Email == "")
-                {
-                    MessageDialog message = new MessageDialog("Tem que preencher os dois campos");
-                    await message.ShowAsync();
-                    return;
-                }
-                u = GestaoDeUtilizadoresViewModel.Login(u);
-                if (u != null)
-                {
-                    MainPage mainPage = MainPage.GetCurrent();
-                    App.user = true;
-                    App.utilizador = u;
-                    mainPage.LoginNvVisibility(u);
-                    mainPage.NavigateHome();
-                }
-                else
-                {
-                    MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
-                    await message.ShowAsync();
-                }
+                await LoginMethod();
             }
         }
 
         private async void PasswordBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
-            if (e.Key == Windows.System.VirtualKey.Enter)
+            if(e.Key == Windows.System.VirtualKey.Enter)
             {
+                await LoginMethod(); 
+            }
+        }
+
+        private async Task LoginMethod()
+        {
                 Utilizador u = new Utilizador();
                 u.Email = EmailTextBox.Text;
                 u.Password = PasswordBox.Password;
@@ -131,7 +94,6 @@ namespace MyMovies.universal.Paginas
                     MessageDialog message = new MessageDialog("O seu email ou password estão incorretos");
                     await message.ShowAsync();
                 }
-            }
         }
 
     }

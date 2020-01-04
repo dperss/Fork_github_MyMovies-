@@ -31,6 +31,8 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class GestaoDeFilmes : Page
     {
+        bool picturesRead = false;
+        bool generos_atoresRead = false;
         GestaoDeFilmesViewModel GestaoDeFilmesViewModel { get; set; }   
         public GestaoDeFilmes()
         {
@@ -78,5 +80,38 @@ namespace MyMovies.universal.Paginas
             StorageFile file = await GestaoDeFilmesViewModel.OpenLocalFile(".jpg",".png");
             await GestaoDeFilmesViewModel.UpdateFoto(file);
         }
+
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (!picturesRead)
+            {
+                GestaoDeFilmesViewModel.ReadFotos();
+                picturesRead = true;
+            }
+            if (!generos_atoresRead)
+            {
+                GestaoDeFilmesViewModel.ReadAtores();
+                GestaoDeFilmesViewModel.ReadGeneros();
+                generos_atoresRead = true;
+            }
+            template_column.Visibility = Visibility.Visible;
+            Generos_column.Visibility = Visibility.Visible;
+            Elenco_column.Visibility = Visibility.Visible;
+
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            template_column.Visibility = Visibility.Collapsed;
+            Generos_column.Visibility = Visibility.Collapsed;
+            Elenco_column.Visibility = Visibility.Collapsed;
+        }
+
+        private void ComboBox_SelectionChanged_Diretor(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+
     }
 }

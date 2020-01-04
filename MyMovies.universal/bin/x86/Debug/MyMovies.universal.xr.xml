@@ -159,6 +159,7 @@
     <RootType FullName="Microsoft.Toolkit.Uwp.UI.Controls.DataGridTemplateColumn">
       <RootProperty Name="Header" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="CellTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
@@ -179,6 +180,11 @@
     <RootType FullName="MyMovies.universal.UserControlFolder.FotoControl">
       <RootProperty Name="ImageSource" />
       <RootProperty Name="MaxWidth" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Content" />
+      <RootEvent Name="Checked" />
+      <RootEvent Name="Unchecked" />
     </RootType>
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeFilmes" />
     <RootType FullName="MyMovies.universal.Paginas.GestaoDeGeneros" />

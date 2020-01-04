@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyMovies.universal.ViewModel
 {
-    class GestaoDeDiretoresViewModel
+    public class GestaoDeDiretoresViewModel
     {
         ObservableCollection<Diretor> _diretores;
         Diretor _diretor;

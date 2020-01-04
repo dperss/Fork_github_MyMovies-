@@ -65,7 +65,7 @@ namespace MyMovies.DAL
         public static List<Filme> ReadAll()
         {
             Database db = new Database();
-            string query = "SELECT * FROM Filme";
+            string query = "SELECT idfilme, nome, duracao, ano FROM Filme";
             List<Filme> lista = new List<Filme>();
 
             SqlDataReader row = db.Query(query, null);
@@ -78,14 +78,32 @@ namespace MyMovies.DAL
                 f.Nome = (string)row["nome"];
                 f.Ano = (string)row["ano"]; //falta ver qual o tipo para ano e para a duração
                 f.Duracao = (string)row ["duracao"];
-                if(row["foto"] != DBNull.Value)
-                    f.Foto = (byte[])row["foto"];
+                //if(row["foto"] != DBNull.Value)
+                    //f.Foto = (byte[])row["foto"];
                 lista.Add(f);
             }
             row.Close();
 
             return lista;
 
+        }
+
+        public static Byte[] ReadFoto(Filme f)
+        {
+            Database db = new Database();
+            string query = "SELECT foto FROM Filme WHERE idfilme = @idfilme";
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@idfilme", f.Idfilme);
+            SqlDataReader row = db.Query(query, dictionary);
+            if(row == null)
+                return null;
+            while (row.Read())
+            {
+                if (row["foto"] != DBNull.Value)
+                    f.Foto = (Byte[])row["foto"];
+            }
+            row.Close();
+            return f.Foto;
         }
         public static List<Filme> ReadAllJoin()
         {

@@ -38,7 +38,6 @@ namespace MyMovies.universal.Paginas
         private void viewUtilizadores_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             GestaoDeUtilizadoresViewModel.SelectedUtilizador = viewUtilizadores.SelectedItem as Utilizador;
-            //FrameworkElement a = Tipo.GetCellContent(viewUtilizadores.SelectedItem); não consigo editar o valor do Tipo
         }
 
         private void viewUtilizadores_RowEditEnded(object sender, Microsoft.Toolkit.Uwp.UI.Controls.DataGridRowEditEndedEventArgs e)

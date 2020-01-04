@@ -148,6 +148,10 @@ namespace MyMovies.BL
         {
             return FilmeDAL.ReadAll();
         }
+        public Byte[] ReadFoto()
+        {
+            return FilmeDAL.ReadFoto(this);
+        }
         public static List<Filme> ReadAllJoin()
         {
             return FilmeDAL.ReadAllJoin();

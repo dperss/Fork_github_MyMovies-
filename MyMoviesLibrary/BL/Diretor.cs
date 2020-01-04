@@ -55,8 +55,7 @@ namespace MyMovies.BL
 
         public override String ToString()
         {
-            return $"Id: {Iddiretor}" +
-                $"\nNome: {Nome}";
+            return $"{Nome}";
         }
         public int Create()
         {
@@ -90,6 +89,7 @@ namespace MyMovies.BL
         {
             return DiretorDAL.ReSeed(number);
         }
+
         public static bool CreateFromObservableCollection(ObservableCollection<Diretor> collection)
         {
             return DiretorDAL.CreateFromObservableCollection(collection);

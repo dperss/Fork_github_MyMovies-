@@ -21,7 +21,7 @@ namespace MyMovies.universal.ViewModel
     {
         ObservableCollection<Filme> _filmes;
         Filme _filme;
-        
+                
         public Filme SelectedFilme
         {
             get
@@ -35,7 +35,7 @@ namespace MyMovies.universal.ViewModel
         }
         public GestaoDeFilmesViewModel()
         {
-            List<Filme> lista = Filme.ReadAllJoin();
+            List<Filme> lista = Filme.ReadAll();
             if(lista == null)
             {
                 Filme.CreateTable();
@@ -45,13 +45,6 @@ namespace MyMovies.universal.ViewModel
             {
                 _filmes = new ObservableCollection<Filme>(lista);
             }
-            foreach (Filme f in Filmes)
-            {
-                f.Atores = f.ReadAllAtores();
-                f.Generos = f.ReadAllGeneros();
-            }
-            
-           
         }
         public ObservableCollection<Filme> Filmes
         {
@@ -151,6 +144,27 @@ namespace MyMovies.universal.ViewModel
             }
 
             return false;
+        }
+        public void ReadFotos()
+        {
+            foreach (Filme f in Filmes) 
+            {
+                f.ReadFoto();
+            }
+        }
+        public void ReadAtores()
+        {
+            foreach (Filme f in Filmes)
+            {
+                f.Atores = f.ReadAllAtores();
+            }
+        }
+        public void ReadGeneros()
+        {
+            foreach (Filme f in Filmes)
+            {
+                f.Generos = f.ReadAllGeneros();
+            }
         }
     }
 }
