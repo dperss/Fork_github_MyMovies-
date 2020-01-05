@@ -424,7 +424,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xb
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeUtilizadores.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Login.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MainPage.xbf
-C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filmes.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Perfil.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Principal.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Registo.xbf
@@ -463,8 +462,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.g.cs
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.g.i.cs
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.g.i.cs
@@ -480,7 +477,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xa
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.xaml
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.xaml
@@ -492,7 +488,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xb
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeUtilizadores.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Login.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MainPage.xbf
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filmes.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.xbf
@@ -764,3 +759,8 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pesquisa.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Filme.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.g.i.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.g.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.xaml
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.xbf

@@ -25,13 +25,13 @@
         
         <Grid Grid.Row="1" Grid.Column="1">
             <Rectangle Fill="LightYellow" Opacity="0.3"/>
-            <GridView ItemsSource="{x:Bind Filmes}">
+            <GridView ItemsSource="{x:Bind Filmes}" IsItemClickEnabled="True" ItemClick="GridView_ItemClick">
                 <GridView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Margin="10">
                             <usercontrol:FotoControl ImageSource="{Binding Foto, Mode=OneTime}" Height="300"/>
                             <TextBlock Text="{Binding Nome, Mode=OneTime}" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
-                            <TextBlock Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center" FontSize="14"/>
+                            <TextBlock Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center" FontSize="16"/>
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>

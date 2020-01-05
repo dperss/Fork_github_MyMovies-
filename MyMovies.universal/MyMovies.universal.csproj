@@ -149,8 +149,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Pagina_Filmes.xaml.cs">
-      <DependentUpon>Pagina_Filmes.xaml</DependentUpon>
+    <Compile Include="Paginas\Pagina_Filme.xaml.cs">
+      <DependentUpon>Pagina_Filme.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Perfil.xaml.cs">
       <DependentUpon>Perfil.xaml</DependentUpon>
@@ -252,7 +252,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Paginas\Pagina_Filmes.xaml">
+    <Page Include="Paginas\Pagina_Filme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

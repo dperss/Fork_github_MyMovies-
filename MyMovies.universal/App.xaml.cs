@@ -108,6 +108,11 @@ namespace MyMovies.universal
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(MainPage));
         }
+        public static void NavigatePaginaFilme(Filme f)
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+            rootFrame.Navigate(typeof(Paginas.Pagina_Filme), f);
+        }
 
         static int StringDistance(string source, string target)
         {
@@ -163,7 +168,7 @@ namespace MyMovies.universal
             Allmovies = Filme.ReadAll();
             foreach(Filme f in Allmovies)
             {
-                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.7)
+                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.5)
                 {
                     flist.Add(f);
                 }
