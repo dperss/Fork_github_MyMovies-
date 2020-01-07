@@ -44,7 +44,6 @@ namespace MyMovies.universal.Paginas
         private void GridView_ItemClick(object sender, ItemClickEventArgs e)
         {
             Filme f = e.ClickedItem as Filme;
-            //App.NavigatePaginaFilme(f);
             MainPage mainPage = MainPage.GetCurrent();
             mainPage.NavigatePaginaFilme(f);
         }

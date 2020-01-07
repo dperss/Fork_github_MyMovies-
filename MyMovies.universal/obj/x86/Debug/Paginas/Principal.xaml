@@ -1,10 +1,11 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="MyMovies.universal.Paginas.Principal"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrol="using:MyMovies.universal.UserControlFolder"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -25,26 +26,26 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <AutoSuggestBox x:ConnectionId='8' Grid.ColumnSpan="2" PlaceholderText="Pesquisa"                                                QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5"                                  />
+            <AutoSuggestBox x:ConnectionId='5' Grid.ColumnSpan="2" PlaceholderText="Pesquisa"                                                QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" Grid.Column="1" RenderTransformOrigin="-1.28,1.5"                                  />
             <Grid Grid.Column="1">
 
-                <Button x:ConnectionId='14' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
+                <Button x:ConnectionId='11' x:Name="Botao_registo"                             Width ="100" Height="50"  HorizontalAlignment="Right" Visibility="Visible" >
                     <Image Source="/Assets\EditDocument-512.png" />
                 </Button>
             </Grid>
             <Grid Grid.Column="2">
-                <Button x:ConnectionId='9' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Visible"  HorizontalAlignment="Center"                             >
+                <Button x:ConnectionId='6' x:Name="Botao_login"  Width ="100" Height="50" Visibility="Visible"  HorizontalAlignment="Center"                             >
                     <Image Source="/Assets\Untitled-1.png" />
                     <Button.Flyout>
                         <MenuFlyout>
-                            <MenuFlyoutItem x:ConnectionId='11' Text="Perfil"                           />
-                            <MenuFlyoutItem x:ConnectionId='12' Text="Biblioteca"                               />
-                            <MenuFlyoutItem x:ConnectionId='13' x:Name="LogOut" Text="LogOut"                     />
+                            <MenuFlyoutItem x:ConnectionId='8' Text="Perfil"                           />
+                            <MenuFlyoutItem x:ConnectionId='9' Text="Biblioteca"                               />
+                            <MenuFlyoutItem x:ConnectionId='10' x:Name="LogOut" Text="LogOut"                     />
 
                         </MenuFlyout>
                     </Button.Flyout>
                 </Button>
-                <Button x:ConnectionId='10' x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center"                                    >
+                <Button x:ConnectionId='7' x:Name="Botao_login_sem_user"  Visibility="Visible" Width ="100" Height="50"  HorizontalAlignment="Center"                                    >
                     <Image Source="/Assets\Untitled-1.png" />
                 </Button>
             </Grid>
@@ -53,24 +54,31 @@
         <Grid Grid.Row="1">
 
             <Pivot x:ConnectionId='4'  Background="CadetBlue" Height="70" Opacity="0.8"                                          >
-                <PivotItem x:ConnectionId='5' x:Name="Recentes" Header="Recentes"/>
+                <PivotItem Tag="Pivot_Recentes" Header="Recentes">
+                    
+                </PivotItem>
 
-                <PivotItem x:ConnectionId='6' x:Name="MaisVistos" Header="Mais Vistos"/>
+                <PivotItem Tag="Pivot_MaisVistos" Header="Mais Vistos"/>
 
-                <PivotItem x:ConnectionId='7' x:Name="MelhorClassificados" Header="Melhor Classificados"/>
+                <PivotItem Tag="Pivot_MelhorClassificados" Header="Melhor Classificados"/>
 
             </Pivot>
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
-            <GridView x:ConnectionId='2' x:Name="Filmes"
-                      SelectionMode="Single">
+            <GridView x:ConnectionId='2' Margin="40" x:Name="GridView_Filmes"
+                      SelectionMode="Single"
+                      IsItemClickEnabled="True"
+                                                  
+                                                     >
                 <GridView.ItemTemplate>
                     <DataTemplate>
-
-                        <Image  Stretch="UniformToFill" Width="190" Height="130" />
+                        <StackPanel Margin="50">
+                            <usercontrol:FotoControl ImageSource="{Binding Foto,Mode=OneTime}" Width="250" Height="250" />
+                            <TextBlock FontWeight="SemiBold" FontSize="16" Text="{Binding Nome, Mode=OneTime}" HorizontalAlignment="Center"/>
+                            <TextBlock FontSize="14" Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center"/>
+                        </StackPanel>
                     </DataTemplate>
-
                 </GridView.ItemTemplate>
 
             </GridView>

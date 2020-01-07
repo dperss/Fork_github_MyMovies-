@@ -5,6 +5,7 @@
     xmlns:local="using:MyMovies.universal.Paginas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrol="using:MyMovies.universal.UserControlFolder"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
@@ -53,24 +54,31 @@
         <Grid Grid.Row="1">
 
             <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" SelectionChanged="Pivot_SelectionChanged">
-                <PivotItem x:Name="Recentes" Header="Recentes"/>
+                <PivotItem Tag="Pivot_Recentes" Header="Recentes">
+                    
+                </PivotItem>
 
-                <PivotItem x:Name="MaisVistos" Header="Mais Vistos"/>
+                <PivotItem Tag="Pivot_MaisVistos" Header="Mais Vistos"/>
 
-                <PivotItem x:Name="MelhorClassificados" Header="Melhor Classificados"/>
+                <PivotItem Tag="Pivot_MelhorClassificados" Header="Melhor Classificados"/>
 
             </Pivot>
         </Grid>
         <Grid Grid.Row="2">
             <Rectangle Fill="Gray" Opacity="0.8" />
-            <GridView x:Name="Filmes"
-                      SelectionMode="Single">
+            <GridView Margin="40" x:Name="GridView_Filmes"
+                      SelectionMode="Single"
+                      IsItemClickEnabled="True"
+                      ItemClick="Filmes_ItemClick"
+                      ItemsSource="{x:Bind Recentes}">
                 <GridView.ItemTemplate>
                     <DataTemplate>
-
-                        <Image  Stretch="UniformToFill" Width="190" Height="130" />
+                        <StackPanel Margin="50">
+                            <usercontrol:FotoControl ImageSource="{Binding Foto,Mode=OneTime}" Width="250" Height="250" />
+                            <TextBlock FontWeight="SemiBold" FontSize="16" Text="{Binding Nome, Mode=OneTime}" HorizontalAlignment="Center"/>
+                            <TextBlock FontSize="14" Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center"/>
+                        </StackPanel>
                     </DataTemplate>
-
                 </GridView.ItemTemplate>
 
             </GridView>

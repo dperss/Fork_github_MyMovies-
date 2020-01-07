@@ -20,6 +20,8 @@ namespace MyMovies.BL
         private Escritor _Escritor;
         private ObservableCollection<Ator> _Atores;
         private List<Genero> _Generos;
+        private long _Visualizacoes;
+        private long _Classificacao;
 
         public int Idfilme {
             get
@@ -125,6 +127,28 @@ namespace MyMovies.BL
             {
                 _Generos = value;
                 Onchanged("Generos");
+            }
+        }
+        public long Visualizacoes
+        {
+            get
+            {
+                return _Visualizacoes;
+            }
+            set
+            {
+                _Visualizacoes = value;
+            }
+        }
+        public long Classificacao
+        {
+            get
+            {
+                return _Classificacao;
+            }
+            set
+            {
+                _Classificacao = value;
             }
         }
 

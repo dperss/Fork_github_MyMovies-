@@ -16,6 +16,8 @@ using Windows.UI.Xaml.Navigation;
 using MyMovies.BL;
 using MyMovies.universal;
 using MyMovies;
+using MyMovies.universal.ViewModel;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -26,13 +28,24 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class Principal : Page
     {
-       
+        //GestaoDeFilmesViewModel gestaoDeFilmesViewModel { get; set; }
+        public ObservableCollection<Filme> Recentes { 
+            get
+            {
+                return App.Recentes;
+            }
+            set
+            {
+                App.Recentes = value;
+            }
+        }
+        public static ObservableCollection<Filme> MaisVistos { get; set; }
+        public static ObservableCollection<Filme> MelhorClassificados { get; set; }
 
         public Principal()
         {
-            
             this.InitializeComponent();
-            if (App.user == true)//Quando tem um user
+            if (App.user == true)
             {
                 Botao_login_sem_user.Visibility = Visibility.Collapsed;
                 Botao_registo.Visibility = Visibility.Collapsed;
@@ -111,20 +124,25 @@ namespace MyMovies.universal.Paginas
         {
             Pivot pivot = sender as Pivot;
             PivotItem pivotItem = pivot.SelectedItem as PivotItem;
-            if(pivotItem.Name == "Recentes")
+            if(pivotItem.Tag.ToString() == "Pivot_Recentes")
             {
-                
+                GridView_Filmes.ItemsSource = Recentes;
             }
-            if(pivotItem.Name == "MaisVistos")
+            if(pivotItem.Tag.ToString() == "Pivot_MaisVistos")
             {
 
             }
-            if(pivotItem.Name == "MelhorClassificados")
+            if(pivotItem.Tag.ToString() == "Pivot_MelhorClassificados")
             {
 
             }
         }
 
-        
+        private void Filmes_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Filme f = e.ClickedItem as Filme;
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.NavigatePaginaFilme(f);
+        }
     }
 }

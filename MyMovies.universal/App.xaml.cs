@@ -1,6 +1,8 @@
 ﻿using MyMovies.BL;
+using MyMovies.universal.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +27,12 @@ namespace MyMovies.universal
     {
         public static bool user = false;
         public static Utilizador utilizador;
+        GestaoDeFilmesViewModel gestaoDeFilmesViewModel { get; set; }
+
+        public static ObservableCollection<Filme> Filmes { get; set; }
+        public static ObservableCollection<Filme> Recentes { get; set; }
+        public static ObservableCollection<Filme> MaisVistos { get; set; }
+        public static ObservableCollection<Filme> MelhorClassificados { get; set; }
 
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
@@ -34,6 +42,13 @@ namespace MyMovies.universal
         {
 
             this.InitializeComponent();
+            gestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
+            gestaoDeFilmesViewModel.ReadFotos();
+            Filmes = gestaoDeFilmesViewModel.Filmes;
+            Recentes = new ObservableCollection<Filme>();
+            MaisVistos = new ObservableCollection<Filme>();
+            MelhorClassificados = new ObservableCollection<Filme>();
+            getRecentes();
             this.Suspending += OnSuspending;
            
         }
@@ -174,6 +189,20 @@ namespace MyMovies.universal
                 }
             }
             return flist;
+        }
+        public static void getRecentes()
+        {
+            SortedDictionary<int, int> id_ano = new SortedDictionary<int, int>();
+            int ano;
+            foreach(Filme f in Filmes)
+            {
+                int.TryParse(f.Ano, out ano);
+                id_ano.Add(ano, f.Idfilme);
+            }
+            foreach(var x in id_ano.Reverse())
+            {
+                Recentes.Add(Filmes.FirstOrDefault(f => f.Idfilme == x.Value));
+            }
         }
 
         

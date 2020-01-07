@@ -42,7 +42,7 @@ namespace MyMovies.DAL
         }
 
         public static int Create(Filme f)
-        { //ver se é void e por parametros
+        {
 
             Database db = new Database();
             string query = "INSERT INTO[dbo].[Filme]([nome],[duracao],[ano])VALUES(@nome,@duracao,@ano);";
@@ -55,7 +55,7 @@ namespace MyMovies.DAL
             {
                 return db.NonQuery(query, d);
             }
-            catch (System.Data.SqlClient.SqlException)
+            catch (System.Data.SqlClient.SqlException e)
             {
                 return 0;
             }
