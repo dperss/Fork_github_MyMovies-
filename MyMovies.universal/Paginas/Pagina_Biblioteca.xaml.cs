@@ -108,5 +108,32 @@ namespace MyMovies.universal.Paginas
                 GridView_Filmes.ItemsSource = Vistos;
             }
         }
+
+        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+            if (autoSuggestBox.Text == "")
+            {
+                return;
+            }
+            List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.NavigatePesquisa(flist);
+        }
+
+        private void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+                if (autoSuggestBox.Text == "")
+                {
+                    return;
+                }
+                List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+                MainPage mainPage = MainPage.GetCurrent();
+                mainPage.NavigatePesquisa(flist);
+            }
+        }
     }
 }

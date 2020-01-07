@@ -1,6 +1,7 @@
 ﻿using MyMovies.BL;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -24,11 +25,12 @@ namespace MyMovies.universal.Paginas
     public sealed partial class Pagina_Filme : Page
     {
         Filme Filme { get; set; }
+
+        Avaliacao_comentario Avaliacao_comentario { get; set; }
         public Pagina_Filme()
         {
             this.InitializeComponent();
             Visibilidade();
-            
         }
 
         public void CheckButtonState()
@@ -55,7 +57,15 @@ namespace MyMovies.universal.Paginas
             Filme.ReadAllAtores();
             Filme.ReadAllGeneros();
             if(App.user == true)
+            {
                 CheckButtonState();
+                Avaliacao_comentario ac = new Avaliacao_comentario();
+                ac.Idutilizador = App.utilizador.Idutilizador;
+                ac.Idfilme = Filme.Idfilme;
+                Avaliacao_comentario = ac.ReadUtilizadorFilme();
+                if(Avaliacao_comentario!=null)
+                    Classificacao.Value = Avaliacao_comentario.Avaliacao;
+            }
             base.OnNavigatedTo(e);
         }
         public void Visibilidade()
@@ -130,6 +140,52 @@ namespace MyMovies.universal.Paginas
                 b.Filme_idfilme = Filme.Idfilme;
                 b.Utilizador_idutilizador = App.utilizador.Idutilizador;
                 b.Delete();
+            }
+        }
+
+        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+            if (autoSuggestBox.Text == "")
+            {
+                return;
+            }
+            List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.NavigatePesquisa(flist);
+        }
+
+        private void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+                if (autoSuggestBox.Text == "")
+                {
+                    return;
+                }
+                List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+                MainPage mainPage = MainPage.GetCurrent();
+                mainPage.NavigatePesquisa(flist);
+            }
+        }
+
+        private void Classificacao_ValueChanged(RatingControl sender, object args)
+        {
+            RatingControl ratingControl = sender as RatingControl;
+            if (Avaliacao_comentario != null)
+            {
+                Avaliacao_comentario.Avaliacao = (int)ratingControl.Value;
+                Avaliacao_comentario.UpdateAvaliacao();
+
+            }
+            else
+            {
+                Avaliacao_comentario = new Avaliacao_comentario();
+                Avaliacao_comentario.Idfilme = Filme.Idfilme;
+                Avaliacao_comentario.Idutilizador = App.utilizador.Idutilizador;
+                Avaliacao_comentario.Avaliacao = (int)ratingControl.Value;
+                Avaliacao_comentario.Create();
             }
         }
     }

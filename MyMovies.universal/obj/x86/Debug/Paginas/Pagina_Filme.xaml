@@ -25,7 +25,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="2" Grid.ColumnSpan="2">
-            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Top" HorizontalAlignment="Right" Width="250"/>
+            <AutoSuggestBox x:ConnectionId='12' PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Top" HorizontalAlignment="Right" Width="250"                                                                                />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
             <Rectangle  Fill="Gray" Opacity="0.6"/>
@@ -81,7 +81,7 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
-                <RatingControl x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed">
+                <RatingControl x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed"                                          >
                     <RatingControl.Resources>
                         <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
                         <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>

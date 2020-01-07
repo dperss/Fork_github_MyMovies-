@@ -20,7 +20,7 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" VerticalAlignment="Center">
-            <Pivot x:ConnectionId='4'  Background="CadetBlue" Height="70" Opacity="0.8"                                           >
+            <Pivot x:ConnectionId='5'  Background="CadetBlue" Height="70" Opacity="0.8"                                           >
                 <PivotItem Header ="Favoritos" Tag="Pivot_Favoritos"/>
                 <PivotItem Header="Para Ver" Tag="Pivot_Para_ver"/>
                 <PivotItem Header="Vistos" Tag="Pivot_Vistos"/>
@@ -28,7 +28,7 @@
         </Grid>
         <Grid Grid.Row="2" >
             <Rectangle Fill="Gray" Opacity="0.8" Margin="0,0,0,0"/>
-            <GridView x:ConnectionId='2' Margin="40" x:Name="GridView_Filmes"
+            <GridView x:ConnectionId='3' Margin="40" x:Name="GridView_Filmes"
                       SelectionMode="Single"
                       IsItemClickEnabled="True"
                                                            
@@ -45,7 +45,7 @@
             </GridView>
         </Grid>
         <Grid Grid.Row="0">
-            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>
+            <AutoSuggestBox x:ConnectionId='2' PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"                                                                                />
         </Grid>
     </Grid>
 </Page>

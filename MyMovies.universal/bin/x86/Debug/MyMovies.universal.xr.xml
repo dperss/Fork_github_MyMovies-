@@ -124,6 +124,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Resources" />
       <RootProperty Name="Visibility" />
+      <RootEvent Name="ValueChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />

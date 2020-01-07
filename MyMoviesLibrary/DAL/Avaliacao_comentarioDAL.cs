@@ -13,10 +13,9 @@ namespace MyMovies.DAL
         public static int Create(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Avaliacao_comentario]([idavaliacao_comentario],[avaliacao],[comentario],[idutilizador],[idfilme])VALUES(@id,@avaliacao,@comentario,@idu,@idf);";
+            string query = "INSERT INTO[dbo].[Avaliacao_comentario]([avaliacao],[comentario],[utilizador_idutilizador],[filme_idfilme])VALUES(@avaliacao,@comentario,@idu,@idf);";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", a.Idavaliacao_comentario);
-            d.Add("@avalicao", a.Avaliacao);
+            d.Add("@avaliacao", a.Avaliacao);
             d.Add("@comentario", a.Comentario);
             d.Add("@idu", a.Idutilizador);
             d.Add("@idf", a.Idfilme);
@@ -24,39 +23,35 @@ namespace MyMovies.DAL
             {
                 return db.NonQuery(query, d);
             }
-            catch (System.Data.SqlClient.SqlException)
+            catch (System.Data.SqlClient.SqlException e)
             {
                 return 0;
             }
         }
 
-        public static List<Avaliacao_comentario> ReadIdUtilizador(Avaliacao_comentario a)
+        public static Avaliacao_comentario ReadUtilizadorFilme(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "SELECT * FROM Avaliacao_comentario WHERE idutilizador=@idu";
+            string query = "SELECT comentario, avaliacao FROM Avaliacao_comentario WHERE utilizador_idutilizador=@idu AND filme_idfilme = @idf";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            List<Avaliacao_comentario> alist = new List<Avaliacao_comentario>();
             d.Add("@idu", a.Idutilizador);
+            d.Add("@idf", a.Idfilme);
             SqlDataReader row = db.Query(query, d);
             if (row.HasRows == false)
                 return null;
             while (row.Read())
             {
-                a = new Avaliacao_comentario();
-                a.Idavaliacao_comentario = (int)row["idavaliacao_comentario"];
                 a.Avaliacao = (int)row["avaliacao"];
                 a.Comentario = (string)row["comentario"];
-                a.Idutilizador = (int)row["idutilizador"];
-                a.Idfilme = (int)row["idfilme"];
-                alist.Add(a);
             }
             row.Close();
-            return alist;
+            db.Close();
+            return a;
         }
-        public static List<Avaliacao_comentario> ReadIdFilme(Avaliacao_comentario a)
+        public static List<Avaliacao_comentario> ReadClassificacoesFilme(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "SELECT * FROM Avaliacao_comentario WHERE idfilme=@idf";
+            string query = "SELECT avaliacao FROM Avaliacao_comentario WHERE idfilme=@idf";
             Dictionary<string, object> d = new Dictionary<string, object>();
             List<Avaliacao_comentario> alist = new List<Avaliacao_comentario>();
             d.Add("@idf", a.Idfilme);
@@ -66,36 +61,12 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 a = new Avaliacao_comentario();
-                a.Idavaliacao_comentario = (int)row["idavaliacao_comentario"];
                 a.Avaliacao = (int)row["avaliacao"];
-                a.Comentario = (string)row["comentario"];
-                a.Idutilizador = (int)row["idutilizador"];
-                a.Idfilme = (int)row["idfilme"];
                 alist.Add(a);
             }
             row.Close();
+            db.Close();
             return alist;
-        }
-
-        public static Avaliacao_comentario ReadId(Avaliacao_comentario a)
-        {
-            Database db = new Database();
-            string query = "SELECT * FROM Avalicao_comentario WHERE idavaliacao_comentario=@id;";
-            Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", a.Idavaliacao_comentario);
-            SqlDataReader row = db.Query(query, d);
-            if (row.HasRows == false)
-                return null;
-            while (row.Read())
-            {
-                a.Idavaliacao_comentario = (int)row["idavaliacao_comentario"];
-                a.Avaliacao = (int)row["avaliacao"];
-                a.Comentario = (string)row["comentario"];
-                a.Idutilizador = (int)row["idutilizador"];
-                a.Idfilme = (int)row["idfilme"];
-            }
-            row.Close();
-            return a;
         }
         public static List<Avaliacao_comentario> ReadAll()
         {
@@ -109,7 +80,6 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 a = new Avaliacao_comentario();
-                a.Idavaliacao_comentario = (int)row["idavaliacao_comentario"];
                 a.Avaliacao = (int)row["avaliacao"];
                 a.Comentario = (string)row["comentario"];
                 a.Idutilizador = (int)row["idutilizador"];
@@ -120,16 +90,31 @@ namespace MyMovies.DAL
             return alist;
 
         }
-        public static int Update(Avaliacao_comentario a)
+        public static int UpdateAvaliacao(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "UPDATE [Avaliacao_comentario] SET[avaliacao] = @avaliacao, [comentario] = @comentario, [idutilizador] = @idu, [idfilme] = @idf WHERE idavaliacao_comentario = @id;";
+            string query = "UPDATE [Avaliacao_comentario] SET[avaliacao] = @avaliacao WHERE utilizador_idutilizador = @idutilizador AND filme_idfilme = @idfilme";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", a.Idavaliacao_comentario);
             d.Add("@avaliacao", a.Avaliacao);
+            d.Add("@idutilizador", a.Idutilizador);
+            d.Add("@idfilme", a.Idfilme);
+            try
+            {
+                return db.NonQuery(query, d);
+            }
+            catch (System.Data.SqlClient.SqlException)
+            {
+                return 0;
+            }
+        }
+        public static int UpdateComentario(Avaliacao_comentario a)
+        {
+            Database db = new Database();
+            string query = "UPDATE [Avaliacao_comentario] SET[comentario] = @comentario WHERE utilizador_idutilizador = @idutilizador AND filme_idfilme = @idfilme";
+            Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@comentario", a.Comentario);
-            d.Add("@idu", a.Idutilizador);
-            d.Add("@idf", a.Idfilme);
+            d.Add("@idutilizador", a.Idutilizador);
+            d.Add("@idfilme", a.Idfilme);
             try
             {
                 return db.NonQuery(query, d);
@@ -142,9 +127,10 @@ namespace MyMovies.DAL
         public static int Delete(Avaliacao_comentario a)
         {
             Database db = new Database();
-            string query = "DELETE FROM [dbo].[Avaliacao_comentario] WHERE idavaliacao_comentario =@id;";
+            string query = "DELETE FROM [dbo].[Avaliacao_comentario] WHERE utilizador_idutilizador = @idutilizador AND filme_idfilme = @idfilme";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@id", a.Idavaliacao_comentario);
+            d.Add("@idutilizador", a.Idutilizador);
+            d.Add("@idfilme", a.Idfilme);
             int result = db.NonQuery(query, d);
             db.Close();
             return result;
@@ -153,12 +139,11 @@ namespace MyMovies.DAL
         {
             Database db = new Database();
             string query = @"CREATE TABLE [dbo].[Avaliacao_comentario] (
-                             [idavaliacao_comentario] INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
-                             [avaliacao] INT NOT NULL,
-                             [comentario] varchar(300) NOT NULL,
-                             [idutilizador] INT NOT NULL,
-                             [idfilme] INT NOT NULL,
-                             );
+                             utilizador_idutilizador int FOREIGN KEY REFERENCES Utilizador(idutilizador) NOT NULL,
+                             filme_idfilme int FOREIGN KEY REFERENCES Filme(idfilme) NOT NULL,
+                             avaliacao INT NOT NULL,
+                             comentario varchar(300) NOT NULL
+                             PRIMARY KEY(utilizador_idutilizador, filme_idfilme));
                              ";
             try
             {

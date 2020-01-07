@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Security.Permissions;
+using System.Collections.Generic;
+using MyMovies.BL;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -73,7 +75,32 @@ namespace MyMovies.universal.Paginas
 
         }
 
+        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+            if (autoSuggestBox.Text == "")
+            {
+                return;
+            }
+            List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+            MainPage mainPage = MainPage.GetCurrent();
+            mainPage.NavigatePesquisa(flist);
+        }
 
+        private void AutoSuggestBox_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
+                if (autoSuggestBox.Text == "")
+                {
+                    return;
+                }
+                List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+                MainPage mainPage = MainPage.GetCurrent();
+                mainPage.NavigatePesquisa(flist);
+            }
+        }
     }
 
 

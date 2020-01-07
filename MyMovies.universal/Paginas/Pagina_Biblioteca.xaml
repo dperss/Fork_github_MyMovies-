@@ -45,7 +45,7 @@
             </GridView>
         </Grid>
         <Grid Grid.Row="0">
-            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>
+            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right" QuerySubmitted="AutoSuggestBox_QuerySubmitted" KeyDown="AutoSuggestBox_KeyDown"/>
         </Grid>
     </Grid>
 </Page>

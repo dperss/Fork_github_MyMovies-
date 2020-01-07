@@ -7,27 +7,19 @@ namespace MyMovies.BL
 {
     public class Avaliacao_comentario
     {
-        public int Idavaliacao_comentario { get; set; }
         public int Avaliacao { get; set; }
         public string Comentario { get; set; }
         public int Idutilizador { get; set; }
         public int Idfilme { get; set; }
 
-        public Avaliacao_comentario() { }
-
-        public Avaliacao_comentario(int idavaliacao_comentario, int avaliacao, string comentario, int idutilizador, int idfilme)
-        {
-            this.Idavaliacao_comentario = idavaliacao_comentario;
-            this.Avaliacao = avaliacao;
-            this.Comentario = comentario;
-            this.Idutilizador = idutilizador;
-            this.Idfilme = idfilme;
+        public Avaliacao_comentario() {
+            Avaliacao = 0;
+            Comentario = "";
         }
 
         public override String ToString()
         {
-            return $"Id: {Idavaliacao_comentario}" +
-                $"\nAvaliação: {Avaliacao}" +
+            return $"\nAvaliação: {Avaliacao}" +
                 $"\nComentário: {Comentario}" +
                 $"\nId Utilizador: {Idutilizador}" +
                 $"\nId Filme: {Idfilme}";
@@ -36,25 +28,26 @@ namespace MyMovies.BL
         {
             return Avaliacao_comentarioDAL.Create(this);
         }
-        public List<Avaliacao_comentario> ReadIdUtilizador()
+        
+        public Avaliacao_comentario ReadUtilizadorFilme()
         {
-            return Avaliacao_comentarioDAL.ReadIdUtilizador(this);
+            return Avaliacao_comentarioDAL.ReadUtilizadorFilme(this);
         }
-        public List<Avaliacao_comentario> ReadIdFilme()
+        public List<Avaliacao_comentario> ReadClassificacoesFilme()
         {
-            return Avaliacao_comentarioDAL.ReadIdFilme(this);
-        }
-        public Avaliacao_comentario ReadId()
-        {
-            return Avaliacao_comentarioDAL.ReadId(this);
+            return Avaliacao_comentarioDAL.ReadClassificacoesFilme(this);
         }
         public static List<Avaliacao_comentario> ReadAll()
         {
             return Avaliacao_comentarioDAL.ReadAll();
         }
-        public int Update()
+        public int UpdateAvaliacao()
         {
-            return Avaliacao_comentarioDAL.Update(this);
+            return Avaliacao_comentarioDAL.UpdateAvaliacao(this);
+        }
+        public int UpdateComentario()
+        {
+            return Avaliacao_comentarioDAL.UpdateComentario(this);
         }
         public int Delete()
         {
