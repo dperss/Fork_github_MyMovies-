@@ -49,6 +49,8 @@ namespace MyMovies.universal
             MaisVistos = new ObservableCollection<Filme>();
             MelhorClassificados = new ObservableCollection<Filme>();
             getRecentes();
+            getMaisVistos();
+            getMelhorClassificados();
             this.Suspending += OnSuspending;
            
         }
@@ -192,16 +194,45 @@ namespace MyMovies.universal
         }
         public static void getRecentes()
         {
-            SortedDictionary<int, int> id_ano = new SortedDictionary<int, int>();
+            Dictionary<int, int> id_ano = new Dictionary<int, int>();
             int ano;
             foreach(Filme f in Filmes)
             {
                 int.TryParse(f.Ano, out ano);
-                id_ano.Add(ano, f.Idfilme);
+                id_ano.Add(f.Idfilme, ano);
             }
-            foreach(var x in id_ano.Reverse())
+            var sortedDict = from entry in id_ano orderby entry.Value descending select entry;
+            foreach (var x in sortedDict)
             {
-                Recentes.Add(Filmes.FirstOrDefault(f => f.Idfilme == x.Value));
+                Recentes.Add(Filmes.FirstOrDefault(f => f.Idfilme == x.Key));
+            }
+        }
+        public static void getMaisVistos()
+        {
+            Dictionary<int, long> id_visualizacao = new Dictionary<int, long>();
+            int ano;
+            foreach (Filme f in Filmes)
+            {
+                id_visualizacao.Add(f.Idfilme, f.Visualizacoes);
+            }
+            var sortedDict = from entry in id_visualizacao orderby entry.Value descending select entry;
+            foreach (var x in sortedDict)
+            {
+                MaisVistos.Add(Filmes.FirstOrDefault(i => i.Idfilme == x.Key));
+            }
+        }
+        public static void getMelhorClassificados()
+        {
+            Dictionary<int, long> id_visualizacao = new Dictionary<int, long>();
+            int ano;
+            foreach (Filme f in Filmes)
+            {
+                id_visualizacao.Add(f.Idfilme, f.Classificacao);
+            }
+            var sortedDict = from entry in id_visualizacao orderby entry.Value descending select entry;
+            foreach (var x in sortedDict)
+            {
+                MelhorClassificados.Add(Filmes.FirstOrDefault(i => i.Idfilme == x.Key));
             }
         }
 

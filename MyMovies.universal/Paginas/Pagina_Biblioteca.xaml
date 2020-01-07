@@ -1,0 +1,51 @@
+﻿<Page
+    x:Class="MyMovies.universal.Paginas.Pagina_Biblioteca"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovies.universal.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrol="using:MyMovies.universal.UserControlFolder"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets\capa.jpg" Stretch="None"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" >
+                <PivotItem Header ="Favoritos"/>
+                <PivotItem Header="Para Ver"/>
+                <PivotItem Header="Vistos"/>
+            </Pivot>
+        </Grid>
+        <Grid Grid.Row="2" >
+            <Rectangle Fill="Gray" Opacity="0.8" Margin="0,0,0,0"/>
+            <GridView Margin="40" x:Name="GridView_Filmes"
+                      SelectionMode="Single"
+                      IsItemClickEnabled="True"
+                      ItemClick="Filmes_ItemClick"
+                      ItemsSource="{x:Bind Favoritos}">
+                <GridView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="50">
+                            <usercontrol:FotoControl ImageSource="{Binding Foto,Mode=OneTime}" Width="250" Height="250" />
+                            <TextBlock FontWeight="SemiBold" FontSize="16" Text="{Binding Nome, Mode=OneTime}" HorizontalAlignment="Center"/>
+                            <TextBlock FontSize="14" Text="{Binding Ano, Mode=OneTime}" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+        </Grid>
+        <Grid Grid.Row="0">
+            <AutoSuggestBox PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" Width="250" HorizontalAlignment="Right"/>
+        </Grid>
+    </Grid>
+</Page>

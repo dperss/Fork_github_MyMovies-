@@ -40,12 +40,18 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid>
-                <usercontrol:FotoControl x:ConnectionId='7'                                                />
+                <usercontrol:FotoControl x:ConnectionId='11'                                                />
             </Grid>
             <Grid Grid.Row="1">
-                <Image Source="/Assets\check-circle-outline-512.png" Height="50" HorizontalAlignment="Left" Margin="100,0,0,0"/>
-                <Image Source="/Assets\181527.png" Height="50" HorizontalAlignment="Center"/>
-                <Image Source="/Assets\233-2336379_png-file-timer-icon-svg.png" Height="50" HorizontalAlignment="Right" Margin="0,0,100,0"/>
+                <ToggleButton x:ConnectionId='8' Height="50" HorizontalAlignment="Left" Margin="100,0,0,0"                         Visibility="Collapsed" x:Name="para_ver">
+                    <Image Source="/Assets\para_ver.png"/>
+                </ToggleButton>
+                <ToggleButton x:ConnectionId='9' Height="50" HorizontalAlignment="Center"                     Visibility="Collapsed" x:Name="visto">
+                    <Image Source="/Assets\visto.png"/>
+                </ToggleButton>
+                <ToggleButton x:ConnectionId='10' Height="50" HorizontalAlignment="Right" Margin="0,0,100,0"                        Visibility="Collapsed" x:Name="favorito">
+                    <Image Source="/Assets\favorito.png"/>
+                </ToggleButton>
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
@@ -55,27 +61,27 @@
             </Grid.RowDefinitions>
             <Grid>
                 <StackPanel>
-                    <TextBlock x:ConnectionId='2' HorizontalAlignment="Center"                                          FontWeight="Bold" FontSize="30" Margin="0,10,0,0"/>
+                    <TextBlock x:ConnectionId='3' HorizontalAlignment="Center"                                          FontWeight="Bold" FontSize="30" Margin="0,10,0,0"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Ano:</TextBlock>
-                        <TextBlock x:ConnectionId='6'                                         FontSize="16"/>
+                        <TextBlock x:ConnectionId='7'                                         FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Duração: </TextBlock>
-                        <TextBlock x:ConnectionId='5'                                             FontSize="16"/>
+                        <TextBlock x:ConnectionId='6'                                             FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Diretor:</TextBlock>
-                        <TextBlock x:ConnectionId='4'                                                  FontSize="16"/>
+                        <TextBlock x:ConnectionId='5'                                                  FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Escritor:</TextBlock>
-                        <TextBlock x:ConnectionId='3'                                                   FontSize="16"/>
+                        <TextBlock x:ConnectionId='4'                                                   FontSize="16"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
-                <RatingControl VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" >
+                <RatingControl x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed">
                     <RatingControl.Resources>
                         <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
                         <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>

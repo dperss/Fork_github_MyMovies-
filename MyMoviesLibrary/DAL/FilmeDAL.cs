@@ -27,6 +27,8 @@ namespace MyMovies.DAL
                             [duracao]         VARCHAR (10) NOT NULL,
                             [ano]      VARCHAR (10) NOT NULL,
                             [foto]     VARBINARY(max),
+                            [visualizacoes] int,
+                            [classificacao] int,
                             PRIMARY KEY CLUSTERED ([Idfilme] ASC));";
 
             try
@@ -45,12 +47,13 @@ namespace MyMovies.DAL
         {
 
             Database db = new Database();
-            string query = "INSERT INTO[dbo].[Filme]([nome],[duracao],[ano])VALUES(@nome,@duracao,@ano);";
+            string query = "INSERT INTO[dbo].[Filme]([nome],[duracao],[ano],[visualizacoes],[classificacao])VALUES(@nome,@duracao,@ano,@visualizacoes,@classificacao);";
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@nome", f.Nome);
             d.Add("@duracao", f.Duracao);
             d.Add("@ano", f.Ano);
-            //d.Add("@foto", f.Foto);
+            d.Add("@visualizacoes", f.Visualizacoes);
+            d.Add("@classificacao", f.Classificacao);
             try
             {
                 return db.NonQuery(query, d);
@@ -65,7 +68,7 @@ namespace MyMovies.DAL
         public static List<Filme> ReadAll()
         {
             Database db = new Database();
-            string query = "SELECT idfilme, nome, duracao, ano FROM Filme";
+            string query = "SELECT idfilme, nome, duracao, ano, visualizacoes, classificacao FROM Filme";
             List<Filme> lista = new List<Filme>();
 
             SqlDataReader row = db.Query(query, null);
@@ -74,12 +77,12 @@ namespace MyMovies.DAL
             while (row.Read())
             {
                 Filme f = new Filme();
-                f.Idfilme = (int)row["idfilme"] ;
+                f.Idfilme = (int)row["idfilme"];
                 f.Nome = (string)row["nome"];
-                f.Ano = (string)row["ano"]; //falta ver qual o tipo para ano e para a duração
+                f.Ano = (string)row["ano"]; 
                 f.Duracao = (string)row ["duracao"];
-                //if(row["foto"] != DBNull.Value)
-                    //f.Foto = (byte[])row["foto"];
+                f.Visualizacoes = (int)row["visualizacoes"];
+                f.Classificacao = (int)row["classificacao"];
                 lista.Add(f);
             }
             row.Close();
@@ -210,6 +213,28 @@ namespace MyMovies.DAL
             dictionary.Add("@duracao", f.Duracao);
             dictionary.Add("@nome", f.Nome);
             dictionary.Add("@ano", f.Ano);
+            int result = db.NonQuery(query, dictionary);
+            db.Close();
+            return result;
+        }
+        public static int UpdateVisualizacoes(Filme f)
+        {
+            Database db = new Database();
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            string query = "UPDATE Filme SET visualizacoes=@visualizacoes WHERE Idfilme=@Idfilme";
+            dictionary.Add("@Idfilme", f.Idfilme);
+            dictionary.Add("@visualizacoes", f.Visualizacoes);
+            int result = db.NonQuery(query, dictionary);
+            db.Close();
+            return result;
+        }
+        public static int UpdateClassificacoes(Filme f)
+        {
+            Database db = new Database();
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            string query = "UPDATE Filme SET classificacoes=@classificacoes WHERE Idfilme=@Idfilme";
+            dictionary.Add("@Idfilme", f.Idfilme);
+            dictionary.Add("@visualizacoes", f.Visualizacoes);
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

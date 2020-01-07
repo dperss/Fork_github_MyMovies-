@@ -119,8 +119,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Biblioteca.xaml.cs">
-      <DependentUpon>Biblioteca.xaml</DependentUpon>
+    <Compile Include="Paginas\Pagina_Biblioteca.xaml.cs">
+      <DependentUpon>Pagina_Biblioteca.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paginas\Definicoes.xaml.cs">
       <DependentUpon>Definicoes.xaml</DependentUpon>
@@ -183,21 +183,21 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\181527.png" />
-    <Content Include="Assets\233-2336379_png-file-timer-icon-svg.png" />
     <Content Include="Assets\aladin.jpg" />
     <Content Include="Assets\bitmap.png" />
     <Content Include="Assets\capa.jpg" />
-    <Content Include="Assets\check-circle-outline-512.png" />
     <Content Include="Assets\EditDocument-512.png" />
     <Content Include="Assets\el camino.jpg" />
     <Content Include="Assets\end_game.jpg" />
+    <Content Include="Assets\favorito.png" />
     <Content Include="Assets\hustlers.jpg" />
     <Content Include="Assets\Joker.PNG" />
     <Content Include="Assets\kindom.jpg" />
+    <Content Include="Assets\para_ver.png" />
     <Content Include="Assets\rambo.jpg" />
     <Content Include="Assets\spiderman.jpg" />
     <Content Include="Assets\Untitled-1.png" />
+    <Content Include="Assets\visto.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -212,7 +212,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Paginas\Biblioteca.xaml">
+    <Page Include="Paginas\Pagina_Biblioteca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

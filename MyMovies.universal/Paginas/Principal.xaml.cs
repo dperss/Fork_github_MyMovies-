@@ -39,8 +39,28 @@ namespace MyMovies.universal.Paginas
                 App.Recentes = value;
             }
         }
-        public static ObservableCollection<Filme> MaisVistos { get; set; }
-        public static ObservableCollection<Filme> MelhorClassificados { get; set; }
+        public static ObservableCollection<Filme> MaisVistos 
+        {
+            get
+            {
+                return App.MaisVistos;
+            }
+            set
+            {
+                App.MaisVistos = value;
+            }
+        }
+        public static ObservableCollection<Filme> MelhorClassificados 
+        {
+            get
+            {
+                return App.MelhorClassificados;
+            }
+            set
+            {
+                App.MelhorClassificados = value;
+            }
+        }
 
         public Principal()
         {
@@ -62,7 +82,7 @@ namespace MyMovies.universal.Paginas
 
         private void Botao_Biblioteca_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Paginas.Biblioteca));
+            this.Frame.Navigate(typeof(Paginas.Pagina_Biblioteca));
             MainPage mainPage = MainPage.GetCurrent();
             mainPage.ChangeNvSelection("Biblioteca_Page");
         }
@@ -130,11 +150,11 @@ namespace MyMovies.universal.Paginas
             }
             if(pivotItem.Tag.ToString() == "Pivot_MaisVistos")
             {
-
+                GridView_Filmes.ItemsSource = MaisVistos;
             }
             if(pivotItem.Tag.ToString() == "Pivot_MelhorClassificados")
             {
-
+                GridView_Filmes.ItemsSource = MelhorClassificados;
             }
         }
 

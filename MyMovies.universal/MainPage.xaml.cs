@@ -79,7 +79,7 @@ namespace MyMovies.universal
                             contentFrame.Navigate(typeof(Paginas.Perfil));
                             break;
                         case "Biblioteca_Page":
-                            contentFrame.Navigate(typeof(Paginas.Biblioteca));
+                            contentFrame.Navigate(typeof(Paginas.Pagina_Biblioteca));
                             break;
                     }
                 }

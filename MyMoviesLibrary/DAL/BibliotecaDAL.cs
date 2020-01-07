@@ -36,7 +36,7 @@ namespace MyMovies.DAL
             Dictionary<string, object> d = new Dictionary<string, object>();
             d.Add("@idutilizador", u.Utilizador_idutilizador);
             d.Add("@idfilme", u.Filme_idfilme);
-            d.Add("@categoria", u.Categoria);
+            d.Add("@categoria", u.Categoria.ToString());
             try
             {
                 return db.NonQuery(query, d);
@@ -70,15 +70,43 @@ namespace MyMovies.DAL
             return blist;
 
         }
+        public static List<Biblioteca> ReadUtilizadorFilme(Biblioteca b)
+        {
+            Database db = new Database();
+            List<Biblioteca> blist = new List<Biblioteca>();
+            string query = "SELECT categoria FROM Biblioteca WHERE utilizador_idutilizador=@idutilizador AND filme_idfilme=@idfilme";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@idutilizador", b.Utilizador_idutilizador);
+            d.Add("@idfilme", b.Filme_idfilme);
+            SqlDataReader row = db.Query(query, d);
+            if(row == null)
+            {
+                return null;
+            }
+            while (row.Read())
+            {
+                b = new Biblioteca();
+                if (((string)row["categoria"]).Equals("favorito"))
+                    b.Categoria = Categoria.favorito;
+                else if (((string)row["categoria"]).Equals("visto"))
+                    b.Categoria = Categoria.visto;
+                else
+                    b.Categoria = Categoria.para_ver;
+                blist.Add(b);
+            }
+            row.Close();
+            db.Close();
+            return blist;
+        }
 
         public static int Delete(Biblioteca b)
         {
             Database db = new Database();
             string query = "DELETE FROM Biblioteca WHERE utilizador_idutilizador = @idutilizador AND filme_idfilme = @idfilme AND categoria = @categoria";
             Dictionary<string, object> d = new Dictionary<string, object>();
-            d.Add("@utilizador_idutilizador", b.Utilizador_idutilizador);
-            d.Add("@filme_idfilme", b.Filme_idfilme);
-            d.Add("@categoria", b.Categoria);
+            d.Add("@idutilizador", b.Utilizador_idutilizador);
+            d.Add("@idfilme", b.Filme_idfilme);
+            d.Add("@categoria", b.Categoria.ToString()) ;
             return db.NonQuery(query, d);
         }
     }

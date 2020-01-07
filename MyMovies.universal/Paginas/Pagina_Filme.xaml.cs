@@ -27,6 +27,25 @@ namespace MyMovies.universal.Paginas
         public Pagina_Filme()
         {
             this.InitializeComponent();
+            Visibilidade();
+            
+        }
+
+        public void CheckButtonState()
+        {
+            Biblioteca b = new Biblioteca();
+            b.Filme_idfilme = Filme.Idfilme;
+            b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+            List<Biblioteca> blist = b.ReadUtilizadorFilme();
+            foreach(Biblioteca bib in blist)
+            {
+                if (bib.Categoria == Categoria.favorito)
+                    favorito.IsChecked = true;
+                if (bib.Categoria == Categoria.para_ver)
+                    para_ver.IsChecked = true;
+                if (bib.Categoria == Categoria.visto)
+                    visto.IsChecked = true;
+            }
         }
         
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -35,7 +54,83 @@ namespace MyMovies.universal.Paginas
             Filme.ReadFoto();
             Filme.ReadAllAtores();
             Filme.ReadAllGeneros();
+            if(App.user == true)
+                CheckButtonState();
             base.OnNavigatedTo(e);
+        }
+        public void Visibilidade()
+        {
+            if(App.user == true)
+            {
+                para_ver.Visibility = Visibility.Visible;
+                visto.Visibility = Visibility.Visible;
+                favorito.Visibility = Visibility.Visible;
+                Classificacao.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void favorito_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggleButton = sender as ToggleButton;
+            Biblioteca b = new Biblioteca();
+            if (toggleButton.IsChecked == true)
+            {
+                b.Categoria = Categoria.favorito;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Create();
+            }
+            if(toggleButton.IsChecked == false)
+            {
+                b.Categoria = Categoria.favorito;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Delete();
+            }
+        }
+
+        private void visto_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggleButton = sender as ToggleButton;
+            Biblioteca b = new Biblioteca();
+            if (toggleButton.IsChecked == true)
+            {
+                b.Categoria = Categoria.visto;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Create();
+                Filme.Visualizacoes += 1;
+                Filme.UpdateVisualizacoes();
+            }
+            if (toggleButton.IsChecked == false)
+            {
+                b.Categoria = Categoria.visto;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Delete();
+                Filme.Visualizacoes -= 1;
+                Filme.UpdateVisualizacoes();
+            }
+        }
+
+        private void para_ver_Click(object sender, RoutedEventArgs e)
+        {
+            ToggleButton toggleButton = sender as ToggleButton;
+            Biblioteca b = new Biblioteca();
+            if (toggleButton.IsChecked == true)
+            {
+                b.Categoria = Categoria.para_ver;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Create();
+            }
+            if (toggleButton.IsChecked == false)
+            {
+                b.Categoria = Categoria.para_ver;
+                b.Filme_idfilme = Filme.Idfilme;
+                b.Utilizador_idutilizador = App.utilizador.Idutilizador;
+                b.Delete();
+            }
         }
     }
 }

@@ -20,8 +20,8 @@ namespace MyMovies.BL
         private Escritor _Escritor;
         private ObservableCollection<Ator> _Atores;
         private List<Genero> _Generos;
-        private long _Visualizacoes;
-        private long _Classificacao;
+        private long _Visualizacoes = 0;
+        private long _Classificacao = 0;
 
         public int Idfilme {
             get
@@ -196,6 +196,14 @@ namespace MyMovies.BL
         public int UpdateFoto()
         {
             return FilmeDAL.UpdateFoto(this);
+        }
+        public int UpdateVisualizacoes()
+        {
+            return FilmeDAL.UpdateVisualizacoes(this);
+        }
+        public int UpdateClassificacoes()
+        {
+            return FilmeDAL.UpdateClassificacoes(this);
         }
 
         public int Delete()

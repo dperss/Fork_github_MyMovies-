@@ -1,16 +1,15 @@
-Assets\181527.png
-Assets\233-2336379_png-file-timer-icon-svg.png
 Assets\aladin.jpg
 Assets\bitmap.png
 Assets\capa.jpg
-Assets\check-circle-outline-512.png
 Assets\EditDocument-512.png
 Assets\el camino.jpg
 Assets\end_game.jpg
+Assets\favorito.png
 Assets\hustlers.jpg
 Assets\Joker.PNG
 Assets\kindom.jpg
 Assets\LockScreenLogo.scale-200.png
+Assets\para_ver.png
 Assets\rambo.jpg
 Assets\spiderman.jpg
 Assets\SplashScreen.scale-200.png
@@ -19,11 +18,11 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Untitled-1.png
+Assets\visto.png
 Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 MyMovies.universal.xr.xml
-Paginas\Biblioteca.xbf
 Paginas\Definicoes.xbf
 Paginas\GestaoDeAtores.xbf
 Paginas\GestaoDeDiretores.xbf
@@ -32,6 +31,7 @@ Paginas\GestaoDeFilmes.xbf
 Paginas\GestaoDeGeneros.xbf
 Paginas\GestaoDeUtilizadores.xbf
 Paginas\Login.xbf
+Paginas\Pagina_Biblioteca.xbf
 Paginas\Pagina_Filme.xbf
 Paginas\Perfil.xbf
 Paginas\Pesquisa.xbf

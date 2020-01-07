@@ -54,9 +54,7 @@
         <Grid Grid.Row="1">
 
             <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" SelectionChanged="Pivot_SelectionChanged">
-                <PivotItem Tag="Pivot_Recentes" Header="Recentes">
-                    
-                </PivotItem>
+                <PivotItem Tag="Pivot_Recentes" Header="Recentes"/>
 
                 <PivotItem Tag="Pivot_MaisVistos" Header="Mais Vistos"/>
 

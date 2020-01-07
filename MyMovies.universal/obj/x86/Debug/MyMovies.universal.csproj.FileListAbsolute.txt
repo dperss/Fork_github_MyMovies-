@@ -417,7 +417,6 @@ C:\Users\Diogo Ramos\Desktop\New folder\mymovies\MyMovies.universal\obj\x86\Debu
 C:\Users\Diogo Ramos\Desktop\New folder\mymovies\MyMovies.universal\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Diogo Ramos\Desktop\New folder\mymovies\MyMovies.universal\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885274160000000.json
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf
-C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeAtores.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\GestaoDeFilmes.xbf
@@ -448,8 +447,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\MyMovies.pdb
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\MyMovies.universal.csprojAssemblyReference.cache
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.g.cs
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.g.i.cs
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.g.i.cs
@@ -470,7 +467,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.g.i.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.xaml
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xaml
@@ -481,7 +477,6 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Perfil.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Principal.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Registo.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\App.xbf
-C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Biblioteca.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Definicoes.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeAtores.xbf
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\GestaoDeFilmes.xbf
@@ -764,3 +759,8 @@ C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.g.i.
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.g.cs
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.xaml
 C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Filme.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Biblioteca.g.i.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Biblioteca.g.cs
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Biblioteca.xaml
+C:\Curso\DAI\mymovies\MyMovies.universal\obj\x86\Debug\Paginas\Pagina_Biblioteca.xbf
+C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Biblioteca.xbf

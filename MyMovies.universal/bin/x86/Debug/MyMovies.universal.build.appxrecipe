@@ -55,26 +55,50 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\181527.png">
-      <PackagePath>Assets\181527.png</PackagePath>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\aladin.jpg">
+      <PackagePath>Assets\aladin.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\233-2336379_png-file-timer-icon-svg.png">
-      <PackagePath>Assets\233-2336379_png-file-timer-icon-svg.png</PackagePath>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\capa.jpg">
+      <PackagePath>Assets\capa.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\el camino.jpg">
+      <PackagePath>Assets\el camino.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\end_game.jpg">
+      <PackagePath>Assets\end_game.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\hustlers.jpg">
+      <PackagePath>Assets\hustlers.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\kindom.jpg">
+      <PackagePath>Assets\kindom.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\rambo.jpg">
+      <PackagePath>Assets\rambo.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\spiderman.jpg">
+      <PackagePath>Assets\spiderman.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\bitmap.png">
       <PackagePath>Assets\bitmap.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\check-circle-outline-512.png">
-      <PackagePath>Assets\check-circle-outline-512.png</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\EditDocument-512.png">
       <PackagePath>Assets\EditDocument-512.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\favorito.png">
+      <PackagePath>Assets\favorito.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Joker.PNG">
       <PackagePath>Assets\Joker.PNG</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\para_ver.png">
+      <PackagePath>Assets\para_ver.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Untitled-1.png">
       <PackagePath>Assets\Untitled-1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\visto.png">
+      <PackagePath>Assets\visto.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
@@ -103,30 +127,6 @@
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\aladin.jpg">
-      <PackagePath>Assets\aladin.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\capa.jpg">
-      <PackagePath>Assets\capa.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\el camino.jpg">
-      <PackagePath>Assets\el camino.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\end_game.jpg">
-      <PackagePath>Assets\end_game.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\hustlers.jpg">
-      <PackagePath>Assets\hustlers.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\kindom.jpg">
-      <PackagePath>Assets\kindom.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\rambo.jpg">
-      <PackagePath>Assets\rambo.jpg</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\spiderman.jpg">
-      <PackagePath>Assets\spiderman.jpg</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -136,8 +136,8 @@
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Biblioteca.xbf">
-      <PackagePath>Paginas\Biblioteca.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Pagina_Biblioteca.xbf">
+      <PackagePath>Paginas\Pagina_Biblioteca.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\bin\x86\Debug\Paginas\Definicoes.xbf">
       <PackagePath>Paginas\Definicoes.xbf</PackagePath>

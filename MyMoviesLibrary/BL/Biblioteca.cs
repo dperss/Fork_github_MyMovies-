@@ -64,5 +64,9 @@ namespace MyMovies.BL
         {
             return BibliotecaDAL.Delete(this);
         }
+        public List<Biblioteca> ReadUtilizadorFilme()
+        {
+            return BibliotecaDAL.ReadUtilizadorFilme(this);
+        }
     }
 }

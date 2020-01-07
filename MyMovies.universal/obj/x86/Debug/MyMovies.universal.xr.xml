@@ -93,7 +93,7 @@
       <RootProperty Name="Header" />
       <RootProperty Name="Tag" />
     </RootType>
-    <RootType FullName="MyMovies.universal.Paginas.Biblioteca" />
+    <RootType FullName="MyMovies.universal.Paginas.Pagina_Biblioteca" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
@@ -102,6 +102,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Resources" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
@@ -264,6 +265,14 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="MyMovies.universal.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ToggleButton">
+      <RootProperty Name="Height" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Content" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="MyMovies.universal.Paginas.Pagina_Filme" />
     <RootType FullName="MyMovies.universal.Paginas.Perfil" />
     <RootType FullName="MyMovies.universal.Paginas.Pesquisa" />

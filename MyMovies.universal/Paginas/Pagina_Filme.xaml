@@ -43,9 +43,15 @@
                 <usercontrol:FotoControl ImageSource="{x:Bind Filme.Foto, Mode=OneTime}"/>
             </Grid>
             <Grid Grid.Row="1">
-                <Image Source="/Assets\check-circle-outline-512.png" Height="50" HorizontalAlignment="Left" Margin="100,0,0,0"/>
-                <Image Source="/Assets\181527.png" Height="50" HorizontalAlignment="Center"/>
-                <Image Source="/Assets\233-2336379_png-file-timer-icon-svg.png" Height="50" HorizontalAlignment="Right" Margin="0,0,100,0"/>
+                <ToggleButton Height="50" HorizontalAlignment="Left" Margin="100,0,0,0" Click="para_ver_Click"  Visibility="Collapsed" x:Name="para_ver">
+                    <Image Source="/Assets\para_ver.png"/>
+                </ToggleButton>
+                <ToggleButton Height="50" HorizontalAlignment="Center" Click="visto_Click" Visibility="Collapsed" x:Name="visto">
+                    <Image Source="/Assets\visto.png"/>
+                </ToggleButton>
+                <ToggleButton Height="50" HorizontalAlignment="Right" Margin="0,0,100,0" Click="favorito_Click" Visibility="Collapsed" x:Name="favorito">
+                    <Image Source="/Assets\favorito.png"/>
+                </ToggleButton>
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
@@ -75,7 +81,7 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
-                <RatingControl VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" >
+                <RatingControl VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed">
                     <RatingControl.Resources>
                         <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
                         <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>
