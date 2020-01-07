@@ -98,6 +98,72 @@ namespace MyMovies.DAL
             db.Close();
             return blist;
         }
+        public static List<Biblioteca> ReadUtilizadorFavoritos(Biblioteca b)
+        {
+            Database db = new Database();
+            List<Biblioteca> blist = new List<Biblioteca>();
+            string query = "SELECT filme_idfilme FROM Biblioteca WHERE utilizador_idutilizador=@idutilizador AND categoria='favorito'";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@idutilizador", b.Utilizador_idutilizador);
+            SqlDataReader row = db.Query(query, d);
+            if (row == null)
+            {
+                return null;
+            }
+            while (row.Read())
+            {
+                b = new Biblioteca();
+                b.Filme_idfilme = (int)row["filme_idfilme"];
+                blist.Add(b);
+            }
+            row.Close();
+            db.Close();
+            return blist;
+        }
+        public static List<Biblioteca> ReadUtilizadorPara_Ver(Biblioteca b)
+        {
+            Database db = new Database();
+            List<Biblioteca> blist = new List<Biblioteca>();
+            string query = "SELECT filme_idfilme FROM Biblioteca WHERE utilizador_idutilizador=@idutilizador AND categoria='para_ver'";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@idutilizador", b.Utilizador_idutilizador);
+            SqlDataReader row = db.Query(query, d);
+            if (row == null)
+            {
+                return null;
+            }
+            while (row.Read())
+            {
+                b = new Biblioteca();
+                b.Filme_idfilme = (int)row["filme_idfilme"];
+                blist.Add(b);
+            }
+            row.Close();
+            db.Close();
+            return blist;
+        }
+        public static List<Biblioteca> ReadUtilizadorVistos(Biblioteca b)
+        {
+            Database db = new Database();
+            List<Biblioteca> blist = new List<Biblioteca>();
+            string query = "SELECT filme_idfilme FROM Biblioteca WHERE utilizador_idutilizador=@idutilizador AND categoria='visto'";
+            Dictionary<string, object> d = new Dictionary<string, object>();
+            d.Add("@idutilizador", b.Utilizador_idutilizador);
+            SqlDataReader row = db.Query(query, d);
+            if (row == null)
+            {
+                return null;
+            }
+            while (row.Read())
+            {
+                b = new Biblioteca();
+                b.Filme_idfilme = (int)row["filme_idfilme"];
+                blist.Add(b);
+            }
+            row.Close();
+            db.Close();
+            return blist;
+        }
 
         public static int Delete(Biblioteca b)
         {

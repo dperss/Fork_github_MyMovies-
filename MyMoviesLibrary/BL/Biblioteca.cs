@@ -60,6 +60,18 @@ namespace MyMovies.BL
         {
             return BibliotecaDAL.ReadAll();
         }
+        public List<Biblioteca> ReadUtilizadorFavoritos()
+        {
+            return BibliotecaDAL.ReadUtilizadorFavoritos(this);
+        }
+        public List<Biblioteca> ReadUtilizadorPara_Ver()
+        {
+            return BibliotecaDAL.ReadUtilizadorPara_Ver(this);
+        }
+        public List<Biblioteca> ReadUtilizadorVistos()
+        {
+            return BibliotecaDAL.ReadUtilizadorVistos(this);
+        }
         public int Delete()
         {
             return BibliotecaDAL.Delete(this);

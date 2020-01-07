@@ -20,10 +20,10 @@
             <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="1" VerticalAlignment="Center">
-            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" >
-                <PivotItem Header ="Favoritos"/>
-                <PivotItem Header="Para Ver"/>
-                <PivotItem Header="Vistos"/>
+            <Pivot  Background="CadetBlue" Height="70" Opacity="0.8" SelectionChanged="Pivot_SelectionChanged" >
+                <PivotItem Header ="Favoritos" Tag="Pivot_Favoritos"/>
+                <PivotItem Header="Para Ver" Tag="Pivot_Para_ver"/>
+                <PivotItem Header="Vistos" Tag="Pivot_Vistos"/>
             </Pivot>
         </Grid>
         <Grid Grid.Row="2" >
@@ -31,7 +31,7 @@
             <GridView Margin="40" x:Name="GridView_Filmes"
                       SelectionMode="Single"
                       IsItemClickEnabled="True"
-                      ItemClick="Filmes_ItemClick"
+                      ItemClick="GridView_Filmes_ItemClick"
                       ItemsSource="{x:Bind Favoritos}">
                 <GridView.ItemTemplate>
                     <DataTemplate>

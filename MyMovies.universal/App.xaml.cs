@@ -185,7 +185,7 @@ namespace MyMovies.universal
             Allmovies = Filme.ReadAll();
             foreach(Filme f in Allmovies)
             {
-                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.5)
+                if(CalculateSimilarity(pesquisa, f.Nome) >= 0.3)
                 {
                     flist.Add(f);
                 }
