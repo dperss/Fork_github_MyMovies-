@@ -99,6 +99,7 @@
       <RootProperty Name="Style" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Tag" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />

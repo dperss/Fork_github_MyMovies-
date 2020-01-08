@@ -201,9 +201,9 @@ namespace MyMovies.BL
         {
             return FilmeDAL.UpdateVisualizacoes(this);
         }
-        public int UpdateClassificacoes()
+        public int UpdateClassificacao()
         {
-            return FilmeDAL.UpdateClassificacoes(this);
+            return FilmeDAL.UpdateClassificacao(this);
         }
 
         public int Delete()

@@ -173,19 +173,25 @@ namespace MyMovies.universal.Paginas
         private void Classificacao_ValueChanged(RatingControl sender, object args)
         {
             RatingControl ratingControl = sender as RatingControl;
+            int valorNovo = (int)ratingControl.Value;
+            if (valorNovo == -1)
+                valorNovo = 0;
             if (Avaliacao_comentario != null)
             {
-                Avaliacao_comentario.Avaliacao = (int)ratingControl.Value;
+                Filme.Classificacao = Filme.Classificacao - Avaliacao_comentario.Avaliacao + valorNovo;
+                Avaliacao_comentario.Avaliacao = valorNovo;
                 Avaliacao_comentario.UpdateAvaliacao();
-
+                Filme.UpdateClassificacao();
             }
             else
             {
                 Avaliacao_comentario = new Avaliacao_comentario();
                 Avaliacao_comentario.Idfilme = Filme.Idfilme;
                 Avaliacao_comentario.Idutilizador = App.utilizador.Idutilizador;
-                Avaliacao_comentario.Avaliacao = (int)ratingControl.Value;
+                Avaliacao_comentario.Avaliacao = valorNovo;
+                Filme.Classificacao += valorNovo;
                 Avaliacao_comentario.Create();
+                Filme.UpdateClassificacao();
             }
         }
     }

@@ -228,13 +228,13 @@ namespace MyMovies.DAL
             db.Close();
             return result;
         }
-        public static int UpdateClassificacoes(Filme f)
+        public static int UpdateClassificacao(Filme f)
         {
             Database db = new Database();
             Dictionary<string, object> dictionary = new Dictionary<string, object>();
-            string query = "UPDATE Filme SET classificacoes=@classificacoes WHERE Idfilme=@Idfilme";
+            string query = "UPDATE Filme SET classificacao=@classificacao WHERE Idfilme=@Idfilme";
             dictionary.Add("@Idfilme", f.Idfilme);
-            dictionary.Add("@visualizacoes", f.Visualizacoes);
+            dictionary.Add("@classificacao", f.Classificacao);
             int result = db.NonQuery(query, dictionary);
             db.Close();
             return result;

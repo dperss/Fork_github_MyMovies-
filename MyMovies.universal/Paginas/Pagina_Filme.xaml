@@ -81,12 +81,23 @@
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
-                <RatingControl VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed" ValueChanged="Classificacao_ValueChanged">
-                    <RatingControl.Resources>
-                        <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
-                        <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>
-                    </RatingControl.Resources>
-                </RatingControl>
+                <StackPanel>
+                    <RatingControl VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed" ValueChanged="Classificacao_ValueChanged">
+                        <RatingControl.Resources>
+                            <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
+                            <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>
+                        </RatingControl.Resources>
+                    </RatingControl>
+                    <TextBox PlaceholderText="Escreva um comentário"></TextBox>
+                    <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="Auto" FontSize="16" Text="Comentarios: "></TextBlock>
+                    <GridView>
+                        <GridView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock></TextBlock>
+                            </DataTemplate>
+                        </GridView.ItemTemplate>
+                    </GridView>
+                </StackPanel>
             </Grid>
         </Grid>
 
