@@ -33,23 +33,9 @@ namespace MyMovies.universal.Paginas
             GestaoDeUtilizadoresViewModel = new GestaoDeUtilizadoresViewModel();
         }
 
-        private async void Button_Submeter(object sender, RoutedEventArgs e)//este codigo devia de estar no gestaodeutilizadoresviewmodel
+        private void Button_Submeter(object sender, RoutedEventArgs e)//este codigo devia de estar no gestaodeutilizadoresviewmodel
         {
-          
-            Utilizador u = new Utilizador();
-            u.Email = EmailTextBox.Text;//o acesso às textboxes tem que ser aqui
-            u.Nome = NomeTextBox.Text;
-            u.Password = PasswordBox.Password;
-            u.Tipo = Tipo.user;
-            if (!GestaoDeUtilizadoresViewModel.CreateUtilizador(u))
-            {
-                MessageDialog message = new MessageDialog("Não foi possível criar a sua conta");
-                await message.ShowAsync();
-            }
-            else {
-                App.NavigateMainPage();
-
-            }
+            Registar();
         }
 
         private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
@@ -76,6 +62,48 @@ namespace MyMovies.universal.Paginas
                 List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
                 MainPage mainPage = MainPage.GetCurrent();
                 mainPage.NavigatePesquisa(flist);
+            }
+        }
+
+        private void EmailTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if(e.Key == Windows.System.VirtualKey.Enter)
+            {
+                Registar();
+            }
+        }
+
+        private void NomeTextBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                Registar();
+            }
+        }
+
+        private void PasswordBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter)
+            {
+                Registar();
+            }
+        }
+        public async void Registar()
+        {
+            Utilizador u = new Utilizador();
+            u.Email = EmailTextBox.Text;//o acesso às textboxes tem que ser aqui
+            u.Nome = NomeTextBox.Text;
+            u.Password = PasswordBox.Password;
+            u.Tipo = Tipo.user;
+            if (!GestaoDeUtilizadoresViewModel.CreateUtilizador(u))
+            {
+                MessageDialog message = new MessageDialog("Não foi possível criar a sua conta");
+                await message.ShowAsync();
+            }
+            else
+            {
+                App.NavigateMainPage();
+
             }
         }
     }

@@ -160,7 +160,7 @@ namespace MyMovies.DAL
             string query = @"CREATE TABLE [dbo].[Utilizador] (
                              idutilizador INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
                              nome varchar(100) NOT NULL,
-                             email varchar(100) NOT NULL,
+                             email varchar(100) NOT NULL UNIQUE,
                              password varchar(45) NOT NULL,
                              tipo varchar(10) NOT NULL CHECK (tipo IN('admin', 'user')));
                              ";
