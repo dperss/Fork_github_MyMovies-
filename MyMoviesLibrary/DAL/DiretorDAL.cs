@@ -69,7 +69,7 @@ namespace MyMovies.DAL
             List<Diretor> dirlist = new List<Diretor>();
             string query = "SELECT * FROM Diretor";
             SqlDataReader row = db.Query(query, null);
-            if (!row.HasRows)
+            if (row == null)
                 return null;
             while (row.Read())
             {

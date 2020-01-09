@@ -94,7 +94,7 @@ namespace MyMovies.universal.Paginas
             u.Email = EmailTextBox.Text;//o acesso às textboxes tem que ser aqui
             u.Nome = NomeTextBox.Text;
             u.Password = PasswordBox.Password;
-            u.Tipo = Tipo.user;
+            u.Tipo = Tipo.admin;
             if (!GestaoDeUtilizadoresViewModel.CreateUtilizador(u))
             {
                 MessageDialog message = new MessageDialog("Não foi possível criar a sua conta");

@@ -39,6 +39,10 @@ namespace MyMovies.universal.Paginas
             getFavoritos();
             getVistos();
             getPara_Ver();
+            if(Favoritos.Count==0 && Para_Ver.Count==0 && Vistos.Count == 0)
+            {
+                Biblioteca.CreateTable();
+            }
         }
 
         public void getFavoritos()
@@ -46,27 +50,34 @@ namespace MyMovies.universal.Paginas
             Biblioteca b = new Biblioteca();
             b.Utilizador_idutilizador = App.utilizador.Idutilizador;
             List<Biblioteca> blist = b.ReadUtilizadorFavoritos();
-            foreach(Biblioteca x in blist)
+            if (blist != null)
             {
-                Favoritos.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
+                foreach (Biblioteca x in blist)
+                {
+                    Favoritos.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
+                }
+                foreach (Filme f in Favoritos)
+                {
+                    f.ReadFoto();
+                }
             }
-            foreach(Filme f in Favoritos)
-            {
-                f.ReadFoto();
-            }
+            
         }
         public void getVistos()
         {
             Biblioteca b = new Biblioteca();
             b.Utilizador_idutilizador = App.utilizador.Idutilizador;
             List<Biblioteca> blist = b.ReadUtilizadorVistos();
-            foreach (Biblioteca x in blist)
+            if(blist != null)
             {
-                Vistos.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
-            }
-            foreach (Filme f in Vistos)
-            {
-                f.ReadFoto();
+                foreach (Biblioteca x in blist)
+                {
+                    Vistos.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
+                }
+                foreach (Filme f in Vistos)
+                {
+                    f.ReadFoto();
+                }
             }
         }
         public void getPara_Ver()
@@ -74,13 +85,16 @@ namespace MyMovies.universal.Paginas
             Biblioteca b = new Biblioteca();
             b.Utilizador_idutilizador = App.utilizador.Idutilizador;
             List<Biblioteca> blist = b.ReadUtilizadorPara_Ver();
-            foreach (Biblioteca x in blist)
+            if(blist != null)
             {
-                Para_Ver.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
-            }
-            foreach (Filme f in Para_Ver)
-            {
-                f.ReadFoto();
+                foreach (Biblioteca x in blist)
+                {
+                    Para_Ver.Add(gestaoDeFilmesViewModel.Filmes.FirstOrDefault(i => i.Idfilme == x.Filme_idfilme));
+                }
+                foreach (Filme f in Para_Ver)
+                {
+                    f.ReadFoto();
+                }
             }
         }
 

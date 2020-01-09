@@ -42,15 +42,15 @@ namespace MyMovies.universal
         {
 
             this.InitializeComponent();
-            gestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
-            gestaoDeFilmesViewModel.ReadFotos();
-            Filmes = gestaoDeFilmesViewModel.Filmes;
+            //gestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
+            //gestaoDeFilmesViewModel.ReadFotos();
+            //Filmes = gestaoDeFilmesViewModel.Filmes;
             Recentes = new ObservableCollection<Filme>();
             MaisVistos = new ObservableCollection<Filme>();
             MelhorClassificados = new ObservableCollection<Filme>();
-            getRecentes();
-            getMaisVistos();
-            getMelhorClassificados();
+            //getRecentes();
+            //getMaisVistos();
+            //getMelhorClassificados();
             this.Suspending += OnSuspending;
            
         }
@@ -125,11 +125,11 @@ namespace MyMovies.universal
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(MainPage));
         }
-        public static void NavigatePaginaFilme(Filme f)
+        /*public static void NavigatePaginaFilme(Filme f)
         {
             Frame rootFrame = Window.Current.Content as Frame;
             rootFrame.Navigate(typeof(Paginas.Pagina_Filme), f);
-        }
+        }*/
 
         static int StringDistance(string source, string target)
         {
@@ -194,6 +194,7 @@ namespace MyMovies.universal
         }
         public static void getRecentes()
         {
+            Recentes.Clear();
             Dictionary<int, int> id_ano = new Dictionary<int, int>();
             int ano;
             foreach(Filme f in Filmes)
@@ -209,6 +210,7 @@ namespace MyMovies.universal
         }
         public static void getMaisVistos()
         {
+            MaisVistos.Clear();
             Dictionary<int, long> id_visualizacao = new Dictionary<int, long>();
             int ano;
             foreach (Filme f in Filmes)
@@ -223,6 +225,7 @@ namespace MyMovies.universal
         }
         public static void getMelhorClassificados()
         {
+            MelhorClassificados.Clear();
             Dictionary<int, long> id_visualizacao = new Dictionary<int, long>();
             int ano;
             foreach (Filme f in Filmes)

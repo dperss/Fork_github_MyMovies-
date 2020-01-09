@@ -61,6 +61,8 @@ namespace MyMovies.DAL
             List<Genero> ulist = new List<Genero>();
             string query = "SELECT * FROM Genero";
             SqlDataReader row = db.Query(query, null);
+            if (row == null)
+                return null;
             while (row.Read())
             {
                 u = new Genero();

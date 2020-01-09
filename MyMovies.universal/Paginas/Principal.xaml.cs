@@ -71,6 +71,12 @@ namespace MyMovies.universal.Paginas
                 Botao_registo.Visibility = Visibility.Collapsed;
                 Botao_login.Visibility = Visibility.Visible;
             }
+            GestaoDeFilmesViewModel gestaoDeFilmesViewModel = new GestaoDeFilmesViewModel();
+            gestaoDeFilmesViewModel.ReadFotos();
+            App.Filmes = gestaoDeFilmesViewModel.Filmes;
+            App.getRecentes();
+            App.getMaisVistos();
+            App.getMelhorClassificados();
         }
 
         private void Botao_registo_Click(object sender, RoutedEventArgs e)

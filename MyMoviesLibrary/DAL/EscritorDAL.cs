@@ -68,7 +68,7 @@ namespace MyMovies.DAL
             List<Escritor> elist = new List<Escritor>();
             string query = "SELECT * FROM Escritor";
             SqlDataReader row = db.Query(query, null);
-            if (!row.HasRows)
+            if (row == null)
                 return null;
             while (row.Read())
             {

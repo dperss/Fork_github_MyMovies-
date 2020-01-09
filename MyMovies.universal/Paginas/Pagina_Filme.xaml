@@ -102,7 +102,7 @@
                 <ScrollViewer>
                 <StackPanel>
                         <TextBlock Margin="5,0,5,0" HorizontalAlignment="Stretch" Height="Auto" FontSize="16" Text="Comentarios: " VerticalAlignment="Stretch" Visibility="Collapsed" x:Name="textblock_comentario"></TextBlock>
-                        <ListView ItemsSource="{x:Bind comentarios}" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="500">
+                        <ListView ItemsSource="{x:Bind comentarios}" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="Auto">
                         <ListView.ItemTemplate>
                                 <DataTemplate>
                                     <Grid>

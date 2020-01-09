@@ -43,14 +43,17 @@ namespace MyMovies.universal.Paginas
             b.Filme_idfilme = Filme.Idfilme;
             b.Utilizador_idutilizador = App.utilizador.Idutilizador;
             List<Biblioteca> blist = b.ReadUtilizadorFilme();
-            foreach(Biblioteca bib in blist)
+            if (blist != null)
             {
-                if (bib.Categoria == Categoria.favorito)
-                    favorito.IsChecked = true;
-                if (bib.Categoria == Categoria.para_ver)
-                    para_ver.IsChecked = true;
-                if (bib.Categoria == Categoria.visto)
-                    visto.IsChecked = true;
+               foreach (Biblioteca bib in blist)
+               {
+                    if (bib.Categoria == Categoria.favorito)
+                        favorito.IsChecked = true;
+                    if (bib.Categoria == Categoria.para_ver)
+                        para_ver.IsChecked = true;
+                    if (bib.Categoria == Categoria.visto)
+                        visto.IsChecked = true;
+                }
             }
         }
         
@@ -68,14 +71,18 @@ namespace MyMovies.universal.Paginas
                 CheckButtonState();
                 ac.Idutilizador = App.utilizador.Idutilizador;
                 Avaliacao_comentario = ac.ReadUtilizadorFilme();
-                if (Avaliacao_comentario != null)
+                if (Avaliacao_comentario == null)
+                {
+                    Avaliacao_comentario.CreateTable();
+                    
+                }else
                 {
                     Classificacao.Value = Avaliacao_comentario.Avaliacao;
                     Avaliacao_comentario_existe = true;
                 }
             }
             List<Avaliacao_comentario> commentslist = ac.ReadAllComentariosFilme();
-            if (commentslist.Count != 0)
+            if (commentslist != null)
             {
                 comentarios = new ObservableCollection<Avaliacao_comentario>(commentslist);
                 if(App.user == true)
@@ -256,7 +263,11 @@ namespace MyMovies.universal.Paginas
                 }
                 else
                 {
-                    Avaliacao_comentario.Create();
+                    if (Avaliacao_comentario.Create() != 1)
+                    {
+                        Avaliacao_comentario.CreateTable();
+                        Avaliacao_comentario.Create();
+                    }
                 }
                 textbox_comentario.Visibility = Visibility.Collapsed;
                 ListView_CommentUser.Visibility = Visibility.Visible;

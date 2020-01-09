@@ -110,6 +110,7 @@ namespace MyMovies.DAL
             {
                 return null;
             }
+            
             while (row.Read())
             {
                 b = new Biblioteca();

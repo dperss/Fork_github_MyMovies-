@@ -82,7 +82,7 @@ namespace MyMovies.BL
             Nome = "";
             Email = "";
             Password = "";
-            Tipo = Tipo.user;
+            Tipo = Tipo.admin;
         }
         public Utilizador(int idutilizador, string nome, string email, string password, string user_adm)
         {

@@ -37,7 +37,9 @@ namespace MyMovies.DAL
             d.Add("@idu", a.Idutilizador);
             d.Add("@idf", a.Idfilme);
             SqlDataReader row = db.Query(query, d);
-            if (row.HasRows == false)
+            if (row == null)
+                return null;
+            if (!row.HasRows)
                 return null;
             while (row.Read())
             {
