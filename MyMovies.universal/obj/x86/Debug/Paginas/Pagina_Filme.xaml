@@ -25,7 +25,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="2" Grid.ColumnSpan="2">
-            <AutoSuggestBox x:ConnectionId='13' PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Top" HorizontalAlignment="Right" Width="250"                                                                                />
+            <AutoSuggestBox x:ConnectionId='20' PlaceholderText="Pesquisa" QueryIcon="Find" BorderBrush="AntiqueWhite" VerticalAlignment="Top" HorizontalAlignment="Right" Width="250"                                                                                />
         </Grid>
         <Grid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
             <Rectangle  Fill="Gray" Opacity="0.6"/>
@@ -40,64 +40,89 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid>
-                <usercontrol:FotoControl x:ConnectionId='12'                                                />
+                <usercontrol:FotoControl x:ConnectionId='19'                                                />
             </Grid>
             <Grid Grid.Row="1">
-                <ToggleButton x:ConnectionId='9' Height="50" HorizontalAlignment="Left" Margin="100,0,0,0"                         Visibility="Collapsed" x:Name="para_ver">
+                <ToggleButton x:ConnectionId='16' Height="50" HorizontalAlignment="Left" Margin="100,0,0,0"                         Visibility="Collapsed" x:Name="para_ver">
                     <Image Source="/Assets\para_ver.png"/>
                 </ToggleButton>
-                <ToggleButton x:ConnectionId='10' Height="50" HorizontalAlignment="Center"                     Visibility="Collapsed" x:Name="visto">
+                <ToggleButton x:ConnectionId='17' Height="50" HorizontalAlignment="Center"                     Visibility="Collapsed" x:Name="visto">
                     <Image Source="/Assets\visto.png"/>
                 </ToggleButton>
-                <ToggleButton x:ConnectionId='11' Height="50" HorizontalAlignment="Right" Margin="0,0,100,0"                        Visibility="Collapsed" x:Name="favorito">
+                <ToggleButton x:ConnectionId='18' Height="50" HorizontalAlignment="Right" Margin="0,0,100,0"                        Visibility="Collapsed" x:Name="favorito">
                     <Image Source="/Assets\favorito.png"/>
                 </ToggleButton>
             </Grid>
         </Grid>
         <Grid Grid.Row="1" Grid.Column="2">
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*"/>
+                <RowDefinition Height="6*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
             <Grid>
                 <StackPanel>
-                    <TextBlock x:ConnectionId='4' HorizontalAlignment="Center"                                          FontWeight="Bold" FontSize="30" Margin="0,10,0,0"/>
+                    <TextBlock x:ConnectionId='11' HorizontalAlignment="Center"                                          FontWeight="Bold" FontSize="30" Margin="0,10,0,0"/>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Ano:</TextBlock>
-                        <TextBlock x:ConnectionId='8'                                         FontSize="16"/>
+                        <TextBlock x:ConnectionId='15'                                         FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Duração: </TextBlock>
-                        <TextBlock x:ConnectionId='7'                                             FontSize="16"/>
+                        <TextBlock x:ConnectionId='14'                                             FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Diretor:</TextBlock>
-                        <TextBlock x:ConnectionId='6'                                                  FontSize="16"/>
+                        <TextBlock x:ConnectionId='13'                                                  FontSize="16"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="10,0,10,5" FontSize="16">Escritor:</TextBlock>
-                        <TextBlock x:ConnectionId='5'                                                   FontSize="16"/>
+                        <TextBlock x:ConnectionId='12'                                                   FontSize="16"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>
             <Grid Grid.Row="1">
                 <StackPanel>
-                    <RatingControl x:ConnectionId='2' VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed"                                          >
+                    <RatingControl x:ConnectionId='5' VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,0,30,0" x:Name="Classificacao" Visibility="Collapsed"                                          >
                         <RatingControl.Resources>
                             <SolidColorBrush x:Key="RatingControlUnselectedForeground" Color="Gray" />
                             <SolidColorBrush x:Key="RatingControlSelectedForeground" Color="DarkGoldenrod"/>
                         </RatingControl.Resources>
                     </RatingControl>
-                    <TextBox PlaceholderText="Escreve um comentário"></TextBox>
-                    <TextBlock VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="Auto" FontSize="16" Text="Comentarios: "></TextBlock>
-                    <GridView>
-                        <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock></TextBlock>
-                            </DataTemplate>
-                        </GridView.ItemTemplate>
-                    </GridView>
+                    <TextBlock x:ConnectionId='6' Margin="5,0,5,0" FontWeight="SemiBold" FontSize="16" Text="O seu comentário:" x:Name="textblock_jacomentou" Visibility="Collapsed"></TextBlock>
+                    <ListView x:ConnectionId='7' x:Name="ListView_CommentUser" Visibility="Collapsed">
+                        <TextBlock x:ConnectionId='10' Margin="5,0,5,0" FontSize="16"                                                             ></TextBlock>
+                    </ListView>
+                    <Button x:ConnectionId='8' HorizontalAlignment="Right"                                         x:Name="Botao_EliminarComentario" Visibility="Collapsed">Eliminar Comentário</Button>
+                    <TextBox x:ConnectionId='9' Margin="5,0,5,0" PlaceholderText="Escreva um comentário" Visibility="Collapsed" x:Name="textbox_comentario"                                     ></TextBox>
+                    
                 </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <ScrollViewer>
+                <StackPanel>
+                        <TextBlock x:ConnectionId='2' Margin="5,0,5,0" HorizontalAlignment="Stretch" Height="Auto" FontSize="16" Text="Comentarios: " VerticalAlignment="Stretch" Visibility="Collapsed" x:Name="textblock_comentario"></TextBlock>
+                        <ListView x:ConnectionId='3'                                    ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="500">
+                        <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Text="{Binding NomeUtilizador, Mode=OneTime}" Style="{ThemeResource BaseTextBlockStyle}" Margin="10,6,0,0"/>
+                                        <TextBlock Grid.Row="1" Text="{Binding Comentario, Mode=OneTime}" Style="{ThemeResource BodyTextBlockStyle}" Margin="10,0,0,6"/>
+                                    </Grid>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    
+                </StackPanel>
+                </ScrollViewer>
             </Grid>
         </Grid>
 

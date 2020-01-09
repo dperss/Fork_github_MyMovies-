@@ -26,7 +26,11 @@ namespace MyMovies.universal.Paginas
     {
         Filme Filme { get; set; }
 
-        Avaliacao_comentario Avaliacao_comentario { get; set; }
+        Avaliacao_comentario Avaliacao_comentario;
+
+        bool Avaliacao_comentario_existe = false;
+
+        ObservableCollection<Avaliacao_comentario> comentarios { get; set; }
         public Pagina_Filme()
         {
             this.InitializeComponent();
@@ -56,16 +60,43 @@ namespace MyMovies.universal.Paginas
             Filme.ReadFoto();
             Filme.ReadAllAtores();
             Filme.ReadAllGeneros();
-            if(App.user == true)
+            Avaliacao_comentario ac = new Avaliacao_comentario();
+            ac.Idfilme = Filme.Idfilme;
+            if (App.user == true)
             {
+                textbox_comentario.Visibility = Visibility.Visible;
                 CheckButtonState();
-                Avaliacao_comentario ac = new Avaliacao_comentario();
                 ac.Idutilizador = App.utilizador.Idutilizador;
-                ac.Idfilme = Filme.Idfilme;
                 Avaliacao_comentario = ac.ReadUtilizadorFilme();
-                if(Avaliacao_comentario!=null)
+                if (Avaliacao_comentario != null)
+                {
                     Classificacao.Value = Avaliacao_comentario.Avaliacao;
+                    Avaliacao_comentario_existe = true;
+                }
             }
+            List<Avaliacao_comentario> commentslist = ac.ReadAllComentariosFilme();
+            if (commentslist.Count != 0)
+            {
+                comentarios = new ObservableCollection<Avaliacao_comentario>(commentslist);
+                if(App.user == true)
+                {
+                    foreach(Avaliacao_comentario x in comentarios)
+                    {
+                        if(x.Idutilizador == App.utilizador.Idutilizador)
+                        {
+                            comentarios.Remove(x);
+                            textbox_comentario.Visibility = Visibility.Collapsed;
+                            textblock_jacomentou.Visibility = Visibility.Visible;
+                            ListView_CommentUser.Visibility = Visibility.Visible;
+                            Botao_EliminarComentario.Visibility = Visibility.Visible;
+                            break;
+                        }
+                    }
+                }
+                textblock_comentario.Visibility = Visibility.Visible;
+            }
+            else
+                comentarios = new ObservableCollection<Avaliacao_comentario>();
             base.OnNavigatedTo(e);
         }
         public void Visibilidade()
@@ -194,5 +225,46 @@ namespace MyMovies.universal.Paginas
                 Filme.UpdateClassificacao();
             }
         }
+
+        private void Button_Click_EliminarComentario(object sender, RoutedEventArgs e)
+        {
+            Avaliacao_comentario.Comentario = "";
+            Avaliacao_comentario.UpdateComentario();
+            textbox_comentario.Visibility = Visibility.Visible;
+            Botao_EliminarComentario.Visibility = Visibility.Collapsed;
+            ListView_CommentUser.Visibility = Visibility.Collapsed;
+            textblock_jacomentou.Visibility = Visibility.Collapsed;
+        }
+
+        private void textbox_comentario_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if(e.Key == Windows.System.VirtualKey.Enter)
+            {
+                TextBox textBox = sender as TextBox;
+                if (textBox.Text == "")
+                    return;
+                if (Avaliacao_comentario == null)
+                {
+                    Avaliacao_comentario = new Avaliacao_comentario();
+                    Avaliacao_comentario.Idutilizador = App.utilizador.Idutilizador;
+                    Avaliacao_comentario.Idfilme = Filme.Idfilme;
+                }
+                Avaliacao_comentario.Comentario = textBox.Text;
+                if (Avaliacao_comentario_existe)
+                {
+                    Avaliacao_comentario.UpdateComentario();
+                }
+                else
+                {
+                    Avaliacao_comentario.Create();
+                }
+                textbox_comentario.Visibility = Visibility.Collapsed;
+                ListView_CommentUser.Visibility = Visibility.Visible;
+                Botao_EliminarComentario.Visibility = Visibility.Visible;
+                textblock_jacomentou.Visibility = Visibility.Visible;
+                this.Bindings.Update();
+            }
+        }
+        
     }
 }

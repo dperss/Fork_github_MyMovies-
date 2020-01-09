@@ -19,6 +19,8 @@
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="Email" />
     <RootPropertyPathName Name="Idutilizador" />
+    <RootPropertyPathName Name="Comentario" />
+    <RootPropertyPathName Name="NomeUtilizador" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -100,6 +102,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Tag" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
@@ -196,9 +199,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Flyout">
@@ -236,6 +239,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="IsSpellCheckEnabled" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="KeyDown" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PersonPicture">
@@ -265,6 +269,20 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Frame" />
     <RootType FullName="MyMovies.universal.MainPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Content" />
+      <RootMethod Name="GetVerticalScrollMode" />
+      <RootMethod Name="SetVerticalScrollMode" />
+      <RootMethod Name="GetVerticalScrollBarVisibility" />
+      <RootMethod Name="SetVerticalScrollBarVisibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="Visibility" />
+      <RootProperty Name="Items" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ToggleButton">
       <RootProperty Name="Height" />
       <RootProperty Name="HorizontalAlignment" />

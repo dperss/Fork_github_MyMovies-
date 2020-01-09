@@ -202,7 +202,8 @@ namespace MyMovies.DAL
             }
             row.Close();
             return lista;
-            }
+        }
+
 
         public static int Update(Filme f)
         {

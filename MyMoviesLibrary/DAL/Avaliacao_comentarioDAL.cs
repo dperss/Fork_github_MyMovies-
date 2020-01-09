@@ -90,6 +90,30 @@ namespace MyMovies.DAL
             return alist;
 
         }
+        public static List<Avaliacao_comentario> ReadAllComentariosFilme(Avaliacao_comentario ac)
+        {
+            Database db = new Database();
+            string query = "SELECT comentario, Utilizador.nome as nome, utilizador_idutilizador as idutilizador FROM Avaliacao_comentario " +
+                "JOIN Utilizador ON Avaliacao_comentario.utilizador_idutilizador = Utilizador.idutilizador " +
+                "WHERE filme_idfilme = @idfilme AND comentario != '';";
+            List<Avaliacao_comentario> aclist = new List<Avaliacao_comentario>();
+            Dictionary<string, object> dictionary = new Dictionary<string, object>();
+            dictionary.Add("@idfilme", ac.Idfilme);
+            SqlDataReader row = db.Query(query, dictionary);
+            if (row == null)
+                return null;
+            while (row.Read())
+            {
+                ac = new Avaliacao_comentario();
+                ac.Comentario = (string)row["comentario"];
+                ac.NomeUtilizador = (string)row["nome"];
+                ac.Idutilizador = (int)row["idutilizador"];
+                aclist.Add(ac);
+            }
+            row.Close();
+            db.Close();
+            return aclist;
+        }
         public static int UpdateAvaliacao(Avaliacao_comentario a)
         {
             Database db = new Database();
