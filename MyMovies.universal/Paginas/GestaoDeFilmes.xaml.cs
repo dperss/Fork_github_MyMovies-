@@ -21,6 +21,7 @@ using System.Threading.Tasks;
 using Windows.Storage.Pickers;
 using System.Text.RegularExpressions;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Collections.ObjectModel;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -33,7 +34,7 @@ namespace MyMovies.universal.Paginas
     {
         bool picturesRead = false;
         bool generos_atoresRead = false;
-        GestaoDeFilmesViewModel GestaoDeFilmesViewModel { get; set; }   
+        GestaoDeFilmesViewModel GestaoDeFilmesViewModel { get; set; }
         public GestaoDeFilmes()
         {
             this.InitializeComponent();
@@ -107,11 +108,6 @@ namespace MyMovies.universal.Paginas
             Elenco_column.Visibility = Visibility.Collapsed;
         }
 
-        private void ComboBox_SelectionChanged_Diretor(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-
+        
     }
 }

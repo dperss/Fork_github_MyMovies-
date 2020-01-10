@@ -66,7 +66,7 @@ namespace MyMovies.BL
                 _Duracao = value;
                 Onchanged("Duracao");
             } 
-        } //AQUI TEM QUE SE VER QUAL TIPO QUE SE USA PARA TIME //acho que é um TimeSpan
+        } 
 
         public byte[] Foto
         {

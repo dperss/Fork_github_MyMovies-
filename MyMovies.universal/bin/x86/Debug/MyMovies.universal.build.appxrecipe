@@ -88,6 +88,86 @@
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\favorito.png">
       <PackagePath>Assets\favorito.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\icon.altform-lightunplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\icon.altform-lightunplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\icon.altform-lightunplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\icon.altform-lightunplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\icon.altform-lightunplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\icon.altform-unplated_targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-unplated_targetsize-24.png">
+      <PackagePath>Assets\icon.altform-unplated_targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\icon.altform-unplated_targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\icon.altform-unplated_targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\icon.altform-unplated_targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.scale-100.png">
+      <PackagePath>Assets\icon.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.scale-125.png">
+      <PackagePath>Assets\icon.scale-125.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.scale-150.png">
+      <PackagePath>Assets\icon.scale-150.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.scale-200.png">
+      <PackagePath>Assets\icon.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.scale-400.png">
+      <PackagePath>Assets\icon.scale-400.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.targetsize-16.png">
+      <PackagePath>Assets\icon.targetsize-16.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.targetsize-24.png">
+      <PackagePath>Assets\icon.targetsize-24.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.targetsize-256.png">
+      <PackagePath>Assets\icon.targetsize-256.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.targetsize-32.png">
+      <PackagePath>Assets\icon.targetsize-32.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\icon.targetsize-48.png">
+      <PackagePath>Assets\icon.targetsize-48.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Joker.PNG">
       <PackagePath>Assets\Joker.PNG</PackagePath>
     </AppxPackagedFile>
@@ -113,11 +193,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Curso\DAI\mymovies\MyMovies.universal\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>

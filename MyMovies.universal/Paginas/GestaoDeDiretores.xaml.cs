@@ -25,7 +25,7 @@ namespace MyMovies.universal.Paginas
     /// </summary>
     public sealed partial class GestaoDeDiretores : Page
     {
-        GestaoDeDiretoresViewModel GestaoDeDiretoresViewModel { get; set; }
+        public GestaoDeDiretoresViewModel GestaoDeDiretoresViewModel { get; set; }
         public GestaoDeDiretores()
         {
             this.InitializeComponent();

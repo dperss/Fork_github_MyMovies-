@@ -177,10 +177,10 @@ namespace MyMovies.DAL
         public static List<Genero> ReadAllGeneros(int idfilme)
         {
             Database db = new Database();
-            string query = "SELECT Genero.nome as nome_genero " +
+            string query = "SELECT Genero.nome as nome_genero, Genero.idgenero as id_genero " +
                 "FROM Filme " +
                 "LEFT JOIN Filme_genero ON Filme.idfilme = Filme_genero.filme_idfilme " +
-                "LEFT JOIN Genero ON Filme_genero.genero_nome = Genero.nome " +
+                "LEFT JOIN Genero ON Filme_genero.genero_idgenero = Genero.idgenero " +
                 "WHERE idfilme = @id;";
             List<Genero> lista = new List<Genero>();
 
@@ -198,6 +198,7 @@ namespace MyMovies.DAL
                     return lista;
                 }
                 g.Nome = (string)row["nome_genero"];
+                g.Idgenero = (int)row["id_genero"];
                 lista.Add(g);
             }
             row.Close();

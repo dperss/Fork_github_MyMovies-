@@ -31,6 +31,7 @@ namespace MyMovies.universal.ViewModel
             if (lista == null)
             {
                 Ator.CreateTable();
+                Filme_ator.CreateTable();
                 _atores = new ObservableCollection<Ator>();
             }
             else

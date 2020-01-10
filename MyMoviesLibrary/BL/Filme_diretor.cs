@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyMovies.BL
 {
-    class Filme_diretor
+    public class Filme_diretor
 
     {
         int _Filme_idfime;

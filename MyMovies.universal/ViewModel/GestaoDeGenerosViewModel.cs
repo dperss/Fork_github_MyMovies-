@@ -30,6 +30,7 @@ namespace MyMovies.universal.ViewModel
             if (lista == null)
             {
                 Genero.CreateTable();
+                Filme_genero.CreateTable();
                 _generos = new ObservableCollection<Genero>();
             }
             else

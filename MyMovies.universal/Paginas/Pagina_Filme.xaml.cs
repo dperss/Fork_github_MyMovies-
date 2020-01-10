@@ -45,8 +45,8 @@ namespace MyMovies.universal.Paginas
             List<Biblioteca> blist = b.ReadUtilizadorFilme();
             if (blist != null)
             {
-               foreach (Biblioteca bib in blist)
-               {
+                foreach (Biblioteca bib in blist)
+                {
                     if (bib.Categoria == Categoria.favorito)
                         favorito.IsChecked = true;
                     if (bib.Categoria == Categoria.para_ver)
@@ -54,7 +54,9 @@ namespace MyMovies.universal.Paginas
                     if (bib.Categoria == Categoria.visto)
                         visto.IsChecked = true;
                 }
+
             }
+            Biblioteca.CreateTable();
         }
         
         protected override void OnNavigatedTo(NavigationEventArgs e)

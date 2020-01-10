@@ -111,6 +111,7 @@ namespace MyMovies.universal.ViewModel
             f.Idfilme = Filmes.Count + 1;
             return CreateFilme(f);
         }
+        
         public async static Task<StorageFile> OpenLocalFile(params string[] types)
         {
             var picker = new FileOpenPicker();

@@ -73,26 +73,47 @@
                 <controls:DataGridTemplateColumn Header="Género" Tag="Genero" x:Name="Generos_column" Visibility="Collapsed">
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
+                            
+                            
                             <Button Content="Ver Géneros">
                                 <Button.Flyout>
                                     <Flyout>
-                                        <StackPanel>
-                                            <TextBlock Text="Géneros" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
-                                            <controls:DataGrid ItemsSource="{Binding Generos}"
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid>
+                                                <StackPanel>
+                                                    <TextBlock Text="Géneros" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                                    <CommandBar Background="Transparent" >
+                                                        <CommandBar.SecondaryCommands>
+                                                            <AppBarButton Icon="Add" Label="Adicionar"/>
+                                                            <AppBarButton Icon="Delete" Label="Eliminar"/>
+                                                        </CommandBar.SecondaryCommands>
+                                                    </CommandBar>
+                                                </StackPanel>
+                                                
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <controls:DataGrid ItemsSource="{Binding Generos}"
                                                            AutoGenerateColumns="False">
-                                                <controls:DataGrid.Columns>
-                                                    <controls:DataGridTextColumn Header="Id" Binding="{Binding Idgenero, Mode=TwoWay}" Tag="Id_Genero" />
-                                                    <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
-                                                </controls:DataGrid.Columns>
-                                            </controls:DataGrid>
-                                        </StackPanel>
+                                                    <controls:DataGrid.Columns>
+                                                        <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idgenero, Mode=OneWay}" Tag="Id_Genero"/>
+                                                        <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
+                                                    </controls:DataGrid.Columns>
+                                                </controls:DataGrid>
+                                            </Grid>
+                                            
+                                            
+                                        </Grid>
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
                         </DataTemplate>
                     </controls:DataGridTemplateColumn.CellTemplate>
                 </controls:DataGridTemplateColumn>
-                
+
                 <!--<controls:DataGridTemplateColumn Header="Diretor">
                     <controls:DataGridTemplateColumn.CellTemplate>
                         <DataTemplate x:DataType="viewmodel:GestaoDeDiretoresViewModel">
@@ -111,17 +132,36 @@
                             <Button Content="Ver Elenco">
                                 <Button.Flyout>
                                     <Flyout>
-                                        <StackPanel>
-                                            <TextBlock Text="Elenco" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
-                                            <controls:DataGrid ItemsSource="{Binding Atores}"
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid>
+                                                <StackPanel>
+                                                    <TextBlock Text="Elenco" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                                    <CommandBar Background="Transparent" >
+                                                        <CommandBar.SecondaryCommands>
+                                                            <AppBarButton Icon="Add" Label="Adicionar"/>
+                                                            <AppBarButton Icon="Delete" Label="Eliminar"/>
+                                                        </CommandBar.SecondaryCommands>
+                                                    </CommandBar>
+                                                </StackPanel>
+
+                                            </Grid>
+                                            <Grid Grid.Row="1">
+                                                <controls:DataGrid ItemsSource="{Binding Atores}"
                                                            AutoGenerateColumns="False">
-                                                <controls:DataGrid.Columns>
-                                                    <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idator, Mode=OneWay}" Tag="Id_Ator"/>
-                                                    <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Ator" />
-                                                    <controls:DataGridTextColumn Header="Data de Nascimento" Binding="{Binding Datanascimento, Mode=TwoWay}" Tag="DataNascimento_Ator" />
-                                                </controls:DataGrid.Columns>
-                                            </controls:DataGrid>
-                                        </StackPanel>
+                                                    <controls:DataGrid.Columns>
+                                                        <controls:DataGridTextColumn Header="Id" IsReadOnly="True" Binding="{Binding Idator, Mode=OneWay}" Tag="Id_Genero"/>
+                                                        <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
+                                                        <controls:DataGridTextColumn Header="Data de Nascimento" Binding="{Binding Datanascimento, Mode=TwoWay}" Tag="DataNascimento"/>
+                                                    </controls:DataGrid.Columns>
+                                                </controls:DataGrid>
+                                            </Grid>
+
+
+                                        </Grid>
                                     </Flyout>
                                 </Button.Flyout>
                             </Button>
@@ -130,7 +170,36 @@
                 </controls:DataGridTemplateColumn>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
+        
+        
+        <!--<ContentDialog x:Name="dialogcontent" Title="Géneros" CloseButtonText="Fechar">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid>
+                    <StackPanel Orientation="Horizontal" Margin="12">
+                        <TextBlock Text="Gestão de Filmes" VerticalAlignment="Center" Margin="5,0" Style="{ThemeResource SubtitleTextBlockStyle}"></TextBlock>
 
+                        <CommandBar Background="Transparent" >
+                            <CommandBar.SecondaryCommands>
+                                <AppBarButton Icon="Add" Label="Adicionar"/>
+                                <AppBarButton Icon="Delete" Label="Eliminar"/>
+                            </CommandBar.SecondaryCommands>
+                        </CommandBar>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <controls:DataGrid ItemsSource="{x:Bind GestaoDeFilmesViewModel.Generos}" AutoGenerateColumns="False">
+                        <controls:DataGrid.Columns>
+                            <controls:DataGridTextColumn Header="Id" Binding="{Binding Idgenero, Mode=TwoWay}" Tag="Id_Genero" />
+                            <controls:DataGridTextColumn Header="Nome" Binding="{Binding Nome, Mode=TwoWay}" Tag="Nome_Genero" />
+                        </controls:DataGrid.Columns>
+                    </controls:DataGrid>
+                </Grid>
+            </Grid>
+        </ContentDialog>-->
 
     </Grid>
 </Page>

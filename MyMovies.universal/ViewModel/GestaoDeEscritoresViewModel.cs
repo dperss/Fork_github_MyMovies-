@@ -30,6 +30,7 @@ namespace MyMovies.universal.ViewModel
             if (lista == null)
             {
                 Escritor.CreateTable();
+                Filme_escritor.CreateTable();
                 _escritores = new ObservableCollection<Escritor>();
             }
             else

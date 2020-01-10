@@ -30,6 +30,7 @@ namespace MyMovies.universal.ViewModel
             if (lista == null)
             {
                 Diretor.CreateTable();
+                Filme_diretor.CreateTable();
                 _diretores = new ObservableCollection<Diretor>();
             }
             else
