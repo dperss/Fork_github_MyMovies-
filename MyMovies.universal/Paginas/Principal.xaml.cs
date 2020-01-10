@@ -119,7 +119,7 @@ namespace MyMovies.universal.Paginas
             mainPage.ChangeNvSelection("Login_Page");
         }
 
-        private void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
+        private async void AutoSuggestBox_KeyDown(object sender, KeyRoutedEventArgs e)
         {
             if(e.Key == Windows.System.VirtualKey.Enter)
             {
@@ -129,12 +129,18 @@ namespace MyMovies.universal.Paginas
                     return;
                 }
                 List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+                if (flist.Count == 0)
+                {
+                    MessageDialog message = new MessageDialog("Não foram encontrados quaisquer resultados");
+                    await message.ShowAsync();
+                    return;
+                }
                 MainPage mainPage = MainPage.GetCurrent();
                 mainPage.NavigatePesquisa(flist);
             }
         }
 
-        private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        private async void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             AutoSuggestBox autoSuggestBox = sender as AutoSuggestBox;
             if (autoSuggestBox.Text == "")
@@ -142,6 +148,12 @@ namespace MyMovies.universal.Paginas
                 return;
             }
             List<Filme> flist = App.Pesquisar(autoSuggestBox.Text);
+            if(flist.Count == 0)
+            {
+                MessageDialog message = new MessageDialog("Não foram encontrados quaisquer resultados");
+                await message.ShowAsync();
+                return;
+            }
             MainPage mainPage = MainPage.GetCurrent();
             mainPage.NavigatePesquisa(flist);
         }
